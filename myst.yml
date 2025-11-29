@@ -10,7 +10,7 @@ project:
     - algebraic number theory
     - arithmetic geometry
   # authors: []
-  github: https://github.com/sheafofthoughts/sheaf-of-thoughts.git
+  github: https://github.com/sheafofthoughts/sheafofthoughtsblog.git
   plugins:
     - https://github.com/jupyter-book/blog-plugin/releases/latest/download/plugin.mjs
 
