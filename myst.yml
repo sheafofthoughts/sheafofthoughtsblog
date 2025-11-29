@@ -16,9 +16,9 @@ project:
 
   toc:
     - file: index.md
-    - title: Interesting facts
-      children:
-       - pattern: posts/*-IT-*.md
+#    - title: Interesting facts
+#      children:
+#       - pattern: posts/*-IT-*.md
     - title: Route to the Fermat's Christmas Theorem
       children:
         - pattern: posts/*-FCT-*.md

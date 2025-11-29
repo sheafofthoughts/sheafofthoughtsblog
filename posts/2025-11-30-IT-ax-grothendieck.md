@@ -1,5 +1,0 @@
----
-title: "Ax-Grothendieck Theorem"
-date: "2025-11-30"
----
-to be written...
