@@ -18,10 +18,11 @@ project:
     - file: index.md
     - title: Interesting facts
       children:
-       - pattern: posts/2025-11-30-ax-grothendieck.md
+       - pattern: posts/*-IT-*.md
     - title: Route to the Fermat's Christmas Theorem
       children:
-        - pattern: posts/2025-11-30-introduction.md
+        - pattern: posts/*-FCT-*.md
+
 
 
 site:
@@ -33,5 +34,3 @@ site:
      logo_text: SheafofThoughtsBlog
      folders: true
      base_url: ""
-
-
