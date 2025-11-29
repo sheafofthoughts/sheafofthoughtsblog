@@ -15,7 +15,7 @@ project:
     - https://github.com/jupyter-book/blog-plugin/releases/latest/download/plugin.mjs
 
   toc:
-    - file: home.md
+    - file: index.md
     - title: Interesting facts
       children:
        - pattern: posts/2025-11-30-ax-grothendieck.md
@@ -32,6 +32,6 @@ site:
   options:
      logo_text: SheafofThoughtsBlog
      folders: true
-     base_url: /
+     base_url: ""
 
 
