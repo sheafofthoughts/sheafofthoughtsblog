@@ -1,0 +1,36 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: ad0b1e63-32a3-440b-9469-2f6bb4374267
+  title: Sheaf of Thoughts
+  description: blog about interesting algebraic stuff
+  keywords: 
+    - algebra
+    - algebraic geometry
+    - algebraic number theory
+    - arithmetic geometry
+  # authors: []
+  github: https://github.com/sheafofthoughts/sheaf-of-thoughts.git
+  plugins:
+    - https://github.com/jupyter-book/blog-plugin/releases/latest/download/plugin.mjs
+
+  toc:
+    - file: home.md
+    - title: Interesting facts
+      children:
+       - pattern: posts/2025-11-30-ax-grothendieck.md
+    - title: Route to the Fermat's Christmas Theorem
+      children:
+        - pattern: posts/2025-11-30-introduction.md
+
+
+site:
+  template: book-theme
+  parts:
+    primary_sidebar_footer: |
+  
+  options:
+     logo_text: SheafofThoughtsBlog
+     folders: true
+
+
