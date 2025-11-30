@@ -80,7 +80,7 @@ That would be great: we could avoid long case checks and simply compute the rema
 An odd prime number $ p $ can be written as the sum of two squares if and only if it has remainder $ 1 $ when divided by $ 4 $.
 :::
 
-Now we see why the theorem is nice: it simplifies a difficult problem (determining whether an odd prime is the sum of two squares) to a simple one (checking whether its remainder, when divided by $ 4 $, is $ 1 $).
+Now we see why the theorem is nice: it simplifies a difficult problem (determining whether an odd prime is the sum of two squares) to a simple one (checking whether its remainder is $ 1 $ when divided by $ 4 $).
 
 # Some plan for the future
 
