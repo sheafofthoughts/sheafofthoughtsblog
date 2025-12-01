@@ -19,7 +19,7 @@ Detailed historical information can be found in the relevant chapter of {cite}`d
 We're bored, so we start writing some useless calculations in our notebook. We really like prime numbers (we'll explain why later in the posts), so we start by writing a few of them:
 ```{math}
 :label: eq.listaprimi
-   2,3,5,7,11,13,17,19,23,29,31,37,41\dots
+   2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41 \dots
 ```
 
 Since we have nothing better to do, we start asking some questions about them, like:
@@ -61,14 +61,13 @@ therefore $ 7 $ cannot be written as the sum of two squares.
 
 Continuing this process, we find that among the primes in [the list](#eq.listaprimi) above, those that satisfy the property are:
 ```{math}
-:label: 
-2,5,13,17,29,37,41...
+:label: eq.listaprimisommaquadrati
+2, 5, 13, 17, 29, 37, 41 \dots
 ```
 
-We start to look at them carefully and we conjecture the following fact: 
+We want to investigate further the properties of [these primes](#eq.listaprimisommaquadrati). First, observe that we are only interested in odd primes (i.e., all primes other than $ 2 $), since we already know that $ 2 $ can be written as the sum of two squares. Therefore, we start to look at them carefully and conjecture the following fact: 
 >All _odd_ primes that can be written as the sum of two squares have remainder $ 1 $ when divided by $ 4 $.
 
-This conjecture tells us nothing about $ 2 $ (which is the only even prime number), but we already know that $ 2 $ can be written as sum of two squares.
 
 However, this only tells us that *if* an odd prime is a sum of two squares, then it leaves remainder $ 1 $ when divided by $ 4 $.
 But in general it's not easy to check whether a prime is the sum of two squares, since we'd have to try many possibilities (look at $ 7 $ and imagine larger primes). If we just want to know whether a prime has remainder $ 1 $ when divided by $ 4 $, we can compute that quickly and save time.
