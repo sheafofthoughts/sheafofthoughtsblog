@@ -19,6 +19,7 @@
 
 
 
+
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>In the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html">previous post</a> we asked some questions about prime numbers such as:</p>
@@ -148,8 +149,9 @@ For every two integers <img src="https://latex.codecogs.com/png.latex?n%5Cgeq%20
 </item>
 <item>
   <title>Ax–Grothendieck Theorem</title>
-  <link>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</link>
+  <link>https://sheafofthoughts.org/posts/advanced-topics/ax-grothendieck/ax-grothendieck.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -275,15 +277,16 @@ For every two integers <img src="https://latex.codecogs.com/png.latex?n%5Cgeq%20
 </section>
 
  ]]></description>
-  <category>Interesting Facts</category>
   <category>Advanced Topics</category>
-  <guid>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</guid>
+  <category>Algebraic Geometry</category>
+  <guid>https://sheafofthoughts.org/posts/advanced-topics/ax-grothendieck/ax-grothendieck.html</guid>
   <pubDate>Sat, 06 Dec 2025 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Introduction</title>
   <link>https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html</link>
   <description><![CDATA[ 
+
 
 
 
