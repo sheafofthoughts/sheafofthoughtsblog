@@ -39,7 +39,6 @@ Let $\underline z:=(z_1,\dots, z_n)\in k^n$ and let $L$ be the subfield of $k$ g
 We start by proving two lemmas and then proceed with the proof of [Theorem @thm-ax-special].
 
 ::: {#lem-criterion-injectivity}
-## Lemma
 
 The map $F$ is injective if and only if there exist $q_{i,j}\in k[x_1,\dots,x_n,y_1,\dots,y_n]$ and integers $k_j>0$ such that, defining
 $$
@@ -58,7 +57,6 @@ Consider the ideal $I=(g_1,\dots, g_n)$. The map $F$ is injective if and only if
 :::
 
 ::: {#lem-no-preimage}
-## Lemma
 
 Let $\underline{z}\in k^n$. Then $\underline z$ is not in the image of $F$ if and only if there exist $r_1,\dots ,r_n\in k[x_1,\dots ,x_n]$ such that
 $$
@@ -164,7 +162,6 @@ Let $f:X\to Y$ be a finite type morphism between noetherian schemes. If $Z \subs
 The following lemma explains why [Theorem @thm-ax-groth] implies [Theorem @thm-ax-special].
 
 ::: {#lem-universally-injective}
-## Lemma
 
 Let $X, Y$ be schemes of finite type over an algebraically closed field $k$. Let $f:X\to Y$ be a morphism whose restriction to $k$-points
 $$
