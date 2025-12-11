@@ -1,7 +1,7 @@
 ---
 title: "Ax–Grothendieck Theorem"
 date: "2025-12-07"
-categories: [Advanced Topics, Algebraic Geometry]
+categories: [Intermediate, Algebraic Geometry]
 ---
 
 # Introduction

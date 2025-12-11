@@ -1,0 +1,15 @@
+---
+title: "Fermat's Christmas Theorem – series index"
+format:
+  html:
+    toc: false
+
+listing:
+  contents: .
+  sort: "date"
+  sort-ui: false
+  categories: false
+  type: default
+page-layout: article
+---
+

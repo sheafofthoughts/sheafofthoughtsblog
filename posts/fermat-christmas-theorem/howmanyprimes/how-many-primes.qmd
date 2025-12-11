@@ -1,7 +1,10 @@
 ---
 title: "How many primes are there?"
+subtitle: "Fermat's Christmas Theorem series"
 date: "2025-12-08"
-categories: [Fermat's Christmas Theorem, Divulgation]
+categories: [Expository, Number Theory]
+
+series: "Fermat's Christmas Theorem"
 ---
 
 # Introduction
@@ -75,7 +78,7 @@ where $q$ is the quotient and $r$ is the remainder. We are ready to state this a
 
 ::: {#thm-euclideandivision .theorem}
 
-Euclidean division.  
+#### Euclidean division.
 For every two integers $n\geq 0$ and $m>0$ (we cannot divide by $0$), there exist integers $q,r\geq 0$ such that
 
 $$
@@ -116,7 +119,7 @@ Now we want to answer the question of which numbers could be written as a produc
 
 ::: {#thm-fundthrmarithmetic .theorem}
 
-Fundamental theorem of arithmetic.
+#### Fundamental theorem of arithmetic.
 Every integer $n$ strictly bigger than one (i.e. $n>1$) can be written *uniquely* as the product of prime numbers.
 
 :::
@@ -239,4 +242,13 @@ Think about these two kinds of proofs and how we used them in the arguments. If 
 In any case, see you next week!
 
 ---
+
+> This article is part of the series
+> [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
+
+::: {.series-nav}
+
+Previous: [Introduction](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html)
+<!-- Next: [Title of part 3](/posts/fermat-christmas-theorem/part-3/) -->
+:::
 

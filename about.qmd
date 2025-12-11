@@ -20,11 +20,11 @@ I write as a student who is still learning, and these posts are a way to collect
 
 ## Projects
 
-### [Interesting facts](https://sheafofthoughts.org/#category=Interesting%20Facts)
-Posts on more advanced topics that I encounter along the way (ideas that I like, want to remember, or want to understand better).
+### Interesting facts
+Posts on more advanced topics (in [algebraic geometry](https://sheafofthoughts.org/#category=Algebraic%20Geometry), [number theory](https://sheafofthoughts.org/#category=Number%20Theory)) that I encounter along the way (ideas that I like, want to remember, or want to understand better).
 
-### [Route to the Fermat's Christmas Theorem](https://sheafofthoughts.org/#category=Fermat's%20Christmas%20Theorem)
-Short weekly notes (aimed to non-experts) developing most of the theory needed to give a complete proof of the Fermat's Christmas Theorem, starting from the very basics. I will try to write the posts in a very simple language, so that anyone could easily follow along.
+### [Route to the Fermat's Christmas Theorem](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)
+Expository weekly notes (aimed to non-experts) developing most of the theory needed to give a complete proof of the Fermat's Christmas Theorem, starting from the very basics. I will try to write the posts in a very simple language, so that anyone could easily follow along.
 
 ---
 

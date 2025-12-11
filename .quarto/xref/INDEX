@@ -33,5 +33,14 @@
   "posts/advanced-topics/ax-grothendieck/ax-grothendieck.qmd": {
     "ax-grothendieck.html": "afaaee07",
     "ax-grothendieck.tex": "f980f046"
+  },
+  "posts/fermat-christmas-theorem/index.qmd": {
+    "index.html": "656399b3"
+  },
+  "posts/fermat-christmas-theorem/FCT-posts/howmanyprimes/how-many-primes.qmd": {
+    "how-many-primes.html": "4066a8c0"
+  },
+  "posts/fermat-christmas-theorem/FCT-posts/introduction/introduction.qmd": {
+    "introduction.html": "003a356c"
   }
 }
