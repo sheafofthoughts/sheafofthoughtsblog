@@ -3,11 +3,6 @@ title: "Introduction"
 date: "2025-11-29"
 bibliography: references.bib
 categories: [Fermat's Christmas Theorem, Divulgation]
-format:
-  html:
-    theme: flatly
-    toc: true
-    math: mathjax
 ---
 
 # Some history
