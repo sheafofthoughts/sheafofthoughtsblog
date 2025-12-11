@@ -1,11 +1,7 @@
 {
   "listingMap": {
-    "posts/index.qmd": [
-      "."
-    ],
     "index.qmd": [
-      "posts",
-      "B3049D40"
+      "posts"
     ]
   }
 }

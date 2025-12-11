@@ -1,11 +1,12 @@
 ---
-title: "Recent Posts"
-page-layout: full
+title: "Posts"
 listing:
   contents: posts
-  categories: true
   sort: "date desc"
+  categories: true
   type: default
+  feed: true
+  feed-title: "SheafofThoughts"
 ---
 
 

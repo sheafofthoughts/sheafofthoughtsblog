@@ -1,11 +1,5 @@
 [
   {
-    "listing": "/posts/index.html",
-    "items": [
-      "/posts/ax-grothendieck.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html",
