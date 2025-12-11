@@ -27,3 +27,6 @@ format:
     documentclass: scrartcl
     include-in-header: pdf-header.tex
 
+filters:
+  - tikz
+

@@ -26,5 +26,8 @@
   "posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.qmd": {
     "how-many-primes.html": "6fed3587",
     "how-many-primes.tex": "51746328"
+  },
+  "posts/interesting-facts/test/test.qmd": {
+    "test.html": "556eaf3d"
   }
 }

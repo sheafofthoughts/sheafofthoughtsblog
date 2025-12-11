@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fa6ebe1abc24c69c1ddb9a141d0fa116.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -191,7 +191,7 @@ window.Quarto = {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>In the <a href="../../../posts/fermat-christmast-theorem/introduction/">previous post</a> we asked some questions about prime numbers such as:</p>
+<p>In the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html">previous post</a> we asked some questions about prime numbers such as:</p>
 <ul>
 <li>Which numbers could be written as the product of primes?</li>
 <li>How many primes are there?</li>
@@ -290,8 +290,7 @@ Every integer <span class="math inline">\(n\)</span> strictly bigger than one (i
 <p>where on the right hand side we are writing the factors (just <span class="math inline">\(7\)</span>) of the factorization.</p>
 <p>We want to convince ourselves that a factorization always exists, so we dive into its proof.</p>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Existence of the prime factorization.<br>
-Suppose some positive integers could not be factorized. Take the smallest such integer and call it <span class="math inline">\(m\)</span>. The integer <span class="math inline">\(m\)</span> cannot be a prime number, since if it were its factorization would be <span class="math inline">\(m=m\)</span> (as we did in the case of <span class="math inline">\(7\)</span>). Since <span class="math inline">\(m\)</span> is not prime, there must be some number <span class="math inline">\(s\)</span> other than <span class="math inline">\(m\)</span> and <span class="math inline">\(1\)</span> which divides it. We can therefore write <span class="math inline">\(m=s\cdot t\)</span> for some other integer <span class="math inline">\(t\)</span>. But now observe that <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> are both smaller than <span class="math inline">\(m\)</span>. Since <span class="math inline">\(m\)</span> was the smallest such number that could not be factorized, both <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> can be factorized into prime factors. In particular we get that</p>
+<p><span class="proof-title"><em>Proof</em> (Existence of the prime factorization). </span>Suppose some positive integers could not be factorized. Take the smallest such integer and call it <span class="math inline">\(m\)</span>. The integer <span class="math inline">\(m\)</span> cannot be a prime number, since if it were its factorization would be <span class="math inline">\(m=m\)</span> (as we did in the case of <span class="math inline">\(7\)</span>). Since <span class="math inline">\(m\)</span> is not prime, there must be some number <span class="math inline">\(s\)</span> other than <span class="math inline">\(m\)</span> and <span class="math inline">\(1\)</span> which divides it. We can therefore write <span class="math inline">\(m=s\cdot t\)</span> for some other integer <span class="math inline">\(t\)</span>. But now observe that <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> are both smaller than <span class="math inline">\(m\)</span>. Since <span class="math inline">\(m\)</span> was the smallest such number that could not be factorized, both <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> can be factorized into prime factors. In particular we get that</p>
 <p><span class="math display">\[
 m=s\cdot t=(\text{prime factorization of }s)\cdot (\text{prime factorization of }t)
 \]</span></p>
@@ -311,8 +310,7 @@ m=s\cdot t=(\text{prime factorization of }s)\cdot (\text{prime factorization of 
 <p>There exist infinitely many prime numbers.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Euclid’s proof.<br>
-Suppose there were only finitely many prime numbers, call them <span class="math inline">\(p_1,\dots,p_n\)</span>. Define <span class="math inline">\(m\)</span> as the product of all these primes plus <span class="math inline">\(1\)</span>, i.e.</p>
+<p><span class="proof-title"><em>Proof</em> (Euclid’s proof). </span>Suppose there were only finitely many prime numbers, call them <span class="math inline">\(p_1,\dots,p_n\)</span>. Define <span class="math inline">\(m\)</span> as the product of all these primes plus <span class="math inline">\(1\)</span>, i.e.</p>
 <p><span class="math display">\[
 m=p_1\cdot p_2\cdots p_n+1
 \]</span></p>

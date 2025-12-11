@@ -131,12 +131,14 @@ svg,
   height: auto;
 }
 
-/* Make quiver.app iframes responsive */
+
+/* Make quiver.app iframes responsive and large enough */
 iframe.quiver-embed {
   display: block;
-  width: 100% !important;
-  max-width: 100%;
-  height: auto;
+  margin: 0.75rem auto;
+  width: 100% !important;        /* take full width of the text / theorem box */
+  max-width: 800px;              /* but don't grow beyond this on huge screens */
+  min-height: 260px;             /* avoid ridiculously short iframes */
 }
 
 

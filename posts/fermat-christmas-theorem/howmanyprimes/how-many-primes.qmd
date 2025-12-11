@@ -158,7 +158,8 @@ We want to convince ourselves that a factorization always exists, so we dive int
 
 ::: {.proof}
 
-Existence of the prime factorization.  
+#### Existence of the prime factorization
+
 Suppose some positive integers could not be factorized. Take the smallest such integer and call it $m$. The integer $m$ cannot be a prime number, since if it were its factorization would be $m=m$ (as we did in the case of $7$). Since $m$ is not prime, there must be some number $s$ other than $m$ and $1$ which divides it. We can therefore write $m=s\cdot t$ for some other integer $t$. But now observe that $s$ and $t$ are both smaller than $m$. Since $m$ was the smallest such number that could not be factorized, both $s$ and $t$ can be factorized into prime factors. In particular we get that
 
 $$
@@ -191,7 +192,7 @@ There exist infinitely many prime numbers.
 
 ::: {.proof}
 
-Euclid's proof.  
+#### Euclid's proof
 Suppose there were only finitely many prime numbers, call them $p_1,\dots,p_n$. Define $m$ as the product of all these primes plus $1$, i.e.
 
 $$
