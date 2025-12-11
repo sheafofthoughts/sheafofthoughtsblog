@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sheafofthoughts.org/index.html</loc>
-    <lastmod>2025-12-11T17:32:53.939Z</lastmod>
+    <loc>https://sheafofthoughts.org/about.html</loc>
+    <lastmod>2025-12-11T17:36:46.514Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</loc>
+    <lastmod>2025-12-11T13:25:26.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html</loc>
+    <lastmod>2025-12-11T17:46:40.923Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html</loc>
     <lastmod>2025-12-11T12:36:33.526Z</lastmod>
   </url>
   <url>
-    <loc>https://sheafofthoughts.org/about.html</loc>
-    <lastmod>2025-12-11T17:35:53.006Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html</loc>
-    <lastmod>2025-12-11T12:44:43.543Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</loc>
-    <lastmod>2025-12-11T13:25:26.638Z</lastmod>
+    <loc>https://sheafofthoughts.org/index.html</loc>
+    <lastmod>2025-12-11T17:32:53.939Z</lastmod>
   </url>
 </urlset>

@@ -116,12 +116,12 @@ Now we want to answer the question of which numbers could be written as a produc
 
 ::: {#thm-fundthrmarithmetic .theorem}
 
-Fundamental theorem of arithmetic.  
+Fundamental theorem of arithmetic.
 Every integer $n$ strictly bigger than one (i.e. $n>1$) can be written *uniquely* as the product of prime numbers.
 
 :::
 
-This helps us understand why primes are so important. In this sense they are the basic building blocks of the integers. We can always decompose an integer as the product of primes and this is done uniquely. 
+This helps us understand why primes are so important. In this sense they are the basic building blocks of the integers. We can always decompose an integer as the product of primes and this is done uniquely.
 
 Let's give some examples to clarify the theorem. Consider $15$. Its prime divisors are $3$ and $5$ so $15=3\cdot 5$. Another example could be $4$; it is divided only by $2$, so $4=2^2$. 
 
@@ -184,7 +184,7 @@ Moreover, the theorem tells us that the factorization is unique: you can't write
 
 Finally, we are ready to answer this question. You may have guessed the answer, but I really want to give a neat argument that will convince you it is true.
 
-::: {.theorem}
+::: {#thm-infinitelymanyprimes .theorem}
 
 There exist infinitely many prime numbers.
 
