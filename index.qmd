@@ -1,5 +1,9 @@
 ---
 title: "Posts"
+format:
+  html:
+    toc: false
+
 listing:
   contents: posts
   sort: "date desc"
