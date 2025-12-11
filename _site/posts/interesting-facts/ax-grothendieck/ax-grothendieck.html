@@ -207,7 +207,7 @@ F:k^n \rightarrow k^n, \qquad F(\underline{x})=(f_1(\underline{x}),\dots, f_n(\u
 <h1>Proof of the theorem</h1>
 <p>We start by proving two lemmas and then proceed with the proof of <a href="#thm-ax-special" class="quarto-xref">Theorem&nbsp;1</a>.</p>
 <div id="lem-criterion-injectivity" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 1 (Lemma)</strong></span> The map <span class="math inline">\(F\)</span> is injective if and only if there exist <span class="math inline">\(q_{i,j}\in k[x_1,\dots,x_n,y_1,\dots,y_n]\)</span> and integers <span class="math inline">\(k_j&gt;0\)</span> such that, defining <span class="math display">\[
+<p><span class="theorem-title"><strong>Lemma 1</strong></span> The map <span class="math inline">\(F\)</span> is injective if and only if there exist <span class="math inline">\(q_{i,j}\in k[x_1,\dots,x_n,y_1,\dots,y_n]\)</span> and integers <span class="math inline">\(k_j&gt;0\)</span> such that, defining <span class="math display">\[
 g_i(x_1,\dots, x_n,y_1,\dots,y_n)
 :=f_i(x_1,\dots , x_n)-f_i(y_1,\dots,y_n),
 \]</span> for all <span class="math inline">\(j\)</span> we have the identity <span id="eq-g-criterion"><span class="math display">\[
@@ -218,7 +218,7 @@ g_i(x_1,\dots, x_n,y_1,\dots,y_n)
 <p><span class="proof-title"><em>Proof</em>. </span>Consider the ideal <span class="math inline">\(I=(g_1,\dots, g_n)\)</span>. The map <span class="math inline">\(F\)</span> is injective if and only if all the zeros of <span class="math inline">\(I\)</span> are of the form <span class="math inline">\((\underline{x},\underline{x})\)</span> for <span class="math inline">\(\underline{x}\in k^n\)</span>. This is the case if and only if the zeros of <span class="math inline">\(I\)</span> are a subset of the zeros of <span class="math inline">\(J=(x_1-y_1,\dots,x_n-y_n)\)</span>, i.e.&nbsp;if and only if <span class="math inline">\(\mathrm{V}(I) \subseteq \mathrm{V}(J)\)</span>. By the <a href="https://en.wikipedia.org/wiki/Hilbert%27s_Nullstellensatz">Hilbert Nullstellensatz</a>, this holds if and only if <span class="math inline">\(J \subseteq \sqrt I\)</span>; hence <span class="math inline">\((x_j-y_j)\in \sqrt{I}\)</span>.</p>
 </div>
 <div id="lem-no-preimage" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 2 (Lemma)</strong></span> Let <span class="math inline">\(\underline{z}\in k^n\)</span>. Then <span class="math inline">\(\underline z\)</span> is not in the image of <span class="math inline">\(F\)</span> if and only if there exist <span class="math inline">\(r_1,\dots ,r_n\in k[x_1,\dots ,x_n]\)</span> such that <span id="eq-r-criterion"><span class="math display">\[
+<p><span class="theorem-title"><strong>Lemma 2</strong></span> Let <span class="math inline">\(\underline{z}\in k^n\)</span>. Then <span class="math inline">\(\underline z\)</span> is not in the image of <span class="math inline">\(F\)</span> if and only if there exist <span class="math inline">\(r_1,\dots ,r_n\in k[x_1,\dots ,x_n]\)</span> such that <span id="eq-r-criterion"><span class="math display">\[
 \sum_{i=1}^n r_i\cdot (f_i-z_i)=1.
 \tag{2}\]</span></span></p>
 </div>
