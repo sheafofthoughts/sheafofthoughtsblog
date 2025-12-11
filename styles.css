@@ -285,13 +285,12 @@ body.quarto-dark div.claim {
    Style the Quarto color-scheme toggle
    ============================ */
 
-/* Make the toggle a small round icon button, with some breathing room */
 .navbar .quarto-color-scheme-toggle {
   width: 2.1rem;
   height: 2.1rem;
   border-radius: 999px;
   padding: 0;
-  margin-left: 0.75rem;                 /* space from "About" */
+  margin-left: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,4 +320,27 @@ body.quarto-dark .navbar .quarto-color-scheme-toggle::before {
 .navbar .quarto-color-scheme-toggle:hover {
   background-color: rgba(148, 163, 184, 0.15);
 }
+
+/* Remove underline in all states */
+.navbar .quarto-color-scheme-toggle,
+.navbar .quarto-color-scheme-toggle:hover,
+.navbar .quarto-color-scheme-toggle:focus {
+  text-decoration: none !important;
+}
+
+
+.series-nav {
+  margin-top: 2rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  border-left: 3px solid #6b7280;
+  background-color: #f9fafb;
+  font-size: 0.9rem;
+}
+
+:root[data-bs-theme="dark"] .series-nav {
+  background-color: #111827;
+  border-left-color: #9ca3af;
+}
+
 
