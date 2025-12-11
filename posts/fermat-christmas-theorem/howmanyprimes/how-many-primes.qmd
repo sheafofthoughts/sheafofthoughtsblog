@@ -6,7 +6,7 @@ categories: [Fermat's Christmas Theorem, Divulgation]
 
 # Introduction
 
-In the [previous post](https://sheafofthoughts.org/posts/2025-11-29-fct-introduction/) we asked some questions about prime numbers such as:
+In the [previous post](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html) we asked some questions about prime numbers such as:
 
 - Which numbers could be written as the product of primes?
 - How many primes are there?
