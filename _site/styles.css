@@ -329,18 +329,72 @@ body.quarto-dark .navbar .quarto-color-scheme-toggle::before {
 }
 
 
-.series-nav {
+/* ==========================================
+   Prev / Next navigation card (light mode)
+   ========================================== */
+
+.page-navigation {
   margin-top: 2rem;
-  padding: 0.75rem 1rem;
-  border-radius: 0.4rem;
-  border-left: 3px solid #6b7280;
-  background-color: #f9fafb;
-  font-size: 0.9rem;
+  border-top: 1px solid #e5e7eb; /* subtle separator line */
+  padding-top: 1rem;
 }
 
-:root[data-bs-theme="dark"] .series-nav {
-  background-color: #111827;
+.page-navigation .nav-page {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.45rem;
+  border-left: 3px solid #6b7280;
+  background-color: #f3f4f6;      /* softer grey, not pure white */
+  font-size: 0.9rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+/* “Next” / “Previous” label */
+.page-navigation .nav-page-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 0.15rem;
+}
+
+/* Link text */
+.page-navigation .nav-page-text,
+.page-navigation .nav-page-text a {
+  color: #0369a1;
+  text-decoration: none;
+}
+
+.page-navigation .nav-page-text a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Dark mode variant
+   ========================================== */
+
+:root[data-bs-theme="dark"] .page-navigation {
+  border-top-color: #374151;
+}
+
+:root[data-bs-theme="dark"] .page-navigation .nav-page {
+  background-color: #111827;      /* dark card, matches site */
   border-left-color: #9ca3af;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+:root[data-bs-theme="dark"] .page-navigation .nav-page-label {
+  color: #9ca3af;
+}
+
+:root[data-bs-theme="dark"] .page-navigation .nav-page-text,
+:root[data-bs-theme="dark"] .page-navigation .nav-page-text a {
+  color: #7dd3fc;                 /* cyan-ish link color */
+}
+
+:root[data-bs-theme="dark"] .page-navigation .nav-page-text a:hover {
+  color: #bae6fd;
 }
 
 

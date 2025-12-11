@@ -241,12 +241,8 @@ In any case, see you next week!
 
 ---
 
-> This article is part of the series
-> [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
+> This article is part of the series [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
 
-::: {.series-nav}
+> Previous: [Introduction](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html)
 
-Previous: [Introduction](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html)
-<!-- Next: [Title of part 3](/posts/fermat-christmas-theorem/part-3/) -->
-:::
 
