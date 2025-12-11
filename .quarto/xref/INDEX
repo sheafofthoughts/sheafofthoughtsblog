@@ -1,0 +1,30 @@
+{
+  "posts/index.qmd": {
+    "index.html": "0b5cd025",
+    "index.tex": "193af4e1"
+  },
+  "posts/ax-grothendieck.qmd": {
+    "ax-grothendieck.html": "eddbee10",
+    "ax-grothendieck.tex": "b16bb1bb"
+  },
+  "about.qmd": {
+    "about.html": "b663068e",
+    "about.tex": "3048aa76"
+  },
+  "index.qmd": {
+    "index.html": "61b82fe0",
+    "index.tex": "ebfda371"
+  },
+  "posts/interesting-facts/ax-grothendieck/ax-grothendieck.qmd": {
+    "ax-grothendieck.html": "82f74eff",
+    "ax-grothendieck.tex": "d646a1fd"
+  },
+  "posts/fermat-christmas-theorem/introduction/introduction.qmd": {
+    "introduction.html": "e09932ef",
+    "introduction.tex": "4ff637e5"
+  },
+  "posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.qmd": {
+    "how-many-primes.html": "6fed3587",
+    "how-many-primes.tex": "51746328"
+  }
+}

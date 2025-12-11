@@ -1,0 +1,31 @@
+---
+title: "About"
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/sheafofthoughts/sheafofthoughtsblog
+---
+
+I am a master's student in mathematics, mostly interested in algebraic stuff.
+In this blog I share things that I find interesting while I study.
+
+I write as a student who is still learning, and these posts are a way to collect what I study and to share it with others.
+
+---
+
+## Projects
+
+### Interesting facts
+Posts on more advanced topics that I encounter along the way (ideas that I like, want to remember, or want to understand better).
+
+### Route to the Fermat's Christmas Theorem
+Short weekly notes (aimed to non-experts) developing most of the theory needed to give a complete proof of the Fermat's Christmas Theorem, starting from the very basics. I will try to write the posts in a very simple language, so that anyone could easily follow along.
+
+---
+
+## Notes
+
+Everything here is written in my free time, so there may be occasional errors.
+If you notice something unclear, feel free to open an issue on GitHub.

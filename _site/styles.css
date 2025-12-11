@@ -1,0 +1,138 @@
+/* Base style for theorem-like blocks and proofs */
+div[id^="thm-"],
+div[id^="lem-"],
+div[id^="cor-"],
+div[id^="prp-"],
+div[id^="cnj-"],
+div[id^="exm-"],
+div[id^="rem-"],
+div[id^="def-"]
+div.definition,
+div.proof,
+div.claim {
+  border-left: 4px solid transparent;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  border-radius: 0.45rem;
+  background-color: #f9fafb;
+}
+
+/* Theorem: pastel purple */
+div[id^="thm-"] {
+  border-color: #8b5cf6;      /* purple-ish border */
+  background-color: #f5f3ff;  /* very light lavender */
+}
+
+/* Lemma: slightly different, indigo */
+div[id^="lem-"] {
+  border-color: #6366f1;      /* indigo border */
+  background-color: #eef2ff;  /* very light indigo */
+}
+
+/* Corollary: fuchsia */
+div[id^="cor-"] {
+  border-color: #d946ef;
+  background-color: #faf5ff;
+}
+
+/* Proof: light pink */
+div.proof {
+  border-color: #ec4899;
+  background-color: #fdf2f8;
+}
+
+/* Example: green */
+div[id^="exm-"] {
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+}
+
+/* Remark: light blue */
+div[id^="rem-"] {
+  border-color: #0ea5e9;
+  background-color: #eff6ff;
+}
+
+/* Conjecture: soft amber (less bright) */
+div[id^="cnj-"] {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+/* Claim: neutral gray */
+div.claim {
+  border-color: #6b7280;
+  background-color: #f9fafb;
+}
+
+/* Question: soft orange */
+div[id^="qst-"] {
+  border-left: 4px solid #f97316;   /* orange-500 border */
+  background-color: #fff7ed;        /* very light orange background */
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  border-radius: 0.45rem;
+}
+
+/* Definition: soft teal */
+div[id^="def-"],
+div.definition {
+  border-color: #14b8a6;      /* teal-500 */
+  background-color: #ecfeff;  /* very light teal */
+}
+
+
+
+
+/* Center the main content a bit */
+main.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Listing container */
+.quarto-listing {
+  margin-top: 1.5rem;
+}
+
+/* Each post item as a soft card */
+.quarto-listing .list-group-item {
+  border: none;
+  border-left: 4px solid #8b5cf6;           /* same purple as your theorems */
+  background-color: #f9fafb;                /* light warm-ish gray */
+  margin-bottom: 1rem;
+  padding: 1.1rem 1.4rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+/* Title of each post */
+.quarto-listing .listing-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+/* Date */
+.quarto-listing .listing-date {
+  font-size: 0.85rem;
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 0.35rem;
+}
+
+/* Description / excerpt */
+.quarto-listing .listing-description {
+  margin: 0;
+  color: #374151; /* gray-700 */
+}
+
+/* Remove the “Other Formats” box from listing pages */
+.quarto-listing .download-options {
+  display: none;
+}
+
+body {
+  background-color: #f5f5f7; /* very light warm gray */
+}
+

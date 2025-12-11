@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "SheafofThoughts"
+  site-url: https://sheafofthoughts.org
+  navbar:
+    left:
+      - href: index.qmd
+        text: Recent Posts
+    right:
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme:
+      - flatly
+    toc: true
+    toc-depth: 3
+    math: mathjax
+    css: styles.css
+  pdf:
+    documentclass: scrartcl
+    include-in-header: pdf-header.tex
+
