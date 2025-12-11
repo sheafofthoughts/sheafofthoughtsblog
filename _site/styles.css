@@ -6,7 +6,7 @@ div[id^="prp-"],
 div[id^="cnj-"],
 div[id^="exm-"],
 div[id^="rem-"],
-div[id^="def-"]
+div[id^="def-"],
 div.definition,
 div.proof,
 div.claim {
@@ -16,6 +16,22 @@ div.claim {
   border-radius: 0.45rem;
   background-color: #f9fafb;
 }
+
+div[id^="thm-"],
+div[id^="lem-"],
+div[id^="cor-"],
+div[id^="prp-"],
+div[id^="cnj-"],
+div[id^="exm-"],
+div[id^="rem-"],
+div[id^="def-"],
+div.definition,
+div.proof,
+div.claim,
+div[id^="qst-"] {
+  overflow-x: auto;
+}
+
 
 /* Theorem: pastel purple */
 div[id^="thm-"] {
@@ -90,9 +106,10 @@ div.definition {
   main.content,
   .page-layout-article main.content {
     max-width: 100%;
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
   }
+
 
   /* Slightly larger, more readable base font on mobile */
   body {
@@ -139,4 +156,26 @@ div.definition {
     padding-bottom: 0.35rem;
   }
 }
+
+/* Keep display equations inside the available width */
+mjx-container[jax="CHTML"][display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* If you ever switch to KaTeX, this covers that case too */
+.katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Make quiver.app iframes responsive */
+iframe.quiver-embed {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+}
+
 
