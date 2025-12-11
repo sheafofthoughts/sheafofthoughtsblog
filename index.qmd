@@ -5,8 +5,8 @@ listing:
   sort: "date desc"
   categories: true
   type: default
-  feed: true
-  feed-title: "SheafofThoughts"
+  feed:
+    title: "SheafofThoughts"
 ---
 
 
