@@ -195,3 +195,136 @@ iframe.quiver-embed {
   }
 }
 
+/* ============================
+   Dark-mode colors for theorem-like blocks
+   ============================ */
+
+/* In Quarto, dark mode adds the class `quarto-dark` to <body>.
+   We use that to override colors. */
+
+/* Make all theorem-like blocks use light text in dark mode */
+body.quarto-dark div[id^="thm-"],
+body.quarto-dark div[id^="lem-"],
+body.quarto-dark div[id^="cor-"],
+body.quarto-dark div[id^="prp-"],
+body.quarto-dark div[id^="cnj-"],
+body.quarto-dark div[id^="exm-"],
+body.quarto-dark div[id^="rem-"],
+body.quarto-dark div[id^="def-"],
+body.quarto-dark div.definition,
+body.quarto-dark div.proof,
+body.quarto-dark div.claim,
+body.quarto-dark div[id^="qst-"] {
+  color: #e5e7eb;  /* light gray text */
+}
+
+/* Theorem */
+body.quarto-dark div[id^="thm-"] {
+  border-color: #a5b4fc;      /* light indigo border */
+  background-color: #111827;  /* dark slate */
+}
+
+/* Lemma */
+body.quarto-dark div[id^="lem-"] {
+  border-color: #818cf8;
+  background-color: #020617;  /* very dark navy */
+}
+
+/* Corollary */
+body.quarto-dark div[id^="cor-"] {
+  border-color: #f472b6;
+  background-color: #4a044e;  /* dark magenta */
+}
+
+/* Proof */
+body.quarto-dark div.proof {
+  border-color: #f9a8d4;
+  background-color: #3b0764;  /* dark purple */
+}
+
+/* Example */
+body.quarto-dark div[id^="exm-"] {
+  border-color: #4ade80;
+  background-color: #022c22;  /* dark green */
+}
+
+/* Remark */
+body.quarto-dark div[id^="rem-"] {
+  border-color: #38bdf8;
+  background-color: #0f172a;  /* dark navy */
+}
+
+/* Definition */
+body.quarto-dark div[id^="def-"],
+body.quarto-dark div.definition {
+  border-color: #2dd4bf;
+  background-color: #042f2e;  /* dark teal */
+}
+
+/* Conjecture */
+body.quarto-dark div[id^="cnj-"] {
+  border-color: #fbbf24;
+  background-color: #451a03;  /* dark amber-brown */
+}
+
+/* Question */
+body.quarto-dark div[id^="qst-"] {
+  border-color: #fdba74;
+  background-color: #431407;  /* dark orange-brown */
+}
+
+/* Claim */
+body.quarto-dark div.claim {
+  border-color: #9ca3af;
+  background-color: #111827;  /* dark neutral gray */
+}
+
+
+
+/* ============================
+   Style the Quarto color-scheme toggle
+   ============================ */
+
+/* Make the toggle a small round icon button, with some breathing room */
+.navbar .quarto-color-scheme-toggle {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
+  padding: 0;
+  margin-left: 0.75rem;                 /* space from "About" */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Hide the default Bootstrap icon inside the button */
+.navbar .quarto-color-scheme-toggle i {
+  display: none;
+}
+
+/* Light-mode icon (sun) */
+.navbar .quarto-color-scheme-toggle::before {
+  content: "☀";
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Dark-mode icon (moon) */
+body.quarto-dark .navbar .quarto-color-scheme-toggle::before {
+  content: "🌙";
+}
+
+/* Slight background on hover */
+.navbar .quarto-color-scheme-toggle:hover {
+  background-color: rgba(148, 163, 184, 0.15);
+}
+
+/* Dark-mode: lighten external diagrams (e.g. quiver.app iframes) */
+:root[data-bs-theme="dark"] iframe {
+  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.05) !important;
+}
+
+

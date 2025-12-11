@@ -18,7 +18,9 @@ website:
 format:
   html:
     theme:
-      - flatly
+      light: flatly
+      dark: darkly
+
     toc: true
     toc-depth: 3
     math: mathjax

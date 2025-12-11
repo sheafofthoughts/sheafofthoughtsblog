@@ -29,5 +29,9 @@
   },
   "posts/interesting-facts/test/test.qmd": {
     "test.html": "556eaf3d"
+  },
+  "posts/advanced-topics/ax-grothendieck/ax-grothendieck.qmd": {
+    "ax-grothendieck.html": "afaaee07",
+    "ax-grothendieck.tex": "f980f046"
   }
 }
