@@ -83,4 +83,60 @@ div.definition {
 
 
 
+/* ---------- Mobile tweaks ---------- */
+@media (max-width: 768px) {
+
+  /* Make the main content more like a book column */
+  main.content,
+  .page-layout-article main.content {
+    max-width: 100%;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  /* Slightly larger, more readable base font on mobile */
+  body {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  /* Theorem/lemma/corollary/… blocks: reduce “massiveness” on mobile */
+  div[id^="thm-"],
+  div[id^="lem-"],
+  div[id^="cor-"],
+  div[id^="prp-"],
+  div[id^="cnj-"],
+  div[id^="exm-"],
+  div[id^="rem-"],
+  div.proof,
+  div.claim,
+  div[id^="qst-"] {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.65rem 0.85rem;
+    border-left-width: 3px;
+    border-radius: 0.35rem;
+  }
+
+  /* Avoid long equations/images overflowing horizontally */
+  img,
+  svg,
+  .quarto-figure img,
+  .quarto-figure svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Heading spacing a bit tighter to reduce empty space */
+  h1, h2, h3 {
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Navbar slightly slimmer on mobile so it wastes less space */
+  .navbar {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+  }
+}
 
