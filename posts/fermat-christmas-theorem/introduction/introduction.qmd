@@ -1,11 +1,9 @@
 ---
 title: "Introduction"
-subtitle: "Fermat's Christmas Theorem series"
+subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-11-29"
 bibliography: references.bib
 categories: [Expository, Number Theory]
-
-series: "Fermat's Christmas Theorem I"
 ---
 
 # Some history
