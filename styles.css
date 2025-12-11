@@ -1,4 +1,7 @@
-/* Base style for theorem-like blocks and proofs */
+/* ============================
+   Base style for theorem-like blocks and proofs
+   ============================ */
+
 div[id^="thm-"],
 div[id^="lem-"],
 div[id^="cor-"],
@@ -15,23 +18,20 @@ div.claim {
   margin: 1.25rem 0;
   border-radius: 0.45rem;
   background-color: #f9fafb;
-}
-
-div[id^="thm-"],
-div[id^="lem-"],
-div[id^="cor-"],
-div[id^="prp-"],
-div[id^="cnj-"],
-div[id^="exm-"],
-div[id^="rem-"],
-div[id^="def-"],
-div.definition,
-div.proof,
-div.claim,
-div[id^="qst-"] {
+  /* If content (equations, diagrams) is too wide,
+     enable horizontal scrolling instead of overflow */
   overflow-x: auto;
 }
 
+/* Question blocks: same idea, own colors */
+div[id^="qst-"] {
+  border-left: 4px solid #f97316;   /* orange-500 border */
+  background-color: #fff7ed;        /* very light orange background */
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  border-radius: 0.45rem;
+  overflow-x: auto;
+}
 
 /* Theorem: pastel purple */
 div[id^="thm-"] {
@@ -81,15 +81,6 @@ div.claim {
   background-color: #f9fafb;
 }
 
-/* Question: soft orange */
-div[id^="qst-"] {
-  border-left: 4px solid #f97316;   /* orange-500 border */
-  background-color: #fff7ed;        /* very light orange background */
-  padding: 0.75rem 1rem;
-  margin: 1.25rem 0;
-  border-radius: 0.45rem;
-}
-
 /* Definition: soft teal */
 div[id^="def-"],
 div.definition {
@@ -98,43 +89,70 @@ div.definition {
 }
 
 
-/* ==== Global protection against wide display math ==== */
+/* ============================
+   Global protection against wide display math
+   ============================ */
 
-/* KaTeX display math (Quarto default) */
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 100%;
-}
-
-/* MathJax v3 display math (if you ever switch) */
+/* MathJax v3 display math (what Quarto uses with mathjax) */
 mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  max-width: 100%;
 }
 
-/* Legacy wrapper that Quarto sometimes uses */
+/* Legacy Pandoc / MathJax wrapper */
 .math.display {
+  display: block;
+  max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+/* KaTeX display math (in case you ever switch) */
+.katex-display {
+  display: block;
   max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 
+/* ============================
+   Figures and quiver diagrams
+   ============================ */
+
+img,
+svg,
+.quarto-figure img,
+.quarto-figure svg,
+.quarto-figure iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make quiver.app iframes responsive */
+iframe.quiver-embed {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto;
+}
 
 
-/* ---------- Mobile tweaks ---------- */
+/* ============================
+   Mobile tweaks
+   ============================ */
+
 @media (max-width: 768px) {
 
-  /* Make the main content more like a book column */
+  /* Make page margins even thinner on mobile (half of 0.2rem) */
   main.content,
   .page-layout-article main.content {
     max-width: 100%;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
   }
-
 
   /* Slightly larger, more readable base font on mobile */
   body {
@@ -142,7 +160,7 @@ mjx-container[display="true"] {
     line-height: 1.55;
   }
 
-  /* Theorem/lemma/corollary/… blocks: reduce “massiveness” on mobile */
+  /* Theorem/lemma/corollary/… blocks: slightly slimmer on mobile */
   div[id^="thm-"],
   div[id^="lem-"],
   div[id^="cor-"],
@@ -150,6 +168,8 @@ mjx-container[display="true"] {
   div[id^="cnj-"],
   div[id^="exm-"],
   div[id^="rem-"],
+  div[id^="def-"],
+  div.definition,
   div.proof,
   div.claim,
   div[id^="qst-"] {
@@ -158,16 +178,6 @@ mjx-container[display="true"] {
     padding: 0.65rem 0.85rem;
     border-left-width: 3px;
     border-radius: 0.35rem;
-  }
-
-  /* Avoid long equations/images overflowing horizontally */
-  img,
-  svg,
-  .quarto-figure img,
-  .quarto-figure svg,
-  .quarto-figure iframe {
-    max-width: 100%;
-    height: auto;
   }
 
   /* Heading spacing a bit tighter to reduce empty space */
@@ -182,26 +192,4 @@ mjx-container[display="true"] {
     padding-bottom: 0.35rem;
   }
 }
-
-/* Keep display equations inside the available width */
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-/* If you ever switch to KaTeX, this covers that case too */
-.katex-display {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-/* Make quiver.app iframes responsive */
-iframe.quiver-embed {
-  display: block;
-  width: 100% !important;
-  max-width: 100%;
-}
-
 
