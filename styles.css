@@ -98,6 +98,31 @@ div.definition {
 }
 
 
+/* ==== Global protection against wide display math ==== */
+
+/* KaTeX display math (Quarto default) */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/* MathJax v3 display math (if you ever switch) */
+mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/* Legacy wrapper that Quarto sometimes uses */
+.math.display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+
+
 
 /* ---------- Mobile tweaks ---------- */
 @media (max-width: 768px) {
@@ -106,8 +131,8 @@ div.definition {
   main.content,
   .page-layout-article main.content {
     max-width: 100%;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
 
 
@@ -139,7 +164,8 @@ div.definition {
   img,
   svg,
   .quarto-figure img,
-  .quarto-figure svg {
+  .quarto-figure svg,
+  .quarto-figure iframe {
     max-width: 100%;
     height: auto;
   }
