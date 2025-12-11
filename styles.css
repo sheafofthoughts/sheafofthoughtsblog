@@ -83,51 +83,97 @@ div.definition {
 
 
 
+/* -------- DESKTOP (lg and up) -------- */
+@media (min-width: 992px) {
 
-/* Center the main content a bit */
-main.content {
-  max-width: 900px;
-  margin: 0 auto;
+  /* Keep the “book-like” centered column only on large screens */
+  main.content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .quarto-listing {
+    margin-top: 1.5rem;
+  }
+
+  .quarto-listing .list-group-item {
+    border: none;
+    border-left: 4px solid #8b5cf6;
+    background-color: #f9fafb;
+    margin-bottom: 1rem;
+    padding: 1.1rem 1.4rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  }
+
+  .quarto-listing .listing-title {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .quarto-listing .listing-date {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0.35rem;
+  }
+
+  .quarto-listing .listing-description {
+    margin: 0;
+    color: #374151;
+  }
 }
 
-/* Listing container */
-.quarto-listing {
-  margin-top: 1.5rem;
+/* -------- MOBILE / TABLET (below lg) -------- */
+@media (max-width: 991.98px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+    /* if the gray background feels heavy on mobile, you can switch to white: */
+    /* background-color: #ffffff; */
+  }
+
+  main.content {
+    padding: 0 1rem;
+  }
+
+  .quarto-listing {
+    margin-top: 1rem;
+  }
+
+  .quarto-listing .list-group-item {
+    border: none;
+    border-left: 3px solid #8b5cf6;
+    background-color: #f9fafb;
+    margin: 0.75rem 0;
+    padding: 0.9rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  }
+
+  .quarto-listing .listing-title {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+  }
+
+  .quarto-listing .listing-date {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+  }
+
+  .quarto-listing .listing-description {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #374151;
+  }
 }
 
-/* Each post item as a soft card */
-.quarto-listing .list-group-item {
-  border: none;
-  border-left: 4px solid #8b5cf6;           /* same purple as your theorems */
-  background-color: #f9fafb;                /* light warm-ish gray */
-  margin-bottom: 1rem;
-  padding: 1.1rem 1.4rem;
-  border-radius: 0.6rem;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
-}
-
-/* Title of each post */
-.quarto-listing .listing-title {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.2rem;
-}
-
-/* Date */
-.quarto-listing .listing-date {
-  font-size: 0.85rem;
-  color: #6b7280; /* gray-500 */
-  margin-bottom: 0.35rem;
-}
-
-/* Description / excerpt */
-.quarto-listing .listing-description {
-  margin: 0;
-  color: #374151; /* gray-700 */
-}
-
-/* Remove the “Other Formats” box from listing pages */
+/* Still hide the “Other Formats” box on listing pages */
 .quarto-listing .download-options {
   display: none;
 }
