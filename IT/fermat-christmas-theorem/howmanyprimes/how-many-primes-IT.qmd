@@ -5,6 +5,11 @@ date: "2025-12-08"
 categories: [Divulgativo, Teoria dei numeri]
 ---
 
+<div class="lang-switch">
+  <a href="/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html">ENG</a>
+  <span class="lang-current">ITA</span>
+</div>
+
 # Introduzione
 
 Nel [post precedente](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html) ci siamo posti alcune domande sui numeri primi, ad esempio:
