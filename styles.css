@@ -330,3 +330,59 @@ body.quarto-dark .navbar .quarto-color-scheme-toggle::before {
 
 
 
+/* ---------- Language switch (ENG / ITA) ---------- */
+
+.lang-switch {
+  display: flex;
+  justify-content: flex-end;   /* push to the right */
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.lang-switch a,
+.lang-switch .lang-current {
+  text-decoration: none;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+}
+
+/* Current language: filled pill */
+.lang-switch .lang-current {
+  font-weight: 600;
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* Other language: outlined pill */
+.lang-switch a {
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.lang-switch a:hover {
+  background-color: #e5e7eb;
+}
+
+/* Dark mode variants */
+
+:root[data-bs-theme="dark"] .lang-switch .lang-current {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+:root[data-bs-theme="dark"] .lang-switch a {
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+:root[data-bs-theme="dark"] .lang-switch a:hover {
+  background-color: #374151;
+}
+
+/* Do not show language switch inside listing previews */
+.quarto-listing .lang-switch {
+  display: none;
+}
+
