@@ -17,6 +17,8 @@ website:
 
 format:
   html:
+    include-in-header: 
+      - bing-verify.html
     theme:
       light: flatly
       dark: darkly
