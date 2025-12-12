@@ -1,0 +1,9 @@
+---
+title: "Some interesting consequence of Chebotarev density theorem"
+date: ""
+categories: [Intermediate, Number Theory]
+draft: unlinked
+---
+
+# Introduction
+hell

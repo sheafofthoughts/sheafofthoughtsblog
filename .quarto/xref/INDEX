@@ -57,5 +57,12 @@
   "IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.qmd": {
     "how-many-primes-IT.html": "7d110c1c",
     "how-many-primes-IT.tex": "a869d874"
+  },
+  "posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.qmd": {
+    "why-fermat-had-no-proof.html": "da25cd26"
+  },
+  "posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.qmd": {
+    "chebotarev-corollaries.html": "912e15d2",
+    "chebotarev-corollaries.tex": "a877aa98"
   }
 }

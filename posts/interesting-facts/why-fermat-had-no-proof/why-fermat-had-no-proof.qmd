@@ -1,9 +1,9 @@
 ---
-title: "Ax–Grothendieck Theorem"
+title: "Why Fermat had (probably) no proof?"
 date: "2025-12-07"
 categories: [Intermediate, Number Theory]
-draft: true
+draft: unlinked
 ---
 
 # Introduction
-hello
+hell
