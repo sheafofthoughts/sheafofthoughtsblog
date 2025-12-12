@@ -6,6 +6,11 @@ bibliography: references.bib
 categories: [Expository, Number Theory]
 ---
 
+<div class="lang-switch">
+  <span class="lang-current">ENG</span>
+  <a href="/IT/fermat-christmas-theorem/introduction/introduction-IT.qmd">ITA</a>
+</div>
+
 # Some history
 
 On Christmas day (25 December 1640), [Pierre de Fermat](https://en.wikipedia.org/wiki/Pierre_de_Fermat) wrote a letter to [Marin Mersenne](https://en.wikipedia.org/wiki/Marin_Mersenne) where he stated that every prime number of the form $4n+1$ could be written as the sum of two squares. He claimed to have an irrefutable proof of the statement. 
@@ -127,3 +132,4 @@ See you soon!
 > This article is part of the series [*Fermat's Christmas Theorem*](https://sheafofthoughts.org/posts/fermat-christmas-theorem/).
 
 > Next: [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
+

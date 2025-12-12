@@ -1,0 +1,135 @@
+---
+title: "Introduzione"
+subtitle: "[Serie \"Fermat's Christmas Theorem\"](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
+date: "2025-11-29"
+bibliography: references.bib
+categories: [Divulgativo, Teoria dei numeri]
+---
+
+<div class="lang-switch">
+  <a href="/posts/fermat-christmas-theorem/introduction/introduction.html">ENG</a>
+  <span class="lang-current">ITA</span>
+</div>
+
+# Un po' di storia
+
+Il giorno di Natale (25 dicembre 1640), [Pierre de Fermat](https://en.wikipedia.org/wiki/Pierre_de_Fermat) scrisse una lettera a [Marin Mersenne](https://en.wikipedia.org/wiki/Marin_Mersenne) in cui affermava che ogni numero primo della forma $4n+1$ può essere scritto come somma di due quadrati. Dichiarò di avere una prova inoppugnabile dell'enunciato. 
+
+Il risultato era già stato congetturato da [Albert Girard](https://en.wikipedia.org/wiki/Albert_Girard), ma la prima dimostrazione completa fu data da [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler), che la annunciò in una lettera inviata a [Christian Goldbach](https://en.wikipedia.org/wiki/Christian_Goldbach).
+
+Oggi il teorema è conosciuto come "Teorema di Fermat sulle somme di due quadrati" o "Teorema di Natale", a causa della data in cui Fermat dichiarò di averne trovato la dimostrazione.
+
+Informazioni storiche più dettagliate si possono trovare nel capitolo corrispondente di @dickinson_history_1938.
+
+---
+
+# A volte i pensieri casuali sono piacevoli
+
+Siamo annoiati, quindi cominciamo a scrivere qualche calcolo inutile sul nostro quaderno. Ci piacciono molto i numeri primi (spiegheremo il perché più avanti nei post), quindi iniziamo scrivendone alcuni:
+
+$$
+   2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41 \dots
+$$ {#eq-listaprimi}
+
+Visto che non abbiamo niente di meglio da fare, cominciamo a porci alcune domande su di loro, ad esempio:
+
+- quanti numeri primi esistono?
+- quali numeri possono essere espressi come prodotto di numeri primi?
+
+Queste domande ci piacciono (e daremo loro una risposta nei prossimi post), ma nel processo ce ne poniamo una più sottile: 
+
+::: {#qst-primenumberassumofsquares}
+**Domanda:**
+Quando possiamo scrivere un numero primo $p$ come somma di due quadrati? In altre parole, quando possiamo scrivere
+$$
+    p=a^2+b^2
+$$
+con $a$ e $b$ interi?
+:::
+
+
+
+Cerchiamo di avvicinarci al problema per tentativi, per capirlo meglio.
+
+- Consideriamo il numero primo $2$. Possiamo scriverlo come somma di due quadrati? Be', non ci sono molti modi di scrivere $2$ come somma di due interi:
+$$
+    2=1+1
+$$
+Ma poiché $1^2=1$ abbiamo
+$$
+    2=1^2+1^2
+$$
+quindi possiamo effettivamente scrivere $2$ come somma di due quadrati.
+
+- Proviamo con $3$: i soli modi possibili di scrivere $3$ come somma di due numeri sono $3=1+2$ e $3=0+3.$ Tuttavia $2$ e $3$ non sono quadrati, quindi $3$ non ha la proprietà.
+
+- Passiamo al numero $5$: possiamo scriverlo come $5=2+3$, ma siccome $2$ e $3$ non sono quadrati, dobbiamo cercare un'altra scrittura, che troviamo in $5=4+1$, dato che $4=2^2$ e $1=1^2$.
+  $$
+    5=1^2+2^2.
+$$
+
+- E $7$? Possiamo scrivere $7$ come:
+    - $7=0+7$, ma $7$ non è un quadrato;
+    - $7=1+6$, ma $6$ non è un quadrato;
+    - $7=2+5$, ma né $2$ né $5$ sono quadrati;
+    - $7=3+4$, ma $3$ non è un quadrato.
+
+Quindi $7$ non può essere scritto come somma di due quadrati.
+
+Continuando questo processo, troviamo che tra i primi nella [lista](#eq-listaprimi) sopra, quelli che soddisfano la proprietà sono:
+
+$$
+2, 5, 13, 17, 29, 37, 41 \dots
+$$ {#eq-listaprimisommaquadrati}
+
+Vogliamo indagare meglio le proprietà di [questi primi](#eq-listaprimisommaquadrati). Per prima cosa, osserviamo che ci interessano solo i primi dispari (cioè tutti i primi diversi da $2$), dato che sappiamo già che $2$ può essere scritto come somma di due quadrati. Pertanto, iniziamo a guardarli con attenzione e congetturare il seguente fatto: 
+
+>Tutti i primi _dispari_ che possono essere scritti come somma di due quadrati hanno resto $1$ quando divisi per $4$.
+
+Tuttavia, questo ci dice solo che *se* un primo dispari è una somma di due quadrati, allora lascia resto $1$ quando diviso per $4$.
+Ma in generale non è facile verificare se un primo è somma di due quadrati, perché dovremmo provare molte possibilità (guarda $7$ e immagina primi più grandi). Se vogliamo soltanto sapere se un primo ha resto $1$ quando diviso per $4$, possiamo calcolarlo velocemente e risparmiare tempo.
+
+Ma forse non abbiamo sprecato tempo a pensare a questo problema. Dal momento che possiamo controllare facilmente qual è il resto di un primo nella divisione per $4$, cosa succede se **possiamo scrivere un primo dispari come somma di due quadrati ogni volta che ha resto $1$ in una tale divisione?**
+Sarebbe ottimo: potremmo evitare lunghe verifiche caso per caso e limitarci a calcolare il resto, come abbiamo imparato alle elementari. Per fortuna, il teorema su cui vogliamo concentrarci ci dà la risposta:
+
+::: {#thm-FCT}
+
+## Fermat's Christmas Theorem
+Un numero primo dispari $p$ può essere scritto come somma di due quadrati se e solo se ha resto $1$ quando diviso per $4$.
+
+:::
+
+
+Ora capiamo perché il teorema è interessante: riduce un problema difficile (stabilire se un primo dispari è somma di due quadrati) a uno semplice (controllare se il suo resto è $1$ nella divisione per $4$).
+
+# Qualche piano per il futuro
+
+Ho scelto di parlare di questo teorema perché, per me, la parte più interessante è la sua dimostrazione. Come studente di matematica passo la maggior parte del mio tempo a cercare di capire dimostrazioni (per me la matematica è soprattutto questo).
+
+Forse alcuni di voi si stanno chiedendo:
+
+>Che cos'è una dimostrazione matematica?
+
+Non è una domanda semplice (è piuttosto [filosofica](https://en.wikipedia.org/wiki/Philosophy_of_mathematics)). In ogni caso, possiamo pensare a una dimostrazione come a un argomento che ci convince della verità di una certa proposizione. Probabilmente non tutti gli argomenti che presenterò saranno dimostrazioni pienamente formali, perché non sarò sempre molto rigoroso. Il mio obiettivo è trasmettere le idee generali più che i dettagli tecnici. Spero che il lettore più attento mi perdonerà se a volte preferisco la semplicità al rigore.
+
+Lo scopo è aiutare i lettori interessati a convincersi del Fermat's Christmas Theorem e, lungo il percorso, spiegare alcune idee matematiche di base.
+
+Un possibile piano per la dimostrazione sarà:
+
+- parlare di alcune [proprietà generali degli interi](https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic)
+- parlare di [aritmetica modulare](https://en.wikipedia.org/wiki/Modular_arithmetic)
+- parlare degli [interi gaussiani](https://en.wikipedia.org/wiki/Gaussian_integer)
+- mettere insieme tutti i pezzi
+
+Spero che vi godiate il percorso tanto quanto l'ho fatto io la prima volta che ho imparato queste bellissime idee.
+
+---
+
+A presto!
+
+---
+
+> Questo articolo fa parte della serie [*Fermat's Christmas Theorem*](https://sheafofthoughts.org/posts/fermat-christmas-theorem/).
+
+> Prossimo: [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
+

@@ -5,6 +5,12 @@ date: "2025-12-08"
 categories: [Expository, Number Theory]
 ---
 
+<div class="lang-switch">
+  <span class="lang-current">ENG</span>
+  <a href="/IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.qmd">ITA</a>
+</div>
+
+
 # Introduction
 
 In the [previous post](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html) we asked some questions about prime numbers such as:

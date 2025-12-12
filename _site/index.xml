@@ -20,6 +20,9 @@
 
 
 
+<div class="lang-switch">
+<p><span class="lang-current">ENG</span> <a href="../../../IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.html">ITA</a></p>
+</div>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>In the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html">previous post</a> we asked some questions about prime numbers such as:</p>
@@ -296,6 +299,9 @@
 
 
 
+<div class="lang-switch">
+<p><span class="lang-current">ENG</span> <a href="../../../IT/fermat-christmas-theorem/introduction/introduction-IT.html">ITA</a></p>
+</div>
 <section id="some-history" class="level1">
 <h1>Some history</h1>
 <p>On Christmas day (25 December 1640), <a href="https://en.wikipedia.org/wiki/Pierre_de_Fermat">Pierre de Fermat</a> wrote a letter to <a href="https://en.wikipedia.org/wiki/Marin_Mersenne">Marin Mersenne</a> where he stated that every prime number of the form <img src="https://latex.codecogs.com/png.latex?4n+1"> could be written as the sum of two squares. He claimed to have an irrefutable proof of the statement.</p>

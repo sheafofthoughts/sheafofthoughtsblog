@@ -42,5 +42,20 @@
   },
   "posts/fermat-christmas-theorem/FCT-posts/introduction/introduction.qmd": {
     "introduction.html": "003a356c"
+  },
+  "posts/fermat-christmas-theorem/introduction/introduction-IT.qmd": {
+    "introduction-IT.html": "a10958a0",
+    "introduction-IT.tex": "870dab44"
+  },
+  "IT/fermat-christmas-theorem/introduction/introduction-IT.qmd": {
+    "introduction-IT.html": "9b7aac30",
+    "introduction-IT.tex": "5fe3dd7a"
+  },
+  "IT/fermat-christmas-theorem/howmanyprimes/how-many-primes.qmd": {
+    "how-many-primes.html": "1b1af339"
+  },
+  "IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.qmd": {
+    "how-many-primes-IT.html": "7d110c1c",
+    "how-many-primes-IT.tex": "a869d874"
   }
 }

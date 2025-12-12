@@ -1,5 +1,6 @@
 ---
 title: "Ax–Grothendieck Theorem"
+subtitle: "When does injectivity imply bijectivity?"
 date: "2025-12-07"
 categories: [Intermediate, Algebraic Geometry]
 ---
