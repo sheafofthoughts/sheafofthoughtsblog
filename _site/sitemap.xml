@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sheafofthoughts.org/index.html</loc>
-    <lastmod>2025-12-11T23:37:40.839Z</lastmod>
+    <lastmod>2025-12-12T16:26:12.165Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/introduction/introduction-IT.html</loc>
     <lastmod>2025-12-11T23:55:32.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</loc>
+    <lastmod>2025-12-12T13:14:12.222Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</loc>
@@ -21,19 +25,15 @@
     <lastmod>2025-12-11T23:31:42.196Z</lastmod>
   </url>
   <url>
+    <loc>https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html</loc>
+    <lastmod>2025-12-12T13:16:46.767Z</lastmod>
+  </url>
+  <url>
     <loc>https://sheafofthoughts.org/about.html</loc>
     <lastmod>2025-12-11T21:20:04.142Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.html</loc>
     <lastmod>2025-12-12T09:12:31.807Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</loc>
-    <lastmod>2025-12-12T13:14:12.222Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html</loc>
-    <lastmod>2025-12-12T13:16:46.767Z</lastmod>
   </url>
 </urlset>
