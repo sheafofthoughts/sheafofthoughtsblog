@@ -51,6 +51,13 @@ div[id^="cor-"] {
   background-color: #faf5ff;
 }
 
+/* Proposition: muted blue-green */
+div[id^="prp-"] {
+  border-color: #0f766e;      /* teal-ish border */
+  background-color: #e0f2fe;  /* light bluish background */
+}
+
+
 /* Proof: light pink */
 div.proof {
   border-color: #ec4899;
@@ -229,6 +236,13 @@ body.quarto-dark div[id^="lem-"] {
   border-color: #818cf8;
   background-color: #020617;  /* very dark navy */
 }
+
+/* Proposition */
+body.quarto-dark div[id^="prp-"] {
+  border-color: #5eead4;      /* bright teal border */
+  background-color: #022c22;  /* dark teal background */
+}
+
 
 /* Corollary */
 body.quarto-dark div[id^="cor-"] {
