@@ -2,7 +2,7 @@
 title: "Some interesting consequences of Chebotarev density theorem"
 date: "2025-12-13"
 description: >
-  We will prove how some interesting proposition follows assuming Chebotarev density theorem.
+  We will prove how some interesting propositions follow from the Chebotarev density theorem.
 categories: [Intermediate, Number Theory]
 bibliography: references.bib
 draft: unlinked
@@ -10,154 +10,154 @@ draft: unlinked
 
 # Introduction
 
-The aim of this post is to explain some of the consequences of Cebotarev density theorem.
-
-First of all, we recall some definition we need, see chapter 13 of @Neukirch1999ANT.
+First of all, we recall some definitions we need; see Chapter VII, §13 of @Neukirch1999ANT.
 
 ::: {.definition}
 
 **Definition:**
-Let $K$ be a number field and $L/K$ be a Galois extension with Galois group $G$. For every $\sigma \in G$ we define $P _{L|K}(\sigma)$ as the set of all unramified prime ideals $\mathfrak{p}$ of $K$ such that there exists a prime ideal $\mathfrak{P}|\mathfrak{p}$ of $L$ satisfying
+Let $K$ be a number field and let $L/K$ be a (finite) Galois extension with Galois group $G$. For every $\sigma \in G$ we define $P_{L|K}(\sigma)$ as the set of all prime ideals $\mathfrak{p}$ of $K$ that are unramified in $L$ and such that there exists a prime ideal $\mathfrak{P}|\mathfrak{p}$ of $L$ satisfying
 $$
-	\sigma=\Big(\frac{L|K}{\mathfrak{P}}\Big)
+	\sigma=\Big(\frac{L|K}{\mathfrak{P}}\Big),
 $$
-where $\Big(\frac{L|K}{\mathfrak{P}}\Big)$ is the Frobenius automorphism of $\mathfrak{P}$ over $K$.
+where $\Big(\frac{L|K}{\mathfrak{P}}\Big)$ is the Frobenius automorphism of $\mathfrak{P}$ over $\mathfrak{p}$.
 
 :::
 
 Since for all $\tau\in G$ we have
 $$
-	\Big(\frac{L|K}{\tau \mathfrak{P}}\Big)=\tau \Big(\frac{L|K}{\mathfrak{P}}\Big)\tau ^{-1}
+	\Big(\frac{L|K}{\tau \mathfrak{P}}\Big)=\tau \Big(\frac{L|K}{\mathfrak{P}}\Big)\tau ^{-1},
 $$
-the set $P _{L|K}(\sigma)$ only depends on the conjugacy class
+the set $P_{L|K}(\sigma)$ only depends on the conjugacy class
 $$
-\langle \sigma \rangle:=\{\tau\sigma\tau ^{-1} | \tau \in G\}
+\langle \sigma \rangle:=\{\tau\sigma\tau ^{-1} \mid \tau \in G\}.
 $$
-Moreover, if $\langle\sigma\rangle\neq \langle \tau \rangle$ then $P _{L|K}(\sigma)\cap P _{L|K}(\tau)=\emptyset$.
+Moreover, if $\langle\sigma\rangle\neq \langle \tau \rangle$ then $P_{L|K}(\sigma)\cap P_{L|K}(\tau)=\emptyset$.
 
-
-We now want to define what a density is.
+We now want to define what a density is (for sets of primes of a number field).
 
 ::: {.definition}
 
 **Definition:**
-Let $A \subseteq \mathbb{N}$. Set $A(n):=\{1,\dots, n\}\cap A$ and $a(n):=|A(n)|$. If the limit exists, we define the *natural density* $d(A)$ as
+Let $K$ be a number field and let $S$ be a set of nonzero prime ideals of $\mathcal{O}_K$. For $x\ge 1$ set
 $$
-d(A):=\lim _{n\to \infty}\frac{a(n)}{n}
+S(x):=\{\mathfrak{p}\in S \mid N\mathfrak{p}\le x\},\qquad \pi_S(x):=|S(x)|.
+$$
+Let $\pi_K(x)$ be the number of all nonzero prime ideals $\mathfrak{p}\subseteq \mathcal{O}_K$ with $N\mathfrak{p}\le x$. If the limit exists, we define the *natural density* $d(S)$ as
+$$
+d(S):=\lim_{x\to \infty}\frac{\pi_S(x)}{\pi_K(x)}.
 $$
 
 :::
 
 ## The theorem
 
-We are now ready to state the theorem
+We are now ready to state the theorem.
 
 ::: {#thm-chebotarev}
 ## Chebotarev density theorem
 
-Let $K$ be a number field and $L/K$ be a finite Galois extension with Galois group $G$. Then for every $\sigma \in G$, the set $P _{L|K}(\sigma)$ has density (the limit exists), and it is given by
+Let $K$ be a number field and let $L/K$ be a finite Galois extension with Galois group $G$. Then for every $\sigma \in G$, the set $P_{L|K}(\sigma)$ has density (the limit exists), and it is given by
 $$
-	d(P _{L|K}(\sigma))=\frac{\#\langle \sigma\rangle}{\#G}
+	d(P_{L|K}(\sigma))=\frac{\#\langle \sigma\rangle}{\#G}.
 $$
 
 :::
 
 We will not prove @thm-chebotarev, since the argument is long and technical. For a complete proof you can look at @Neukirch1999ANT.
 
-
 # The consequences
 
-We finally can learn about the corollaries of @thm-chebotarev.
-
-
+We can finally look at some corollaries of @thm-chebotarev.
 
 ## There are infinitely many primes splitting completely
 
 ::: {.definition}
 
 **Definition:**
-Let $L/K$ be a Galois extension of number fields and $\mathfrak{p}$ be a prime of $K$. We say that $\mathfrak{p}$ splits completely in $L$ if 
+Let $L/K$ be a Galois extension of number fields and let $\mathfrak{p}$ be a prime of $K$. We say that $\mathfrak{p}$ splits completely in $L$ if
 $$
-	f(\mathfrak{p})=e(\mathfrak{p})=1
-$$ 
-where $f$ is the inertia index and $e$ is the ramification index. We define $P(L|K)$ as the set of primes of $K$ splitting completely in $L$.
+	e(\mathfrak{p})=f(\mathfrak{p})=1,
+$$
+where $e(\mathfrak{p})$ is the ramification index and $f(\mathfrak{p})$ is the residue degree. We define $P(L|K)$ as the set of primes of $K$ splitting completely in $L$.
 
 :::
 
 ::: {#cor-infinitelyprimessplitting}
 ## of @thm-chebotarev
 
-Let $K$ be a number field and $L/K$ be a finite Galois extension. Then there are infinitely many primes of $K$ splitting completely in $L$.
+Let $K$ be a number field and let $L/K$ be a finite Galois extension. Then there are infinitely many primes of $K$ splitting completely in $L$.
 :::
 
 ::: {.proof}
 
-Let $\mathfrak{p}$ be a prime of $K$. For the same reasoning used in the proof of @lem-primesplitsiff we have
+Let $\mathfrak{p}$ be a prime of $K$ unramified in $L$, and let $\mathfrak{P}|\mathfrak{p}$ in $L$. Then
 $$
-	\mathfrak{p} \text{ splits completely in } L \iff \Big( \frac{L|K}{\mathfrak{P}} \Big)=1_G 
+	\mathfrak{p} \text{ splits completely in } L \iff \Big( \frac{L|K}{\mathfrak{P}} \Big)=1_G.
 $$
-Indeed, $\mathfrak{p}$ splits completely in $L$ means that it is unramified and that its inertia index is $1$. But this means that the decomposition group $D(\mathfrak{P}|\mathfrak{p})$ is trivial for every $\mathfrak{P}|\mathfrak{p}$. Since the Frobenius automorphism a generator of the group,
+Indeed, $\mathfrak{p}$ splits completely means $e(\mathfrak{P}|\mathfrak{p})=f(\mathfrak{P}|\mathfrak{p})=1$, hence the decomposition group $D(\mathfrak{P}|\mathfrak{p})$ is trivial. Since $\mathfrak{p}$ is unramified, the decomposition group is cyclic and generated by the Frobenius element, so
 $$
-	D(\mathfrak{P}|\mathfrak{p})=\{1\}\iff \Big(\frac{L|K}{\mathfrak{P}}\Big)=1_G
+	D(\mathfrak{P}|\mathfrak{p}) \text{ is trivial } \iff \Big(\frac{L|K}{\mathfrak{P}}\Big)=1_G.
 $$
 
-
-Therefore, we get that $P(L|K)=P _{L|K}(1_G)$. Applying @thm-chebotarev we obtain
+Therefore, we get $P(L|K)=P_{L|K}(1_G)$. Applying @thm-chebotarev we obtain
 $$
-	d(P(L|K))=\frac{1}{\# \mathrm{Gal}(L/K)}\neq 0
-$$ 
-hence the set $P(L|K)$ must be infinite (otherwise its density would be $0$.
+	d(P(L|K))=\frac{1}{\# \mathrm{Gal}(L/K)}> 0,
+$$
+hence the set $P(L|K)$ must be infinite (otherwise its density would be $0$).
 
 :::
-
-
-
 
 ## Characterization of number fields through splitting of primes
 
 ::: {#lem-primesplitsiff}
-Let $K$ be a number field, let $L$ and $M$ be two finite Galois extensions of $K$, and $N:=LM$ the composite field. For every prime $\mathfrak{p}$ of $K$ unramified in $N$, pick a prime $\mathfrak{P}$ of $N$ above $\mathfrak{p}$. Then
+Let $K$ be a number field, let $L$ and $M$ be two finite Galois extensions of $K$, and $N:=LM$ the composite field. Set
 $$
-	\mathfrak{p}\in P(M|K)\iff \Big(\frac{N|K}{\mathfrak{P}}\Big)\in H_M
+G:=\mathrm{Gal}(N/K),\qquad H_M:=\mathrm{Gal}(N/M).
+$$
+For every prime $\mathfrak{p}$ of $K$ unramified in $N$, pick a prime $\mathfrak{P}$ of $N$ above $\mathfrak{p}$. Then
+$$
+	\mathfrak{p}\in P(M|K)\iff \Big(\frac{N|K}{\mathfrak{P}}\Big)\in H_M.
 $$
 
 :::
+
 ::: {.proof}
 
 Since $M/K$ is Galois, the restriction map
 $$
 \mathrm{res}_M: G=\mathrm{Gal}(N/K)\to \mathrm{Gal}(M/K)
 $$
-is surjective with kernel $H_M$. Since $\mathfrak{p}$ is unramified, the Frobenius automorphism is well defined and it satisfies:
+is surjective with kernel $H_M$. Since $\mathfrak{p}$ is unramified in $N$, the Frobenius element is well-defined and it satisfies
 $$
-	\mathrm{res}_M\Big(\Big(\frac{N|K}{\mathfrak{P}}\Big)\Big)=\Big(\frac{M|K}{\mathfrak{P}\cap M}\Big)\in \mathrm{Gal}(M/K)
-$$ 
-Now observe that $\mathfrak{p}$ splits completely in $M$ if and only if every prime of $M$ above $\mathfrak{p}$ has inertia index $1$ (since we already know that $\mathfrak{p}$ is unramified). Equivalently, (as seen in the proof of @cor-infinitelyprimessplitting)
+	\mathrm{res}_M\Big(\Big(\frac{N|K}{\mathfrak{P}}\Big)\Big)=\Big(\frac{M|K}{\mathfrak{P}\cap M}\Big)\in \mathrm{Gal}(M/K).
 $$
-	\Big(\frac{M|K}{\mathfrak{P}}\Big)=1.
+
+Now observe that $\mathfrak{p}$ splits completely in $M$ if and only if (equivalently) the Frobenius element in $\mathrm{Gal}(M/K)$ is trivial:
+$$
+	\mathfrak{p}\in P(M|K)\iff \Big(\frac{M|K}{\mathfrak{P}\cap M}\Big)=1.
 $$
 This holds if and only if $\Big(\frac{N|K}{\mathfrak{P}}\Big)\in \mathrm{ker}(\mathrm{res}_M)=H_M$.
 
 :::
 
+::: {#cor-characterization-of-number-fields}
+## M. Bauer, corollary of @thm-chebotarev
 
-::: {#prp-characterization-of-number-fields}
-## M. Bauer
 Let $K$ be a number field and let $L$ and $M$ be two finite Galois extensions of $K$. Then
 $$
-	P(M|K) \subseteq P(L|K) \iff L \subseteq M
+	P(M|K) \subseteq P(L|K) \iff L \subseteq M.
 $$
-Therefore, 
+Therefore,
 $$
-	P(M|K)=P(L|K)\iff L=M
+	P(M|K)=P(L|K)\iff L=M.
 $$
-In other words, the primes splitting completely determine univocally the number field.
+In other words, the primes splitting completely determine uniquely the number field.
 
 :::
 
 ::: {.proof}
 
-If $L \subseteq M$ then $P(M|K) \subseteq P(L|K)$ because of the multiplicativity of inertia and ramification index in towers of extensions.
+If $L \subseteq M$ then $P(M|K) \subseteq P(L|K)$ because in a tower the ramification indices and residue degrees are multiplicative.
 
 Conversely, define the composite field $N:=LM$ and set
 $$
@@ -166,21 +166,129 @@ $$
 
 Assume for the sake of contradiction that $L\not\subseteq M$. This is equivalent to $H_M\not \subseteq H_L$. Choose $g\in H_M\smallsetminus H_L$. Since $H_M$ and $H_L$ are normal,
 $$
-\langle g\rangle \subseteq H_M,\quad \langle g\rangle \cap H_L=\emptyset
+\langle g\rangle \subseteq H_M,\quad \langle g\rangle \cap H_L=\emptyset.
 $$
 
-By @thm-chebotarev there are infinitely many primes $\mathfrak{p}$ of $K$ unramified in $N$ with Frobenius conjugacy class equal to $\langle g\rangle$ (if it was finite, the density would be $0$). For such a $\mathfrak{p}$, pick $\mathfrak{P}|\mathfrak{p}$ in $N$; then 
+By @thm-chebotarev there are infinitely many primes $\mathfrak{p}$ of $K$ unramified in $N$ with Frobenius conjugacy class equal to $\langle g\rangle$ (if it was finite, the density would be $0$). For such a $\mathfrak{p}$, pick $\mathfrak{P}|\mathfrak{p}$ in $N$; then
 $$
-	\Big(\frac{N|K}{\mathfrak{P}}\Big)\in \langle g\rangle \subseteq H_M
+	\Big(\frac{N|K}{\mathfrak{P}}\Big)\in \langle g\rangle \subseteq H_M.
+$$
+By @lem-primesplitsiff we get $\mathfrak{p}\in P(M|K)$.
+
+But also $\Big(\frac{N|K}{\mathfrak{P}}\Big)\notin H_L$, hence (by the same lemma applied to $L$) we have $\mathfrak{p}\notin P(L|K)$. This contradicts $P(M|K) \subseteq P(L|K)$.
+
+Therefore $L\subseteq M$.
+
+:::
+
+## Dirichlet's Theorem on primes in arithmetic progressions
+
+::: {#cor-dirichlet}
+## Dirichlet's Theorem
+
+Let $a,n\geq 1$ be integers with $\gcd(a,n)=1$. Then there are infinitely many primes such that $p\equiv a \pmod n$.
+:::
+
+::: {.proof}
+
+Let $\zeta$ be a primitive $n$-th root of unity, define $L:=\mathbb{Q}(\zeta)$, and let $G:=\mathrm{Gal}(L/\mathbb{Q})$. We know that $L/\mathbb{Q}$ is Galois and
+$$
+	G\cong (\mathbb{Z}/n \mathbb{Z})^\times,
+$$
+where the class of $b$ corresponds to the automorphism sending $\zeta$ to $\zeta^b$.
+
+Let $p$ be a prime with $p\nmid n$. Then $p$ is unramified in $L$, and for any prime $\mathfrak{P}|p$ in $L$ the Frobenius automorphism satisfies
+$$
+	\Big(\frac{L|\mathbb{Q}}{\mathfrak{P}}\Big)(\zeta)=\zeta^p.
+$$
+In other words, under the isomorphism $G\cong(\mathbb{Z}/n\mathbb{Z})^\times$, the Frobenius element corresponds to the class of $p \bmod n$.
+
+Therefore,
+$$
+	p\equiv a \pmod n
+	\quad\iff\quad
+	\Big(\frac{L|\mathbb{Q}}{\mathfrak{P}}\Big)\ \text{corresponds to } a\in(\mathbb{Z}/n\mathbb{Z})^\times.
+$$
+By @thm-chebotarev, the set of such primes has positive density, hence it is infinite. (The finitely many primes dividing $n$ are irrelevant.)
+
+:::
+
+## Condition for linearity of a polynomial
+
+::: {#cor-irrpolylinear}
+
+Let $f\in \mathbb{Z}[X]$ be an irreducible polynomial such that for all but finitely many primes $p$ the reduction $\bar f\in \mathbb{F}_p[X]$ has a root. Then $\deg(f)=1$.
+:::
+
+::: {.proof}
+
+Let $n:=\deg(f)$ and suppose that $n>1$. Let $L$ be the splitting field of $f$ over $\mathbb{Q}$ and set $G:=\mathrm{Gal}(L/\mathbb{Q})$. Let $\Omega$ be the set of roots of $f$ in $L$. Since $f$ is irreducible, the action of $G$ on $\Omega$ is transitive. By Burnside's lemma (orbit-counting), there is some $\sigma\in G$ with no fixed points in $\Omega$.
+
+ Let $S$ be the finite set of rational primes $p$ such that $p$ divides the discriminant of $f$ or the leading coefficient of $f$. For every $p\notin S$, the reduction $(f\bmod p)$ is separable, and $p$ is unramified in the splitting field $L$. Moreover, the factorization type of $(f\bmod p)$ corresponds to the cycle structure of $\Big(\frac{L|\mathbb{Q}}{\mathfrak{P}}\Big)$ acting on $\Omega$, where $\mathfrak{P}|p$. In particular, $(f\bmod p)$ has a root in $\mathbb{F}_p$ if and only if $\Big(\frac{L|\mathbb{Q}}{\mathfrak{P}}\Big)$ has a fixed point in $\Omega$.
+
+By @thm-chebotarev, the set $P_{L|\mathbb{Q}}(\sigma)$ is infinite (it has positive density). Since $S$ is finite, there are infinitely many primes $p\notin S$ such that
+$$
+	\Big(\frac{L|\mathbb{Q}}{\mathfrak{P}}\Big)\in \langle\sigma\rangle,
+$$
+where $\mathfrak{P}|p$. For all such primes the Frobenius automorphism has no fixed points, thus the reduction of $f$ has no roots modulo these primes. This is a contradiction, since we assumed that $(f\bmod p)$ has a root for all but finitely many primes.
+
+:::
+
+## How many $\mathbb{F}_p$-points?
+
+::: {#cor-howmanyFppoints}
+
+Let $A$ be a $\mathbb{Z}$-algebra of finite type such that there exists a ring map $f:A\to \mathbb{C}$. Then for infinitely many primes $p$ there is a ring morphism $A\to \mathbb{F}_p$.
+:::
+
+What we are saying is that if you consider a set of polynomials in $\mathbb{Z}[X_1,\dots , X_n]$ (the polynomials defining $A$ as a quotient of $\mathbb{Z}[X_1,\dots, X_n]$), then if they have a common solution in $\mathbb{C}$ (i.e. there is a map $A\to \mathbb{C}$), they have a common solution modulo $p$, for infinitely many primes $p$ (i.e. a map $A\to \mathbb{F}_p$).
+
+::: {.proof}
+
+Since we have a map $f:A\to \mathbb{C}$, we get $A\otimes_\mathbb{Z}\mathbb{C}\neq 0$, which is equivalent to $A\otimes_\mathbb{Z}\mathbb{Q}\neq 0$ (because $\mathbb{Q}\to \mathbb{C}$ is faithfully flat). In particular, $A\otimes_\mathbb{Z}\mathbb{Q}$ has a maximal ideal $\mathfrak{m}$. Let
+$$
+L := (A\otimes_\mathbb{Z}\mathbb{Q})/\mathfrak{m}.
+$$
+By Zariski's lemma, $L$ is a finite extension of $\mathbb{Q}$, hence a number field.
+
+Consider now the composition map $\phi: A\to A\otimes_\mathbb{Z}\mathbb{Q}\to L$. Let $a_1,\dots,a_r$ be generators of $A$ as a $\mathbb{Z}$-algebra. Choose $N\in \mathbb{Z}_{>0}$ such that $N\cdot \phi(a_i)$ is an algebraic integer for every $i=1,\dots, r$. Then $\phi(a_i)\in \mathcal{O}_L[1/N]$ for all $i$, hence $\phi$ lands in $\mathcal{O}_L[1/N]$, i.e. we have a map
+$$
+\phi: A\to \mathcal{O}_L[1/N].
+$$
+Equivalently, it factorizes through a map
+$$
+\bar \phi: A[1/N]\to \mathcal{O}_L[1/N].
 $$
 
-By @lem-primesplitsiff
+Fix a rational prime $p$ not dividing $N$. Any prime ideal $\mathfrak{P}$ of $L$ dividing $p$ gives the reduction map
 $$
-\mathfrak{p}\in P(M|K)
+	\mathcal{O}_L[1/N]\to \mathcal{O}_L/\mathfrak{P}.
 $$
-But also $\Big(\frac{N|K}{\mathfrak{P}}\Big)\notin H_L$, so $\mathfrak{p}\notin P(L|K)$. This contradicts $P(M|K) \subseteq P(L|K)$.
+Moreover, if the residue degree satisfies $f(\mathfrak{P}|p)=1$, then $\mathcal{O}_L/\mathfrak{P}\cong \mathbb{F}_p$, hence we get a map
+$$
+	A[1/N]\to \mathcal{O}_L[1/N]\to \mathcal{O}_L/\mathfrak{P}\cong \mathbb{F}_p.
+$$
+Since $p\nmid N$, this is the same as a map $A\to \mathbb{F}_p$.
+
+Let $M$ be the Galois closure of $L$ over $\mathbb{Q}$. By @cor-infinitelyprimessplitting there are infinitely many primes $p$ splitting completely in $M$. Discarding the finitely many primes dividing $N$, we can assume also $p\nmid N$.
+
+Let $p$ be such a prime. Choose a prime $\mathfrak{Q}$ of $M$ above $p$ and set $\mathfrak{P}:=\mathfrak{Q}\cap \mathcal{O}_L$. Since $p$ splits completely in $M$, we have $f(\mathfrak{Q}|p)=1$. By multiplicativity of residue degrees in towers,
+$$
+f(\mathfrak{Q}|p)=f(\mathfrak{Q}|\mathfrak{P})\cdot f(\mathfrak{P}|p)=1,
+$$
+hence $f(\mathfrak{P}|p)=1$ and therefore $\mathcal{O}_L/\mathfrak{P}\cong \mathbb{F}_p$. This gives a map $A\to \mathbb{F}_p$ for infinitely many primes $p$.
 
 :::
 
 
+
+# Conclusion
+
+In this post we saw how the Chebotarev density theorem can be used as a very efficient “machine” to produce arithmetic information.
+
+Starting from the simple observation that Frobenius elements encode splitting behaviour, we deduced that totally split primes always exist in abundance (in fact with positive density), and we used this to prove a rigidity statement: in the Galois case, knowing which primes split completely already determines the extension.
+
+We also proved Dirichlet’s theorem on primes in arithmetic progressions by applying Chebotarev to cyclotomic fields, and we saw a typical application to polynomials: if an irreducible polynomial has a root modulo almost every prime, then it must be linear.
+
+All these results share the same pattern: translate a question into a condition on Frobenius conjugacy classes, then use Chebotarev to conclude that the relevant primes not only exist, but have a precise density.
 
