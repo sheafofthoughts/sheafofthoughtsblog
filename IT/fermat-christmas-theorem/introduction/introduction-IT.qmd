@@ -82,7 +82,7 @@ $$
 2, 5, 13, 17, 29, 37, 41 \dots
 $$ {#eq-listaprimisommaquadrati}
 
-Vogliamo indagare meglio le proprietà di [questi primi](#eq-listaprimisommaquadrati). Per prima cosa, osserviamo che ci interessano solo i primi dispari (cioè tutti i primi diversi da $2$), dato che sappiamo già che $2$ può essere scritto come somma di due quadrati. Pertanto, iniziamo a guardarli con attenzione e congetturare il seguente fatto: 
+Vogliamo indagare meglio le proprietà di questi primi. Per prima cosa, osserviamo che ci interessano solo i primi dispari (cioè tutti i primi diversi da $2$), dato che sappiamo già che $2$ può essere scritto come somma di due quadrati. Pertanto, iniziamo a guardarli con attenzione e congetturare il seguente fatto: 
 
 >Tutti i primi _dispari_ che possono essere scritti come somma di due quadrati hanno resto $1$ quando divisi per $4$.
 

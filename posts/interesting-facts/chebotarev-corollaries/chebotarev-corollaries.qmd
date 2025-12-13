@@ -1,6 +1,8 @@
 ---
 title: "Some interesting consequences of Chebotarev density theorem"
 date: "2025-12-13"
+description: >
+  We will prove how some interesting proposition follows assuming Chebotarev density theorem.
 categories: [Intermediate, Number Theory]
 bibliography: references.bib
 draft: unlinked
@@ -10,7 +12,7 @@ draft: unlinked
 
 The aim of this post is to explain some of the consequences of Cebotarev density theorem.
 
-First of all, we define the objects we need, see chapter 13 of @Neukirch1999ANT.
+First of all, we recall some definition we need, see chapter 13 of @Neukirch1999ANT.
 
 ::: {.definition}
 
@@ -60,26 +62,83 @@ $$
 
 :::
 
-We will not prove @thm-chebotarev, since the argument is long and technical. For a complete proof look at @Neukirch1999ANT.
+We will not prove @thm-chebotarev, since the argument is long and technical. For a complete proof you can look at @Neukirch1999ANT.
 
 
 # The consequences
 
 We finally can learn about the corollaries of @thm-chebotarev.
 
-## Characterization of number fields through splitting of primes
+
+
+## There are infinitely many primes splitting completely
 
 ::: {.definition}
 
 **Definition:**
-Let $L/K$ be a Galois extension of number fields and $\mathfrak{p}$ be a prime of $K$. We say that $\mathfrak{p}$ splits completely in $L$ if for every prime $\mathfrak{P}|\mathfrak{p}$
+Let $L/K$ be a Galois extension of number fields and $\mathfrak{p}$ be a prime of $K$. We say that $\mathfrak{p}$ splits completely in $L$ if 
 $$
-	f(\mathfrak{P}|\mathfrak{p})=e(\mathfrak{P}|\mathfrak{p})=1
+	f(\mathfrak{p})=e(\mathfrak{p})=1
 $$ 
 where $f$ is the inertia index and $e$ is the ramification index. We define $P(L|K)$ as the set of primes of $K$ splitting completely in $L$.
 
 :::
 
+::: {#cor-infinitelyprimessplitting}
+## of @thm-chebotarev
+
+Let $K$ be a number field and $L/K$ be a finite Galois extension. Then there are infinitely many primes of $K$ splitting completely in $L$.
+:::
+
+::: {.proof}
+
+Let $\mathfrak{p}$ be a prime of $K$. For the same reasoning used in the proof of @lem-primesplitsiff we have
+$$
+	\mathfrak{p} \text{ splits completely in } L \iff \Big( \frac{L|K}{\mathfrak{P}} \Big)=1_G 
+$$
+Indeed, $\mathfrak{p}$ splits completely in $L$ means that it is unramified and that its inertia index is $1$. But this means that the decomposition group $D(\mathfrak{P}|\mathfrak{p})$ is trivial for every $\mathfrak{P}|\mathfrak{p}$. Since the Frobenius automorphism a generator of the group,
+$$
+	D(\mathfrak{P}|\mathfrak{p})=\{1\}\iff \Big(\frac{L|K}{\mathfrak{P}}\Big)=1_G
+$$
+
+
+Therefore, we get that $P(L|K)=P _{L|K}(1_G)$. Applying @thm-chebotarev we obtain
+$$
+	d(P(L|K))=\frac{1}{\# \mathrm{Gal}(L/K)}\neq 0
+$$ 
+hence the set $P(L|K)$ must be infinite (otherwise its density would be $0$.
+
+:::
+
+
+
+
+## Characterization of number fields through splitting of primes
+
+::: {#lem-primesplitsiff}
+Let $K$ be a number field, let $L$ and $M$ be two finite Galois extensions of $K$, and $N:=LM$ the composite field. For every prime $\mathfrak{p}$ of $K$ unramified in $N$, pick a prime $\mathfrak{P}$ of $N$ above $\mathfrak{p}$. Then
+$$
+	\mathfrak{p}\in P(M|K)\iff \Big(\frac{N|K}{\mathfrak{P}}\Big)\in H_M
+$$
+
+:::
+::: {.proof}
+
+Since $M/K$ is Galois, the restriction map
+$$
+\mathrm{res}_M: G=\mathrm{Gal}(N/K)\to \mathrm{Gal}(M/K)
+$$
+is surjective with kernel $H_M$. Since $\mathfrak{p}$ is unramified, the Frobenius automorphism is well defined and it satisfies:
+$$
+	\mathrm{res}_M\Big(\Big(\frac{N|K}{\mathfrak{P}}\Big)\Big)=\Big(\frac{M|K}{\mathfrak{P}\cap M}\Big)\in \mathrm{Gal}(M/K)
+$$ 
+Now observe that $\mathfrak{p}$ splits completely in $M$ if and only if every prime of $M$ above $\mathfrak{p}$ has inertia index $1$ (since we already know that $\mathfrak{p}$ is unramified). Equivalently, (as seen in the proof of @cor-infinitelyprimessplitting)
+$$
+	\Big(\frac{M|K}{\mathfrak{P}}\Big)=1.
+$$
+This holds if and only if $\Big(\frac{N|K}{\mathfrak{P}}\Big)\in \mathrm{ker}(\mathrm{res}_M)=H_M$.
+
+:::
 
 
 ::: {#prp-characterization-of-number-fields}
@@ -92,7 +151,7 @@ Therefore,
 $$
 	P(M|K)=P(L|K)\iff L=M
 $$
-i.e. the primes splitting completely completely determine the number field.
+In other words, the primes splitting completely determine univocally the number field.
 
 :::
 
@@ -100,7 +159,7 @@ i.e. the primes splitting completely completely determine the number field.
 
 If $L \subseteq M$ then $P(M|K) \subseteq P(L|K)$ because of the multiplicativity of inertia and ramification index in towers of extensions.
 
-Conversely, define $N:=LM$ as the composite field and set
+Conversely, define the composite field $N:=LM$ and set
 $$
 G:=\mathrm{Gal}(N/K),\quad H_L:=\mathrm{Gal}(N/L),\quad H_M:=\mathrm{Gal}(N/M).
 $$
@@ -110,53 +169,18 @@ $$
 \langle g\rangle \subseteq H_M,\quad \langle g\rangle \cap H_L=\emptyset
 $$
 
-By @thm-chebotarev there are infinitely many primes $\mathfrak{p}$ of $K$ unramified in $N$ with Frobenius conjugacy class equal to $\langle g\rangle$. For such a $\mathfrak{p}$, pick $\mathfrak{P}|\mathfrak{p}$ in $N$; then 
+By @thm-chebotarev there are infinitely many primes $\mathfrak{p}$ of $K$ unramified in $N$ with Frobenius conjugacy class equal to $\langle g\rangle$ (if it was finite, the density would be $0$). For such a $\mathfrak{p}$, pick $\mathfrak{P}|\mathfrak{p}$ in $N$; then 
 $$
 	\Big(\frac{N|K}{\mathfrak{P}}\Big)\in \langle g\rangle \subseteq H_M
 $$
 
-
-::: {.claim}
-<a id="clm-primesplitsiff"></a>
-**Claim:**
-For every prime $\mathfrak{p}$ of $K$ unramified in $N$, pick a prime $\mathfrak{P}$ of $N$ above $\mathfrak{p}$. Then
-$$
-	\mathfrak{p}\in P(M|K)\iff \Big(\frac{N|K}{\mathfrak{P}}\Big)\in H_M
-$$
-
-:::
-
-Assuming the claim we get
+By @lem-primesplitsiff
 $$
 \mathfrak{p}\in P(M|K)
 $$
 But also $\Big(\frac{N|K}{\mathfrak{P}}\Big)\notin H_L$, so $\mathfrak{p}\notin P(L|K)$. This contradicts $P(M|K) \subseteq P(L|K)$.
 
-
-We are left to prove the claim.
-
-::: {.proof}
-#### of the claim
-
-Since $M/K$ is Galois, the restriction map
-$$
-\mathrm{res}_M: G=\mathrm{Gal}(N/K)\to \mathrm{Gal}(M/K)
-$$
-is surjective with kernel $H_M$. Since $\mathfrak{p}$ is unramified, the Frobenius automorphism is well defined and it satisfies:
-$$
-	\mathrm{res}_M\Big(\Big(\frac{N|K}{\mathfrak{P}}\Big)\Big)=\Big(\frac{M|K}{\mathfrak{P}\cap M}\Big)\in \mathrm{Gal}(M/K)
-$$ 
-Now observe that $\mathfrak{p}$ splits completely in $M$ if and only if every prime of $M$ above $\mathfrak{p}$ has inertia index $1$ (since we already know that $\mathfrak{p}$ is unramified). Equivalently, the decomposition group in $\mathrm{Gal}(E/K)$ is trivial, which is the same of saying that
-$$
-	\Big(\frac{M|K}{\mathfrak{p}}\Big)=1.
-$$
-This holds if and only if $\Big(\frac{N|K}{\mathfrak{p}}\Big)\in \mathrm{ker}(\mathrm{res}_M)=H_M$.
-
 :::
-:::
-
-
-
 
 
 

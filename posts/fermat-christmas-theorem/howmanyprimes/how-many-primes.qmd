@@ -2,6 +2,8 @@
 title: "How many primes are there?"
 subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-08"
+description: >
+  Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic.
 categories: [Expository, Number Theory]
 ---
 

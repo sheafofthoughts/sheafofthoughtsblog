@@ -9,7 +9,7 @@ listing:
   sort: "date desc"
   categories: true
   type: default
-  fields: [title, subtitle, date, categories]
+  fields: [title, subtitle, description, date, categories]
   feed:
     title: "SheafofThoughts"
 

@@ -2,6 +2,8 @@
 title: "Introduction"
 subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-11-29"
+description:
+  We introduce Fermat’s Christmas Theorem and try to understand its meaning through concrete examples.
 bibliography: references.bib
 categories: [Expository, Number Theory]
 ---
@@ -81,7 +83,7 @@ $$
 2, 5, 13, 17, 29, 37, 41 \dots
 $$ {#eq-listaprimisommaquadrati}
 
-We want to investigate further the properties of [these primes](#eq-listaprimisommaquadrati). First, observe that we are only interested in odd primes (i.e., all primes other than $2$), since we already know that $2$ can be written as the sum of two squares. Therefore, we start to look at them carefully and conjecture the following fact: 
+We want to investigate further the properties of these primes. First, observe that we are only interested in odd primes (i.e., all primes other than $2$), since we already know that $2$ can be written as the sum of two squares. Therefore, we start to look at them carefully and conjecture the following fact: 
 
 >All _odd_ primes that can be written as the sum of two squares have remainder $1$ when divided by $4$.
 
