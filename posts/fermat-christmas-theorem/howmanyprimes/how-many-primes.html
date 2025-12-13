@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.8.26" />
 
-<meta name="dcterms.date" content="2025-12-08">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-<title>Quanti numeri primi ci sono? – SheafofThoughts</title>
+<meta name="dcterms.date" content="2025-12-08" />
+<meta name="description" content="Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic." />
+
+<title>How many primes are there? – SheafofThoughts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,29 +26,7 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<!-- htmldependencies:E3FAD763 -->
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,6 +54,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="msvalidate.01" content="27B9097A6103EA5075D902CB55234013" />
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -104,10 +86,56 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../../styles.css" />
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="/index.html">
+    <span class="navbar-title">SheafofThoughts</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+  aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"
+  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="/index.html"> 
+<span class="menu-text">Recent Posts</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="/about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <div id="quarto-toc-target"></div>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<script id = "quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -271,73 +299,21 @@ window.Quarto = {
     }
   </script>
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
-    <span class="navbar-title">SheafofThoughts</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
-<span class="menu-text">Recent Posts</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduzione" id="toc-introduzione" class="nav-link active" data-scroll-target="#introduzione">Introduzione</a>
-  <ul class="collapse">
-  <li><a href="#che-cosè-un-primo" id="toc-che-cosè-un-primo" class="nav-link" data-scroll-target="#che-cosè-un-primo">Che cos’è un primo?</a></li>
-  </ul></li>
-  <li><a href="#ritorno-a-scuola-la-divisione-euclidea" id="toc-ritorno-a-scuola-la-divisione-euclidea" class="nav-link" data-scroll-target="#ritorno-a-scuola-la-divisione-euclidea">Ritorno a scuola: la divisione euclidea</a></li>
-  <li><a href="#il-teorema-fondamentale-dellaritmetica" id="toc-il-teorema-fondamentale-dellaritmetica" class="nav-link" data-scroll-target="#il-teorema-fondamentale-dellaritmetica">Il teorema fondamentale dell’aritmetica</a></li>
-  <li><a href="#quanti-numeri-primi-ci-sono" id="toc-quanti-numeri-primi-ci-sono" class="nav-link" data-scroll-target="#quanti-numeri-primi-ci-sono">Quanti numeri primi ci sono?</a></li>
-  <li><a href="#conclusione" id="toc-conclusione" class="nav-link" data-scroll-target="#conclusione">Conclusione</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="how-many-primes.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quanti numeri primi ci sono?</h1>
-<p class="subtitle lead"><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Serie “Fermat’s Christmas Theorem”</a></p>
+<h1 class="title">How many primes are there?</h1>
+<p class="subtitle lead"><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a></p>
   <div class="quarto-categories">
-    <div class="quarto-category">Divulgativo</div>
-    <div class="quarto-category">Teoria dei numeri</div>
+    <div class="quarto-category">Expository</div>
+    <div class="quarto-category">Number Theory</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    <p>Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic.</p>
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -357,167 +333,189 @@ window.Quarto = {
 
 </header>
 
-
-<section id="introduzione" class="level1">
-<h1>Introduzione</h1>
-<p>Nel <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html">post precedente</a> ci siamo posti alcune domande sui numeri primi, ad esempio:</p>
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction">Introduction</a>
+  <ul>
+  <li><a href="#what-a-prime-is" id="toc-what-a-prime-is">What a prime is?</a></li>
+  </ul></li>
+  <li><a href="#back-to-school-the-euclidean-division" id="toc-back-to-school-the-euclidean-division">Back to school: the Euclidean division</a></li>
+  <li><a href="#the-fundamental-theorem-of-arithmetic" id="toc-the-fundamental-theorem-of-arithmetic">The fundamental theorem of arithmetic</a></li>
+  <li><a href="#how-many-primes-are-there" id="toc-how-many-primes-are-there">How many primes are there?</a></li>
+  <li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+<div class="lang-switch">
+<p><span class="lang-current">ENG</span> <a href="/IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.qmd">ITA</a></p>
+</div>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html">previous post</a> we asked some questions about prime numbers such as:</p>
 <ul>
-<li>Quali numeri possono essere scritti come prodotto di numeri primi?</li>
-<li>Quanti numeri primi esistono?</li>
+<li>Which numbers could be written as the product of primes?</li>
+<li>How many primes are there?</li>
 </ul>
-<p>Lo scopo di questo post è dare una risposta precisa a queste due domande.</p>
-<p>La prima persona a rispondere rigorosamente a queste domande fu il matematico greco <a href="https://en.wikipedia.org/wiki/Euclid">Euclide</a>, e seguiremo a grandi linee il suo ragionamento.</p>
-<section id="che-cosè-un-primo" class="level2">
-<h2 class="anchored" data-anchor-id="che-cosè-un-primo">Che cos’è un primo?</h2>
-<p>Iniziamo con un breve ripasso. A scuola abbiamo imparato che un intero positivo è primo se i suoi soli divisori sono <span class="math inline">\(1\)</span> e se stesso (<span class="math inline">\(1\)</span> non è considerato primo). Quindi <span class="math inline">\(2,3,5,\dots\)</span> sono i primi primi che incontriamo.</p>
-<p>Consideriamo il primo <span class="math inline">\(2\)</span>. Osserviamo che ogni volta che <span class="math inline">\(2\)</span> divide un prodotto di due interi <span class="math inline">\(a\cdot b\)</span>, divide uno dei due fattori (cioè o <span class="math inline">\(2\)</span> divide <span class="math inline">\(a\)</span> oppure <span class="math inline">\(2\)</span> divide <span class="math inline">\(b\)</span>). Prova qualche esempio per convincerti. Per esempio, <span class="math inline">\(2\)</span> divide il prodotto <span class="math inline">\(4\cdot 5=20\)</span> e infatti <span class="math inline">\(2\)</span> divide <span class="math inline">\(4\)</span>. Puoi provare con qualunque prodotto e la proprietà continuerà a valere. Non c’è nulla di speciale in <span class="math inline">\(2\)</span>; in realtà ogni numero primo soddisfa questa proprietà (cioè, se un numero primo <span class="math inline">\(p\)</span> divide un prodotto <span class="math inline">\(a\cdot b\)</span> allora <span class="math inline">\(p\)</span> divide <span class="math inline">\(a\)</span> oppure <span class="math inline">\(p\)</span> divide <span class="math inline">\(b\)</span>). Nota che questa proprietà caratterizza i numeri primi. Per esempio, osserva che <span class="math inline">\(6\)</span> (che non è primo) divide il prodotto <span class="math inline">\(3\cdot 4=12\)</span>, ma <span class="math inline">\(6\)</span> non divide né <span class="math inline">\(3\)</span> né <span class="math inline">\(4\)</span>.</p>
-<p>Poiché questa proprietà è importante, definiamo i numeri primi nel modo seguente:</p>
+<p>The goal of this post is to give a precise answer to these two questions.</p>
+<p>The first person to rigorously answer these questions was the Greek mathematician <a href="https://en.wikipedia.org/wiki/Euclid">Euclid</a>, and we will roughly follow his reasoning.</p>
+<section id="what-a-prime-is" class="level2">
+<h2>What a prime is?</h2>
+<p>Let’s start with a short recap. In school we learned that a positive integer is prime if its only divisors are <span class="math inline">\(1\)</span> and itself (<span class="math inline">\(1\)</span> is not considered prime). So we have that <span class="math inline">\(2,3,5,\dots\)</span> are the first few primes.</p>
+<p>Consider the prime <span class="math inline">\(2\)</span>. Note that every time <span class="math inline">\(2\)</span> divides a product of two integers <span class="math inline">\(a\cdot b\)</span>, it divides one of the two factors (i.e. either <span class="math inline">\(2\)</span> divides <span class="math inline">\(a\)</span> or <span class="math inline">\(2\)</span> divides <span class="math inline">\(b\)</span>). Try a few examples to convince yourself. For instance, <span class="math inline">\(2\)</span> divides the product <span class="math inline">\(4\cdot 5=20\)</span> and indeed <span class="math inline">\(2\)</span> divides <span class="math inline">\(4\)</span>. You can try any product and the property will hold. There is nothing special about <span class="math inline">\(2\)</span>; indeed, every prime number satisfies this (i.e. if a prime number <span class="math inline">\(p\)</span> divides a product <span class="math inline">\(a\cdot b\)</span> then either <span class="math inline">\(p\)</span> divides <span class="math inline">\(a\)</span> or <span class="math inline">\(p\)</span> divides <span class="math inline">\(b\)</span>). Note that this property characterises primes. For example, observe that <span class="math inline">\(6\)</span> (which isn’t prime) divides the product <span class="math inline">\(3\cdot 4=12\)</span>, but <span class="math inline">\(6\)</span> divides neither <span class="math inline">\(3\)</span> nor <span class="math inline">\(4\)</span>.</p>
+<p>Since this property is important, we define prime numbers as follows:</p>
 <div class="definition">
-<p><strong>Definizione:</strong> Un intero <span class="math inline">\(p\)</span> è <em>primo</em> se ogni volta che <span class="math inline">\(p\)</span> divide un prodotto <span class="math inline">\(a\cdot b\)</span>, allora <span class="math inline">\(p\)</span> divide <span class="math inline">\(a\)</span> oppure <span class="math inline">\(p\)</span> divide <span class="math inline">\(b\)</span>.</p>
+<p><strong>Definition:</strong> An integer <span class="math inline">\(p\)</span> is <em>prime</em> if whenever <span class="math inline">\(p\)</span> divides a product <span class="math inline">\(a\cdot b\)</span>, then <span class="math inline">\(p\)</span> divides <span class="math inline">\(a\)</span> or <span class="math inline">\(p\)</span> divides <span class="math inline">\(b\)</span>.</p>
 </div>
-<p>Useremo invece il termine <em>irriducibile</em> per l’altra definizione che conosciamo:</p>
+<p>We will instead use the term <em>irreducible</em> for the other definition we know:</p>
 <div class="definition">
-<p><strong>Definizione:</strong> Un intero <span class="math inline">\(q\)</span> è <em>irriducibile</em> se i suoi soli divisori sono se stesso, <span class="math inline">\(1\)</span> e <span class="math inline">\(-1\)</span>.</p>
+<p><strong>Definition:</strong> An integer <span class="math inline">\(q\)</span> is <em>irreducible</em> if its only divisors are itself,<span class="math inline">\(1\)</span>, and <span class="math inline">\(-1\)</span>.</p>
 </div>
-<p>Includiamo <span class="math inline">\(-1\)</span> perché permettiamo anche interi negativi; ad esempio <span class="math inline">\(-3\)</span> è irriducibile poiché i suoi soli divisori sono <span class="math inline">\(-1\)</span>, <span class="math inline">\(1\)</span> e <span class="math inline">\(-3\)</span>.</p>
-<p>Per gli interi, un numero è irriducibile se e solo se è primo, quindi le due definizioni coincidono. Per questo usiamo spesso la definizione tramite irriducibilità per i numeri primi.</p>
-<hr>
+<p>We include <span class="math inline">\(-1\)</span> because we allow negative integers; for instance <span class="math inline">\(-3\)</span> is irreducible since its only divisors are <span class="math inline">\(-1\)</span>, <span class="math inline">\(1\)</span>, and <span class="math inline">\(-3\)</span>.</p>
+<p>For integers, a number is irreducible if and only if it is prime, so the two definitions agree. This is why we often use the irreducible definition for primes.</p>
+<hr />
 </section>
 </section>
-<section id="ritorno-a-scuola-la-divisione-euclidea" class="level1">
-<h1>Ritorno a scuola: la divisione euclidea</h1>
-<p>Sappiamo come funziona la divisione tra interi. Per esempio, per dividere <span class="math inline">\(7\)</span> per <span class="math inline">\(2\)</span> contiamo quante volte possiamo sommare <span class="math inline">\(2\)</span> senza superare <span class="math inline">\(7\)</span>. Vediamo che <span class="math inline">\(2+2+2=6\)</span>, quindi il quoziente è <span class="math inline">\(3\)</span> e il resto è <span class="math inline">\(1\)</span>. Scriviamo in simboli</p>
+<section id="back-to-school-the-euclidean-division" class="level1">
+<h1>Back to school: the Euclidean division</h1>
+<p>We know how division of integers works. For example, to divide <span class="math inline">\(7\)</span> by <span class="math inline">\(2\)</span> we count how many times <span class="math inline">\(2\)</span> can be added without exceeding <span class="math inline">\(7\)</span>. We see that <span class="math inline">\(2+2+2=6\)</span>, so the quotient is <span class="math inline">\(3\)</span> and the remainder is <span class="math inline">\(1\)</span>. We write in symbols</p>
 <p><span class="math display">\[
 7=2\cdot 3+1
 \]</span></p>
-<p>Un altro esempio: dividendo <span class="math inline">\(17\)</span> per <span class="math inline">\(15\)</span> otteniamo quoziente <span class="math inline">\(1\)</span> e resto <span class="math inline">\(2\)</span>, cioè</p>
+<p>Another example: dividing <span class="math inline">\(17\)</span> by <span class="math inline">\(15\)</span> yields quotient <span class="math inline">\(1\)</span> and remainder <span class="math inline">\(2\)</span>, i.e.</p>
 <p><span class="math display">\[
 17=15\cdot 1+2
 \]</span></p>
-<p>Come ultimo esempio, supponiamo di voler dividere <span class="math inline">\(3\)</span> per <span class="math inline">\(12\)</span>. Poiché <span class="math inline">\(12\)</span> è troppo grande, il quoziente è <span class="math inline">\(0\)</span> e il resto è <span class="math inline">\(3\)</span>, cioè</p>
+<p>As a final example, suppose we want to divide <span class="math inline">\(3\)</span> by <span class="math inline">\(12\)</span>. Since <span class="math inline">\(12\)</span> is too big, the quotient is <span class="math inline">\(0\)</span> and the remainder is <span class="math inline">\(3\)</span>, i.e.</p>
 <p><span class="math display">\[
 3=12\cdot 0+3
 \]</span></p>
-<p>Abbiamo imparato che possiamo sempre eseguire la divisione con resto: per interi positivi <span class="math inline">\(n,m\)</span> possiamo scrivere</p>
+<p>We learned that we can always perform division with remainder: for positive integers <span class="math inline">\(n,m\)</span> we can write</p>
 <p><span class="math display">\[
 n=m\cdot q+r
 \]</span></p>
-<p>dove <span class="math inline">\(q\)</span> è il quoziente e <span class="math inline">\(r\)</span> è il resto. Siamo pronti a enunciare questo fatto come un teorema:</p>
+<p>where <span class="math inline">\(q\)</span> is the quotient and <span class="math inline">\(r\)</span> is the remainder. We are ready to state this as a theorem:</p>
 <div id="thm-euclideandivision" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Divisione euclidea.)</strong></span> Per ogni coppia di interi <span class="math inline">\(n\geq 0\)</span> e <span class="math inline">\(m&gt;0\)</span> (non possiamo dividere per <span class="math inline">\(0\)</span>), esistono interi <span class="math inline">\(q,r\geq 0\)</span> tali che</p>
+<p><span class="theorem-title"><strong>Theorem 1 (Euclidean division.)</strong></span> For every two integers <span class="math inline">\(n\geq 0\)</span> and <span class="math inline">\(m&gt;0\)</span> (we cannot divide by <span class="math inline">\(0\)</span>), there exist integers <span class="math inline">\(q,r\geq 0\)</span> such that</p>
 <p><span class="math display">\[
 n=m\cdot q+r
 \]</span></p>
-<p>dove <span class="math inline">\(r&lt;m\)</span>. Inoltre <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span> sono determinati in modo unico.</p>
+<p>where <span class="math inline">\(r&lt;m\)</span>. Moreover <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> are uniquely determined.</p>
 </div>
-<p>Ok, fermiamoci un attimo: questo teorema sembra più complicato di quanto dovrebbe. Prima di tutto, dovrebbe essere chiaro che possiamo scrivere il nostro <span class="math inline">\(n\)</span> come</p>
+<p>Okay, pause for a moment: this theorem seems more complicated than it should be. First, it should be clear that we can write our <span class="math inline">\(n\)</span> as</p>
 <p><span class="math display">\[
 n=m\cdot q+r
 \]</span></p>
-<p>per qualche <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span>. Perché <span class="math inline">\(r\)</span> deve essere strettamente minore di <span class="math inline">\(m\)</span>? Perché, se così non fosse, potremmo dividere ancora. Per esempio, supponiamo di scrivere</p>
+<p>for some <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span>. Why must <span class="math inline">\(r\)</span> be strictly less than <span class="math inline">\(m\)</span>? Because if it were not, we could divide further. For example suppose we write</p>
 <p><span class="math display">\[
 15=4\cdot 2+6
 \]</span></p>
-<p>Questo non è ammesso, perché <span class="math inline">\(6=4+2\)</span>; possiamo ancora dividere per <span class="math inline">\(4\)</span> e ottenere</p>
+<p>This is not admissible, since <span class="math inline">\(6=4+2\)</span>; we can still divide by <span class="math inline">\(4\)</span> to get</p>
 <p><span class="math display">\[
 15=4\cdot 3+2
 \]</span></p>
-<p>Ora, poiché <span class="math inline">\(2\)</span> è più piccolo di <span class="math inline">\(4\)</span>, non possiamo più dividerlo, quindi abbiamo finito e ciò che otteniamo è la divisione.</p>
-<p>L’altra domanda è: che cosa significa che <span class="math inline">\(q\)</span> e <span class="math inline">\(r\)</span> sono determinati in modo unico? Significa che c’è un solo modo di scrivere <span class="math inline">\(n\)</span> come <span class="math inline">\(m\cdot q+r\)</span>, con <span class="math inline">\(r&lt;m\)</span>. Prendi carta e penna e prova a convincerti che questa scrittura è unica facendo qualche esempio.</p>
-<hr>
+<p>Now, since <span class="math inline">\(2\)</span> is smaller than <span class="math inline">\(4\)</span>, we cannot divide it again, so we are done and what we get is the division.</p>
+<p>The other question is: what does it mean that <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> are uniquely determined? It means there is only one way to write <span class="math inline">\(n\)</span> as <span class="math inline">\(m\cdot q+r\)</span>, with <span class="math inline">\(r&lt;m\)</span>. Take a pen and paper and try to convince yourself that this writing is unique by doing some example.</p>
+<hr />
 </section>
-<section id="il-teorema-fondamentale-dellaritmetica" class="level1">
-<h1>Il teorema fondamentale dell’aritmetica</h1>
-<p>Ora vogliamo rispondere alla domanda su quali numeri possono essere scritti come prodotto di primi. Il teorema seguente ci dà la risposta.</p>
+<section id="the-fundamental-theorem-of-arithmetic" class="level1">
+<h1>The fundamental theorem of arithmetic</h1>
+<p>Now we want to answer the question of which numbers could be written as a product of primes. The following theorem gives us the answer.</p>
 <div id="thm-fundthrmarithmetic" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (Teorema fondamentale dell’aritmetica.)</strong></span> Ogni intero <span class="math inline">\(n\)</span> strettamente maggiore di uno (cioè <span class="math inline">\(n&gt;1\)</span>) può essere scritto in modo <em>unico</em> come prodotto di numeri primi.</p>
+<p><span class="theorem-title"><strong>Theorem 2 (Fundamental theorem of arithmetic.)</strong></span> Every integer <span class="math inline">\(n\)</span> strictly bigger than one (i.e. <span class="math inline">\(n&gt;1\)</span>) can be written <em>uniquely</em> as the product of prime numbers.</p>
 </div>
-<p>Questo ci aiuta a capire perché i numeri primi sono così importanti. In questo senso sono i mattoni fondamentali degli interi. Possiamo sempre decomporre un intero come prodotto di primi e questo avviene in modo unico.</p>
-<p>Facciamo alcuni esempi per chiarire il teorema. Consideriamo <span class="math inline">\(15\)</span>. I suoi divisori primi sono <span class="math inline">\(3\)</span> e <span class="math inline">\(5\)</span>, quindi <span class="math inline">\(15=3\cdot 5\)</span>. Un altro esempio può essere <span class="math inline">\(4\)</span>; è divisibile solo per <span class="math inline">\(2\)</span>, quindi <span class="math inline">\(4=2^2\)</span>.</p>
-<p>Come si fattorizza un numero in pratica? Prendiamo un intero, per esempio <span class="math inline">\(36\)</span>. Guardiamo i primi iniziali</p>
+<p>This helps us understand why primes are so important. In this sense they are the basic building blocks of the integers. We can always decompose an integer as the product of primes and this is done uniquely.</p>
+<p>Let’s give some examples to clarify the theorem. Consider <span class="math inline">\(15\)</span>. Its prime divisors are <span class="math inline">\(3\)</span> and <span class="math inline">\(5\)</span> so <span class="math inline">\(15=3\cdot 5\)</span>. Another example could be <span class="math inline">\(4\)</span>; it is divided only by <span class="math inline">\(2\)</span>, so <span class="math inline">\(4=2^2\)</span>.</p>
+<p>How do we factor a number in practice? Pick an integer, for example <span class="math inline">\(36\)</span>. We look at the first few primes</p>
 <p><span class="math display">\[
 2,3,5,7,11,\dots
 \]</span></p>
-<p>e testiamo la divisibilità per i primi successivi:</p>
+<p>and test the divisibility by successive primes:</p>
 <ul>
-<li><span class="math inline">\(36\)</span> è divisibile per <span class="math inline">\(2\)</span>? Sì: <span class="math inline">\(36=2\cdot 18\)</span>.</li>
-<li><span class="math inline">\(18\)</span> è divisibile per <span class="math inline">\(2\)</span>? Sì: <span class="math inline">\(18=2\cdot 9\)</span>.</li>
-<li><span class="math inline">\(9\)</span> è divisibile per <span class="math inline">\(2\)</span>? No: passiamo al primo successivo.</li>
-<li><span class="math inline">\(9\)</span> è divisibile per <span class="math inline">\(3\)</span>? Sì: <span class="math inline">\(9=3\cdot 3\)</span>.</li>
+<li>Is <span class="math inline">\(36\)</span> divisible by <span class="math inline">\(2\)</span>? Yes: <span class="math inline">\(36=2\cdot 18\)</span>.</li>
+<li>Is <span class="math inline">\(18\)</span> divisible by <span class="math inline">\(2\)</span>? Yes: <span class="math inline">\(18=2\cdot 9\)</span>.</li>
+<li>Is <span class="math inline">\(9\)</span> divisible by <span class="math inline">\(2\)</span>? No: we move on to the next prime.</li>
+<li>Is <span class="math inline">\(9\)</span> divisible by <span class="math inline">\(3\)</span>? Yes: <span class="math inline">\(9=3\cdot 3\)</span>.</li>
 </ul>
-<p>Otteniamo quindi</p>
+<p>So we get</p>
 <p><span class="math display">\[
 36=2\cdot 18=2\cdot (2\cdot 9)=2\cdot (2\cdot (3\cdot 3))=2^2\cdot 3^2
 \]</span></p>
-<p>Con questo procedimento possiamo fattorizzare qualunque intero positivo. Per gli interi negativi, basta aggiungere un segno meno davanti; ad esempio <span class="math inline">\(-36=-(2^2\cdot 3^2)\)</span>.</p>
-<p>Consideriamo ora <span class="math inline">\(7\)</span>. Poiché è primo, non può essere fattorizzato ulteriormente. Diremo quindi che la sua fattorizzazione è semplicemente se stesso, cioè</p>
+<p>By this process we can factor any positive integer. For negative integers, include a leading minus sign; e.g. <span class="math inline">\(-36=-(2^2\cdot 3^2)\)</span>.</p>
+<p>Now consider <span class="math inline">\(7\)</span>. Since it is prime, it can’t be factorized further. Therefore, we will say that its factorization is just itself, i.e. given by</p>
 <p><span class="math display">\[
 7=7
 \]</span></p>
-<p>dove a destra stiamo scrivendo i fattori (solo <span class="math inline">\(7\)</span>) della fattorizzazione.</p>
-<p>Vogliamo convincerci che una fattorizzazione esiste sempre, quindi entriamo nel dettaglio della dimostrazione.</p>
+<p>where on the right hand side we are writing the factors (just <span class="math inline">\(7\)</span>) of the factorization.</p>
+<p>We want to convince ourselves that a factorization always exists, so we dive into its proof.</p>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em> (Esistenza della fattorizzazione in primi). </span>Supponiamo che alcuni interi positivi non possano essere fattorizzati. Prendiamo il più piccolo tra questi interi e chiamiamolo <span class="math inline">\(m\)</span>. L’intero <span class="math inline">\(m\)</span> non può essere un numero primo, perché se lo fosse la sua fattorizzazione sarebbe <span class="math inline">\(m=m\)</span> (come abbiamo fatto nel caso di <span class="math inline">\(7\)</span>). Poiché <span class="math inline">\(m\)</span> non è primo, deve esistere un numero <span class="math inline">\(s\)</span> diverso da <span class="math inline">\(m\)</span> e da <span class="math inline">\(1\)</span> che lo divide. Possiamo quindi scrivere <span class="math inline">\(m=s\cdot t\)</span> per qualche altro intero <span class="math inline">\(t\)</span>. Osserviamo ora che <span class="math inline">\(s\)</span> e <span class="math inline">\(t\)</span> sono entrambi minori di <span class="math inline">\(m\)</span>. Dal momento che <span class="math inline">\(m\)</span> era il più piccolo numero che non poteva essere fattorizzato, sia <span class="math inline">\(s\)</span> che <span class="math inline">\(t\)</span> possono essere fattorizzati in fattori primi. In particolare otteniamo</p>
+<p><span class="proof-title"><em>Proof</em> (Existence of the prime factorization). </span>Suppose some positive integers could not be factorized. Take the smallest such integer and call it <span class="math inline">\(m\)</span>. The integer <span class="math inline">\(m\)</span> cannot be a prime number, since if it were its factorization would be <span class="math inline">\(m=m\)</span> (as we did in the case of <span class="math inline">\(7\)</span>). Since <span class="math inline">\(m\)</span> is not prime, there must be some number <span class="math inline">\(s\)</span> other than <span class="math inline">\(m\)</span> and <span class="math inline">\(1\)</span> which divides it. We can therefore write <span class="math inline">\(m=s\cdot t\)</span> for some other integer <span class="math inline">\(t\)</span>. But now observe that <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> are both smaller than <span class="math inline">\(m\)</span>. Since <span class="math inline">\(m\)</span> was the smallest such number that could not be factorized, both <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> can be factorized into prime factors. In particular we get that</p>
 <p><span class="math display">\[
-m=s\cdot t=(\text{fattorizzazione in primi di }s)\cdot (\text{fattorizzazione in primi di }t)
+m=s\cdot t=(\text{prime factorization of }s)\cdot (\text{prime factorization of }t)
 \]</span></p>
-<p>Questo fornisce una fattorizzazione di <span class="math inline">\(m\)</span>. Per esempio, <span class="math inline">\(144=4\cdot 36\)</span>; fattorizzando otteniamo <span class="math inline">\(4=2^2\)</span> e <span class="math inline">\(36=2^2\cdot 3^2\)</span>, quindi</p>
+<p>This yields a factorization of <span class="math inline">\(m\)</span>. For example, <span class="math inline">\(144=4\cdot 36\)</span>; factoring gives <span class="math inline">\(4=2^2\)</span> and <span class="math inline">\(36=2^2\cdot 3^2\)</span>, hence</p>
 <p><span class="math display">\[
 144=4\cdot 36=(2^2)\cdot (2^2\cdot 3^2)=2^4\cdot 3^2
 \]</span></p>
-<p>Abbiamo quindi dimostrato che il più piccolo numero che non poteva essere fattorizzato in realtà può essere fattorizzato. Dunque, otteniamo la tesi.</p>
+<p>Therefore, we proved that the smallest number which couldn’t be factorized can actually be factorized. Hence, we get the claim.</p>
 </div>
-<p>Inoltre, il teorema ci dice che la fattorizzazione è unica: non puoi scrivere un intero (<span class="math inline">\(&gt;1\)</span>) come prodotto di primi in due modi diversi. Prova qualche esempio per convincerti.</p>
-<hr>
+<p>Moreover, the theorem tells us that the factorization is unique: you can’t write an integer (<span class="math inline">\(&gt;1\)</span>) as a product of primes in two different ways. Try some examples to convince yourself.</p>
+<hr />
 </section>
-<section id="quanti-numeri-primi-ci-sono" class="level1">
-<h1>Quanti numeri primi ci sono?</h1>
-<p>Siamo finalmente pronti a rispondere a questa domanda. Probabilmente immagini già la risposta, ma voglio comunque dare un argomento pulito che ti convinca che è corretta.</p>
+<section id="how-many-primes-are-there" class="level1">
+<h1>How many primes are there?</h1>
+<p>Finally, we are ready to answer this question. You may have guessed the answer, but I really want to give a neat argument that will convince you it is true.</p>
 <div id="thm-infinitelymanyprimes" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3</strong></span> Esistono infiniti numeri primi.</p>
+<p><span class="theorem-title"><strong>Theorem 3</strong></span> There exist infinitely many prime numbers.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em> (Dimostrazione di Euclide). </span>Supponiamo che esistano solo finitamenti numeri primi, chiamiamoli <span class="math inline">\(p_1,\dots,p_n\)</span>. Definiamo <span class="math inline">\(m\)</span> come il prodotto di tutti questi primi più <span class="math inline">\(1\)</span>, cioè</p>
+<p><span class="proof-title"><em>Proof</em> (Euclid’s proof). </span>Suppose there were only finitely many prime numbers, call them <span class="math inline">\(p_1,\dots,p_n\)</span>. Define <span class="math inline">\(m\)</span> as the product of all these primes plus <span class="math inline">\(1\)</span>, i.e.</p>
 <p><span class="math display">\[
 m=p_1\cdot p_2\cdots p_n+1
 \]</span></p>
-<p>Osserviamo che <span class="math inline">\(m\)</span> non è divisibile da nessuno dei primi <span class="math inline">\(p_1,\dots,p_n\)</span>. Per convincerci, prendiamo <span class="math inline">\(p_1\)</span> e scriviamo</p>
+<p>Observe that <span class="math inline">\(m\)</span> is not divisible by any of the primes <span class="math inline">\(p_1,\dots,p_n\)</span>. To convince ourselves, take <span class="math inline">\(p_1\)</span> and write</p>
 <p><span class="math display">\[
 m=p_1\cdot (p_2\cdots p_n)+1
 \]</span></p>
-<p>Definiamo <span class="math inline">\(q:=(p_2\cdots p_n)\)</span>. Stiamo quindi dicendo</p>
+<p>Define <span class="math inline">\(q:=(p_2\cdots p_n)\)</span>. We are saying</p>
 <p><span class="math display">\[
 m=p_1\cdot (p_2\cdots p_n)+1=p_1\cdot q+1
 \]</span></p>
-<p>Dunque <span class="math inline">\(m\)</span> ha resto <span class="math inline">\(1\)</span> nella divisione per <span class="math inline">\(p_1\)</span>, quindi <span class="math inline">\(p_1\)</span> non divide <span class="math inline">\(m\)</span> (se lo dividesse, il resto sarebbe <span class="math inline">\(0\)</span>). Non c’è nulla di speciale in <span class="math inline">\(p_1\)</span>: possiamo ripetere lo stesso argomento per tutti gli altri primi <span class="math inline">\(p_2,\dots,p_n\)</span>.</p>
-<p>Siamo quindi convinti che nessun primo nella lista <span class="math inline">\(p_1,\dots,p_n\)</span> divide <span class="math inline">\(m\)</span>.</p>
-<p>Ma abbiamo detto che ogni numero intero può essere scritto come prodotto di numeri primi. Tuttavia, poiché <span class="math inline">\(m\)</span> non è divisibile da nessuno dei primi nella lista <span class="math inline">\(p_1,\dots,p_n\)</span>, significa che la lista non contiene tutti i numeri primi.</p>
-<p>Quindi, ogni volta che supponiamo che una lista finita <span class="math inline">\(p_1,\dots,p_n\)</span> contenga tutti i primi, possiamo costruire un primo che non è nella lista; dunque ogni lista finita è incompleta.</p>
-<p>Concludiamo che devono esistere infiniti numeri primi.</p>
+<p>Thus, <span class="math inline">\(m\)</span> has remainder <span class="math inline">\(1\)</span> when divided by <span class="math inline">\(p_1\)</span>, so <span class="math inline">\(p_1\)</span> does not divide <span class="math inline">\(m\)</span> (if it did the remainder would be <span class="math inline">\(0\)</span>). Nothing is special about <span class="math inline">\(p_1\)</span>: we can repeat the same argument for all the other primes <span class="math inline">\(p_2,\dots,p_n\)</span>.</p>
+<p>So we are convinced that no prime in the list <span class="math inline">\(p_1,\dots,p_n\)</span> divides <span class="math inline">\(m\)</span>.</p>
+<p>But we said that any integer number can be written as the product of primes. However, since <span class="math inline">\(m\)</span> is not divisible by any prime in the list <span class="math inline">\(p_1,\dots,p_n\)</span>, it means that the list does not contain all of the primes.</p>
+<p>Hence, whenever we suppose a finite list <span class="math inline">\(p_1,\dots,p_n\)</span> contains all primes, we can construct a prime not in the list; thus any finite list is incomplete.</p>
+<p>We conclude that there must be infinitely many primes.</p>
 </div>
-<hr>
+<hr />
 </section>
-<section id="conclusione" class="level1">
-<h1>Conclusione</h1>
-<p>Per dimostrare che esistono <em>infiniti</em> numeri primi abbiamo usato una strategia comune. Abbiamo capito che dimostrare l’enunciato così com’è è molto difficile. Come si può dimostrare che esistono infiniti numeri primi? L’idea naturale è: supponiamo che ce ne siano solo finiti e ricaviamo una contraddizione. Questo è ciò che chiamiamo <em>dimostrazione per assurdo</em> (dimostri la tua affermazione mostrando che la sua negazione porta a un’impossibilità).</p>
-<p>C’è un’altra idea interessante che abbiamo usato oggi. Quando abbiamo dimostrato <a href="#thm-fundthrmarithmetic" class="quarto-xref">Theorem&nbsp;2</a> abbiamo ipotizzato che esistessero numeri che non soddisfacevano il nostro enunciato. Poi abbiamo preso il minimo tra questi numeri e dimostrato che in realtà quel minimo soddisfaceva la nostra tesi. Questo tipo di argomento è spesso chiamato <em>dimostrazione per controesempio minimale</em> (una forma di induzione), ed è anch’esso molto comune.</p>
-<p>Pensa a questi due tipi di dimostrazioni e a come li abbiamo utilizzati negli argomenti. Se vuoi esercitarti, prova a dimostrare l’unicità della fattorizzazione in primi (prosegui per assurdo e usa le due definizioni di numero primo introdotte sopra).</p>
-<hr>
-<p>In ogni caso, ci vediamo la prossima settimana!</p>
-<hr>
-<blockquote class="blockquote">
-<p>Questo articolo fa parte della serie <a href="../../../posts/fermat-christmas-theorem/"><em>Fermat’s Christmas Theorem</em></a>.</p>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>To prove there are <em>infinitely many</em> primes we used a common strategy. We understood that proving the statement as it appears is very difficult. How can you prove there are infinitely many primes? The natural idea is: suppose there were only finitely many, and derive a contradiction. This is what we call a <em>proof by contradiction</em> (you prove your claim by proving that its negation is false).</p>
+<p>There is another cool idea we used today. When we proved <a href="#thm-fundthrmarithmetic" class="quarto-xref">Theorem 2</a> we had the idea of supposing that there were some numbers not satisfying our statement. Then we took the minimum among these numbers and proved that the minimum actually satisfied our claim. This kind of argument is often called <em>proof by minimal counterexample</em> (a form of induction), and it is also common.</p>
+<p>Think about these two kinds of proofs and how we used them in the arguments. If you’d like to practice, try proving uniqueness of prime factorization (proceed by contradiction and use the two definitions of prime introduced above).</p>
+<hr />
+<p>In any case, see you next week!</p>
+<hr />
+<blockquote>
+<p>This article is part of the series <a href="../../../posts/fermat-christmas-theorem/"><em>Fermat’s Christmas Theorem</em></a>.</p>
 </blockquote>
-<blockquote class="blockquote">
-<p>Precedente: <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html">Introduction</a></p>
+<blockquote>
+<p>Previous: <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html">Introduction</a></p>
 </blockquote>
-
-
-
+<div id="quarto-book-math" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWVuYWJsZS1tYXRoLWlubGluZQ=="><span class="math inline">\(e = mC^2\)</span></span></p>
+</div>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">SheafofThoughts</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">SheafofThoughts</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UmVjZW50IFBvc3Rz">Recent Posts</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2luZGV4Lmh0bWw=">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QWJvdXQ=">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0Lmh0bWw=">/about.html</span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">How many primes are there? – SheafofThoughts</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">How many primes are there? – SheafofThoughts</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">How many primes are there? – SheafofThoughts</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">SheafofThoughts</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==">Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj">Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic.</span></p>
+</div>
 </section>
 
 </main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<script id = "quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -932,7 +930,6 @@ m=p_1\cdot (p_2\cdots p_n)+1=p_1\cdot q+1
   </script>
 </div> <!-- /content -->
 
+</body>
 
-
-
-</body></html>
+</html>

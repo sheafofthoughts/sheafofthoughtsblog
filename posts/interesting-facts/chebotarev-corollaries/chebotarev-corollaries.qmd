@@ -245,13 +245,13 @@ What we are saying is that if you consider a set of polynomials in $\mathbb{Z}[X
 
 ::: {.proof}
 
-Since we have a map $f:A\to \mathbb{C}$, we get $A\otimes_\mathbb{Z}\mathbb{C}\neq 0$, which is equivalent to $A\otimes_\mathbb{Z}\mathbb{Q}\neq 0$ (because $\mathbb{Q}\to \mathbb{C}$ is faithfully flat). In particular, $A\otimes_\mathbb{Z}\mathbb{Q}$ has a maximal ideal $\mathfrak{m}$. Let
+Since we have a map $f:A\to \mathbb{C}$, we get $A\otimes_{\mathbb{Z}}\mathbb{C}\neq 0$, which is equivalent to $A\otimes_{\mathbb{Z}}\mathbb{Q}\neq 0$ (because $\mathbb{Q}\to \mathbb{C}$ is faithfully flat). In particular, $A\otimes_{\mathbb{Z}}\mathbb{Q}$ has a maximal ideal $\mathfrak{m}$. Let
 $$
-L := (A\otimes_\mathbb{Z}\mathbb{Q})/\mathfrak{m}.
+L := (A\otimes_{\mathbb{Z}}\mathbb{Q})/\mathfrak{m}.
 $$
 By Zariski's lemma, $L$ is a finite extension of $\mathbb{Q}$, hence a number field.
 
-Consider now the composition map $\phi: A\to A\otimes_\mathbb{Z}\mathbb{Q}\to L$. Let $a_1,\dots,a_r$ be generators of $A$ as a $\mathbb{Z}$-algebra. Choose $N\in \mathbb{Z}_{>0}$ such that $N\cdot \phi(a_i)$ is an algebraic integer for every $i=1,\dots, r$. Then $\phi(a_i)\in \mathcal{O}_L[1/N]$ for all $i$, hence $\phi$ lands in $\mathcal{O}_L[1/N]$, i.e. we have a map
+Consider now the composition map $\phi: A\to A\otimes_{\mathbb{Z}}\mathbb{Q}\to L$. Let $a_1,\dots,a_r$ be generators of $A$ as a $\mathbb{Z}$-algebra. Choose $N\in \mathbb{Z}_{>0}$ such that $N\cdot \phi(a_i)$ is an algebraic integer for every $i=1,\dots, r$. Then $\phi(a_i)\in \mathcal{O}_L[1/N]$ for all $i$, hence $\phi$ lands in $\mathcal{O}_L[1/N]$, i.e. we have a map
 $$
 \phi: A\to \mathcal{O}_L[1/N].
 $$
