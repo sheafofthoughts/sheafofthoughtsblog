@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sheafofthoughts.org/index.html</loc>
-    <lastmod>2025-12-13T10:54:56.710Z</lastmod>
+    <lastmod>2025-12-13T14:26:31.208Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/introduction/introduction-IT.html</loc>
@@ -17,12 +17,16 @@
     <lastmod>2025-12-13T10:54:11.539Z</lastmod>
   </url>
   <url>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html</loc>
+    <lastmod>2025-12-13T10:59:21.626Z</lastmod>
+  </url>
+  <url>
     <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html</loc>
     <lastmod>2025-12-13T10:53:54.291Z</lastmod>
   </url>
   <url>
-    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html</loc>
-    <lastmod>2025-12-13T10:59:21.626Z</lastmod>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/index.html</loc>
+    <lastmod>2025-12-13T13:53:29.986Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html</loc>
