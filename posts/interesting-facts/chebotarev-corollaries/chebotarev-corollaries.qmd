@@ -1,9 +1,162 @@
 ---
-title: "Some interesting consequence of Chebotarev density theorem"
-date: ""
+title: "Some interesting consequences of Chebotarev density theorem"
+date: "2025-12-13"
 categories: [Intermediate, Number Theory]
+bibliography: references.bib
 draft: unlinked
 ---
 
 # Introduction
-hell
+
+The aim of this post is to explain some of the consequences of Cebotarev density theorem.
+
+First of all, we define the objects we need, see chapter 13 of @Neukirch1999ANT.
+
+::: {.definition}
+
+**Definition:**
+Let $K$ be a number field and $L/K$ be a Galois extension with Galois group $G$. For every $\sigma \in G$ we define $P _{L|K}(\sigma)$ as the set of all unramified prime ideals $\mathfrak{p}$ of $K$ such that there exists a prime ideal $\mathfrak{P}|\mathfrak{p}$ of $L$ satisfying
+$$
+	\sigma=\Big(\frac{L|K}{\mathfrak{P}}\Big)
+$$
+where $\Big(\frac{L|K}{\mathfrak{P}}\Big)$ is the Frobenius automorphism of $\mathfrak{P}$ over $K$.
+
+:::
+
+Since for all $\tau\in G$ we have
+$$
+	\Big(\frac{L|K}{\tau \mathfrak{P}}\Big)=\tau \Big(\frac{L|K}{\mathfrak{P}}\Big)\tau ^{-1}
+$$
+the set $P _{L|K}(\sigma)$ only depends on the conjugacy class
+$$
+\langle \sigma \rangle:=\{\tau\sigma\tau ^{-1} | \tau \in G\}
+$$
+Moreover, if $\langle\sigma\rangle\neq \langle \tau \rangle$ then $P _{L|K}(\sigma)\cap P _{L|K}(\tau)=\emptyset$.
+
+
+We now want to define what a density is.
+
+::: {.definition}
+
+**Definition:**
+Let $A \subseteq \mathbb{N}$. Set $A(n):=\{1,\dots, n\}\cap A$ and $a(n):=|A(n)|$. If the limit exists, we define the *natural density* $d(A)$ as
+$$
+d(A):=\lim _{n\to \infty}\frac{a(n)}{n}
+$$
+
+:::
+
+## The theorem
+
+We are now ready to state the theorem
+
+::: {#thm-chebotarev}
+## Chebotarev density theorem
+
+Let $K$ be a number field and $L/K$ be a finite Galois extension with Galois group $G$. Then for every $\sigma \in G$, the set $P _{L|K}(\sigma)$ has density (the limit exists), and it is given by
+$$
+	d(P _{L|K}(\sigma))=\frac{\#\langle \sigma\rangle}{\#G}
+$$
+
+:::
+
+We will not prove @thm-chebotarev, since the argument is long and technical. For a complete proof look at @Neukirch1999ANT.
+
+
+# The consequences
+
+We finally can learn about the corollaries of @thm-chebotarev.
+
+## Characterization of number fields through splitting of primes
+
+::: {.definition}
+
+**Definition:**
+Let $L/K$ be a Galois extension of number fields and $\mathfrak{p}$ be a prime of $K$. We say that $\mathfrak{p}$ splits completely in $L$ if for every prime $\mathfrak{P}|\mathfrak{p}$
+$$
+	f(\mathfrak{P}|\mathfrak{p})=e(\mathfrak{P}|\mathfrak{p})=1
+$$ 
+where $f$ is the inertia index and $e$ is the ramification index. We define $P(L|K)$ as the set of primes of $K$ splitting completely in $L$.
+
+:::
+
+
+
+::: {#prp-characterization-of-number-fields}
+## M. Bauer
+Let $K$ be a number field and let $L$ and $M$ be two finite Galois extensions of $K$. Then
+$$
+	P(M|K) \subseteq P(L|K) \iff L \subseteq M
+$$
+Therefore, 
+$$
+	P(M|K)=P(L|K)\iff L=M
+$$
+i.e. the primes splitting completely completely determine the number field.
+
+:::
+
+::: {.proof}
+
+If $L \subseteq M$ then $P(M|K) \subseteq P(L|K)$ because of the multiplicativity of inertia and ramification index in towers of extensions.
+
+Conversely, define $N:=LM$ as the composite field and set
+$$
+G:=\mathrm{Gal}(N/K),\quad H_L:=\mathrm{Gal}(N/L),\quad H_M:=\mathrm{Gal}(N/M).
+$$
+
+Assume for the sake of contradiction that $L\not\subseteq M$. This is equivalent to $H_M\not \subseteq H_L$. Choose $g\in H_M\smallsetminus H_L$. Since $H_M$ and $H_L$ are normal,
+$$
+\langle g\rangle \subseteq H_M,\quad \langle g\rangle \cap H_L=\emptyset
+$$
+
+By @thm-chebotarev there are infinitely many primes $\mathfrak{p}$ of $K$ unramified in $N$ with Frobenius conjugacy class equal to $\langle g\rangle$. For such a $\mathfrak{p}$, pick $\mathfrak{P}|\mathfrak{p}$ in $N$; then 
+$$
+	\Big(\frac{N|K}{\mathfrak{P}}\Big)\in \langle g\rangle \subseteq H_M
+$$
+
+
+::: {.claim}
+<a id="clm-primesplitsiff"></a>
+**Claim:**
+For every prime $\mathfrak{p}$ of $K$ unramified in $N$, pick a prime $\mathfrak{P}$ of $N$ above $\mathfrak{p}$. Then
+$$
+	\mathfrak{p}\in P(M|K)\iff \Big(\frac{N|K}{\mathfrak{P}}\Big)\in H_M
+$$
+
+:::
+
+Assuming the claim we get
+$$
+\mathfrak{p}\in P(M|K)
+$$
+But also $\Big(\frac{N|K}{\mathfrak{P}}\Big)\notin H_L$, so $\mathfrak{p}\notin P(L|K)$. This contradicts $P(M|K) \subseteq P(L|K)$.
+
+
+We are left to prove the claim.
+
+::: {.proof}
+#### of the claim
+
+Since $M/K$ is Galois, the restriction map
+$$
+\mathrm{res}_M: G=\mathrm{Gal}(N/K)\to \mathrm{Gal}(M/K)
+$$
+is surjective with kernel $H_M$. Since $\mathfrak{p}$ is unramified, the Frobenius automorphism is well defined and it satisfies:
+$$
+	\mathrm{res}_M\Big(\Big(\frac{N|K}{\mathfrak{P}}\Big)\Big)=\Big(\frac{M|K}{\mathfrak{P}\cap M}\Big)\in \mathrm{Gal}(M/K)
+$$ 
+Now observe that $\mathfrak{p}$ splits completely in $M$ if and only if every prime of $M$ above $\mathfrak{p}$ has inertia index $1$ (since we already know that $\mathfrak{p}$ is unramified). Equivalently, the decomposition group in $\mathrm{Gal}(E/K)$ is trivial, which is the same of saying that
+$$
+	\Big(\frac{M|K}{\mathfrak{p}}\Big)=1.
+$$
+This holds if and only if $\Big(\frac{N|K}{\mathfrak{p}}\Big)\in \mathrm{ker}(\mathrm{res}_M)=H_M$.
+
+:::
+:::
+
+
+
+
+
+
