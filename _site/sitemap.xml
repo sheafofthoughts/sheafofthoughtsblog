@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sheafofthoughts.org/index.html</loc>
-    <lastmod>2025-12-13T10:54:56.710Z</lastmod>
+    <lastmod>2025-12-13T14:26:31.208Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/introduction/introduction-IT.html</loc>
@@ -35,5 +35,9 @@
   <url>
     <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.html</loc>
     <lastmod>2025-12-12T09:12:31.807Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/index.html</loc>
+    <lastmod>2025-12-13T13:53:29.986Z</lastmod>
   </url>
 </urlset>

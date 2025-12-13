@@ -10,78 +10,7 @@
 <atom:link href="https://sheafofthoughts.org/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Fri, 12 Dec 2025 23:00:00 GMT</lastBuildDate>
-<item>
-  <title>Some interesting consequences of Chebotarev density theorem</title>
-  <link>https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The aim of this post is to explain some of the consequences of Cebotarev density theorem.</p>
-<p>First of all, we define the objects we need, see chapter 13 of <span class="citation" data-cites="Neukirch1999ANT">Neukirch (1999)</span>.</p>
-<div class="definition">
-<p><strong>Definition:</strong> Let <img src="https://latex.codecogs.com/png.latex?K"> be a number field and <img src="https://latex.codecogs.com/png.latex?L/K"> be a Galois extension with Galois group <img src="https://latex.codecogs.com/png.latex?G">. For every <img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5Cin%20G"> we define <img src="https://latex.codecogs.com/png.latex?P%20_%7BL%7CK%7D(%5Csigma)"> as the set of all unramified prime ideals <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> of <img src="https://latex.codecogs.com/png.latex?K"> such that there exists a prime ideal <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BP%7D%7C%5Cmathfrak%7Bp%7D"> of <img src="https://latex.codecogs.com/png.latex?L"> satisfying <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Csigma=%5CBig(%5Cfrac%7BL%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)%0A"> where <img src="https://latex.codecogs.com/png.latex?%5CBig(%5Cfrac%7BL%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)"> is the Frobenius automorphism of <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BP%7D"> over <img src="https://latex.codecogs.com/png.latex?K">.</p>
-</div>
-<p>Since for all <img src="https://latex.codecogs.com/png.latex?%5Ctau%5Cin%20G"> we have <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5CBig(%5Cfrac%7BL%7CK%7D%7B%5Ctau%20%5Cmathfrak%7BP%7D%7D%5CBig)=%5Ctau%20%5CBig(%5Cfrac%7BL%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)%5Ctau%20%5E%7B-1%7D%0A"> the set <img src="https://latex.codecogs.com/png.latex?P%20_%7BL%7CK%7D(%5Csigma)"> only depends on the conjugacy class <img src="https://latex.codecogs.com/png.latex?%0A%5Clangle%20%5Csigma%20%5Crangle:=%5C%7B%5Ctau%5Csigma%5Ctau%20%5E%7B-1%7D%20%7C%20%5Ctau%20%5Cin%20G%5C%7D%0A"> Moreover, if <img src="https://latex.codecogs.com/png.latex?%5Clangle%5Csigma%5Crangle%5Cneq%20%5Clangle%20%5Ctau%20%5Crangle"> then <img src="https://latex.codecogs.com/png.latex?P%20_%7BL%7CK%7D(%5Csigma)%5Ccap%20P%20_%7BL%7CK%7D(%5Ctau)=%5Cemptyset">.</p>
-<p>We now want to define what a density is.</p>
-<div class="definition">
-<p><strong>Definition:</strong> Let <img src="https://latex.codecogs.com/png.latex?A%20%5Csubseteq%20%5Cmathbb%7BN%7D">. Set <img src="https://latex.codecogs.com/png.latex?A(n):=%5C%7B1,%5Cdots,%20n%5C%7D%5Ccap%20A"> and <img src="https://latex.codecogs.com/png.latex?a(n):=%7CA(n)%7C">. If the limit exists, we define the <em>natural density</em> <img src="https://latex.codecogs.com/png.latex?d(A)"> as <img src="https://latex.codecogs.com/png.latex?%0Ad(A):=%5Clim%20_%7Bn%5Cto%20%5Cinfty%7D%5Cfrac%7Ba(n)%7D%7Bn%7D%0A"></p>
-</div>
-<section id="the-theorem" class="level2">
-<h2 class="anchored" data-anchor-id="the-theorem">The theorem</h2>
-<p>We are now ready to state the theorem</p>
-<div id="thm-chebotarev" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Chebotarev density theorem)</strong></span> Let <img src="https://latex.codecogs.com/png.latex?K"> be a number field and <img src="https://latex.codecogs.com/png.latex?L/K"> be a finite Galois extension with Galois group <img src="https://latex.codecogs.com/png.latex?G">. Then for every <img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5Cin%20G">, the set <img src="https://latex.codecogs.com/png.latex?P%20_%7BL%7CK%7D(%5Csigma)"> has density (the limit exists), and it is given by <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20d(P%20_%7BL%7CK%7D(%5Csigma))=%5Cfrac%7B%5C#%5Clangle%20%5Csigma%5Crangle%7D%7B%5C#G%7D%0A"></p>
-</div>
-<p>We will not prove Theorem&nbsp;1, since the argument is long and technical. For a complete proof look at <span class="citation" data-cites="Neukirch1999ANT">Neukirch (1999)</span>.</p>
-</section>
-</section>
-<section id="the-consequences" class="level1">
-<h1>The consequences</h1>
-<p>We finally can learn about the corollaries of Theorem&nbsp;1.</p>
-<section id="characterization-of-number-fields-through-splitting-of-primes" class="level2">
-<h2 class="anchored" data-anchor-id="characterization-of-number-fields-through-splitting-of-primes">Characterization of number fields through splitting of primes</h2>
-<div class="definition">
-<p><strong>Definition:</strong> Let <img src="https://latex.codecogs.com/png.latex?L/K"> be a Galois extension of number fields and <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> be a prime of <img src="https://latex.codecogs.com/png.latex?K">. We say that <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> splits completely in <img src="https://latex.codecogs.com/png.latex?L"> if for every prime <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BP%7D%7C%5Cmathfrak%7Bp%7D"> <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20f(%5Cmathfrak%7BP%7D%7C%5Cmathfrak%7Bp%7D)=e(%5Cmathfrak%7BP%7D%7C%5Cmathfrak%7Bp%7D)=1%0A"> where <img src="https://latex.codecogs.com/png.latex?f"> is the inertia index and <img src="https://latex.codecogs.com/png.latex?e"> is the ramification index. We define <img src="https://latex.codecogs.com/png.latex?P(L%7CK)"> as the set of primes of <img src="https://latex.codecogs.com/png.latex?K"> splitting completely in <img src="https://latex.codecogs.com/png.latex?L">.</p>
-</div>
-<div id="lem-primesplitsiff" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 1</strong></span> Let <img src="https://latex.codecogs.com/png.latex?K"> be a number field and let <img src="https://latex.codecogs.com/png.latex?L"> and <img src="https://latex.codecogs.com/png.latex?M"> be two finite Galois extensions of <img src="https://latex.codecogs.com/png.latex?K">. For every prime <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> of <img src="https://latex.codecogs.com/png.latex?K"> unramified in <img src="https://latex.codecogs.com/png.latex?N">, pick a prime <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BP%7D"> of <img src="https://latex.codecogs.com/png.latex?N"> above <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D">. Then <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Cmathfrak%7Bp%7D%5Cin%20P(M%7CK)%5Ciff%20%5CBig(%5Cfrac%7BN%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)%5Cin%20H_M%0A"></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Since <img src="https://latex.codecogs.com/png.latex?M/K"> is Galois, the restriction map <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathrm%7Bres%7D_M:%20G=%5Cmathrm%7BGal%7D(N/K)%5Cto%20%5Cmathrm%7BGal%7D(M/K)%0A"> is surjective with kernel <img src="https://latex.codecogs.com/png.latex?H_M">. Since <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> is unramified, the Frobenius automorphism is well defined and it satisfies: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Cmathrm%7Bres%7D_M%5CBig(%5CBig(%5Cfrac%7BN%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)%5CBig)=%5CBig(%5Cfrac%7BM%7CK%7D%7B%5Cmathfrak%7BP%7D%5Ccap%20M%7D%5CBig)%5Cin%20%5Cmathrm%7BGal%7D(M/K)%0A"> Now observe that <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> splits completely in <img src="https://latex.codecogs.com/png.latex?M"> if and only if every prime of <img src="https://latex.codecogs.com/png.latex?M"> above <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> has inertia index <img src="https://latex.codecogs.com/png.latex?1"> (since we already know that <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> is unramified). Equivalently, the decomposition group in <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BGal%7D(M/K)"> is trivial, which is the same of saying that <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5CBig(%5Cfrac%7BM%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)=1.%0A"> This holds if and only if <img src="https://latex.codecogs.com/png.latex?%5CBig(%5Cfrac%7BN%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)%5Cin%20%5Cmathrm%7Bker%7D(%5Cmathrm%7Bres%7D_M)=H_M">.</p>
-</div>
-<div id="prp-characterization-of-number-fields" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposition 1 (M. Bauer)</strong></span> Let <img src="https://latex.codecogs.com/png.latex?K"> be a number field and let <img src="https://latex.codecogs.com/png.latex?L"> and <img src="https://latex.codecogs.com/png.latex?M"> be two finite Galois extensions of <img src="https://latex.codecogs.com/png.latex?K">. Then <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20P(M%7CK)%20%5Csubseteq%20P(L%7CK)%20%5Ciff%20L%20%5Csubseteq%20M%0A"> Therefore, <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20P(M%7CK)=P(L%7CK)%5Ciff%20L=M%0A"> In other words, the primes splitting completely determine univocally the number field.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>If <img src="https://latex.codecogs.com/png.latex?L%20%5Csubseteq%20M"> then <img src="https://latex.codecogs.com/png.latex?P(M%7CK)%20%5Csubseteq%20P(L%7CK)"> because of the multiplicativity of inertia and ramification index in towers of extensions.</p>
-<p>Conversely, define the composite field <img src="https://latex.codecogs.com/png.latex?N:=LM"> and set <img src="https://latex.codecogs.com/png.latex?%0AG:=%5Cmathrm%7BGal%7D(N/K),%5Cquad%20H_L:=%5Cmathrm%7BGal%7D(N/L),%5Cquad%20H_M:=%5Cmathrm%7BGal%7D(N/M).%0A"></p>
-<p>Assume for the sake of contradiction that <img src="https://latex.codecogs.com/png.latex?L%5Cnot%5Csubseteq%20M">. This is equivalent to <img src="https://latex.codecogs.com/png.latex?H_M%5Cnot%20%5Csubseteq%20H_L">. Choose <img src="https://latex.codecogs.com/png.latex?g%5Cin%20H_M%5Csmallsetminus%20H_L">. Since <img src="https://latex.codecogs.com/png.latex?H_M"> and <img src="https://latex.codecogs.com/png.latex?H_L"> are normal, <img src="https://latex.codecogs.com/png.latex?%0A%5Clangle%20g%5Crangle%20%5Csubseteq%20H_M,%5Cquad%20%5Clangle%20g%5Crangle%20%5Ccap%20H_L=%5Cemptyset%0A"></p>
-<p>By Theorem&nbsp;1 there are infinitely many primes <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D"> of <img src="https://latex.codecogs.com/png.latex?K"> unramified in <img src="https://latex.codecogs.com/png.latex?N"> with Frobenius conjugacy class equal to <img src="https://latex.codecogs.com/png.latex?%5Clangle%20g%5Crangle">. For such a <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D">, pick <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BP%7D%7C%5Cmathfrak%7Bp%7D"> in <img src="https://latex.codecogs.com/png.latex?N">; then <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5CBig(%5Cfrac%7BN%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)%5Cin%20%5Clangle%20g%5Crangle%20%5Csubseteq%20H_M%0A"></p>
-<p>By Lemma&nbsp;1 <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathfrak%7Bp%7D%5Cin%20P(M%7CK)%0A"> But also <img src="https://latex.codecogs.com/png.latex?%5CBig(%5Cfrac%7BN%7CK%7D%7B%5Cmathfrak%7BP%7D%7D%5CBig)%5Cnotin%20H_L">, so <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bp%7D%5Cnotin%20P(L%7CK)">. This contradicts <img src="https://latex.codecogs.com/png.latex?P(M%7CK)%20%5Csubseteq%20P(L%7CK)">.</p>
-</div>
-
-
-
-
-</section>
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
-<div id="ref-Neukirch1999ANT" class="csl-entry">
-Neukirch, Jürgen. 1999. <em>Algebraic Number Theory</em>. 1st ed. Vol. 322. Grundlehren Der Mathematischen Wissenschaften. Berlin, Heidelberg: Springer-Verlag. <a href="https://doi.org/10.1007/978-3-662-03983-0">https://doi.org/10.1007/978-3-662-03983-0</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>Intermediate</category>
-  <category>Number Theory</category>
-  <guid>https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html</guid>
-  <pubDate>Fri, 12 Dec 2025 23:00:00 GMT</pubDate>
-</item>
+<lastBuildDate>Sun, 07 Dec 2025 23:00:00 GMT</lastBuildDate>
 <item>
   <title>How many primes are there?</title>
   <link>https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html</link>
@@ -359,29 +288,6 @@ Neukirch, Jürgen. 1999. <em>Algebraic Number Theory</em>. 1st ed. Vol. 322. Gru
   <category>Intermediate</category>
   <category>Algebraic Geometry</category>
   <guid>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</guid>
-  <pubDate>Sat, 06 Dec 2025 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Why Fermat had (probably) no proof?</title>
-  <link>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>hell</p>
-
-
-
-</section>
-
- ]]></description>
-  <category>Intermediate</category>
-  <category>Number Theory</category>
-  <guid>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</guid>
   <pubDate>Sat, 06 Dec 2025 23:00:00 GMT</pubDate>
 </item>
 <item>

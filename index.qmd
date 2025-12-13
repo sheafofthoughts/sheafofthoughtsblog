@@ -5,13 +5,14 @@ format:
     toc: false
 
 listing:
-  contents: posts
+  type: default
+  contents:
+    - posts
+    - "!posts/fermat-christmas-theorem/index.qmd"
   sort: "date desc"
   categories: true
-  type: default
   fields: [title, subtitle, description, date, categories]
   feed:
     title: "SheafofThoughts"
-
 ---
 
