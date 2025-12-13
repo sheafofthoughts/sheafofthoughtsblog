@@ -2,8 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html",
       "/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html",
       "/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html",
+      "/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html",
       "/posts/fermat-christmas-theorem/introduction/introduction.html"
     ]
   }
