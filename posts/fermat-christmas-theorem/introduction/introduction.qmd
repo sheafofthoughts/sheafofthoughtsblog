@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Introduction to Fermat's Christmas Theorem"
 subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-11-29"
 description:
