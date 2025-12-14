@@ -5,7 +5,7 @@ date: "2025-11-29"
 description:
   We introduce Fermat’s Christmas Theorem and try to understand its meaning through concrete examples.
 bibliography: references.bib
-categories: [Expository, Number Theory]
+categories: [Expository]
 ---
 
 <div class="lang-switch">
