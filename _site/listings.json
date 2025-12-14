@@ -13,7 +13,8 @@
     "listing": "/posts/fermat-christmas-theorem/index.html",
     "items": [
       "/posts/fermat-christmas-theorem/introduction/introduction.html",
-      "/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html"
+      "/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html",
+      "/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html"
     ]
   }
 ]

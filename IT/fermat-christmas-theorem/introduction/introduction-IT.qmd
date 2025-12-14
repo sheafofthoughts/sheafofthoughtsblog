@@ -102,6 +102,9 @@ Un numero primo dispari $p$ può essere scritto come somma di due quadrati se e 
 
 Ora capiamo perché il teorema è interessante: riduce un problema difficile (stabilire se un primo dispari è somma di due quadrati) a uno semplice (controllare se il suo resto è $1$ nella divisione per $4$).
 
+Nei prossimi post svilupperemo gli strumenti passo per passo, fino a che potremo dare una dimostrazione completa del teorema.
+
+
 # Qualche piano per il futuro
 
 Ho scelto di parlare di questo teorema perché, per me, la parte più interessante è la sua dimostrazione. Come studente di matematica passo la maggior parte del mio tempo a cercare di capire dimostrazioni (per me la matematica è soprattutto questo).

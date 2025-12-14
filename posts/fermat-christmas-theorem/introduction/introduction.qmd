@@ -104,6 +104,8 @@ An odd prime number $p$ can be written as the sum of two squares if and only if 
 
 Now we see why the theorem is nice: it simplifies a difficult problem (determining whether an odd prime is the sum of two squares) to a simple one (checking whether its remainder is $1$ when divided by $4$).
 
+In the next posts we will develop the necessary tools step by step, until we can give a complete proof of Fermat’s Christmas Theorem.
+
 # Some plan for the future
 
 I chose to talk about this theorem because, to me, the most interesting part is its proof. As a math student I spend most of my time trying to understand proofs (for me, mathematics is mostly about them).
