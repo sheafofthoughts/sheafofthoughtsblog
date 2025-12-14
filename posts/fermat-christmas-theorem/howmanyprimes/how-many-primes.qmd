@@ -224,7 +224,7 @@ Thus, $m$ has remainder $1$ when divided by $p_1$, so $p_1$ does not divide $m$ 
 
 So we are convinced that no prime in the list $p_1,\dots,p_n$ divides $m$. 
 
-But we said that any integer number can be written as the product of primes. However, since $m$ is not divisible by any prime in the list $p_1,\dots,p_n$, it means that the list does not contain all of the primes.
+But we said  (@thm-fundthrmarithmetic) that any integer number can be written as the product of primes. However, since $m$ is not divisible by any prime in the list $p_1,\dots,p_n$, it means that the list does not contain all of the primes.
 
 Hence, whenever we suppose a finite list $p_1,\dots,p_n$ contains all primes, we can construct a prime not in the list; thus any finite list is incomplete.
 

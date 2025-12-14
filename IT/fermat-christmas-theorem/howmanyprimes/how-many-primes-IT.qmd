@@ -221,7 +221,7 @@ Dunque $m$ ha resto $1$ nella divisione per $p_1$, quindi $p_1$ non divide $m$ (
 
 Siamo quindi convinti che nessun primo nella lista $p_1,\dots,p_n$ divide $m$. 
 
-Ma abbiamo detto che ogni numero intero può essere scritto come prodotto di numeri primi. Tuttavia, poiché $m$ non è divisibile da nessuno dei primi nella lista $p_1,\dots,p_n$, significa che la lista non contiene tutti i numeri primi.
+Ma abbiamo detto (@thm-fundthrmarithmetic) che ogni numero intero può essere scritto come prodotto di numeri primi. Tuttavia, poiché $m$ non è divisibile da nessuno dei primi nella lista $p_1,\dots,p_n$, significa che la lista non contiene tutti i numeri primi.
 
 Quindi, ogni volta che supponiamo che una lista finita $p_1,\dots,p_n$ contenga tutti i primi, possiamo costruire un primo che non è nella lista; dunque ogni lista finita è incompleta.
 
