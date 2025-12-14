@@ -67,7 +67,8 @@
     "chebotarev-corollaries.tex": "a877aa98"
   },
   "posts/fermat-christmas-theorem/integer-congruences/integer-congruences.qmd": {
-    "integer-congruences.html": "8f027293"
+    "integer-congruences.html": "8f027293",
+    "integer-congruences.tex": "fc0e4344"
   },
   "IT/fermat-christmas-theorem/integer-congruences/integer-congruences-IT.qmd": {
     "integer-congruences-IT.html": "69a48441",

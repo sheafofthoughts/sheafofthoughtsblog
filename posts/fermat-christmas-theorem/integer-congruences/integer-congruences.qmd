@@ -5,7 +5,6 @@ date: "2025-12-14"
 description:
   We introduce modular arithmetic and explain the Chinese Remainder Theorem.
 categories: [Expository]
-draft: unlinked
 ---
 
 <div class="lang-switch">
