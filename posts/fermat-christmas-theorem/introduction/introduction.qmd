@@ -133,5 +133,5 @@ See you soon!
 
 > This article is part of the series [*Fermat's Christmas Theorem*](https://sheafofthoughts.org/posts/fermat-christmas-theorem/).
 
-> Next: [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
+> **Next:** [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
 

@@ -251,6 +251,8 @@ In any case, see you next week!
 
 > This article is part of the series [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
 
-> Previous: [Introduction](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html)
+> **Previous:** [Introduction to Fermat's Christmas Theorem](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html)
+
+> **Next:** [Some basic modular arithmetic](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html)
 
 
