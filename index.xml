@@ -64,7 +64,7 @@
 <div id="rem-congruent-to-remainder" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em>. </span>For every integer <img src="https://latex.codecogs.com/png.latex?n"> and <img src="https://latex.codecogs.com/png.latex?q"> with <img src="https://latex.codecogs.com/png.latex?q%3E0">, if <img src="https://latex.codecogs.com/png.latex?r"> is the remainder of the division of <img src="https://latex.codecogs.com/png.latex?n"> by <img src="https://latex.codecogs.com/png.latex?q">, then <img src="https://latex.codecogs.com/png.latex?n%5Cequiv_q%20r">.</p>
 </div>
-<p>The following fact is of fundamental importance.</p>
+<p>The following fact tells us the meaning of congruences.</p>
 <div id="prp-meaning-of-congruence" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposition 1</strong></span> Let <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?m">, and <img src="https://latex.codecogs.com/png.latex?q"> be integers with <img src="https://latex.codecogs.com/png.latex?q%3E0">. Then <img src="https://latex.codecogs.com/png.latex?n%5Cequiv_q%20m"> if and only if <img src="https://latex.codecogs.com/png.latex?q"> divides <img src="https://latex.codecogs.com/png.latex?n-m">.</p>
 </div>
