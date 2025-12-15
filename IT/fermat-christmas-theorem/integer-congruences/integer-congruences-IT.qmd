@@ -87,7 +87,7 @@ ha resto $2$, e anche $2$ ha resto $2$ quando viene diviso per $3$.
 Per ogni intero $n$ e ogni $q$ con $q>0$, se $r$ è il resto della divisione di $n$ per $q$, allora $n\equiv_q r$.
 :::
 
-Il seguente fatto è fondamentale.
+Il seguente fatto ci dice il significato delle congruenze.
 
 ::: {#prp-meaning-of-congruence .theorem}
 Siano $n$, $m$ e $q$ interi con $q>0$. Allora $n\equiv_q m$ se e solo se $q$ divide $n-m$.

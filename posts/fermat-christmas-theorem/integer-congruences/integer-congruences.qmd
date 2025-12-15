@@ -87,7 +87,7 @@ has remainder $2$, and also $2$ has remainder $2$ when divided by $3$.
 For every integer $n$ and $q$ with $q>0$, if $r$ is the remainder of the division of $n$ by $q$, then $n\equiv_q r$.
 :::
 
-The following fact is of fundamental importance.
+The following fact tells us the meaning of congruences.
 
 ::: {#prp-meaning-of-congruence .theorem}
 Let $n$, $m$, and $q$ be integers with $q>0$. Then $n\equiv_q m$ if and only if $q$ divides $n-m$.
