@@ -157,7 +157,7 @@
 <p>This article is part of the series <a href="../../../posts/fermat-christmas-theorem/"><em>Fermat’s Christmas Theorem</em></a>.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p><strong>Previous:</strong> <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/howmanyprimes.html">How many primes are there?</a></p>
+<p><strong>Previous:</strong> <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html">How many primes are there?</a></p>
 </blockquote>
 
 
@@ -636,6 +636,7 @@ Neukirch, Jürgen. 1999. <em>Algebraic Number Theory</em>. 1st ed. Vol. 322. Gru
 <p><span class="theorem-title"><strong>Theorem 1 (Fermat’s Christmas Theorem)</strong></span> An odd prime number <img src="https://latex.codecogs.com/png.latex?p"> can be written as the sum of two squares if and only if it has remainder <img src="https://latex.codecogs.com/png.latex?1"> when divided by <img src="https://latex.codecogs.com/png.latex?4">.</p>
 </div>
 <p>Now we see why the theorem is nice: it simplifies a difficult problem (determining whether an odd prime is the sum of two squares) to a simple one (checking whether its remainder is <img src="https://latex.codecogs.com/png.latex?1"> when divided by <img src="https://latex.codecogs.com/png.latex?4">).</p>
+<p>In the next posts we will develop the necessary tools step by step, until we can give a complete proof of Fermat’s Christmas Theorem.</p>
 </section>
 <section id="some-plan-for-the-future" class="level1">
 <h1>Some plan for the future</h1>

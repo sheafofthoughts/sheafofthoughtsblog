@@ -421,5 +421,5 @@ Once we find such an $x$, bus $A$ will also arrive at time $x$. @thm-crt tells u
 
 > This article is part of the series [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
 
-> **Previous:** [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/howmanyprimes.html)
+> **Previous:** [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
 

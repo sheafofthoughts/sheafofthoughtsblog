@@ -7,6 +7,11 @@ description:
 categories: [Expository]
 ---
 
+<div class="lang-switch">
+  <a href="/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html">ENG</a>
+  <span class="lang-current">ITA</span>
+</div>
+
 # Introduzione
 
 Siamo alla fermata dell’autobus, in attesa che arrivi il nostro autobus. Sul tabellone è scritto che ci sono tre autobus in arrivo a breve:
@@ -416,4 +421,4 @@ Una volta trovato un tale $x$, anche l’autobus $A$ arriverà al tempo $x$. @th
 
 > Questo articolo fa parte della serie [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
 
-> **Precedente:** [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/howmanyprimes.html)
+> **Precedente:** [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
