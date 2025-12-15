@@ -3,7 +3,7 @@ title: "Aritmetica modulare di base"
 subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-14"
 description:
-  Introduciamo l’aritmetica modulare e spieghiamo il Teorema Cinese del Resto.
+  Introduciamo l’aritmetica modulare e capiamo il significato del Teorema Cinese del Resto.
 categories: [Expository]
 ---
 

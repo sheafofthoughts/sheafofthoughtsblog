@@ -3,7 +3,7 @@ title: "Some basic modular arithmetic"
 subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-14"
 description:
-  We introduce modular arithmetic and explain the Chinese Remainder Theorem.
+  We introduce modular arithmetic and understand the meaning of Chinese Remainder Theorem.
 categories: [Expository]
 ---
 
