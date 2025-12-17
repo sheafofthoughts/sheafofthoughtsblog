@@ -285,3 +285,8 @@ We also proved Dirichlet’s theorem on primes in arithmetic progressions by app
 
 All these results share the same pattern: translate a question into a condition on Frobenius conjugacy classes, then use Chebotarev to conclude that the relevant primes not only exist, but are infinitely many.
 
+---
+
+I would like to thank my friend who suggested this topic to me and helped me write this post.
+
+---

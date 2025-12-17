@@ -281,6 +281,9 @@
 <p>Starting from the simple observation that Frobenius elements encode splitting behaviour, we deduced that totally split primes always exist in abundance (in fact with positive density), and we used this to prove a rigidity statement: in the Galois case, knowing which primes split completely already determines the extension.</p>
 <p>We also proved Dirichlet’s theorem on primes in arithmetic progressions by applying Chebotarev to cyclotomic fields, and we saw a typical application to polynomials: if an irreducible polynomial has a root modulo almost every prime, then it must be linear.</p>
 <p>All these results share the same pattern: translate a question into a condition on Frobenius conjugacy classes, then use Chebotarev to conclude that the relevant primes not only exist, but are infinitely many.</p>
+<hr>
+<p>I would like to thank my friend who suggested this topic to me and helped me write this post.</p>
+<hr>
 
 
 
