@@ -254,3 +254,9 @@ Moreover, Hensel’s lemma shows that these solutions often lift to $\mathbb{Z}_
 
 This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo $n$, or elementary $p$-adic methods.
 
+
+---
+
+I would like to thank my friend who suggested this topic to me and helped me write this post.
+
+---
