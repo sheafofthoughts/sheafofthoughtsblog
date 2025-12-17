@@ -12,7 +12,7 @@ In 1637, Fermat stated that:
 
 > It is impossible to separate a cube into two cubes, or a biquadrate into two biquadrate, or in general any power higher than the second into the power of like degree; I have discovered a truly remarkable proof which this margin is too small to contain." (@dickinson_history_1938)
 
-This theorem is now known as Fermat's Last Theorem, and it formally says the following.
+This theorem is now known as Fermat's Last Theorem, and it can be stated as follows.
 
 ::: {#thm-fermat}
 ## Fermat's last theorem
@@ -25,9 +25,9 @@ has no non-trivial solutions $x,y,z\in \mathbb{Z}$.
 
 :::
 
-First, observe that we can reduce to consider only triples $(x,y,z)\in \mathbb{Z}^3$ with $\gcd(x,y,z)=1$. In particular, in this situation $x,y,z$ are pairwise coprime: for instance, if a prime $\ell$ divides $x$ and $z$, then it divides $z^q-x^q=y^q$, hence it divides $y$, contradicting $\gcd(x,y,z)=1$. Moreover, Fermat himself proved the theorem in the case $n=4$; therefore, using basic properties of powers, it is enough to prove the theorem for $n=q$ where $q$ is an odd prime.
+First, observe that we can reduce to consider only triples $(x,y,z)\in \mathbb{Z}^3$ with $\gcd(x,y,z)=1$. In particular, in this situation $x,y,z$ are pairwise coprime: for instance, if a prime $\ell$ divides $x$ and $z$, then it divides $z^q-x^q=y^q$, hence it divides $y$, contradicting $\gcd(x,y,z)=1$. Moreover, Fermat himself proved the theorem in the case $n=4$; therefore, using basic properties of powers, it is enough to prove the theorem for $n=q$, where $q$ is an odd prime.
 
-To prove @thm-fermat we could naively proceed in the following way. Fix an odd prime $q\geq 3$ and suppose that we had a non-trivial solution $x,y,z\in \mathbb{Z}$ of
+To prove @thm-fermat, we could naively proceed in the following way. Fix an odd prime $q\geq 3$ and suppose that we had a non-trivial solution $x,y,z\in \mathbb{Z}$ of
 $$
 x^q+y^q=z^q
 $$ {#eq-fermat}
@@ -41,7 +41,7 @@ There exists an integer $N\geq q$ such that for every prime $p>N$, @eq-fermat ha
 
 :::
 
-This theorem tells us a lot more than we would need. Indeed, it says that eventually, for every prime $p$, there is a non-trivial solution modulo $p$, while we would only need infinitely many such primes.
+Therefore, there are only finitely many primes with no non-trivial solution, which proves that the method cannot work.
 
 ## Warm up: a special case
 
@@ -56,16 +56,16 @@ $$
 1^q+1^q=z^q.
 $$
 
-::: {#rem-wearehappy}
-
-From @prp-root-of-two we already get that Fermat's last theorem cannot be proven by the naive approach we explained. Indeed, we already found infinitely many non-trivial solutions modulo infinitely many primes.
-:::
-
 ::: {.proof}
 
 #### Proof of @prp-root-of-two
 
 This proposition is an easy corollary of [Corollary 5](https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html#how-many-mathbbf_p-points) you can find in a [previous post](https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html) about the Chebotarev density theorem, applied to the algebra $A:=\mathbb{Z}[X]/(X^q-2)$.
+:::
+
+::: {#rem-wearehappy}
+
+Observe that the Chebotarev density theorem only tells us that we find infinitely many primes giving a solution to the equation, but it also tells us that the set of primes we find has density less than $1$. Therefore, it is not sufficient to establish what we want.
 :::
 
 # Proof of @thm-eventually
@@ -86,7 +86,7 @@ We now state the Weil conjectures in the form we need.
 
 ::: {#thm-weil}
 
-#### special case of the Weil conjectures
+#### Special case of the Weil conjectures
 
 Suppose that $X$ is a smooth, geometrically irreducible, projective curve over the field $\mathbb{F}_p$, and let $g$ be the genus of $X$. The zeta function $\zeta(X,t)$ of $X$ is, by definition,
 $$
@@ -108,11 +108,11 @@ Now we are ready to prove @thm-eventually.
 
 ::: {.proof}
 
-#### of @thm-eventually
+#### Proof of @thm-eventually
 
-- **Step 1:** *There are at most $3q$ points of $X=V_+(X^q+Y^q-Z^q)\subseteq \mathbb{P}^2_{\mathbb{F}_p}$ such that at least one among the coordinates $x,y,z$ vanishes.*
+- **Step 1:** *There are at most $3q$ points of $X=V_+(X^q+Y^q-Z^q)\subseteq \mathbb{P}^2_{\mathbb{F}_p}$ such that at least one of the coordinates $x,y,z$ vanishes.*
 
-  *Proof:* Consider the line $z=0$. On this line, the equation becomes $X^q+Y^q=0$, which is a homogeneous equation of degree $q$ on $\mathbb{P}^1$, hence it has at most $q$ solutions over any field. Repeating the same argument for the lines $x=0$ and $y=0$ gives the claim.
+  *Proof:* Consider the line $z=0$. On this line, the equation becomes $X^q+Y^q=0$, which is a homogeneous equation of degree $q$ on $\mathbb{P}^1_{\mathbb{F}_p}$, hence it has at most $q$ solutions over any field. Repeating the same argument for the lines $x=0$ and $y=0$ gives the claim.
 
 - **Step 2:** *$X$ is a smooth, geometrically irreducible, projective curve of genus $g=\frac{(q-1)(q-2)}{2}$.*
 
@@ -122,23 +122,23 @@ Now we are ready to prove @thm-eventually.
   \frac{\partial F}{\partial Y}=qY^{q-1},\qquad
   \frac{\partial F}{\partial Z}=-qZ^{q-1},
   $$
-  and since $q\not\equiv 0\pmod p$, these three partial derivatives cannot vanish simultaneously at any point of $\mathbb{P}^2$.
+  and since $q\not\equiv 0\pmod p$, these three partial derivatives cannot vanish simultaneously at any point of $\mathbb{P}^2 _{\overline{\mathbb{F}}_p}$.
 
   We now prove that $X$ is geometrically irreducible. This means that
   $$
-  X\times_{\mathrm{Spec}(\mathbb{F}_p)} \mathrm{Spec}(\bar{\mathbb{F}}_p)
+  X\times_{\mathrm{Spec}(\mathbb{F}_p)} \mathrm{Spec}(\overline{\mathbb{F}}_p)
   $$
-  (where $\bar{\mathbb{F}}_p$ is an algebraic closure) is an irreducible topological space. If it were reducible, then $F$ would factor in $\bar{\mathbb{F}}_p[X,Y,Z]$ as a product $F=GH$ with $\deg(G),\deg(H)>0$. By Bézout's theorem we get that $V_+(G)\cap V_+(H)\neq \emptyset$. Pick $P\in V_+(G)\cap V_+(H)$. Then, for every $W\in\{X,Y,Z\}$,
+  (where $\overline{\mathbb{F}_p}$ is an algebraic closure) is an irreducible topological space. If it were reducible, then $F$ would factor in $\overline{\mathbb{F}}_p[X,Y,Z]$ as a product $F=GH$ with $\deg(G),\deg(H)>0$. By Bézout's theorem we get that $V_+(G)\cap V_+(H)\neq \emptyset$. Pick $P\in V_+(G)\cap V_+(H)$. Then, for every $W\in\{X,Y,Z\}$,
   $$
   \frac{\partial F}{\partial W}=G\frac{\partial H}{\partial W}+H \frac{\partial G}{\partial W},
   $$
   so all partial derivatives of $F$ vanish at $P$, contradicting smoothness.
 
-  Finally, since $X$ is a smooth plane curve of degree $q$, its genus is $g=\frac{(q-1)(q-2)}{2}$ (by [genus-degree formula](https://en.wikipedia.org/wiki/Genus%E2%80%93degree_formula))
+  Finally, since $X$ is a smooth plane curve of degree $q$, its genus is $g=\frac{(q-1)(q-2)}{2}$ (by [genus-degree formula](https://en.wikipedia.org/wiki/Genus%E2%80%93degree_formula)).
 
 - **Step 3:** *Apply @thm-weil.*
 
-  From
+  From (in the following we work with formal series $\mathbb{C}[[t]]$)
   $$
   \zeta(X,t)=\exp\Big(\sum_{m=1}^\infty \#X(\mathbb{F}_{p^m}) \frac{t^m}{m}\Big)
   $$
@@ -154,6 +154,10 @@ Now we are ready to prove @thm-eventually.
   $$
   we obtain
   $$
+  	\#X(\mathbb{F}_p)=\Big(\frac{\mathrm{d}}{\mathrm{d}t}\big(\log(P(t))-\log(1-t)-\log(1-pt)\big)\Big)\Big|_{t=0}
+  $$
+  hence
+  $$
   \#X(\mathbb{F}_p)=p+1-\sum_{i=1}^{2g}\alpha_i.
   $$
   Since $|\alpha_i|=\sqrt{p}$ for all $i$, we deduce the bound
@@ -162,7 +166,7 @@ Now we are ready to prove @thm-eventually.
   =p+1-(q-1)(q-2)\sqrt p.
   $$
 
-  Hence, for $p$ large enough (for example, for $p>(q^2+3q)^2$), we have $\#X(\mathbb{F}_p)>3q$. By Step 1, this implies that there must be a point $[x:y:z]\in X(\mathbb{F}_p)$ with $xyz\neq 0$, i.e. a non-trivial solution modulo $p$.
+  Hence, for $p$ large enough, we have $\#X(\mathbb{F}_p)>3q$ (indeed the right-hand side approaches $+\infty$ when $p$ approaches $+\infty$). By Step 1, this implies that there must be a point $[x:y:z]\in X(\mathbb{F}_p)$ with $xyz\neq 0$, i.e. a non-trivial solution modulo $p$.
 
 :::
 
@@ -178,22 +182,22 @@ There exists an integer $N\geq q$ such that for every prime $p>N$, the [Fermat e
 
 From @thm-extension we get, in particular, a non-trivial solution in every $\mathbb{Z}/p^r\mathbb{Z}$ for every $r\geq 1$ and for every prime $p>N$.
 
-Since we can factorize every integer as a product of primes, this tells us that if $m$ is an integer whose prime divisors are all $>N$, then $x^q+y^q=z^q$ has a non-trivial solution in $\mathbb{Z}/m \mathbb{Z}$.
+Since we can factorize every integer as a product of primes, this tells us that if $m$ is an integer having at least one prime divisor $>N$, then $x^q+y^q=z^q$ has a non-trivial solution in $\mathbb{Z}/m \mathbb{Z}$.
 
 ::: {.proof}
 
-#### of @thm-extension
+#### Proof of @thm-extension
 
-Fix a prime $p>N$. From @thm-eventually we know that there is a solution $(\bar a,\bar b,\bar c)\in(\mathbb{F}_p^\times)^3$ such that
+Fix a prime $p>N$. From @thm-eventually we know that there is a solution $(\overline a,\overline b,\overline c)\in(\mathbb{F}_p^\times)^3$ such that
 $$
-\bar a^q+\bar b^q=\bar c^q \quad\text{in }\mathbb{F}_p.
+\overline a^q+\overline b^q=\overline c^q \quad\text{in }\mathbb{F}_p.
 $$
-Choose lifts $a,b,c_0\in \mathbb{Z}_p^\times$ such that $a\equiv \bar a$, $b\equiv \bar b$, $c_0\equiv \bar c \pmod p$. Define the polynomial $g(T):=a^q+b^q-T^q\in \mathbb{Z}_p[T]$.
+Choose lifts $a,b,c_0\in \mathbb{Z}_p^\times$ such that $a\equiv \overline a$, $b\equiv \overline b$, $c_0\equiv \overline c \pmod p$. Define the polynomial $g(T):=a^q+b^q-T^q\in \mathbb{Z}_p[T]$.
 
 Then
 
 - $g(c_0)\equiv 0 \pmod p$;
-- $g'(T)=-qT^{q-1}$, so $g'(c_0)\equiv -q\bar c^{\,q-1}\not \equiv 0 \pmod p$ (since $p\neq q$ and $\bar c\neq 0$).
+- $g'(T)=-qT^{q-1}$, so $g'(c_0)\equiv -q\overline c^{\,q-1}\not \equiv 0 \pmod p$ (since $p\neq q$ and $\overline c\neq 0$).
 
 By Hensel's lemma there is a unique $c\in \mathbb{Z}_p$ such that $c\equiv c_0 \pmod p$ and such that $c$ is a root of $g$ in $\mathbb{Z}_p$. In particular,
 $$
@@ -204,6 +208,39 @@ so $(a,b,c)\in(\mathbb{Z}_p^\times)^3$ is a non-trivial $p$-adic solution.
 
 :::
 
+# What do we bring with us
+
+There are some general facts we used in our reasoning that could be used in other contexts. I would like to point out some of these things.
+
+The first one is from Step 2 of the proof of @thm-eventually.
+
+::: {#prp-F-irrid .theorem}
+
+Let $k$ be a field and $F(X_1,\dots , X_n)\in k[X_1,\dots, X_n]$, with $n\geq 3$, a homogeneous polynomial. Define the ideal $J:=(\frac{\partial F}{\partial X_1},\dots , \frac{\partial F}{\partial X_n})$. If the intersection between the zeros of $J$ (closed points of $V(J)$) and the roots of $F$ is just $(0,\dots,0)$ in $\overline{k}^n$, then $F$ is irreducible in $\overline{k}$.
+
+:::
+
+Similarly, observe that the bound
+$$
+	\#X(\mathbb{F}_q)\geq p+1-(q-1)(q-2)\sqrt p
+$$
+deduced in Step 3 of the proof of @thm-eventually is true for every smooth, geometrically irreducible, projective curve of genus $\frac{(q-1)(q-2)}{2}$.
+
+Moreover, you can check that the proof of @thm-eventually is actually a proof of the following more general fact:
+
+::: {#thm-general}
+
+Let $F$ be a homogeneous polynomial in $3$ or less variables with coefficients in $\mathbb{Z}$, and $J:=(\frac{\partial F}{\partial X_i})_{i\in I}$ (where $I$ is the index set of the variables). Then, if the intersection between the zeros of $J$ and the roots of $F$ is $(0,\dots, 0)$ in $\overline{\mathbb{F}}_p$ eventually for every $p$, $F$ has eventually non-trivial solutions modulo every $p$.
+
+:::
+
+Finally, we also proved in @thm-extension the following.
+
+::: {#prp-hensel .theorem}
+
+Let $A$ be a henselian local ring (a local ring where the one-variable Hensel lemma is true), let $k$ be its residue field, let $f\in A[X_1,\dots, X_n]$, and let $a=(a_1,\dots,a_n)$ be a solution of $f$ in $k$ such that $\nabla f(a_1,\dots, a_n)\neq 0$ in $k$. Then there exists a solution $(s_1,\dots,s_n)$ of $f$ in $A$.
+
+:::
 
 # Conclusion
 
@@ -215,5 +252,5 @@ has $\mathbb{F}_p$-points with all coordinates nonzero for every sufficiently la
 
 Moreover, Hensel’s lemma shows that these solutions often lift to $\mathbb{Z}_p$, and hence to solutions modulo $p^r$ for all $r\ge 1$.
 
-This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes.
+This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo $n$, or elementary $p$-adic methods.
 
