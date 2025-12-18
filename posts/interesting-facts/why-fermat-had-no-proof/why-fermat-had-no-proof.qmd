@@ -230,7 +230,7 @@ Moreover, you can check that the proof of @thm-eventually is actually a proof of
 
 ::: {#thm-general}
 
-Let $F$ be a homogeneous polynomial in $3$ or less variables with coefficients in $\mathbb{Z}$, and $J:=(\frac{\partial F}{\partial X_i})_{i\in I}$ (where $I$ is the index set of the variables). Then, if the intersection between the zeros of $J$ and the roots of $F$ is $(0,\dots, 0)$ in $\overline{\mathbb{F}}_p$ eventually for every $p$, $F$ has eventually non-trivial solutions modulo every $p$.
+Let $F(X,Y,Z)\in \mathbb{Z}[X,Y,Z]$ be a homogeneous polynomial, and $J:=(\frac{\partial F}{\partial X}, \frac{\partial F}{\partial Y}, \frac{\partial F}{\partial Z})$. Then, if eventually for every $p$ prime the intersection between the zeros of $J$ and the roots of $F$ is $(0,\dots, 0)$ in $\overline{\mathbb{F}}_p^3$, $F$ has eventually non-trivial solutions modulo every $p$.
 
 :::
 
