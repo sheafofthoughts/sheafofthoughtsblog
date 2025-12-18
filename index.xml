@@ -10,7 +10,131 @@
 <atom:link href="https://sheafofthoughts.org/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Sat, 13 Dec 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 17 Dec 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Why Fermat had (probably) no proof?</title>
+  <link>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In 1637, Fermat stated that:</p>
+<blockquote class="blockquote">
+<p>It is impossible to separate a cube into two cubes, or a biquadrate into two biquadrate, or in general any power higher than the second into the power of like degree; I have discovered a truly remarkable proof which this margin is too small to contain.” (<span class="citation" data-cites="dickinson_history_1938">Dickinson (1938)</span>)</p>
+</blockquote>
+<p>This theorem is now known as Fermat’s Last Theorem, and it can be stated as follows.</p>
+<div id="thm-fermat" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Fermat’s last theorem)</strong></span> Let <img src="https://latex.codecogs.com/png.latex?n%5Cgeq%203"> be an integer. The equation <img src="https://latex.codecogs.com/png.latex?%0Ax%5En+y%5En=z%5En%0A"> has no non-trivial solutions <img src="https://latex.codecogs.com/png.latex?x,y,z%5Cin%20%5Cmathbb%7BZ%7D">.</p>
+</div>
+<p>First, observe that we can reduce to consider only triples <img src="https://latex.codecogs.com/png.latex?(x,y,z)%5Cin%20%5Cmathbb%7BZ%7D%5E3"> with <img src="https://latex.codecogs.com/png.latex?%5Cgcd(x,y,z)=1">. In particular, in this situation <img src="https://latex.codecogs.com/png.latex?x,y,z"> are pairwise coprime: for instance, if a prime <img src="https://latex.codecogs.com/png.latex?%5Cell"> divides <img src="https://latex.codecogs.com/png.latex?x"> and <img src="https://latex.codecogs.com/png.latex?z">, then it divides <img src="https://latex.codecogs.com/png.latex?z%5Eq-x%5Eq=y%5Eq">, hence it divides <img src="https://latex.codecogs.com/png.latex?y">, contradicting <img src="https://latex.codecogs.com/png.latex?%5Cgcd(x,y,z)=1">. Moreover, Fermat himself proved the theorem in the case <img src="https://latex.codecogs.com/png.latex?n=4">; therefore, using basic properties of powers, it is enough to prove the theorem for <img src="https://latex.codecogs.com/png.latex?n=q">, where <img src="https://latex.codecogs.com/png.latex?q"> is an odd prime.</p>
+<p>To prove Theorem&nbsp;1, we could naively proceed in the following way. Fix an odd prime <img src="https://latex.codecogs.com/png.latex?q%5Cgeq%203"> and suppose that we had a non-trivial solution <img src="https://latex.codecogs.com/png.latex?x,y,z%5Cin%20%5Cmathbb%7BZ%7D"> of <span id="eq-fermat"><img src="https://latex.codecogs.com/png.latex?%0Ax%5Eq+y%5Eq=z%5Eq%0A%5Ctag%7B1%7D"></span> Then, reducing this equation modulo every prime <img src="https://latex.codecogs.com/png.latex?p"> such that <img src="https://latex.codecogs.com/png.latex?p%5Cnmid%20xyz">, we get a non-trivial solution modulo <img src="https://latex.codecogs.com/png.latex?p">. Therefore, only finitely many primes <img src="https://latex.codecogs.com/png.latex?p"> can fail to admit a non-trivial solution modulo <img src="https://latex.codecogs.com/png.latex?p">. If we proved that for infinitely many primes <img src="https://latex.codecogs.com/png.latex?p"> the reduction of Equation&nbsp;1 modulo <img src="https://latex.codecogs.com/png.latex?p"> has no non-trivial solution, then we would conclude that Equation&nbsp;1 has no integer solutions at all.</p>
+<p>We will prove that this method cannot work. Indeed, we have the following.</p>
+<div id="thm-eventually" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2</strong></span> There exists an integer <img src="https://latex.codecogs.com/png.latex?N%5Cgeq%20q"> such that for every prime <img src="https://latex.codecogs.com/png.latex?p%3EN">, Equation&nbsp;1 has a non-trivial solution in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">.</p>
+</div>
+<p>Therefore, there are only finitely many primes with no non-trivial solution, which proves that the method cannot work.</p>
+<section id="warm-up-a-special-case" class="level2">
+<h2 class="anchored" data-anchor-id="warm-up-a-special-case">Warm up: a special case</h2>
+<div id="prp-root-of-two" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposition 1</strong></span> Fix a prime <img src="https://latex.codecogs.com/png.latex?q">. There are infinitely many primes <img src="https://latex.codecogs.com/png.latex?p"> such that <img src="https://latex.codecogs.com/png.latex?2"> has a <img src="https://latex.codecogs.com/png.latex?q">-th root in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">.</p>
+</div>
+<p>From this proposition we obtain that the equation <img src="https://latex.codecogs.com/png.latex?x%5Eq+y%5Eq=z%5Eq"> has a non-trivial solution modulo <img src="https://latex.codecogs.com/png.latex?p"> for infinitely many primes <img src="https://latex.codecogs.com/png.latex?p">. Indeed, if <img src="https://latex.codecogs.com/png.latex?z%5Eq=2"> in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">, we can choose <img src="https://latex.codecogs.com/png.latex?x=y=1"> and get <img src="https://latex.codecogs.com/png.latex?%0A1%5Eq+1%5Eq=z%5Eq.%0A"></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em> (Proof of Proposition&nbsp;1). </span>This proposition is an easy corollary of <a href="https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html#how-many-mathbbf_p-points">Corollary 5</a> you can find in a <a href="https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html">previous post</a> about the Chebotarev density theorem, applied to the algebra <img src="https://latex.codecogs.com/png.latex?A:=%5Cmathbb%7BZ%7D%5BX%5D/(X%5Eq-2)">.</p>
+</div>
+<div id="rem-wearehappy" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em>. </span>Observe that the Chebotarev density theorem only tells us that we find infinitely many primes giving a solution to the equation, but it also tells us that the set of primes we find has density less than <img src="https://latex.codecogs.com/png.latex?1">. Therefore, it is not sufficient to establish what we want.</p>
+</div>
+</section>
+</section>
+<section id="proof-of-thm-eventually" class="level1">
+<h1>Proof of Theorem&nbsp;2</h1>
+<p>The idea to prove Theorem&nbsp;2 is to use a geometric fact. In particular, we want to study the projective curve <img src="https://latex.codecogs.com/png.latex?%0AX:=V_+(X%5Eq+Y%5Eq-Z%5Eq)%5Csubseteq%20%5Cmathbb%7BP%7D%5E2_%7B%5Cmathbb%7BF%7D_p%7D,%0A"> where <img src="https://latex.codecogs.com/png.latex?p%5Cneq%20q"> are primes. Finding a non-trivial solution in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p"> is the same as finding a point <img src="https://latex.codecogs.com/png.latex?%5Bx:y:z%5D%5Cin%20X(%5Cmathbb%7BF%7D_p)"> such that <img src="https://latex.codecogs.com/png.latex?xyz%5Cneq%200">.</p>
+<p>After proving that <img src="https://latex.codecogs.com/png.latex?X"> satisfies the hypotheses of the <a href="https://en.wikipedia.org/wiki/Weil_conjectures#Statement_of_the_Weil_conjectures">Weil conjectures</a>, we will use them to establish, for <img src="https://latex.codecogs.com/png.latex?p"> large enough, a bound <img src="https://latex.codecogs.com/png.latex?%0A%5C#X(%5Cmathbb%7BF%7D_p)%3E%203q,%0A"> where <img src="https://latex.codecogs.com/png.latex?X(%5Cmathbb%7BF%7D_p)"> denotes the <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">-rational points. We will also prove that the points where one coordinate vanishes are <img src="https://latex.codecogs.com/png.latex?%5Cle%203q">. Therefore, we will get the theorem as a direct consequence of the bound.</p>
+<p>We now state the Weil conjectures in the form we need.</p>
+<div id="thm-weil" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (Special case of the Weil conjectures)</strong></span> Suppose that <img src="https://latex.codecogs.com/png.latex?X"> is a smooth, geometrically irreducible, projective curve over the field <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">, and let <img src="https://latex.codecogs.com/png.latex?g"> be the genus of <img src="https://latex.codecogs.com/png.latex?X">. The zeta function <img src="https://latex.codecogs.com/png.latex?%5Czeta(X,t)"> of <img src="https://latex.codecogs.com/png.latex?X"> is, by definition, <img src="https://latex.codecogs.com/png.latex?%0A%5Czeta(X,t):=%5Cexp%5CBig(%5Csum_%7Bm=1%7D%5E%5Cinfty%20%5C#X(%5Cmathbb%7BF%7D_%7Bp%5Em%7D)%20%5Cfrac%7Bt%5Em%7D%7Bm%7D%5CBig).%0A"> Then <img src="https://latex.codecogs.com/png.latex?%5Czeta(X,t)"> is a rational function and can be written as <img src="https://latex.codecogs.com/png.latex?%0A%5Czeta(X,t)=%5Cfrac%7BP(t)%7D%7B(1-t)(1-pt)%7D,%0A"> where <img src="https://latex.codecogs.com/png.latex?P(t)%5Cin%5Cmathbb%7BZ%7D%5Bt%5D"> has degree <img src="https://latex.codecogs.com/png.latex?2g"> and factors as <img src="https://latex.codecogs.com/png.latex?%0AP(t)=%5Cprod_%7Bi=1%7D%5E%7B2g%7D(1-%5Calpha_i%20t)%0A%5Cqquad%5Ctext%7Bwith%7D%5Cqquad%20%7C%5Calpha_i%7C=%5Csqrt%7Bp%7D.%0A"></p>
+</div>
+<p>Now we are ready to prove Theorem&nbsp;2.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em> (Proof of Theorem&nbsp;2). </span></p>
+<ul>
+<li><p><strong>Step 1:</strong> <em>There are at most <img src="https://latex.codecogs.com/png.latex?3q"> points of <img src="https://latex.codecogs.com/png.latex?X=V_+(X%5Eq+Y%5Eq-Z%5Eq)%5Csubseteq%20%5Cmathbb%7BP%7D%5E2_%7B%5Cmathbb%7BF%7D_p%7D"> such that at least one of the coordinates <img src="https://latex.codecogs.com/png.latex?x,y,z"> vanishes.</em></p>
+<p><em>Proof:</em> Consider the line <img src="https://latex.codecogs.com/png.latex?z=0">. On this line, the equation becomes <img src="https://latex.codecogs.com/png.latex?X%5Eq+Y%5Eq=0">, which is a homogeneous equation of degree <img src="https://latex.codecogs.com/png.latex?q"> on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BP%7D%5E1_%7B%5Cmathbb%7BF%7D_p%7D">, hence it has at most <img src="https://latex.codecogs.com/png.latex?q"> solutions over any field. Repeating the same argument for the lines <img src="https://latex.codecogs.com/png.latex?x=0"> and <img src="https://latex.codecogs.com/png.latex?y=0"> gives the claim.</p></li>
+<li><p><strong>Step 2:</strong> <em><img src="https://latex.codecogs.com/png.latex?X"> is a smooth, geometrically irreducible, projective curve of genus <img src="https://latex.codecogs.com/png.latex?g=%5Cfrac%7B(q-1)(q-2)%7D%7B2%7D">.</em></p>
+<p><em>Proof:</em> <img src="https://latex.codecogs.com/png.latex?X"> is projective by construction. It is smooth because <img src="https://latex.codecogs.com/png.latex?p%5Cneq%20q">: if <img src="https://latex.codecogs.com/png.latex?F:=X%5Eq+Y%5Eq-Z%5Eq">, then <img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20X%7D=qX%5E%7Bq-1%7D,%5Cqquad%0A%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20Y%7D=qY%5E%7Bq-1%7D,%5Cqquad%0A%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20Z%7D=-qZ%5E%7Bq-1%7D,%0A"> and since <img src="https://latex.codecogs.com/png.latex?q%5Cnot%5Cequiv%200%5Cpmod%20p">, these three partial derivatives cannot vanish simultaneously at any closed point of <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BP%7D%5E2%20_%7B%5Coverline%7B%5Cmathbb%7BF%7D%7D_p%7D">.</p>
+<p>We now prove that <img src="https://latex.codecogs.com/png.latex?X"> is geometrically irreducible. This means that <img src="https://latex.codecogs.com/png.latex?%0AX%5Ctimes_%7B%5Cmathrm%7BSpec%7D(%5Cmathbb%7BF%7D_p)%7D%20%5Cmathrm%7BSpec%7D(%5Coverline%7B%5Cmathbb%7BF%7D%7D_p)%0A"> (where <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbb%7BF%7D_p%7D"> is an algebraic closure) is an irreducible topological space. If it were reducible, then <img src="https://latex.codecogs.com/png.latex?F"> would factor in <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbb%7BF%7D%7D_p%5BX,Y,Z%5D"> as a product <img src="https://latex.codecogs.com/png.latex?F=GH"> with <img src="https://latex.codecogs.com/png.latex?%5Cdeg(G),%5Cdeg(H)%3E0">. By Bézout’s theorem we get that <img src="https://latex.codecogs.com/png.latex?V_+(G)%5Ccap%20V_+(H)%5Cneq%20%5Cemptyset">. Pick <img src="https://latex.codecogs.com/png.latex?P%5Cin%20V_+(G)%5Ccap%20V_+(H)">. Then, for every <img src="https://latex.codecogs.com/png.latex?W%5Cin%5C%7BX,Y,Z%5C%7D">, <img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20W%7D=G%5Cfrac%7B%5Cpartial%20H%7D%7B%5Cpartial%20W%7D+H%20%5Cfrac%7B%5Cpartial%20G%7D%7B%5Cpartial%20W%7D,%0A"> so all partial derivatives of <img src="https://latex.codecogs.com/png.latex?F"> vanish at <img src="https://latex.codecogs.com/png.latex?P">, contradicting smoothness.</p>
+<p>Finally, since <img src="https://latex.codecogs.com/png.latex?X"> is a smooth plane curve of degree <img src="https://latex.codecogs.com/png.latex?q">, its genus is <img src="https://latex.codecogs.com/png.latex?g=%5Cfrac%7B(q-1)(q-2)%7D%7B2%7D"> (by <a href="https://en.wikipedia.org/wiki/Genus%E2%80%93degree_formula">genus-degree formula</a>).</p></li>
+<li><p><strong>Step 3:</strong> <em>Apply Theorem&nbsp;3.</em></p>
+<p>From (in the following we work with formal series <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BC%7D%5B%5Bt%5D%5D">) <img src="https://latex.codecogs.com/png.latex?%0A%5Czeta(X,t)=%5Cexp%5CBig(%5Csum_%7Bm=1%7D%5E%5Cinfty%20%5C#X(%5Cmathbb%7BF%7D_%7Bp%5Em%7D)%20%5Cfrac%7Bt%5Em%7D%7Bm%7D%5CBig)%0A"> we get <img src="https://latex.codecogs.com/png.latex?%0A%5C#X(%5Cmathbb%7BF%7D_p)=%5CBig(%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D%5Clog(%5Czeta(X,t))%5CBig)%5CBig%7C_%7Bt=0%7D.%0A"> Using <img src="https://latex.codecogs.com/png.latex?%0A%5Czeta(X,t)=%5Cfrac%7BP(t)%7D%7B(1-t)(1-pt)%7D%0A%5Cquad%5Ctext%7Band%7D%5Cquad%0AP(t)=%5Cprod_%7Bi=1%7D%5E%7B2g%7D(1-%5Calpha_i%20t),%0A"> we obtain <img src="https://latex.codecogs.com/png.latex?%0A%20%20%5C#X(%5Cmathbb%7BF%7D_p)=%5CBig(%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D%5Cbig(%5Clog(P(t))-%5Clog(1-t)-%5Clog(1-pt)%5Cbig)%5CBig)%5CBig%7C_%7Bt=0%7D%0A"> hence <img src="https://latex.codecogs.com/png.latex?%0A%5C#X(%5Cmathbb%7BF%7D_p)=p+1-%5Csum_%7Bi=1%7D%5E%7B2g%7D%5Calpha_i.%0A"> Since <img src="https://latex.codecogs.com/png.latex?%7C%5Calpha_i%7C=%5Csqrt%7Bp%7D"> for all <img src="https://latex.codecogs.com/png.latex?i">, we deduce the bound <img src="https://latex.codecogs.com/png.latex?%0A%5C#X(%5Cmathbb%7BF%7D_p)%5Cgeq%20p+1-2g%20%5Csqrt%20p%0A=p+1-(q-1)(q-2)%5Csqrt%20p.%0A"></p>
+<p>Hence, for <img src="https://latex.codecogs.com/png.latex?p"> large enough, we have <img src="https://latex.codecogs.com/png.latex?%5C#X(%5Cmathbb%7BF%7D_p)%3E3q"> (indeed the right-hand side approaches <img src="https://latex.codecogs.com/png.latex?+%5Cinfty"> when <img src="https://latex.codecogs.com/png.latex?p"> approaches <img src="https://latex.codecogs.com/png.latex?+%5Cinfty">). By Step 1, this implies that there must be a point <img src="https://latex.codecogs.com/png.latex?%5Bx:y:z%5D%5Cin%20X(%5Cmathbb%7BF%7D_p)"> with <img src="https://latex.codecogs.com/png.latex?xyz%5Cneq%200">, i.e.&nbsp;a non-trivial solution modulo <img src="https://latex.codecogs.com/png.latex?p">.</p></li>
+</ul>
+</div>
+<section id="extending-to-p-adic-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="extending-to-p-adic-solutions">Extending to <img src="https://latex.codecogs.com/png.latex?p">-adic solutions</h2>
+<p>We can extend the theorem thanks to <a href="https://en.wikipedia.org/wiki/Hensel%27s_lemma">Hensel’s lemma</a>. In particular, we can say the following.</p>
+<div id="thm-extension" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 (Extension of Theorem&nbsp;2)</strong></span> There exists an integer <img src="https://latex.codecogs.com/png.latex?N%5Cgeq%20q"> such that for every prime <img src="https://latex.codecogs.com/png.latex?p%3EN">, the <a href="@eq-fermat">Fermat equation</a> has a non-trivial solution in <img src="https://latex.codecogs.com/png.latex?(%5Cmathbb%7BZ%7D_p)%5E%5Ctimes">.</p>
+</div>
+<p>From Theorem&nbsp;4 we get, in particular, a non-trivial solution in every <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D/p%5Er%5Cmathbb%7BZ%7D"> for every <img src="https://latex.codecogs.com/png.latex?r%5Cgeq%201"> and for every prime <img src="https://latex.codecogs.com/png.latex?p%3EN">.</p>
+<p>Since we can factorize every integer as a product of primes, this tells us that if <img src="https://latex.codecogs.com/png.latex?m"> is an integer having at least one prime divisor <img src="https://latex.codecogs.com/png.latex?%3EN">, then <img src="https://latex.codecogs.com/png.latex?x%5Eq+y%5Eq=z%5Eq"> has a non-trivial solution in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D/m%20%5Cmathbb%7BZ%7D">.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em> (Proof of Theorem&nbsp;4). </span>Fix a prime <img src="https://latex.codecogs.com/png.latex?p%3EN">. From Theorem&nbsp;2 we know that there is a solution <img src="https://latex.codecogs.com/png.latex?(%5Coverline%20a,%5Coverline%20b,%5Coverline%20c)%5Cin(%5Cmathbb%7BF%7D_p%5E%5Ctimes)%5E3"> such that <img src="https://latex.codecogs.com/png.latex?%0A%5Coverline%20a%5Eq+%5Coverline%20b%5Eq=%5Coverline%20c%5Eq%20%5Cquad%5Ctext%7Bin%20%7D%5Cmathbb%7BF%7D_p.%0A"> Choose lifts <img src="https://latex.codecogs.com/png.latex?a,b,c_0%5Cin%20%5Cmathbb%7BZ%7D_p%5E%5Ctimes"> such that <img src="https://latex.codecogs.com/png.latex?a%5Cequiv%20%5Coverline%20a">, <img src="https://latex.codecogs.com/png.latex?b%5Cequiv%20%5Coverline%20b">, <img src="https://latex.codecogs.com/png.latex?c_0%5Cequiv%20%5Coverline%20c%20%5Cpmod%20p">. Define the polynomial <img src="https://latex.codecogs.com/png.latex?g(T):=a%5Eq+b%5Eq-T%5Eq%5Cin%20%5Cmathbb%7BZ%7D_p%5BT%5D">.</p>
+<p>Then</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?g(c_0)%5Cequiv%200%20%5Cpmod%20p">;</li>
+<li><img src="https://latex.codecogs.com/png.latex?g'(T)=-qT%5E%7Bq-1%7D">, so <img src="https://latex.codecogs.com/png.latex?g'(c_0)%5Cequiv%20-q%5Coverline%20c%5E%7B%5C,q-1%7D%5Cnot%20%5Cequiv%200%20%5Cpmod%20p"> (since <img src="https://latex.codecogs.com/png.latex?p%5Cneq%20q"> and <img src="https://latex.codecogs.com/png.latex?%5Coverline%20c%5Cneq%200">).</li>
+</ul>
+<p>By Hensel’s lemma there is a unique <img src="https://latex.codecogs.com/png.latex?c%5Cin%20%5Cmathbb%7BZ%7D_p"> such that <img src="https://latex.codecogs.com/png.latex?c%5Cequiv%20c_0%20%5Cpmod%20p"> and such that <img src="https://latex.codecogs.com/png.latex?c"> is a root of <img src="https://latex.codecogs.com/png.latex?g"> in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D_p">. In particular, <img src="https://latex.codecogs.com/png.latex?%0Aa%5Eq+b%5Eq=c%5Eq%0A%5Cquad%5Ctext%7Bin%20%7D%5Cmathbb%7BZ%7D_p,%0A"> so <img src="https://latex.codecogs.com/png.latex?(a,b,c)%5Cin(%5Cmathbb%7BZ%7D_p%5E%5Ctimes)%5E3"> is a non-trivial <img src="https://latex.codecogs.com/png.latex?p">-adic solution.</p>
+</div>
+</section>
+</section>
+<section id="what-do-we-bring-with-us" class="level1">
+<h1>What do we bring with us</h1>
+<p>There are some general facts we used in our reasoning that could be used in other contexts. I would like to point out some of these things.</p>
+<p>The first one is from Step 2 of the proof of Theorem&nbsp;2.</p>
+<div id="prp-F-irrid" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposition 2</strong></span> Let <img src="https://latex.codecogs.com/png.latex?k"> be a field and <img src="https://latex.codecogs.com/png.latex?F(X_1,%5Cdots%20,%20X_n)%5Cin%20k%5BX_1,%5Cdots,%20X_n%5D">, with <img src="https://latex.codecogs.com/png.latex?n%5Cgeq%203">, a homogeneous polynomial. Define the ideal <img src="https://latex.codecogs.com/png.latex?J:=(%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20X_1%7D,%5Cdots%20,%20%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20X_n%7D)">. If the intersection between the zeros of <img src="https://latex.codecogs.com/png.latex?J"> (closed points of <img src="https://latex.codecogs.com/png.latex?V(J)">) and the roots of <img src="https://latex.codecogs.com/png.latex?F"> is just <img src="https://latex.codecogs.com/png.latex?(0,%5Cdots,0)"> in <img src="https://latex.codecogs.com/png.latex?%5Coverline%7Bk%7D%5En">, then <img src="https://latex.codecogs.com/png.latex?F"> is irreducible in <img src="https://latex.codecogs.com/png.latex?%5Coverline%7Bk%7D">.</p>
+</div>
+<p>Similarly, observe that the bound <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5C#X(%5Cmathbb%7BF%7D_q)%5Cgeq%20p+1-(q-1)(q-2)%5Csqrt%20p%0A"> deduced in Step 3 of the proof of Theorem&nbsp;2 is true for every smooth, geometrically irreducible, projective curve of genus <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B(q-1)(q-2)%7D%7B2%7D">.</p>
+<p>Moreover, you can check that the proof of Theorem&nbsp;2 is actually a proof of the following more general fact:</p>
+<div id="thm-general" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5</strong></span> Let <img src="https://latex.codecogs.com/png.latex?F(X,Y,Z)%5Cin%20%5Cmathbb%7BZ%7D%5BX,Y,Z%5D"> be a homogeneous polynomial, and <img src="https://latex.codecogs.com/png.latex?J:=(%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20X%7D,%20%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20Y%7D,%20%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20Z%7D)">. Then, if eventually for every <img src="https://latex.codecogs.com/png.latex?p"> prime the intersection between the zeros of <img src="https://latex.codecogs.com/png.latex?J"> and the roots of <img src="https://latex.codecogs.com/png.latex?F"> is <img src="https://latex.codecogs.com/png.latex?(0,%5Cdots,%200)"> (or empty) in <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbb%7BF%7D%7D_p%5E3">, <img src="https://latex.codecogs.com/png.latex?F"> has eventually non-trivial solutions modulo every <img src="https://latex.codecogs.com/png.latex?p">.</p>
+</div>
+<p>Finally, we also proved in Theorem&nbsp;4 the following.</p>
+<div id="prp-hensel" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposition 3</strong></span> Let <img src="https://latex.codecogs.com/png.latex?A"> be a henselian local ring (a local ring where the one-variable Hensel lemma is true) with maximal ideal <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bm%7D">, let <img src="https://latex.codecogs.com/png.latex?k"> be its residue field, let <img src="https://latex.codecogs.com/png.latex?f%5Cin%20A%5BX_1,%5Cdots,%20X_n%5D">, and let <img src="https://latex.codecogs.com/png.latex?a=(a_1,%5Cdots,a_n)"> be a solution of <img src="https://latex.codecogs.com/png.latex?f"> in <img src="https://latex.codecogs.com/png.latex?k"> such that <img src="https://latex.codecogs.com/png.latex?%5Cnabla%20f(a_1,%5Cdots,%20a_n)%5Cneq%200"> in <img src="https://latex.codecogs.com/png.latex?k">. Then there exists a solution <img src="https://latex.codecogs.com/png.latex?(s_1,%5Cdots,s_n)"> of <img src="https://latex.codecogs.com/png.latex?f"> in <img src="https://latex.codecogs.com/png.latex?A"> such that <img src="https://latex.codecogs.com/png.latex?s_i%5Cequiv%20a_i%20%5Cbmod%20%5Cmathfrak%7Bm%7D">.</p>
+</div>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>The key point is that reducing Fermat’s equation modulo primes is simply too weak to rule out integer solutions. In fact, for a fixed odd prime exponent <img src="https://latex.codecogs.com/png.latex?q">, the Fermat curve <img src="https://latex.codecogs.com/png.latex?%0AX:%20%5C;%20X%5Eq+Y%5Eq=Z%5Eq%0A"> has <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">-points with all coordinates non-zero for every sufficiently large prime <img src="https://latex.codecogs.com/png.latex?p">.</p>
+<p>Moreover, Hensel’s lemma shows that these solutions often lift to <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D_p">, and hence give solutions modulo <img src="https://latex.codecogs.com/png.latex?p%5Er"> for all <img src="https://latex.codecogs.com/png.latex?r%5Cge%201">.</p>
+<p>This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo <img src="https://latex.codecogs.com/png.latex?n">, or elementary <img src="https://latex.codecogs.com/png.latex?p">-adic methods. However, we don’t know whether Fermat could have proven the theorem using other techniques, as he did in the case <img src="https://latex.codecogs.com/png.latex?n=4">.</p>
+<hr>
+<p>I would like to thank my friend who suggested this topic to me and helped me write this post.</p>
+<hr>
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-dickinson_history_1938" class="csl-entry">
+Dickinson, L. J. 1938. <em>History of the Theory of Numbers</em>. New York: Chelsea Publishing Company.
+</div>
+</div></section></div> ]]></description>
+  <category>Intermediate</category>
+  <category>Number Theory</category>
+  <category>Algebraic Geometry</category>
+  <guid>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</guid>
+  <pubDate>Wed, 17 Dec 2025 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Some basic modular arithmetic</title>
   <link>https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html</link>
