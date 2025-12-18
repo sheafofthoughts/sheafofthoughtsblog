@@ -339,7 +339,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#warm-up-a-special-case" id="toc-warm-up-a-special-case" class="nav-link" data-scroll-target="#warm-up-a-special-case">Warm up: a special case</a></li>
   </ul></li>
-  <li><a href="#proof-of-thm-eventually" id="toc-proof-of-thm-eventually" class="nav-link" data-scroll-target="#proof-of-thm-eventually">Proof of Theorem&nbsp;2</a>
+  <li><a href="#of-thm-eventually" id="toc-of-thm-eventually" class="nav-link" data-scroll-target="#of-thm-eventually">of Theorem&nbsp;2</a>
   <ul class="collapse">
   <li><a href="#extending-to-p-adic-solutions" id="toc-extending-to-p-adic-solutions" class="nav-link" data-scroll-target="#extending-to-p-adic-solutions">Extending to <span class="math inline">\(p\)</span>-adic solutions</a></li>
   </ul></li>
@@ -417,15 +417,15 @@ x^q+y^q=z^q
 1^q+1^q=z^q.
 \]</span></p>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em> (Proof of <a href="#prp-root-of-two" class="quarto-xref">Proposition&nbsp;1</a>). </span>This proposition is an easy corollary of <a href="https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html#how-many-mathbbf_p-points">Corollary 5</a> you can find in a <a href="https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html">previous post</a> about the Chebotarev density theorem, applied to the algebra <span class="math inline">\(A:=\mathbb{Z}[X]/(X^q-2)\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em> (of <a href="#prp-root-of-two" class="quarto-xref">Proposition&nbsp;1</a>). </span>This proposition is an easy corollary of <a href="https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html#how-many-mathbbf_p-points">Corollary 5</a> you can find in a <a href="https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html">previous post</a> about the Chebotarev density theorem, applied to the algebra <span class="math inline">\(A:=\mathbb{Z}[X]/(X^q-2)\)</span>.</p>
 </div>
 <div id="rem-wearehappy" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em>. </span>Observe that the Chebotarev density theorem only tells us that we find infinitely many primes giving a solution to the equation, but it also tells us that the set of primes we find has density less than <span class="math inline">\(1\)</span>. Therefore, it is not sufficient to establish what we want.</p>
 </div>
 </section>
 </section>
-<section id="proof-of-thm-eventually" class="level1">
-<h1>Proof of <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a></h1>
+<section id="of-thm-eventually" class="level1">
+<h1>of <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a></h1>
 <p>The idea to prove <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a> is to use a geometric fact. In particular, we want to study the projective curve <span class="math display">\[
 X:=V_+(X^q+Y^q-Z^q)\subseteq \mathbb{P}^2_{\mathbb{F}_p},
 \]</span> where <span class="math inline">\(p\neq q\)</span> are primes. Finding a non-trivial solution in <span class="math inline">\(\mathbb{F}_p\)</span> is the same as finding a point <span class="math inline">\([x:y:z]\in X(\mathbb{F}_p)\)</span> such that <span class="math inline">\(xyz\neq 0\)</span>.</p>
@@ -445,7 +445,7 @@ P(t)=\prod_{i=1}^{2g}(1-\alpha_i t)
 </div>
 <p>Now we are ready to prove <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a>.</p>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em> (Proof of <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a>). </span></p>
+<p><span class="proof-title"><em>Proof</em> (of <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a>). </span></p>
 <ul>
 <li><p><strong>Step 1:</strong> <em>There are at most <span class="math inline">\(3q\)</span> points of <span class="math inline">\(X=V_+(X^q+Y^q-Z^q)\subseteq \mathbb{P}^2_{\mathbb{F}_p}\)</span> such that at least one of the coordinates <span class="math inline">\(x,y,z\)</span> vanishes.</em></p>
 <p><em>Proof:</em> Consider the line <span class="math inline">\(z=0\)</span>. On this line, the equation becomes <span class="math inline">\(X^q+Y^q=0\)</span>, which is a homogeneous equation of degree <span class="math inline">\(q\)</span> on <span class="math inline">\(\mathbb{P}^1_{\mathbb{F}_p}\)</span>, hence it has at most <span class="math inline">\(q\)</span> solutions over any field. Repeating the same argument for the lines <span class="math inline">\(x=0\)</span> and <span class="math inline">\(y=0\)</span> gives the claim.</p></li>
@@ -490,7 +490,7 @@ P(t)=\prod_{i=1}^{2g}(1-\alpha_i t),
 <p>From <a href="#thm-extension" class="quarto-xref">Theorem&nbsp;4</a> we get, in particular, a non-trivial solution in every <span class="math inline">\(\mathbb{Z}/p^r\mathbb{Z}\)</span> for every <span class="math inline">\(r\geq 1\)</span> and for every prime <span class="math inline">\(p&gt;N\)</span>.</p>
 <p>Since we can factorize every integer as a product of primes, this tells us that if <span class="math inline">\(m\)</span> is an integer having at least one prime divisor <span class="math inline">\(&gt;N\)</span>, then <span class="math inline">\(x^q+y^q=z^q\)</span> has a non-trivial solution in <span class="math inline">\(\mathbb{Z}/m \mathbb{Z}\)</span>.</p>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em> (Proof of <a href="#thm-extension" class="quarto-xref">Theorem&nbsp;4</a>). </span>Fix a prime <span class="math inline">\(p&gt;N\)</span>. From <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a> we know that there is a solution <span class="math inline">\((\overline a,\overline b,\overline c)\in(\mathbb{F}_p^\times)^3\)</span> such that <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em> (of <a href="#thm-extension" class="quarto-xref">Theorem&nbsp;4</a>). </span>Fix a prime <span class="math inline">\(p&gt;N\)</span>. From <a href="#thm-eventually" class="quarto-xref">Theorem&nbsp;2</a> we know that there is a solution <span class="math inline">\((\overline a,\overline b,\overline c)\in(\mathbb{F}_p^\times)^3\)</span> such that <span class="math display">\[
 \overline a^q+\overline b^q=\overline c^q \quad\text{in }\mathbb{F}_p.
 \]</span> Choose lifts <span class="math inline">\(a,b,c_0\in \mathbb{Z}_p^\times\)</span> such that <span class="math inline">\(a\equiv \overline a\)</span>, <span class="math inline">\(b\equiv \overline b\)</span>, <span class="math inline">\(c_0\equiv \overline c \pmod p\)</span>. Define the polynomial <span class="math inline">\(g(T):=a^q+b^q-T^q\in \mathbb{Z}_p[T]\)</span>.</p>
 <p>Then</p>
