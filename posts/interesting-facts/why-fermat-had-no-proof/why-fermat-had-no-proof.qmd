@@ -69,7 +69,7 @@ This proposition is an easy corollary of [Corollary 5](https://sheafofthoughts.o
 Observe that the Chebotarev density theorem only tells us that we find infinitely many primes giving a solution to the equation, but it also tells us that the set of primes we find has density less than $1$. Therefore, it is not sufficient to establish what we want.
 :::
 
-# of @thm-eventually
+# Proof of @thm-eventually
 
 The idea to prove @thm-eventually is to use a geometric fact. In particular, we want to study the projective curve
 $$
