@@ -51,8 +51,8 @@
 </div>
 </section>
 </section>
-<section id="of-thm-eventually" class="level1">
-<h1>of Theorem&nbsp;2</h1>
+<section id="proof-of-thm-eventually" class="level1">
+<h1>Proof of Theorem&nbsp;2</h1>
 <p>The idea to prove Theorem&nbsp;2 is to use a geometric fact. In particular, we want to study the projective curve <img src="https://latex.codecogs.com/png.latex?%0AX:=V_+(X%5Eq+Y%5Eq-Z%5Eq)%5Csubseteq%20%5Cmathbb%7BP%7D%5E2_%7B%5Cmathbb%7BF%7D_p%7D,%0A"> where <img src="https://latex.codecogs.com/png.latex?p%5Cneq%20q"> are primes. Finding a non-trivial solution in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p"> is the same as finding a point <img src="https://latex.codecogs.com/png.latex?%5Bx:y:z%5D%5Cin%20X(%5Cmathbb%7BF%7D_p)"> such that <img src="https://latex.codecogs.com/png.latex?xyz%5Cneq%200">.</p>
 <p>After proving that <img src="https://latex.codecogs.com/png.latex?X"> satisfies the hypotheses of the <a href="https://en.wikipedia.org/wiki/Weil_conjectures#Statement_of_the_Weil_conjectures">Weil conjectures</a>, we will use them to establish, for <img src="https://latex.codecogs.com/png.latex?p"> large enough, a bound <img src="https://latex.codecogs.com/png.latex?%0A%5C#X(%5Cmathbb%7BF%7D_p)%3E%203q,%0A"> where <img src="https://latex.codecogs.com/png.latex?X(%5Cmathbb%7BF%7D_p)"> denotes the <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">-rational points. We will also prove that the points where one coordinate vanishes are <img src="https://latex.codecogs.com/png.latex?%5Cle%203q">. Therefore, we will get the theorem as a direct consequence of the bound.</p>
 <p>We now state the Weil conjectures in the form we need.</p>
