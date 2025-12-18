@@ -180,7 +180,7 @@ We can extend the theorem thanks to [Hensel's lemma](https://en.wikipedia.org/wi
 ::: {#thm-extension}
 ## Extension of @thm-eventually
 
-There exists an integer $N\geq q$ such that for every prime $p>N$, the [Fermat equation](@eq-fermat) has a non-trivial solution in $(\mathbb{Z}_p)^\times$.
+There exists an integer $N\geq q$ such that for every prime $p>N$, the Fermat equation (@eq-fermat) has a non-trivial solution in $(\mathbb{Z}_p)^\times$.
 :::
 
 From @thm-extension we get, in particular, a non-trivial solution in every $\mathbb{Z}/p^r\mathbb{Z}$ for every $r\geq 1$ and for every prime $p>N$.
