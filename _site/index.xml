@@ -49,6 +49,7 @@
 <div id="rem-wearehappy" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em>. </span>Observe that the Chebotarev density theorem only tells us that we find infinitely many primes giving a solution to the equation, but it also tells us that the set of primes we find has density less than <img src="https://latex.codecogs.com/png.latex?1">. Therefore, it is not sufficient to establish what we want.</p>
 </div>
+<hr>
 </section>
 </section>
 <section id="proof-of-thm-eventually" class="level1">
@@ -91,6 +92,7 @@
 </ul>
 <p>By Hensel’s lemma there is a unique <img src="https://latex.codecogs.com/png.latex?c%5Cin%20%5Cmathbb%7BZ%7D_p"> such that <img src="https://latex.codecogs.com/png.latex?c%5Cequiv%20c_0%20%5Cpmod%20p"> and such that <img src="https://latex.codecogs.com/png.latex?c"> is a root of <img src="https://latex.codecogs.com/png.latex?g"> in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D_p">. In particular, <img src="https://latex.codecogs.com/png.latex?%0Aa%5Eq+b%5Eq=c%5Eq%0A%5Cquad%5Ctext%7Bin%20%7D%5Cmathbb%7BZ%7D_p,%0A"> so <img src="https://latex.codecogs.com/png.latex?(a,b,c)%5Cin(%5Cmathbb%7BZ%7D_p%5E%5Ctimes)%5E3"> is a non-trivial <img src="https://latex.codecogs.com/png.latex?p">-adic solution.</p>
 </div>
+<hr>
 </section>
 </section>
 <section id="what-do-we-bring-with-us" class="level1">
@@ -109,6 +111,7 @@
 <div id="prp-hensel" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposition 3</strong></span> Let <img src="https://latex.codecogs.com/png.latex?A"> be a henselian local ring (a local ring where the one-variable Hensel lemma is true) with maximal ideal <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bm%7D">, let <img src="https://latex.codecogs.com/png.latex?k"> be its residue field, let <img src="https://latex.codecogs.com/png.latex?f%5Cin%20A%5BX_1,%5Cdots,%20X_n%5D">, and let <img src="https://latex.codecogs.com/png.latex?a=(a_1,%5Cdots,a_n)"> be a solution of <img src="https://latex.codecogs.com/png.latex?f"> in <img src="https://latex.codecogs.com/png.latex?k"> such that <img src="https://latex.codecogs.com/png.latex?%5Cnabla%20f(a_1,%5Cdots,%20a_n)%5Cneq%200"> in <img src="https://latex.codecogs.com/png.latex?k">. Then there exists a solution <img src="https://latex.codecogs.com/png.latex?(s_1,%5Cdots,s_n)"> of <img src="https://latex.codecogs.com/png.latex?f"> in <img src="https://latex.codecogs.com/png.latex?A"> such that <img src="https://latex.codecogs.com/png.latex?s_i%5Cequiv%20a_i%20%5Cbmod%20%5Cmathfrak%7Bm%7D">.</p>
 </div>
+<hr>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
@@ -117,7 +120,6 @@
 <p>This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo <img src="https://latex.codecogs.com/png.latex?n">, or elementary <img src="https://latex.codecogs.com/png.latex?p">-adic methods. However, we don’t know whether Fermat could have proven the theorem using other techniques, as he did in the case <img src="https://latex.codecogs.com/png.latex?n=4">.</p>
 <hr>
 <p>I would like to thank my friend who suggested this topic to me and helped me write this post.</p>
-<hr>
 
 
 
@@ -397,6 +399,7 @@ Dickinson, L. J. 1938. <em>History of the Theory of Numbers</em>. New York: Chel
 <p>Consider now the composition map <img src="https://latex.codecogs.com/png.latex?%5Cphi:%20A%5Cto%20A%5Cotimes_%7B%5Cmathbb%7BZ%7D%7D%5Cmathbb%7BQ%7D%5Cto%20L">. Let <img src="https://latex.codecogs.com/png.latex?a_1,%5Cdots,a_r"> be generators of <img src="https://latex.codecogs.com/png.latex?A"> as a <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D">-algebra. Choose <img src="https://latex.codecogs.com/png.latex?N%5Cin%20%5Cmathbb%7BZ%7D_%7B%3E0%7D"> such that <img src="https://latex.codecogs.com/png.latex?N%5Ccdot%20%5Cphi(a_i)"> is an algebraic integer for every <img src="https://latex.codecogs.com/png.latex?i=1,%5Cdots,%20r">. Then <img src="https://latex.codecogs.com/png.latex?%5Cphi(a_i)%5Cin%20%5Cmathcal%7BO%7D_L%5B1/N%5D"> for all <img src="https://latex.codecogs.com/png.latex?i">, hence <img src="https://latex.codecogs.com/png.latex?%5Cphi"> lands in <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BO%7D_L%5B1/N%5D">, i.e.&nbsp;we have a map <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi:%20A%5Cto%20%5Cmathcal%7BO%7D_L%5B1/N%5D.%0A"> Fix a rational prime <img src="https://latex.codecogs.com/png.latex?p"> not dividing <img src="https://latex.codecogs.com/png.latex?N">. Any prime ideal <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BP%7D"> of <img src="https://latex.codecogs.com/png.latex?L"> dividing <img src="https://latex.codecogs.com/png.latex?p"> gives the reduction map <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Cmathcal%7BO%7D_L%5B1/N%5D%5Cto%20%5Cmathcal%7BO%7D_L/%5Cmathfrak%7BP%7D.%0A"> Moreover, if the residue degree satisfies <img src="https://latex.codecogs.com/png.latex?f(%5Cmathfrak%7BP%7D%7Cp)=1">, then <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BO%7D_L/%5Cmathfrak%7BP%7D%5Ccong%20%5Cmathbb%7BF%7D_p">, hence we get a map <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20A%5Cto%20%5Cmathcal%7BO%7D_L%5B1/N%5D%5Cto%20%5Cmathcal%7BO%7D_L/%5Cmathfrak%7BP%7D%5Ccong%20%5Cmathbb%7BF%7D_p.%0A"> Since <img src="https://latex.codecogs.com/png.latex?p%5Cnmid%20N">, this is the same as a map <img src="https://latex.codecogs.com/png.latex?A%5Cto%20%5Cmathbb%7BF%7D_p">.</p>
 <p>By Corollary&nbsp;1 there are infinitely many primes <img src="https://latex.codecogs.com/png.latex?p"> splitting completely in <img src="https://latex.codecogs.com/png.latex?L">. Discarding the finitely many primes dividing <img src="https://latex.codecogs.com/png.latex?N">, we can assume also <img src="https://latex.codecogs.com/png.latex?p%5Cnmid%20N">. This gives a map <img src="https://latex.codecogs.com/png.latex?A%5Cto%20%5Cmathbb%7BF%7D_p"> for infinitely many primes <img src="https://latex.codecogs.com/png.latex?p">.</p>
 </div>
+<hr>
 </section>
 </section>
 <section id="conclusion" class="level1">
@@ -407,7 +410,6 @@ Dickinson, L. J. 1938. <em>History of the Theory of Numbers</em>. New York: Chel
 <p>All these results share the same pattern: translate a question into a condition on Frobenius conjugacy classes, then use Chebotarev to conclude that the relevant primes not only exist, but are infinitely many.</p>
 <hr>
 <p>I would like to thank my friend who suggested this topic to me and helped me write this post.</p>
-<hr>
 
 
 

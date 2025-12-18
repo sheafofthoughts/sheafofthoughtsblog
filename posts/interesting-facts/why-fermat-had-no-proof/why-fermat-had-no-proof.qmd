@@ -69,6 +69,8 @@ This proposition is an easy corollary of [Corollary 5](https://sheafofthoughts.o
 Observe that the Chebotarev density theorem only tells us that we find infinitely many primes giving a solution to the equation, but it also tells us that the set of primes we find has density less than $1$. Therefore, it is not sufficient to establish what we want.
 :::
 
+---
+
 # Proof of @thm-eventually
 
 The idea to prove @thm-eventually is to use a geometric fact. In particular, we want to study the projective curve
@@ -209,6 +211,9 @@ so $(a,b,c)\in(\mathbb{Z}_p^\times)^3$ is a non-trivial $p$-adic solution.
 
 :::
 
+
+---
+
 # What do we bring with us
 
 There are some general facts we used in our reasoning that could be used in other contexts. I would like to point out some of these things.
@@ -243,6 +248,8 @@ Let $A$ be a henselian local ring (a local ring where the one-variable Hensel le
 
 :::
 
+---
+
 # Conclusion
 
 The key point is that reducing Fermat’s equation modulo primes is simply too weak to rule out integer solutions. In fact, for a fixed odd prime exponent $q$, the Fermat curve
@@ -259,5 +266,3 @@ This helps explain why Fermat’s marginal claim is implausible: any proof of Fe
 ---
 
 I would like to thank my friend who suggested this topic to me and helped me write this post.
-
----
