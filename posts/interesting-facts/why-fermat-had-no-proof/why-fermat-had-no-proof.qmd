@@ -122,7 +122,7 @@ Now we are ready to prove @thm-eventually.
   \frac{\partial F}{\partial Y}=qY^{q-1},\qquad
   \frac{\partial F}{\partial Z}=-qZ^{q-1},
   $$
-  and since $q\not\equiv 0\pmod p$, these three partial derivatives cannot vanish simultaneously at any point of $\mathbb{P}^2 _{\overline{\mathbb{F}}_p}$.
+  and since $q\not\equiv 0\pmod p$, these three partial derivatives cannot vanish simultaneously at any closed point of $\mathbb{P}^2 _{\overline{\mathbb{F}}_p}$.
 
   We now prove that $X$ is geometrically irreducible. This means that
   $$
