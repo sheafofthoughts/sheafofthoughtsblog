@@ -113,7 +113,7 @@
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
 <p>The key point is that reducing Fermat’s equation modulo primes is simply too weak to rule out integer solutions. In fact, for a fixed odd prime exponent <img src="https://latex.codecogs.com/png.latex?q">, the Fermat curve <img src="https://latex.codecogs.com/png.latex?%0AX:%20%5C;%20X%5Eq+Y%5Eq=Z%5Eq%0A"> has <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D_p">-points with all coordinates non-zero for every sufficiently large prime <img src="https://latex.codecogs.com/png.latex?p">.</p>
-<p>Moreover, Hensel’s lemma shows that these solutions often lift to <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D_p">, and hence give solutions modulo <img src="https://latex.codecogs.com/png.latex?p%5Er"> for all <img src="https://latex.codecogs.com/png.latex?r%5Cge%201">.</p>
+<p>Moreover, Hensel’s lemma shows that these solutions eventually lift to <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D_p">, and hence give solutions modulo <img src="https://latex.codecogs.com/png.latex?p%5Er"> for all <img src="https://latex.codecogs.com/png.latex?r%5Cge%201">.</p>
 <p>This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo <img src="https://latex.codecogs.com/png.latex?n">, or elementary <img src="https://latex.codecogs.com/png.latex?p">-adic methods. However, we don’t know whether Fermat could have proven the theorem using other techniques, as he did in the case <img src="https://latex.codecogs.com/png.latex?n=4">.</p>
 <hr>
 <p>I would like to thank my friend who suggested this topic to me and helped me write this post.</p>

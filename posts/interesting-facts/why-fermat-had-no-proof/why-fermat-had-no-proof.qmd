@@ -251,7 +251,7 @@ X: \; X^q+Y^q=Z^q
 $$
 has $\mathbb{F}_p$-points with all coordinates non-zero for every sufficiently large prime $p$.
 
-Moreover, Hensel’s lemma shows that these solutions often lift to $\mathbb{Z}_p$, and hence give solutions modulo $p^r$ for all $r\ge 1$.
+Moreover, Hensel’s lemma shows that these solutions eventually lift to $\mathbb{Z}_p$, and hence give solutions modulo $p^r$ for all $r\ge 1$.
 
 This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo $n$, or elementary $p$-adic methods. However, we don't know whether Fermat could have proven the theorem using other techniques, as he did in the case $n=4$.
 
