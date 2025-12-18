@@ -22,9 +22,9 @@
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>In 1637, Fermat stated that:</p>
+<p>According to <span class="citation" data-cites="dickinson_history_1938">Dickinson (1938)</span>, Fermat stated the following in 1637.</p>
 <blockquote class="blockquote">
-<p>It is impossible to separate a cube into two cubes, or a biquadrate into two biquadrate, or in general any power higher than the second into the power of like degree; I have discovered a truly remarkable proof which this margin is too small to contain.” (<span class="citation" data-cites="dickinson_history_1938">Dickinson (1938)</span>)</p>
+<p>It is impossible to separate a cube into two cubes, or a biquadrate into two biquadrate, or in general any power higher than the second into the power of like degree; I have discovered a truly remarkable proof which this margin is too small to contain.”</p>
 </blockquote>
 <p>This theorem is now known as Fermat’s Last Theorem, and it can be stated as follows.</p>
 <div id="thm-fermat" class="theorem">
