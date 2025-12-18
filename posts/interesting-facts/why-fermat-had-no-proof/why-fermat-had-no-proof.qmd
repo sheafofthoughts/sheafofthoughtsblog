@@ -3,7 +3,6 @@ title: "Why Fermat had (probably) no proof?"
 date: "2025-12-18"
 categories: [Intermediate, Number Theory, Algebraic Geometry]
 bibliography: references.bib
-draft: unlinked
 ---
 
 # Introduction
@@ -177,7 +176,7 @@ We can extend the theorem thanks to [Hensel's lemma](https://en.wikipedia.org/wi
 ::: {#thm-extension}
 ## Extension of @thm-eventually
 
-There exists an integer $N\geq q$ such that for every prime $p>N$, the [Fermat equation](@eq-fermat) has a non-trivial solution in $\mathbb{Z}_p$ (the $p$-adics).
+There exists an integer $N\geq q$ such that for every prime $p>N$, the [Fermat equation](@eq-fermat) has a non-trivial solution in $(\mathbb{Z}_p)^\times$.
 :::
 
 From @thm-extension we get, in particular, a non-trivial solution in every $\mathbb{Z}/p^r\mathbb{Z}$ for every $r\geq 1$ and for every prime $p>N$.
@@ -230,7 +229,7 @@ Moreover, you can check that the proof of @thm-eventually is actually a proof of
 
 ::: {#thm-general}
 
-Let $F(X,Y,Z)\in \mathbb{Z}[X,Y,Z]$ be a homogeneous polynomial, and $J:=(\frac{\partial F}{\partial X}, \frac{\partial F}{\partial Y}, \frac{\partial F}{\partial Z})$. Then, if eventually for every $p$ prime the intersection between the zeros of $J$ and the roots of $F$ is $(0,\dots, 0)$ in $\overline{\mathbb{F}}_p^3$, $F$ has eventually non-trivial solutions modulo every $p$.
+Let $F(X,Y,Z)\in \mathbb{Z}[X,Y,Z]$ be a homogeneous polynomial, and $J:=(\frac{\partial F}{\partial X}, \frac{\partial F}{\partial Y}, \frac{\partial F}{\partial Z})$. Then, if eventually for every $p$ prime the intersection between the zeros of $J$ and the roots of $F$ is $(0,\dots, 0)$ (or empty) in $\overline{\mathbb{F}}_p^3$, $F$ has eventually non-trivial solutions modulo every $p$.
 
 :::
 
@@ -238,7 +237,7 @@ Finally, we also proved in @thm-extension the following.
 
 ::: {#prp-hensel .theorem}
 
-Let $A$ be a henselian local ring (a local ring where the one-variable Hensel lemma is true), let $k$ be its residue field, let $f\in A[X_1,\dots, X_n]$, and let $a=(a_1,\dots,a_n)$ be a solution of $f$ in $k$ such that $\nabla f(a_1,\dots, a_n)\neq 0$ in $k$. Then there exists a solution $(s_1,\dots,s_n)$ of $f$ in $A$.
+Let $A$ be a henselian local ring (a local ring where the one-variable Hensel lemma is true) with maximal ideal $\mathfrak{m}$, let $k$ be its residue field, let $f\in A[X_1,\dots, X_n]$, and let $a=(a_1,\dots,a_n)$ be a solution of $f$ in $k$ such that $\nabla f(a_1,\dots, a_n)\neq 0$ in $k$. Then there exists a solution $(s_1,\dots,s_n)$ of $f$ in $A$ such that $s_i\equiv a_i \bmod \mathfrak{m}$.
 
 :::
 
@@ -248,11 +247,11 @@ The key point is that reducing Fermat’s equation modulo primes is simply too w
 $$
 X: \; X^q+Y^q=Z^q
 $$
-has $\mathbb{F}_p$-points with all coordinates nonzero for every sufficiently large prime $p$.
+has $\mathbb{F}_p$-points with all coordinates non-zero for every sufficiently large prime $p$.
 
-Moreover, Hensel’s lemma shows that these solutions often lift to $\mathbb{Z}_p$, and hence to solutions modulo $p^r$ for all $r\ge 1$.
+Moreover, Hensel’s lemma shows that these solutions often lift to $\mathbb{Z}_p$, and hence give solutions modulo $p^r$ for all $r\ge 1$.
 
-This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo $n$, or elementary $p$-adic methods.
+This helps explain why Fermat’s marginal claim is implausible: any proof of Fermat’s Last Theorem must use information that cannot be recovered by congruences modulo primes, modulo $n$, or elementary $p$-adic methods. However, we don't know whether Fermat could have proven the theorem using other techniques, as he did in the case $n=4$.
 
 
 ---
