@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-12-25">
+<meta name="description" content="We introduce Gaussian integers and explain what it means, in this context, to be a sum of two squares. In particular, we will see what it means for a prime to be a sum of two squares in the Gaussian integers.">
+
+<title>Proof of Fermat’s Christmas Theorem – SheafofThoughts</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="msvalidate.01" content="27B9097A6103EA5075D902CB55234013">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">SheafofThoughts</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Recent Posts</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#fermats-christmas-theorem" id="toc-fermats-christmas-theorem" class="nav-link active" data-scroll-target="#fermats-christmas-theorem">Fermat’s Christmas Theorem</a></li>
+  <li><a href="#gaussian-integers" id="toc-gaussian-integers" class="nav-link" data-scroll-target="#gaussian-integers">Gaussian integers</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-prime-in-the-gaussian-integers" id="toc-what-is-a-prime-in-the-gaussian-integers" class="nav-link" data-scroll-target="#what-is-a-prime-in-the-gaussian-integers">What is a prime in the Gaussian integers?</a></li>
+  </ul></li>
+  <li><a href="#proof-of-the-theorem-finally" id="toc-proof-of-the-theorem-finally" class="nav-link" data-scroll-target="#proof-of-the-theorem-finally">Proof of the theorem (finally!)</a></li>
+  <li><a href="#relation-between-x21equiv_p-0-and-fermats-christmas-theorem" id="toc-relation-between-x21equiv_p-0-and-fermats-christmas-theorem" class="nav-link" data-scroll-target="#relation-between-x21equiv_p-0-and-fermats-christmas-theorem">Relation between <span class="math inline">\(x^2+1\equiv_p 0\)</span> and Fermat’s christmas theorem</a>
+  <ul class="collapse">
+  <li><a href="#primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers" id="toc-primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers" class="nav-link" data-scroll-target="#primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers">Primes in the integers which are not primes in the Gaussian integers</a></li>
+  <li><a href="#wilson-theorem-and-solution-to-x21equiv_p-0" id="toc-wilson-theorem-and-solution-to-x21equiv_p-0" class="nav-link" data-scroll-target="#wilson-theorem-and-solution-to-x21equiv_p-0">Wilson theorem and solution to <span class="math inline">\(x^2+1\equiv_p 0\)</span></a></li>
+  <li><a href="#the-theorem-is-proven-what-else-can-we-say" id="toc-the-theorem-is-proven-what-else-can-we-say" class="nav-link" data-scroll-target="#the-theorem-is-proven-what-else-can-we-say">The theorem is proven, what else can we say?</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#guided-exercises" id="toc-guided-exercises" class="nav-link" data-scroll-target="#guided-exercises">Guided exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1-infinitely-many-primes-that-are-sums-of-two-squares" id="toc-exercise-1-infinitely-many-primes-that-are-sums-of-two-squares" class="nav-link" data-scroll-target="#exercise-1-infinitely-many-primes-that-are-sums-of-two-squares">Exercise 1: infinitely many primes that are sums of two squares</a></li>
+  <li><a href="#exercise-2-which-integers-are-sums-of-two-squares" id="toc-exercise-2-which-integers-are-sums-of-two-squares" class="nav-link" data-scroll-target="#exercise-2-which-integers-are-sums-of-two-squares">Exercise 2: which integers are sums of two squares?</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="proof-of-the-theorem.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Proof of Fermat’s Christmas Theorem</h1>
+<p class="subtitle lead"><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a></p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Expository</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>We introduce Gaussian integers and explain what it means, in this context, to be a sum of two squares. In particular, we will see what it means for a prime to be a sum of two squares in the Gaussian integers.</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 25, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="lang-switch">
+<p><a href="../../../IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html">ITA</a> <span class="lang-current">ENG</span></p>
+</div>
+<section id="fermats-christmas-theorem" class="level1">
+<h1>Fermat’s Christmas Theorem</h1>
+<p>Let’s recap what we have seen so far. We start by stating Fermat’s Christmas theorem in terms of congruences.</p>
+<div id="thm-fermat" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Fermat’s Christmas Theorem)</strong></span> An odd prime number <span class="math inline">\(p\)</span> can be written as <span class="math inline">\(p=a^2+b^2\)</span> with <span class="math inline">\(a,b\in\mathbb Z\)</span> if and only if <span class="math inline">\(p\equiv_4 1\)</span>.</p>
+</div>
+<p>In the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">previous post</a> we proved that if <span class="math inline">\(p\)</span> can be written as the sum of two squares, then it has remainder <span class="math inline">\(1\)</span> when divided by <span class="math inline">\(4\)</span>, i.e.&nbsp;<span class="math inline">\(p\equiv_4 1\)</span>. Now we want to prove the converse: if <span class="math inline">\(p\equiv_4 1\)</span>, then <span class="math inline">\(p\)</span> can be written as the sum of two squares (this is the hard part).</p>
+<p>In this post we develop everything we need in order to give a complete proof of the theorem. First, we shift the problem to the context of Gaussian integers, which are an extension of the integers we know. Then we will see how sums of two squares appear naturally there, and how to recognize the primes that can be written as the sum of two squares.</p>
+</section>
+<section id="gaussian-integers" class="level1">
+<h1>Gaussian integers</h1>
+<p>We all know that the equation <span id="eq-gauss"><span class="math display">\[
+    x^2+1=0
+\tag{1}\]</span></span> has no solutions in the integers, since squares are always nonnegative, and if we add <span class="math inline">\(1\)</span> to a nonnegative number we can’t get zero. Right?</p>
+<p>Well, let’s add a solution of this equation to the integers: we define <span class="math display">\[
+i:=\sqrt{-1}
+\]</span> so that we get <span class="math display">\[
+    i^2+1=\sqrt{-1}^2+1=-1+1=0
+\]</span></p>
+<p>We now have a solution to <a href="#eq-gauss" class="quarto-xref">Equation&nbsp;1</a>.</p>
+<p>We define <span class="math inline">\(\mathbb{Z}[i]\)</span> to be the set of integers in which we add this <span class="math inline">\(i\)</span>. The “numbers” in <span class="math inline">\(\mathbb{Z}[i]\)</span> are of the form <span class="math inline">\(a+b\cdot i\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are usual integers. For example, <span class="math inline">\(1+2i\)</span>, <span class="math inline">\(5+7i\)</span>, and <span class="math inline">\(0+i\)</span> are all Gaussian integers. The special cases of numbers of the form <span class="math inline">\(a+0\cdot i\)</span> will be just denoted by <span class="math inline">\(a\)</span>, while the numbers <span class="math inline">\(0+b\cdot i\)</span> will be denoted just by <span class="math inline">\(bi\)</span>. In particular observe that we have all the integers inside <span class="math inline">\(\mathbb{Z}[i]\)</span>: indeed we can recover them as the numbers of the form <span class="math inline">\(a+0\cdot i=a\)</span>.</p>
+<p>But why should we work in Gaussian integers instead of classical integers? We will understand this later, since the existence of a solution for the congruence <span class="math display">\[
+x^2+1\equiv_p 0
+\]</span> is closely related to <span class="math inline">\(p\)</span> being a sum of two squares.</p>
+<p>First of all, how do products and sums work in the Gaussian integers?</p>
+<p>It is easy: you just have to treat <span class="math inline">\(i\)</span> as a formal variable, and remember that <span class="math inline">\(i^2=-1\)</span>. I will explain it better:</p>
+<p>Suppose we want to sum <span class="math inline">\(3+2i\)</span> with <span class="math inline">\(5+i\)</span>. Then we do like this: <span class="math display">\[
+    (3+2i)+(5+i)=(3+5)+(2+1)i=8+3i
+\]</span> so we add the numbers that don’t have the <span class="math inline">\(i\)</span> with them and the numbers that have the <span class="math inline">\(i\)</span> with them separately. Other examples: <span class="math display">\[
+    (-2+4i)+(7-3i)=5+i,\qquad (3+6i)-i=3+7i,\qquad 3+(-1+i)=2+i.
+\]</span></p>
+<p>Similarly we do for the products, we just treat <span class="math inline">\(i\)</span> as a formal variable: <span class="math display">\[
+    (3+2i)\cdot(5+i)=3\cdot 5+ 3\cdot i+2i\cdot 5+2i\cdot i=15+3i+10i+2i^2=15+2i^2+13i
+\]</span> Now remember that <span class="math inline">\(i^2=-1\)</span> so <span class="math inline">\(2i^2=-2\)</span>, thus <span class="math display">\[
+    15+2i^2+13i=15-2+13i=13+13i
+\]</span></p>
+<p>Other examples: <span class="math display">\[
+    (-2+4i)(7-3i)=-2+34i,\qquad (3+6i)\cdot (-i)=6-3i,\qquad 3\cdot (-1+i)=-3+3i
+\]</span></p>
+<p>Now, define the following:</p>
+<div class="definition">
+<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We define its conjugate to be <span class="math inline">\(a-bi\)</span>.</p>
+</div>
+<div id="exm-conjugates" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> &nbsp;</p>
+<ul>
+<li>The conjugate of <span class="math inline">\(3+4i\)</span> is <span class="math inline">\(3-4i\)</span>.</li>
+<li>The conjugate of <span class="math inline">\(1-i\)</span> is <span class="math inline">\(1+i\)</span>.</li>
+<li>The conjugate of <span class="math inline">\(4\)</span> is <span class="math inline">\(4\)</span>.</li>
+<li>The conjugate of <span class="math inline">\(-6i\)</span> is <span class="math inline">\(6i\)</span>.</li>
+</ul>
+</div>
+<p>Now observe this useful thing. If you multiply a Gaussian integer <span class="math inline">\(a+bi\)</span> by its conjugate <span class="math inline">\(a-bi\)</span> you get <span class="math display">\[
+    (a+bi)(a-bi)=a^2-abi+abi-b^2i^2=a^2-b^2i^2
+\]</span> and since <span class="math inline">\(i^2=-1\)</span> we get <span class="math display">\[
+    (a+bi)(a-bi)=a^2+b^2
+\]</span></p>
+<p>This is nice, isn’t it? Our goal is to understand when a prime is a sum of two squares, and now we have an easy way to produce sums of two squares.</p>
+<section id="what-is-a-prime-in-the-gaussian-integers" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-prime-in-the-gaussian-integers">What is a prime in the Gaussian integers?</h2>
+<p>If you remember, in the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html#what-a-prime-is">second post</a> we defined a prime <span class="math inline">\(p\)</span> as a number such that whenever <span class="math inline">\(p\)</span> divides a product <span class="math inline">\(a\cdot b\)</span>, then either <span class="math inline">\(p\)</span> divides <span class="math inline">\(a\)</span> or <span class="math inline">\(p\)</span> divides <span class="math inline">\(b\)</span>. We now do the same in the Gaussian integers. First we define what it means to divide something in the Gaussian integers.</p>
+<div class="definition">
+<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We say that <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(c+di\)</span> if we can write <span class="math display">\[
+    c+di=(a+bi)\cdot (e+fi)
+\]</span> for some Gaussian integer <span class="math inline">\(e+fi\)</span>.</p>
+</div>
+<div class="definition">
+<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We say that <span class="math inline">\(a+bi\)</span> is prime if whenever <span class="math inline">\(a+bi\)</span> divides a product <span class="math inline">\((c+di)(e+fi)\)</span> then either <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(c+di\)</span> or <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(e+fi\)</span>.</p>
+</div>
+<p>We will not prove the following theorem, whose proof is in some way similar to the one made for the integers.</p>
+<div id="thm-ufd" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (Unique factorization)</strong></span> Every Gaussian integer <span class="math inline">\(a+bi\)</span> can be written as the product of Gaussian integer primes, i.e. <span class="math display">\[
+    a+bi=(c_1+d_1i)\cdots(c_k+d_ki)
+\]</span> for some positive integer <span class="math inline">\(k\)</span>. This writing is unique up to multiplying by <span class="math inline">\(-1, i,\)</span> and <span class="math inline">\(-i\)</span>.</p>
+</div>
+<p>Let’s clarify this uniqueness, which is a little bit strange. What we are saying is that if you consider a Gaussian integer like <span class="math inline">\(1+3i\)</span>, you can factorize it as <span class="math display">\[
+    1+3i=(1+i)(2+i)
+\]</span> (you can check that <span class="math inline">\(1+i\)</span> and <span class="math inline">\(2+i\)</span> are primes by using the definition, but it is maybe a little tedious). Observe now that <span class="math inline">\(i\cdot (-i)=-i^2=1\)</span>. Therefore we can write <span class="math display">\[
+    1+3i=1\cdot (1+i)(2+i)=(i\cdot (-i))(1+i)(2+i)=i\cdot ((-i)\cdot (1+i))(2+i)=i\cdot (1-i)(2+i)
+\]</span> this seems to be another factorization of <span class="math inline">\(1+3i\)</span>. However, it differs from the other one only because we multiplied by <span class="math inline">\(1=i\cdot (-i)\)</span>. Therefore, we say that up to multiplying by these special numbers (if you think about it you can also do the same by writing <span class="math inline">\(1=(-1)\cdot (-1)\)</span> and <span class="math inline">\(1=(-i)\cdot i\)</span>) the factorization is unique.</p>
+</section>
+</section>
+<section id="proof-of-the-theorem-finally" class="level1">
+<h1>Proof of the theorem (finally!)</h1>
+<p>Okay, we are almost there. We can now try to understand how the proof will work.</p>
+<p>Let <span class="math inline">\(p\)</span> be a prime in the integers. A sketch of the proof is to prove the following statements:</p>
+<ul>
+<li>if <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution then <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers;</li>
+<li>if <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers, then <span class="math inline">\(p\)</span> can be written as the sum of two squares;</li>
+<li>if <span class="math inline">\(p\)</span> is the sum of two squares then <span class="math inline">\(p\equiv_4 1\)</span> (we already proved this <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">last time</a>!);</li>
+<li>if <span class="math inline">\(p\equiv_4 1\)</span> then <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution.</li>
+</ul>
+<p>These implications tell us that if we know that one statement above is true, then all the other three are true. In other words, the statements above are all saying the same thing: they are equivalent, since they imply each other (observe that the first hypothesis is the same as the last conclusion).</p>
+</section>
+<section id="relation-between-x21equiv_p-0-and-fermats-christmas-theorem" class="level1">
+<h1>Relation between <span class="math inline">\(x^2+1\equiv_p 0\)</span> and Fermat’s christmas theorem</h1>
+<p>The following lemma is the crucial one: through this lemma we will be able to prove Fermat’s Christmas Theorem. It gives the right interpretation of what it means for a prime <span class="math inline">\(p\)</span> to be the sum of two squares.</p>
+<div id="lem-square-minus-one" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1</strong></span> Let <span class="math inline">\(p\)</span> be a prime number. If the congruence <span class="math display">\[
+    x^2+1\equiv_p 0
+\]</span> has a solution, then <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers.</p>
+</div>
+<p>The meaning of <span class="math inline">\(x^2+1\equiv_p 0\)</span> having a solution is that there exists an integer <span class="math inline">\(x\in \mathbb{Z}\)</span> such that <span class="math inline">\(x^2+1\equiv_p 0\)</span>, or equivalently that <span class="math inline">\(p\)</span> divides <span class="math inline">\(x^2+1\)</span>. Another way to say this is <span class="math display">\[
+    x^2\equiv_p -1
+\]</span> so we are saying that <span class="math inline">\(-1\)</span> is a square when reduced modulo <span class="math inline">\(p\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose that there exists an <span class="math inline">\(x\in \mathbb{Z}\)</span> such that <span class="math display">\[
+    x^2+1\equiv_p 0
+\]</span> This means that <span class="math inline">\(p\)</span> divides <span class="math inline">\(x^2+1\)</span>. But observe that <span class="math display">\[
+    x^2+1=(x+i)(x-i)
+\]</span> in the Gaussian integers. We want to say that <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers.</p>
+<p>Suppose that <span class="math inline">\(p+0i\)</span> were a prime in the Gaussian integers. Since <span class="math inline">\(p+0i\)</span> divides the product <span class="math inline">\((x+i)(x-i)\)</span>, then it would have to divide one of them. But this is impossible. Indeed, if <span class="math inline">\(p+0i\)</span> divides <span class="math inline">\(x+i\)</span>, then we can write <span class="math inline">\(x+i=(p+0i)(a+bi)=pa+pbi\)</span>. Confronting the coefficients of <span class="math inline">\(i\)</span> in both sides gives <span class="math inline">\(1=pb\)</span>, which is impossible. The same argument works for <span class="math inline">\(x-i\)</span>.</p>
+<p>Therefore <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers.</p>
+</div>
+<section id="primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers" class="level2">
+<h2 class="anchored" data-anchor-id="primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers">Primes in the integers which are not primes in the Gaussian integers</h2>
+<div id="lem-not-prime" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2</strong></span> Let <span class="math inline">\(p\)</span> be a prime number. If <span class="math inline">\(p+0i\)</span> is not prime in <span class="math inline">\(\mathbb{Z}[i]\)</span>, then we can write <span class="math inline">\(p\)</span> as a sum of two squares.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(p+0i\)</span> is not prime, then it can be written as a product of two factors: <span class="math display">\[
+    p+0i=(a+bi)(c+di)
+\]</span> where neither <span class="math inline">\(a+bi\)</span> nor <span class="math inline">\(c+di\)</span> are equal to <span class="math inline">\(1,-1,i,-i\)</span>.</p>
+<p>Now multiply both sides by their conjugates. On the left we get <span class="math display">\[
+    (p+0i)(p-0i)=p^2.
+\]</span> On the right we get <span class="math display">\[
+    (a+bi)(a-bi)(c+di)(c-di)=(a^2+b^2)(c^2+d^2).
+\]</span> Therefore <span class="math display">\[
+    p^2=(a^2+b^2)(c^2+d^2).
+\]</span></p>
+<p>We have <span class="math inline">\(a^2+b^2&gt;1\)</span> and <span class="math inline">\(c^2+d^2&gt;1\)</span>. But <span class="math inline">\(p\)</span> is prime in <span class="math inline">\(\mathbb{Z}\)</span>, so the only way two integers bigger than <span class="math inline">\(1\)</span> can multiply to <span class="math inline">\(p^2\)</span> is that <span class="math display">\[
+    a^2+b^2=p,\qquad c^2+d^2=p.
+\]</span> In particular, <span class="math display">\[
+    p=a^2+b^2,
+\]</span> which means that <span class="math inline">\(p\)</span> is a sum of two squares.</p>
+</div>
+</section>
+<section id="wilson-theorem-and-solution-to-x21equiv_p-0" class="level2">
+<h2 class="anchored" data-anchor-id="wilson-theorem-and-solution-to-x21equiv_p-0">Wilson theorem and solution to <span class="math inline">\(x^2+1\equiv_p 0\)</span></h2>
+<p>We will use the following theorem to prove what we need.</p>
+<div id="thm-wilson" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (Wilson’s Theorem)</strong></span> If <span class="math inline">\(p\)</span> is a prime number, then <span class="math display">\[
+(p-1)\cdot (p-2)\cdot (p-3)\cdots 2\cdot 1 \equiv_p p-1.
+\]</span> i.e.&nbsp;multiplying all numbers from <span class="math inline">\(p-1\)</span> to <span class="math inline">\(1\)</span> we get <span class="math inline">\(p-1\)</span> modulo <span class="math inline">\(p\)</span>.</p>
+</div>
+<p>We give an idea of how to prove this theorem.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em> (Idea). </span>Recall that an integer <span class="math inline">\(x\)</span> is invertible modulo <span class="math inline">\(p\)</span> if and only if <span class="math inline">\(\gcd(x,p)=1\)</span>. Since <span class="math inline">\(p\)</span> is prime, it has no common factors with any of the numbers <span class="math inline">\((p-1),(p-2),\dots,2,1\)</span>. This means that every factor on the left hand side is invertible modulo <span class="math inline">\(p\)</span>.</p>
+<p>Now, when you list all the invertible residues modulo <span class="math inline">\(p\)</span>, you get exactly <span class="math inline">\(1,2,\dots,p-1\)</span>. So on the left hand side, every term appears together with its inverse, except for the terms that are their own inverse.</p>
+<p>An element <span class="math inline">\(a\)</span> is its own inverse if and only if <span class="math inline">\(a^2\equiv_p 1\)</span>. Modulo a prime, this means <span class="math inline">\(a\equiv_p 1\)</span> or <span class="math inline">\(a\equiv_p -1\)</span>. Therefore, everything cancels out in pairs, and only <span class="math inline">\(-1\equiv_p p-1\)</span> remains.</p>
+</div>
+<div id="lem-final" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 3</strong></span> If <span class="math inline">\(p\)</span> is a prime such that <span class="math inline">\(p\equiv_4 1\)</span> then <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(p\equiv_4 1\)</span>, it means that <span class="math inline">\(p-1\)</span> is divisible by <span class="math inline">\(4\)</span>, which means that <span class="math inline">\(p-1=4k\)</span> for some integer <span class="math inline">\(k\)</span>. We have then <span class="math display">\[
+    (p-1)\cdot (p-2)\cdot (p-3)\cdots 3\cdot 2\cdot 1.
+\]</span></p>
+<p>Now group the factors in pairs as follows: <span class="math display">\[
+    (p-1)\cdot 1\cdot (p-2)\cdot 2\cdots (p-2k)\cdot (2k).
+\]</span></p>
+<p>Since <span class="math inline">\(p-j\equiv_p -j\)</span>, each pair gives <span class="math display">\[
+    (p-j)\cdot j\equiv_p (-j)\cdot j=-j^2.
+\]</span> Therefore <span class="math display">\[
+    (p-1)\cdot (p-2)\cdots 2\cdot 1\equiv_p (-1)^2\cdot (-2)^2\cdots (-(2k))^2=(1\cdot 2\cdot 3\cdots \cdot (2k-1)\cdot 2k)^2.
+\]</span> (Here the minus signs disappear because we are squaring.)</p>
+<p>But, by <a href="#thm-wilson" class="quarto-xref">Theorem&nbsp;3</a> we also know that the left hand side is congruent to <span class="math inline">\(p-1\)</span> modulo <span class="math inline">\(p\)</span>. And since <span class="math inline">\(p-1\equiv_p -1\)</span> we get that <span class="math display">\[
+    -1\equiv_p (1\cdot 2\cdots (2k-1)\cdot 2k)^2
+\]</span> Define <span class="math display">\[
+x:= 1\cdot 2\cdots (2k-1)\cdot 2k
+\]</span></p>
+<p>Then we get <span class="math display">\[
+    x^2+1\equiv_p 0.
+\]</span> Therefore, we found a solution.</p>
+</div>
+</section>
+<section id="the-theorem-is-proven-what-else-can-we-say" class="level2">
+<h2 class="anchored" data-anchor-id="the-theorem-is-proven-what-else-can-we-say">The theorem is proven, what else can we say?</h2>
+<p>The theorem is finally proven, but we don’t stop asking questions. We come up with two questions.</p>
+<div id="qst-howmany">
+<p>How many primes can be written as the sum of two squares? Equivalently, how many primes have remainder <span class="math inline">\(1\)</span> when divided by <span class="math inline">\(4\)</span>?</p>
+</div>
+<p>Probably not surprisingly we already expect that there are infinitely many primes that can be written as the sum of two squares. This statement is left as a guided exercise at the end of the post.</p>
+<p>An interesting, but non trivial fact is to know also the density of these kinds of primes. Namely, if we consider all the primes up to some integer <span class="math inline">\(N\)</span>, how many of these do we expect to be written as the sum of two squares? The answer is that we expect about half of them to be of this kind. Indeed here you can see a table which could convince you:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(N\)</span></th>
+<th style="text-align: right;">primes <span class="math inline">\(\le N\)</span></th>
+<th style="text-align: right;">primes that are <span class="math inline">\(a^2+b^2\)</span></th>
+<th style="text-align: right;">proportion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(10^2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(25\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(12\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0.48\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(10^3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(168\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(81\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0.4821\ldots\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(10^6\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(78498\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(39176\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0.49907\ldots\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(10^9\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(50847534\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(25423492\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0.499994\ldots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>This can be proven, however this is far beyond our interests here.</p>
+<p>Another natural question now could be</p>
+<div id="qst-numbers">
+<p>Consider an integer <span class="math inline">\(n\)</span>. When can we write it as the sum of two squares?</p>
+</div>
+<p>So we are trying to generalize from the case of primes to the case of a general integer. This is not difficult to prove knowing Fermat’s Christmas Theorem, therefore it is also left as a guided exercise at the end.</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>I would like to point out that the crucial point in our reasoning was to relate the problem of writing <span class="math inline">\(p\)</span> as the sum of two squares and the solution of the congruence <span class="math inline">\(x^2+1\)</span>. Indeed, if you think about it, the Gaussian integers were defined by adding the solution of <span class="math inline">\(x^2+1=0\)</span> to the integers. This is not a coincidence.</p>
+<p>There are more general theorems that tell us precisely how the factorization of a prime (ideal) in an extension of the integers (given by adding something similar to the solutions of a polynomial) relates to the factorization (in our case the solutions) of the polynomial modulo that prime.</p>
+<p>In our case we knew that <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution, and this is the same as saying that there exists an integer <span class="math inline">\(u\)</span> such that <span class="math inline">\(u^2\equiv_p -1\)</span>. Then modulo <span class="math inline">\(p\)</span> we have the factorization <span class="math display">\[
+    x^2+1\equiv_p (x+u)(x-u),
+\]</span> because <span class="math display">\[
+    (x+u)(x-u)=x^2-u^2\equiv_p x^2+1.
+\]</span></p>
+<p>This tells us exactly that the prime <span class="math inline">\(p\)</span> can be written as the product of two primes in the Gaussian integers (observe the symmetry: the polynomial splits in two factors exactly as the prime). The theorem which explains this behaviour is known as the <a href="https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem">Dedekind-Kummer theorem</a>.</p>
+</section>
+<section id="guided-exercises" class="level1">
+<h1>Guided exercises</h1>
+<section id="exercise-1-infinitely-many-primes-that-are-sums-of-two-squares" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-infinitely-many-primes-that-are-sums-of-two-squares">Exercise 1: infinitely many primes that are sums of two squares</h2>
+<div id="qst-ex1">
+<section id="exercise-1" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-1">Exercise 1</h4>
+<p>Prove that there are infinitely many primes that can be written as the sum of two squares.</p>
+</section>
+</div>
+<details class="hint">
+<summary>
+Hint 1
+</summary>
+A prime is a sum of two squares if and only if <span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(p\)</span>. Suppose there are only finitely many primes such that <span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(p\)</span>. What can you say?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 1
+</summary>
+Saying “<span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(p\)</span>” means: there exists an integer <span class="math inline">\(n\)</span> such that <span class="math display">\[
+  n^2\equiv_p -1,
+  \]</span> i.e.&nbsp;<span class="math inline">\(p\mid (n^2+1)\)</span>. So every prime for which <span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(p\)</span> divides at least one number of the form <span class="math inline">\(n^2+1\)</span>.
+</details>
+<details class="hint">
+<summary>
+Hint 2
+</summary>
+Let <span class="math inline">\(k\)</span> be the product of all primes <span class="math inline">\(p\)</span> such that <span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(p\)</span>. Try to imitate Euclid’s proof that there are infinitely many primes.
+</details>
+<details class="hint">
+<summary>
+Hint 3
+</summary>
+Consider the integer <span class="math inline">\(k^2+1\)</span>. Which primes can divide it?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 3 (and end of the exercise)
+</summary>
+<p>Take a prime <span class="math inline">\(q\)</span> dividing <span class="math inline">\(k^2+1\)</span>. Then <span class="math display">\[
+  k^2\equiv_q -1,
+  \]</span> so <span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(q\)</span>. By definition of <span class="math inline">\(k\)</span>, this forces <span class="math inline">\(q\mid k\)</span>.</p>
+<p>But then <span class="math inline">\(q\)</span> divides both <span class="math inline">\(k\)</span> and <span class="math inline">\(k^2+1\)</span>, hence it divides their difference <span class="math inline">\((k^2+1)-k^2=1\)</span>, impossible. Contradiction.</p>
+Therefore the assumption “only finitely many primes with <span class="math inline">\(-1\)</span> a square mod <span class="math inline">\(p\)</span>” was false, and there are infinitely many such primes. By Fermat’s Christmas theorem, these are exactly the primes that are sums of two squares.
+</details>
+<hr>
+</section>
+<section id="exercise-2-which-integers-are-sums-of-two-squares" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2-which-integers-are-sums-of-two-squares">Exercise 2: which integers are sums of two squares?</h2>
+<div id="qst-ex2">
+<section id="exercise-2" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-2">Exercise 2</h4>
+<p>Which integers <span class="math inline">\(n\ge 1\)</span> can be written as <span class="math inline">\(n=a^2+b^2\)</span>?</p>
+</section>
+</div>
+<details class="hint">
+<summary>
+Hint 1
+</summary>
+What happens if <span class="math inline">\(n\)</span> is the product of two primes that can be written as the sum of two squares?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 1
+</summary>
+If <span class="math inline">\(p=a^2+b^2\)</span> and <span class="math inline">\(q=c^2+d^2\)</span>, then <span class="math inline">\(pq\)</span> is again a sum of two squares. Indeed a sum of two squares can be written as a Gaussian integer times its conjugate: <span class="math display">\[
+    a^2+b^2=(a+bi)(a-bi),\qquad c^2+d^2=(c+di)(c-di).
+  \]</span> Therefore <span class="math display">\[
+    (a^2+b^2)(c^2+d^2)=(a+bi)(a-bi)(c+di)(c-di).
+  \]</span> The factor <span class="math inline">\((a+bi)(c+di)\)</span> is a Gaussian integer, and <span class="math inline">\((a-bi)(c-di)\)</span> is its conjugate. So their product is a sum of two squares.
+</details>
+<details class="hint">
+<summary>
+Hint 2
+</summary>
+Consider the number <span class="math inline">\(5\cdot 7^2\)</span>. Can it be written as a sum of two squares?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 2
+</summary>
+Yes: <span class="math display">\[
+  5\cdot 7^2=245=14^2+7^2.
+  \]</span> (So the prime <span class="math inline">\(7\equiv_4 3\)</span> is not “forbidden”, but its exponent seems to matter.)
+</details>
+<details class="hint">
+<summary>
+Hint 3
+</summary>
+In the previous hint, <span class="math inline">\(5\equiv_4 1\)</span> and <span class="math inline">\(7\equiv_4 3\)</span>. What theorem do you expect?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 3 (the statement)
+</summary>
+<strong>Theorem (sum of two squares).</strong> A positive integer <span class="math inline">\(n\)</span> can be written as <span class="math inline">\(n=a^2+b^2\)</span> if and only if, in the prime factorization of <span class="math inline">\(n\)</span>, every prime <span class="math inline">\(q\equiv_4 3\)</span> appears with an <strong>even</strong> exponent.
+</details>
+<details class="solution">
+<summary>
+Complete proof (guided by the hints)
+</summary>
+<p><strong>Step 1: primes <span class="math inline">\(q\equiv_4 3\)</span> must appear an even number of times.</strong></p>
+<p>We first prove the following lemma:</p>
+<div id="lem-q3-divides" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 4</strong></span> Let <span class="math inline">\(q\)</span> be a prime with <span class="math inline">\(q\equiv_4 3\)</span>. If <span class="math inline">\(q\mid (a^2+b^2)\)</span>, then <span class="math inline">\(q\mid a\)</span> and <span class="math inline">\(q\mid b\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(q\mid (a^2+b^2)\)</span>. If <span class="math inline">\(q\nmid b\)</span>, then <span class="math inline">\(b\)</span> has an inverse <span class="math inline">\(u\)</span> modulo <span class="math inline">\(q\)</span>, and <span class="math display">\[
+  \left(a\cdot u\right)^2\equiv_q -1,
+  \]</span> so <span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(q\)</span>. But by Fermat’s Christmas theorem, this would force <span class="math inline">\(q\equiv_4 1\)</span>, contradiction. Therefore <span class="math inline">\(q\mid b\)</span>. Then <span class="math inline">\(q\mid a^2\)</span> and hence <span class="math inline">\(q\mid a\)</span>.</p>
+</div>
+<p>Now assume <span class="math inline">\(n=a^2+b^2\)</span>. Take a prime <span class="math inline">\(q\equiv_4 3\)</span> dividing <span class="math inline">\(n\)</span>. By the lemma, <span class="math inline">\(q\)</span> divides both <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, so <span class="math inline">\(q^2\)</span> divides <span class="math inline">\(a^2+b^2=n\)</span>. This means that in the prime factorization of <span class="math inline">\(n\)</span>, the exponent of <span class="math inline">\(q\)</span> cannot be odd: it must be even.</p>
+<p><strong>Step 2: the converse.</strong></p>
+<p>Now suppose <span class="math inline">\(n\)</span> has the property that every prime <span class="math inline">\(q\equiv_4 3\)</span> appears with an even exponent. So we can write <span class="math inline">\(n\)</span> as a product of three types of factors:</p>
+<ul>
+<li><p>a power of <span class="math inline">\(2\)</span>,</p></li>
+<li><p>primes <span class="math inline">\(p\equiv_4 1\)</span> (possibly repeated),</p></li>
+<li><p>and squares of primes <span class="math inline">\(q\equiv_4 3\)</span> (possibly repeated).</p>
+<p>Each of these factors is a sum of two squares:</p></li>
+<li><p><span class="math inline">\(2=1^2+1^2\)</span>,</p></li>
+<li><p>if <span class="math inline">\(p\equiv_4 1\)</span> then <span class="math inline">\(p\)</span> is a sum of two squares by Fermat’s Christmas theorem,</p></li>
+<li><p>and if you have a square <span class="math inline">\(q^{2m}\)</span> then <span class="math inline">\(q^{2m}=(q^m)^2+0^2\)</span>.</p>
+<p>Finally, by Hint 1, a product of sums of two squares (check that the arguments works not only for primes) is again a sum of two squares. Therefore <span class="math inline">\(n\)</span> is a sum of two squares.</p></li>
+</ul>
+</details>
+
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sheafofthoughts\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
