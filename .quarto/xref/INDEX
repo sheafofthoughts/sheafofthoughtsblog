@@ -73,5 +73,13 @@
   "IT/fermat-christmas-theorem/integer-congruences/integer-congruences-IT.qmd": {
     "integer-congruences-IT.html": "69a48441",
     "integer-congruences-IT.tex": "add97451"
+  },
+  "posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.qmd": {
+    "proof-of-the-theorem.html": "93619a85",
+    "proof-of-the-theorem.tex": "e955e62c"
+  },
+  "IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.qmd": {
+    "proof-of-the-theorem-IT.html": "9666e289",
+    "proof-of-the-theorem-IT.tex": "6d60d185"
   }
 }

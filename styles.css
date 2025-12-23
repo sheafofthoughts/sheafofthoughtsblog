@@ -400,3 +400,72 @@ body.quarto-dark .navbar .quarto-color-scheme-toggle::before {
   display: none;
 }
 
+
+
+
+/* ============================
+   Click-to-reveal hints/solutions (details/summary)
+   Append this at the end of your style.css
+   ============================ */
+
+details.hint,
+details.solution {
+  border-left: 4px solid transparent;
+  padding: 0.75rem 1rem;
+  margin: 1.0rem 0;
+  border-radius: 0.45rem;
+  background-color: #f9fafb;
+  overflow-x: auto;
+}
+
+details.hint {
+  border-left-color: #f97316;   /* orange-500 */
+  background-color: #fff7ed;   /* light orange */
+}
+
+details.solution {
+  border-left-color: #14b8a6;  /* teal-500 */
+  background-color: #ecfeff;   /* light teal */
+}
+
+details.hint > summary,
+details.solution > summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;            /* remove default triangle in some browsers */
+}
+
+details.hint > summary::-webkit-details-marker,
+details.solution > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.hint > summary::before,
+details.solution > summary::before {
+  display: inline-block;
+  width: 1.2em;
+  margin-right: 0.2em;
+  content: "▸";
+}
+
+details[open].hint > summary::before,
+details[open].solution > summary::before {
+  content: "▾";
+}
+
+/* Dark mode */
+body.quarto-dark details.hint,
+body.quarto-dark details.solution {
+  color: #e5e7eb;
+}
+
+body.quarto-dark details.hint {
+  border-left-color: #fdba74;
+  background-color: #431407;
+}
+
+body.quarto-dark details.solution {
+  border-left-color: #2dd4bf;
+  background-color: #042f2e;
+}
+
