@@ -580,3 +580,8 @@ Let $q$ be a prime with $q\equiv_4 3$. If $q\mid (a^2+b^2)$, then $q\mid a$ and 
 
 </details>
 
+---
+
+> This article is part of the series [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
+
+> **Previous:** [Some basic modular arithmetic](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html)
