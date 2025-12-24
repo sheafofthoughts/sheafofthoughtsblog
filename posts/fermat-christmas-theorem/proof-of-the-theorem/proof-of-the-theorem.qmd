@@ -3,7 +3,7 @@ title: "Proof of Fermat’s Christmas Theorem"
 subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-25"
 description: >
-  We introduce Gaussian integers and explain what it means, in this context, to be a sum of two squares. In particular, we will see what it means for a prime to be a sum of two squares in the Gaussian integers.
+  We prove Fermat's Christmas Theorem using Gaussian integers, linking sums of two squares to the solvability of $x^2\equiv_p -1$.
 categories: [Expository]
 ---
 

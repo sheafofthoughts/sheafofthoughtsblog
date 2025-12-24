@@ -3,7 +3,7 @@ title: "Dimostrazione del Teorema di Natale di Fermat"
 subtitle: "[Serie sul Teorema di Natale di Fermat](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-25"
 description: >
-  Introduciamo gli interi di Gauss e spieghiamo cosa significa, in questo contesto, essere una somma di due quadrati. In particolare, vedremo cosa significa per un primo essere una somma di due quadrati negli interi di Gauss.
+  Dimostriamo il Teorema di Natale mediante gli interi di Gauss, connettendo le somme di due quadrati con la risolubilità di $x^2\equiv_p -1$
 categories: [Expository]
 draft: unlinked
 ---
