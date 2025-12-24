@@ -1,6 +1,6 @@
 ---
-title: "Dimostrazione del Teorema di Natale"
-subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
+title: "Dimostrazione del Teorema di Natale di Fermat"
+subtitle: "[Serie sul Teorema di Natale di Fermat](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-25"
 description: >
   Introduciamo gli interi di Gauss e spieghiamo cosa significa, in questo contesto, essere una somma di due quadrati. In particolare, vedremo cosa significa per un primo essere una somma di due quadrati negli interi di Gauss.
@@ -9,91 +9,93 @@ draft: unlinked
 ---
 
 <div class="lang-switch">
-  <a href="/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.qmd">ENG</a>
-  <span class="lang-current">ITA</span>
+  <a href="/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.qmd">ITA</a>
+  <span class="lang-current">ENG</span>
 </div>
 
-# Il Teorema di Natale
+# Teorema di Natale
 
-Ricordiamo velocemente cosa abbiamo visto finora. Partiamo con l'enunciare il teorema di Natale in termini di congruenze.
+Ricapitoliamo ciò che abbiamo visto finora. Iniziamo enunciando il teorema di Natale in termini di congruenze.
 
 ::: {#thm-fermat}
 
-## Teorema di Natale
-
-
+## Teorema di Natale 
 Un numero primo dispari $p$ si può scrivere come $p=a^2+b^2$ con $a,b\in\mathbb Z$ se e solo se $p\equiv_4 1$.
 
 :::
 
-Nel [post precedente](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem) abbiamo dimostrato che se $p$ si può scrivere come somma di due quadrati, allora ha resto $1$ quando lo dividiamo per $4$, cioè $p\equiv_4 1$. Ora vogliamo dimostrare il converso: se $p\equiv_4 1$, allora $p$ si può scrivere come somma di due quadrati (questa è la parte difficile).
+Nel [post precedente](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem) abbiamo dimostrato che se $p$ si può scrivere come somma di due quadrati, allora ha resto $1$ nella divisione per $4$, cioè $p\equiv_4 1$. Ora vogliamo dimostrare il viceversa: se $p\equiv_4 1$, allora $p$ si può scrivere come somma di due quadrati (questa è la parte difficile).
 
-
-In questo post sviluppiamo tutto ciò che serve per dare una dimostrazione completa del teorema. Per prima cosa, spostiamo il problema nel contesto degli interi di Gauss, che sono un’estensione degli interi che conosciamo. Poi vedremo come le somme di due quadrati compaiono in modo naturale lì, e come riconoscere i primi che si possono scrivere come somma di due quadrati.
-
+In questo post sviluppiamo tutto ciò che serve per dare una dimostrazione completa del teorema. Per prima cosa spostiamo il problema nel contesto degli interi di Gauss, che sono un’estensione degli interi che già conosciamo. Poi vedremo come le somme di due quadrati compaiono in modo naturale e come riconoscere i primi che si possono scrivere come somma di due quadrati.
 
 # Interi di Gauss
-
 
 Sappiamo tutti che l’equazione
 $$
 	x^2+1=0
 $$ {#eq-gauss}
-non ha soluzioni negli interi, perché i quadrati sono sempre non negativi, e se aggiungiamo $1$ a un numero non negativo non possiamo ottenere zero. Giusto?
+non ha soluzioni negli interi, perché i quadrati sono sempre non negativi e, aggiungendo $1$ a un numero non negativo, non si può ottenere zero.
 
-Bene, aggiungiamo una soluzione di questa equazione agli interi: definiamo
+Aggiungiamo allora una soluzione di questa equazione agli interi: definiamo
 $$
 i:=\sqrt{-1}
 $$
-così otteniamo
+così che
 $$
-	i^2+1=\sqrt{-1}^2+1=-1+1=0
+	i^2+1=\sqrt{-1}^2+1=-1+1=0.
 $$
 
-Ora abbiamo una soluzione di @eq-gauss.
+Quindi ora abbiamo una soluzione di @eq-gauss, che è $i$.
 
-Definiamo $\mathbb{Z}[i]$ come l’insieme degli interi in cui aggiungiamo questo $i$. I “numeri” in $\mathbb{Z}[i]$ sono della forma $a+b\cdot i$, dove $a$ e $b$ sono interi usuali. Per esempio, $1+2i$, $5+7i$, e $0+i$ sono tutti interi di Gauss. I casi speciali della forma $a+0\cdot i$ li denotiamo semplicemente con $a$, mentre i numeri $0+b\cdot i$ li denotiamo con $bi$. In particolare, osserva che dentro $\mathbb{Z}[i]$ ci sono tutti gli interi: infatti li recuperiamo come i numeri della forma $a+0\cdot i=a$.
-
-Ma perché dovremmo lavorare negli interi di Gauss invece che negli interi classici? Lo capiremo tra poco, dal momento che l’esistenza di una soluzione della congruenza
+Definiamo $\mathbb{Z}[i]$ (gli interi di Gauss) come gli interi insieme a questo $i$. I “numeri” in $\mathbb{Z}[i]$ sono della forma
 $$
-x^2+1\equiv_p 0
+a+b\cdot i
 $$
-è strettamente legata al fatto che $p$ sia una somma di due quadrati.
+dove $a$ e $b$ sono interi usuali. Per esempio,
+$$
+1+2i,\qquad 5+7i,\qquad 0+i
+$$
+sono tutti interi di Gauss. I casi particolari della forma $a+0i$ li denoteremo semplicemente con $a$, mentre i numeri $0+bi$ li denoteremo con $bi$. In particolare, osserviamo che dentro $\mathbb{Z}[i]$ ci sono tutti gli interi: infatti li recuperiamo come numeri della forma $a+0i=a$.
 
+Ma perché dovremmo lavorare negli interi di Gauss invece che negli interi “classici”? Cercheremo di capirlo lungo la dimostrazione del Teorema di Natale. Il punto chiave è che le soluzioni dell’equazione polinomiale
+$$
+	x^2+1=0
+$$
+sono strettamente legate al nostro teorema.
 
-Prima di tutto: come funzionano somme e prodotti negli interi di Gauss?
+Ma prima dobbiamo capire come funzionano somme e prodotti negli interi di Gauss.
 
-È facile: basta trattare $i$ come una variabile formale, e ricordare che $i^2=-1$. Lo spiego meglio:
+È semplice: basta trattare $i$ come una variabile formale e ricordare che $i^2=-1$. Spiego meglio:
 
 Supponiamo di voler sommare $3+2i$ con $5+i$. Allora facciamo così:
 $$
-	(3+2i)+(5+i)=(3+5)+(2+1)i=8+3i
+	(3+2i)+(5+i)=(3+5)+(2+1)i=8+3i.
 $$
-cioè sommiamo separatamente le parti senza $i$ e quelle con $i$. Altri esempi:
+Cioè sommiamo separatamente la parte “reale” e la parte con $i$. Altri esempi:
 $$
 	(-2+4i)+(7-3i)=5+i,\qquad (3+6i)-i=3+7i,\qquad 3+(-1+i)=2+i.
 $$
 
-Analogamente per i prodotti: trattiamo $i$ come una variabile formale:
+Per i prodotti facciamo la stessa cosa: trattiamo $i$ come una variabile formale e poi usiamo $i^2=-1$:
 $$
-	(3+2i)\cdot(5+i)=3\cdot 5+ 3\cdot i+2i\cdot 5+2i\cdot i=15+3i+10i+2i^2=15+2i^2+13i
+	(3+2i)\cdot(5+i)=3\cdot 5+ 3\cdot i+2i\cdot 5+2i\cdot i=15+3i+10i+2i^2=15+2i^2+13i.
 $$
 Ora ricordiamo che $i^2=-1$, quindi $2i^2=-2$, e dunque
 $$
-	15+2i^2+13i=15-2+13i=13+13i
+	15+2i^2+13i=15-2+13i=13+13i.
 $$
 
 Altri esempi:
 $$
-	(-2+4i)(7-3i)=-2+34i,\qquad (3+6i)\cdot (-i)=6-3i,\qquad 3\cdot (-1+i)=-3+3i
+	(-2+4i)(7-3i)=-2+34i,\qquad (3+6i)\cdot (-i)=6-3i,\qquad 3\cdot (-1+i)=-3+3i.
 $$
 
-Ora definiamo quanto segue:
+Ora definiamo il coniugato:
 
 ::: {.definition}
 
 **Definizione:**
-Sia $a+bi$ un intero di Gauss. Definiamo il suo coniugato come $a-bi$.
+Sia $a+bi$ un intero di Gauss. Definiamo il suo *coniugato* come $a-bi$.
 
 :::
 
@@ -106,28 +108,25 @@ Sia $a+bi$ un intero di Gauss. Definiamo il suo coniugato come $a-bi$.
 
 :::
 
-Ora osserva questo fatto utile. Se moltiplichi un intero di Gauss $a+bi$ per il suo coniugato $a-bi$ ottieni
+Osserviamo ora questo fatto utile. Se moltiplichiamo un intero di Gauss $a+bi$ per il suo coniugato $a-bi$, otteniamo
 $$
 	(a+bi)(a-bi)=a^2-abi+abi-b^2i^2=a^2-b^2i^2
 $$
-e siccome $i^2=-1$ otteniamo
+e siccome $i^2=-1$ segue che
 $$
-	(a+bi)(a-bi)=a^2+b^2
+	(a+bi)(a-bi)=a^2+b^2.
 $$
 
+Bello, no? Il nostro obiettivo è capire quando un primo è una somma di due quadrati, e ora abbiamo un modo semplice per produrre somme di due quadrati.
 
-È bello, no? Il nostro obiettivo è capire quando un primo è una somma di due quadrati, e ora abbiamo un modo semplice per produrre somme di due quadrati.
+## Che cos’è un primo negli interi di Gauss?
 
-
-
-## Cos’è un primo negli interi di Gauss?
-
-Se ti ricordi, nel [secondo post](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html#what-a-prime-is) abbiamo definito un primo $p$ come un numero tale che, ogni volta che $p$ divide un prodotto $a\cdot b$, allora $p$ divide $a$ oppure $p$ divide $b$. Ora facciamo lo stesso negli interi di Gauss. Prima definiamo cosa significa dividere qualcosa negli interi di Gauss.
+Se ricordate, nel [secondo post](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html#what-a-prime-is) abbiamo definito un primo $p$ come un numero tale che, ogni volta che $p$ divide un prodotto $a\cdot b$, allora $p$ divide $a$ oppure $p$ divide $b$. Facciamo la stessa cosa negli interi di Gauss. Prima definiamo cosa significa “dividere” in $\mathbb{Z}[i]$.
 
 ::: {.definition}
 
 **Definizione:**
-Sia $a+bi$ un intero di Gauss. Diciamo che $a+bi$ divide $c+di$ se possiamo scrivere
+Sia $a+bi$ un intero di Gauss. Diciamo che $a+bi$ *divide* $c+di$ se possiamo scrivere
 $$
 	c+di=(a+bi)\cdot (e+fi)
 $$
@@ -138,12 +137,11 @@ per qualche intero di Gauss $e+fi$.
 ::: {.definition}
 
 **Definizione:**
-Sia $a+bi$ un intero di Gauss. Diciamo che $a+bi$ è primo se ogni volta che $a+bi$ divide un prodotto $(c+di)(e+fi)$, allora $a+bi$ divide $c+di$ oppure $a+bi$ divide $e+fi$.
+Sia $a+bi$ un intero di Gauss. Diciamo che $a+bi$ è *primo* se, ogni volta che $a+bi$ divide un prodotto $(c+di)(e+fi)$, allora $a+bi$ divide $c+di$ oppure $a+bi$ divide $e+fi$.
 
 :::
 
-Non dimostreremo il seguente teorema, la cui dimostrazione è in un certo senso simile a quella fatta per gli interi.
-
+Non dimostreremo il seguente teorema, la cui dimostrazione è simile a quella per gli interi.
 
 ::: {#thm-ufd}
 
@@ -153,41 +151,55 @@ Ogni intero di Gauss $a+bi$ si può scrivere come prodotto di primi di Gauss, ci
 $$
 	a+bi=(c_1+d_1i)\cdots(c_k+d_ki)
 $$
-per qualche intero positivo $k$. Questa scrittura è unica a meno di moltiplicare per $-1, i,$ e $-i$.
-
+per qualche intero positivo $k$. Questa scrittura è unica a meno di moltiplicare per $1,-1,i$ e $-i$.
 
 :::
 
-Chiariamo questa unicità, che è un po’ strana. Quello che stiamo dicendo è che se consideri un intero di Gauss come $1+3i$, lo puoi fattorizzare come
+Chiariamo questa unicità, che è un po’ strana. Il punto è che, per esempio, l’intero di Gauss $1+3i$ si può fattorizzare come
 $$
-	1+3i=(1+i)(2+i)
+	1+3i=(1+i)(2+i).
 $$
-(puoi verificare che $1+i$ e $2+i$ sono primi usando la definizione, ma può essere un po’ noioso). Ora osserva che $i\cdot (-i)=-i^2=1$. Quindi possiamo scrivere
+(Potete verificare che $1+i$ e $2+i$ sono primi usando la definizione, ma può essere un po’ laborioso.) Ora osserviamo che $i\cdot (-i)=-i^2=1$. Quindi possiamo scrivere
 $$
-	1+3i=1\cdot (1+i)(2+i)=(i\cdot (-i))(1+i)(2+i)=i\cdot ((-i)\cdot (1+i))(2+i)=i\cdot (1-i)(2+i)
+	1+3i=1\cdot (1+i)(2+i),
 $$
-questa sembra un’altra fattorizzazione di $1+3i$. Tuttavia differisce dalla precedente solo perché abbiamo moltiplicato per $1=i\cdot (-i)$. Quindi diciamo che, a meno di moltiplicare per questi numeri speciali (se ci pensi puoi fare lo stesso anche con $1=(-1)\cdot(-1)$ e $1=(-i)\cdot i$), la fattorizzazione è unica.
-
-
+semplicemente moltiplicando per $1$. Ma siccome $1=i\cdot(-i)$, allora
+$$
+	1+3i=(i\cdot (-i))(1+i)(2+i),
+$$
+che è lo stesso (per associatività) di
+$$
+	1+3i=i\cdot ((-i)(1+i))(2+i),
+$$
+e quindi
+$$
+	1+3i=i\cdot (1-i)(2+i).
+$$
+Questa sembra un’altra fattorizzazione di $1+3i$. Tuttavia differisce dalla precedente solo perché abbiamo moltiplicato per $1=i\cdot (-i)$. @thm-ufd ci sta dicendo che tutte le possibili fattorizzazioni in primi di $1+3i$ differiscono solo per moltiplicazioni “furbe” per $1$. Per questo diciamo che, a meno di moltiplicare per questi elementi speciali (e se ci pensate si può fare anche scrivendo $1=(-1)\cdot(-1)$ oppure $1=(-i)\cdot i$), la fattorizzazione è unica.
 
 # Dimostrazione del teorema (finalmente!)
 
-Ok, ci siamo quasi. Ora possiamo provare a capire come funzionerà la dimostrazione.
+Ora possiamo capire come funzionerà la dimostrazione.
 
-Sia $p$ un primo negli interi. Uno schema della dimostrazione è mostrare le seguenti affermazioni:
+Sia $p$ un numero primo negli interi. Uno schema della dimostrazione consiste nel provare le seguenti affermazioni:
 
 - se $x^2+1\equiv_p 0$ ha una soluzione allora $p+0i$ non è primo negli interi di Gauss;
 - se $p+0i$ non è primo negli interi di Gauss, allora $p$ si può scrivere come somma di due quadrati;
-- se $p$ è somma di due quadrati allora $p\equiv_4 1$ (lo abbiamo già dimostrato [l’ultima volta](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem)!);
+- se $p$ è somma di due quadrati allora $p\equiv_4 1$ (lo abbiamo già dimostrato [l’altra volta](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem)!);
 - se $p\equiv_4 1$ allora $x^2+1\equiv_p 0$ ha una soluzione.
 
-Queste implicazioni ci dicono che se sappiamo che una delle affermazioni sopra è vera, allora anche le altre tre lo sono. In altre parole, le affermazioni sopra stanno dicendo la stessa cosa: sono equivalenti, perché si implicano a vicenda (nota che la prima ipotesi coincide con l’ultima conclusione).
+Queste implicazioni ci dicono che, se sappiamo che una delle affermazioni sopra è vera, allora lo sono anche tutte le altre. In altre parole, le affermazioni
 
+- $x^2+1\equiv_p 0$ ha una soluzione;
+- $p+0i$ non è primo negli interi di Gauss;
+- $p$ è somma di due quadrati;
+- $p\equiv_4 1$
 
-# Relazione tra $x^2+1\equiv_p 0$ e il teorema di Natale
+stanno dicendo la stessa cosa: sono equivalenti, perché si implicano a vicenda.
 
+## Relazione tra $x^2+1\equiv_p 0$ e il Teorema di Natale
 
-Il seguente lemma è cruciale: grazie a questo lemma potremo dimostrare il teorema di Natale. Dà l’interpretazione giusta di cosa significa che un primo $p$ sia una somma di due quadrati.
+Il seguente lemma è quello cruciale: grazie a questo lemma riusciremo a dimostrare il Teorema di Natale. Ci dà l’interpretazione corretta di cosa significa che un primo $p$ è somma di due quadrati.
 
 ::: {#lem-square-minus-one}
 
@@ -199,51 +211,47 @@ ha una soluzione, allora $p+0i$ non è primo negli interi di Gauss.
 
 :::
 
-Il significato di “$x^2+1\equiv_p 0$ ha una soluzione” è che esiste un intero $x\in\mathbb Z$ tale che $x^2+1\equiv_p 0$, oppure equivalentemente che $p$ divide $x^2+1$. Un altro modo di dirlo è
+Dire che $x^2+1\equiv_p 0$ ha una soluzione significa che esiste un intero $x\in\mathbb{Z}$ tale che $x^2+1\equiv_p 0$, oppure, in modo equivalente, che $p$ divide $x^2+1$. Un altro modo di dirlo è
 $$
-	x^2\equiv_p -1
+	x^2\equiv_p -1,
 $$
-quindi stiamo dicendo che $-1$ è un quadrato modulo $p$.
-
+cioè stiamo dicendo che $-1$ è un quadrato modulo $p$.
 
 ::: {.proof}
 
-Supponiamo che esista un $x\in\mathbb Z$ tale che
+Supponiamo che esista un $x\in \mathbb{Z}$ tale che
 $$
-	x^2+1\equiv_p 0
+	x^2+1\equiv_p 0.
 $$
-Questo significa che $p$ divide $x^2+1$. Ma osserva che
+Questo significa che $p$ divide $x^2+1$. Ma osserviamo che
 $$
 	x^2+1=(x+i)(x-i)
 $$
-negli interi di Gauss. Vogliamo dire che $p+0i$ non è primo negli interi di Gauss.
+negli interi di Gauss. Vogliamo mostrare che $p+0i$ non è primo negli interi di Gauss.
 
-Supponiamo $p+0i$ primo negli interi di Gauss. Siccome $p+0i$ divide il prodotto $(x+i)(x-i)$, allora dovrebbe dividere uno dei due fattori. Ma è impossibile. Infatti, se $p+0i$ divide $x+i$, allora possiamo scrivere $x+i=(p+0i)(a+bi)=pa+pbi$. Confrontando i coefficienti di $i$ sui due lati otteniamo $1=pb$, impossibile. Lo stesso argomento vale per $x-i$.
+Supponiamo per assurdo che $p+0i$ sia primo negli interi di Gauss. Dato che $p+0i$ divide il prodotto $(x+i)(x-i)$, allora dovrebbe dividere uno dei due fattori. Ma questo è impossibile. Infatti, se $p+0i$ dividesse $x+i$, potremmo scrivere $x+i=(p+0i)(a+bi)=pa+pbi$. Confrontando i coefficienti di $i$ nei due membri otteniamo $1=pb$, impossibile. Lo stesso argomento vale per $x-i$.
 
 Quindi $p+0i$ non è primo negli interi di Gauss.
 
 :::
 
-
 ## Primi negli interi che non sono primi negli interi di Gauss
 
 ::: {#lem-not-prime}
-
 
 Sia $p$ un numero primo. Se $p+0i$ non è primo in $\mathbb{Z}[i]$, allora possiamo scrivere $p$ come somma di due quadrati.
 
 :::
 
-
 ::: {.proof}
 
-Se $p+0i$ non è primo, allora si può scrivere come prodotto di due fattori:
+Se $p+0i$ non è primo, allora (per @thm-ufd) si può scrivere come prodotto di almeno due fattori:
 $$
 	p+0i=(a+bi)(c+di)
 $$
 dove né $a+bi$ né $c+di$ sono uguali a $1,-1,i,-i$.
 
-Ora moltiplichiamo entrambi i lati per i loro coniugati. A sinistra otteniamo
+Ora moltiplichiamo entrambi i membri per i loro coniugati. A sinistra otteniamo
 $$
 	(p+0i)(p-0i)=p^2.
 $$
@@ -256,7 +264,7 @@ $$
 	p^2=(a^2+b^2)(c^2+d^2).
 $$
 
-Abbiamo $a^2+b^2>1$ e $c^2+d^2>1$. Ma $p$ è primo in $\mathbb Z$, quindi l’unico modo in cui due interi maggiori di $1$ possono moltiplicarsi per dare $p^2$ è che
+Abbiamo $a^2+b^2>1$ e $c^2+d^2>1$. Ma $p$ è primo in $\mathbb{Z}$, quindi l’unico modo in cui due interi maggiori di $1$ possono moltiplicarsi per dare $p^2$ è che
 $$
 	a^2+b^2=p,\qquad c^2+d^2=p.
 $$
@@ -268,11 +276,9 @@ cioè $p$ è una somma di due quadrati.
 
 :::
 
+## Teorema di Wilson e soluzioni di $x^2+1\equiv_p 0$
 
-## Teorema di Wilson e soluzione di $x^2+1\equiv_p 0$
-
-Useremo il seguente teorema per dimostrare ciò che ci serve.
-
+Useremo il seguente teorema per ottenere ciò che ci serve.
 
 ::: {#thm-wilson}
 
@@ -282,44 +288,43 @@ Se $p$ è un numero primo, allora
 $$
 (p-1)\cdot (p-2)\cdot (p-3)\cdots 2\cdot 1 \equiv_p p-1.
 $$
-cioè moltiplicando tutti i numeri da $p-1$ fino a $1$ otteniamo $p-1$ modulo $p$.
+Cioè, moltiplicando tutti i numeri da $p-1$ fino a $1$ otteniamo $p-1$ modulo $p$.
 
 :::
 
-Diamo un’idea di come dimostrare questo teorema.
+Diamo un’idea della dimostrazione del teorema di Wilson; tuttavia questa dimostrazione non è essenziale per capire il cuore del Teorema di Natale.
 
 ::: {.proof}
 
 #### Idea
 
-Ricorda che un intero $x$ è invertibile modulo $p$ se e solo se $\mathrm{MCD}(x,p)=1$. Siccome $p$ è primo, non ha fattori in comune con nessuno dei numeri $(p-1),(p-2),\dots,2,1$. Questo significa che ogni fattore a sinistra è invertibile modulo $p$.
+Ricordiamo che un intero $x$ è invertibile modulo $p$ se e solo se $\mathrm{MCD}(x,p)=1$. Poiché $p$ è primo, non ha fattori in comune con nessuno dei numeri $(p-1),(p-2),\dots,2,1$. Questo significa che ogni fattore nel prodotto a sinistra è invertibile modulo $p$.
 
-Ora, se elenchi tutti i residui invertibili modulo $p$, ottieni esattamente $1,2,\dots,p-1$. Quindi, a sinistra, ogni termine compare insieme al suo inverso, tranne i termini che sono il proprio inverso.
+Ora, se elenchiamo tutti i resti invertibili modulo $p$, otteniamo esattamente $1,2,\dots,p-1$. Quindi nel prodotto a sinistra ogni termine compare insieme al suo inverso, tranne per i termini che sono il proprio inverso.
 
-Un elemento $a$ è il proprio inverso se e solo se $a^2\equiv_p 1$. Modulo un primo, questo significa $a\equiv_p 1$ oppure $a\equiv_p -1$. Quindi tutto si cancella a coppie, e rimane solo $-1\equiv_p p-1$.
+Un elemento $a$ è il proprio inverso se e solo se $a^2\equiv_p 1$. Modulo un primo questo significa $a\equiv_p 1$ oppure $a\equiv_p -1$. Quindi tutto si semplifica a coppie e rimane solo $-1\equiv_p p-1$.
 
 :::
 
-
 ::: {#lem-final}
 
-Se $p$ è un primo tale che $p\equiv_4 1$ allora $x^2+1\equiv_p 0$ ha una soluzione.
+Se $p$ è un primo tale che $p\equiv_4 1$, allora $x^2+1\equiv_p 0$ ha una soluzione.
 
 :::
 
 ::: {.proof}
 
-Dato che $p\equiv_4 1$, significa che $p-1$ è divisibile per $4$, cioè $p-1=4k$ per qualche intero $k$. Consideriamo
+Poiché $p\equiv_4 1$, allora $p-1$ è divisibile per $4$, cioè $p-1=4k$ per qualche intero $k$. Consideriamo il prodotto
 $$
 	(p-1)\cdot (p-2)\cdot (p-3)\cdots 3\cdot 2\cdot 1.
 $$
 
-Ora raggruppiamo i fattori a coppie così:
+Dato che $p-1=4k$, possiamo raggruppare i fattori a coppie nel seguente modo:
 $$
 	(p-1)\cdot 1\cdot (p-2)\cdot 2\cdots (p-2k)\cdot (2k).
 $$
 
-Siccome $p-j\equiv_p -j$, ogni coppia dà
+Poiché $p-j\equiv_p -j$, ogni coppia dà
 $$
 	(p-j)\cdot j\equiv_p (-j)\cdot j=-j^2.
 $$
@@ -327,18 +332,17 @@ Quindi
 $$
 	(p-1)\cdot (p-2)\cdots 2\cdot 1\equiv_p (-1)^2\cdot (-2)^2\cdots (-(2k))^2=(1\cdot 2\cdot 3\cdots \cdot (2k-1)\cdot 2k)^2.
 $$
-(Qui i segni meno spariscono perché stiamo elevando al quadrato.)
+(Qui i segni meno scompaiono perché stiamo elevando al quadrato.)
 
-Ma per il teorema di Wilson @thm-wilson sappiamo anche che il lato sinistro è congruo a $p-1$ modulo $p$. E siccome $p-1\equiv_p -1$, otteniamo
+Ma per @thm-wilson sappiamo anche che il membro sinistro è congruo a $p-1$ modulo $p$. E poiché $p-1\equiv_p -1$, otteniamo
 $$
-	-1\equiv_p (1\cdot 2\cdots (2k-1)\cdot 2k)^2
+	-1\equiv_p (1\cdot 2\cdots (2k-1)\cdot 2k)^2.
 $$
 Definiamo
 $$
-x:= 1\cdot 2\cdots (2k-1)\cdot 2k
+x:= 1\cdot 2\cdots (2k-1)\cdot 2k.
 $$
-
-Allora otteniamo
+Allora
 $$
 	x^2+1\equiv_p 0.
 $$
@@ -346,20 +350,20 @@ Quindi abbiamo trovato una soluzione.
 
 :::
 
+## Il teorema è dimostrato: cos’altro possiamo dire?
 
-## Il teorema è dimostrato, cos’altro possiamo dire?
-
-Il teorema è finalmente dimostrato, ma non smettiamo di fare domande. Ne vengono fuori due.
+Il teorema è finalmente dimostrato, ma non smettiamo di farci domande.
 
 ::: {#qst-howmany}
 
-Quanti primi si possono scrivere come somma di due quadrati? Equivalentemente, quanti primi hanno resto $1$ quando li dividiamo per $4$?
+**Domanda:**
+Quanti primi si possono scrivere come somma di due quadrati? Equivalentemente, quanti primi hanno resto $1$ nella divisione per $4$?
 
 :::
 
-Probabilmente non sorprende che ci aspettiamo che ci siano infiniti primi scrivibili come somma di due quadrati. Questa affermazione è lasciata come esercizio guidato alla fine del post.
+Non sorprende che ci aspettiamo che esistano infiniti primi che si possono scrivere come somma di due quadrati. Questa affermazione è lasciata come esercizio guidato alla fine del post.
 
-Un fatto interessante, ma non banale, è capire anche la densità di questi primi. Cioè: se consideriamo tutti i primi fino a un intero $N$, quanti di questi ci aspettiamo che siano somme di due quadrati? La risposta è che ci aspettiamo circa la metà. Ecco una tabella che può convincerti:
+Un fatto interessante, ma non banale, è capire anche la densità di questo tipo di primi. Cioè: se consideriamo tutti i primi fino a un intero $N$, quanti ci aspettiamo che siano scrivibili come somma di due quadrati? La risposta è che ci aspettiamo circa la metà. Per esempio, questa tabella potrebbe convincervi:
 
 | $N$ | primi $\le N$ | primi che sono $a^2+b^2$ | proporzione |
 |---:|---:|---:|---:|
@@ -368,27 +372,26 @@ Un fatto interessante, ma non banale, è capire anche la densità di questi prim
 | $10^6$ | $78498$ | $39176$ | $0.49907\ldots$ |
 | $10^9$ | $50847534$ | $25423492$ | $0.499994\ldots$ |
 
+Questo si può dimostrare in modo rigoroso, ma è ben oltre i nostri scopi qui.
 
-Questo si può dimostrare, ma è ben oltre i nostri interessi qui.
-
-Un’altra domanda naturale è
+Un’altra domanda naturale potrebbe essere:
 
 ::: {#qst-numbers}
 
-Dato un intero $n$, quando si può scrivere come somma di due quadrati?
+**Domanda:**
+Dato un intero $n$, quando lo si può scrivere come somma di due quadrati?
 
 :::
 
-Quindi stiamo generalizzando dal caso dei primi al caso di un intero qualunque. Questo non è difficile da dimostrare conoscendo il teorema di Natale, quindi lo lasciamo come esercizio guidato alla fine.
-
+In altre parole, stiamo chiedendo come generalizzare dal caso dei primi al caso di un intero qualunque. Questo non è difficile da dimostrare una volta noto il Teorema di Natale, quindi lo lasciamo come esercizio guidato alla fine.
 
 # Conclusione
 
-Vorrei sottolineare che il punto cruciale del nostro ragionamento è stato collegare il problema di scrivere $p$ come somma di due quadrati con la soluzione della congruenza $x^2+1$. Infatti, se ci pensi, gli interi di Gauss sono definiti aggiungendo agli interi una soluzione di $x^2+1=0$. Non è una coincidenza.
+Vorrei sottolineare che il punto cruciale del nostro ragionamento è stato collegare il problema di scrivere $p$ come somma di due quadrati con la risolubilità della congruenza $x^2+1$. Infatti, se ci pensate, gli interi di Gauss sono stati definiti aggiungendo agli interi una soluzione di $x^2+1=0$. Non è una coincidenza.
 
-Esistono teoremi più generali che spiegano precisamente come la fattorizzazione di un (ideale) primo in un’estensione degli interi (ottenuta aggiungendo qualcosa di simile alle soluzioni di un polinomio) sia legata alla fattorizzazione (nel nostro caso, alle soluzioni) del polinomio modulo quel primo.
+Esistono teoremi più generali che descrivono precisamente come la fattorizzazione di un primo (in realtà, di un ideale primo) in un’estensione degli interi (ottenuta aggiungendo qualcosa di simile alle soluzioni di un polinomio) sia legata alla fattorizzazione del polinomio modulo quel primo.
 
-Nel nostro caso sapevamo che $x^2+1\equiv_p 0$ ha una soluzione, e questo equivale a dire che esiste un intero $u$ tale che $u^2\equiv_p -1$. Allora modulo $p$ abbiamo la fattorizzazione
+Nel nostro caso sapevamo che $x^2+1\equiv_p 0$ ha una soluzione, cioè esiste un intero $u$ tale che $u^2\equiv_p -1$. Allora modulo $p$ abbiamo la fattorizzazione
 $$
 	x^2+1\equiv_p (x+u)(x-u),
 $$
@@ -397,67 +400,58 @@ $$
 	(x+u)(x-u)=x^2-u^2\equiv_p x^2+1.
 $$
 
-Questo ci dice esattamente che il primo $p$ si può scrivere come prodotto di due primi negli interi di Gauss (osserva la simmetria: il polinomio si spezza in due fattori esattamente come il primo). Il teorema che spiega questo comportamento è noto come [teorema di Dedekind-Kummer](https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem).
-
+Questo ci dice esattamente che il primo $p$ si può scrivere come prodotto di due primi negli interi di Gauss (osservate la simmetria: il polinomio si spezza in due fattori esattamente come il primo). Il teorema che spiega questo comportamento è noto come [teorema di Dedekind-Kummer](https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem).
 
 # Esercizi guidati
 
-## Esercizio 1: infiniti primi che sono somme di due quadrati
+## Esercizio 1: infiniti primi somma di due quadrati
 
 ::: {#qst-ex1}
 
 #### Esercizio 1
-Dimostra che esistono infiniti primi che si possono scrivere come somma di due quadrati.
+Dimostra che esistono infiniti numeri primi che si possono scrivere come somma di due quadrati.
 
 :::
 
 <details class="hint">
   <summary>Suggerimento 1</summary>
-  Un primo è una somma di due quadrati se e solo se $-1$ è un quadrato mod $p$.
-  Supponi che ci siano solo finitamenti molti primi tali che $-1$ sia un quadrato mod $p$.
-  Cosa puoi dire?
+  Un primo è somma di due quadrati se e solo se $-1$ è un quadrato modulo $p$.
+  Supponi che esistano solo un numero finito di primi tali che $-1$ sia un quadrato modulo $p$.
+  Che cosa puoi dire?
 </details>
 
 <details class="solution">
   <summary>Soluzione al Suggerimento 1</summary>
-  Dire “$-1$ è un quadrato mod $p$” significa: esiste un intero $n$ tale che
+  Dire “$-1$ è un quadrato modulo $p$” significa: esiste un intero $n$ tale che
   $$
   n^2\equiv_p -1,
   $$
   cioè $p\mid (n^2+1)$.
-  Quindi ogni primo per cui $-1$ è un quadrato mod $p$ divide almeno un numero della forma $n^2+1$.
+  Quindi ogni primo per cui $-1$ è un quadrato modulo $p$ divide almeno un numero della forma $n^2+1$.
 </details>
 
 <details class="hint">
   <summary>Suggerimento 2</summary>
-  Sia $k$ il prodotto di tutti i primi $p$ tali che $-1$ sia un quadrato mod $p$.
+  Sia $k$ il prodotto di tutti i primi $p$ tali che $-1$ è un quadrato modulo $p$.
   Prova a imitare la dimostrazione di Euclide che esistono infiniti primi.
 </details>
 
 <details class="hint">
   <summary>Suggerimento 3</summary>
-  Considera l’intero $k^2+1$. Quali primi lo possono dividere?
+  Considera l’intero $k^2+1$. Quali primi possono dividerlo?
 </details>
 
 <details class="solution">
   <summary>Soluzione al Suggerimento 3 (e fine dell’esercizio)</summary>
-  Sia $q$ un primo che divide $k^2+1$. Allora
-  $$
-  k^2\equiv_q -1,
-  $$
-  quindi $-1$ è un quadrato mod $q$.
-  Per definizione di $k$, questo forza $q\mid k$.
+  In modo analogo alla dimostrazione di Euclide, nessuno dei fattori primi di $k$ (cioè i primi tali che $-1$ è un quadrato modulo $p$) può dividere $k^2+1$ (perché il resto sarebbe $1$). Tuttavia deve esistere un primo $q$ che divide $k^2+1$, quindi la lista finita che avevamo supposto non è completa.
 
-  Ma allora $q$ divide sia $k$ sia $k^2+1$, quindi divide anche la loro differenza $(k^2+1)-k^2=1$, impossibile.
-  Contraddizione.
-
-  Quindi l’ipotesi “solo finitamenti molti primi con $-1$ quadrato mod $p$” è falsa, ed esistono infiniti primi di questo tipo.
-  Per il teorema di Natale, questi sono esattamente i primi che sono somme di due quadrati.
+  Dunque l’ipotesi “solo un numero finito di primi con $-1$ quadrato modulo $p$” era falsa, ed esistono infiniti tali primi.
+  Per il Teorema di Natale, questi sono esattamente i primi che sono somma di due quadrati.
 </details>
 
 ---
 
-## Esercizio 2: quali interi sono somme di due quadrati?
+## Esercizio 2: quali interi sono somma di due quadrati?
 
 ::: {#qst-ex2}
 
@@ -468,7 +462,7 @@ Quali interi $n\ge 1$ si possono scrivere come $n=a^2+b^2$?
 
 <details class="hint">
   <summary>Suggerimento 1</summary>
-  Cosa succede se $n$ è il prodotto di due primi che si possono scrivere come somma di due quadrati?
+  Che cosa succede se $n$ è il prodotto di due primi che si possono scrivere come somma di due quadrati?
 </details>
 
 <details class="solution">
@@ -484,7 +478,6 @@ Quali interi $n\ge 1$ si possono scrivere come $n=a^2+b^2$?
   Il fattore $(a+bi)(c+di)$ è un intero di Gauss, e $(a-bi)(c-di)$ è il suo coniugato. Quindi il loro prodotto è una somma di due quadrati.
 </details>
 
-
 <details class="hint">
   <summary>Suggerimento 2</summary>
   Considera il numero $5\cdot 7^2$. Si può scrivere come somma di due quadrati?
@@ -496,19 +489,19 @@ Quali interi $n\ge 1$ si possono scrivere come $n=a^2+b^2$?
   $$
   5\cdot 7^2=245=14^2+7^2.
   $$
-  (Quindi il primo $7\equiv_4 3$ non è “vietato”, ma sembra contare l’esponente.)
+  (Quindi il primo $7\equiv_4 3$ non è “vietato”, ma sembra che conti l’esponente.)
 </details>
 
 <details class="hint">
   <summary>Suggerimento 3</summary>
   Nel suggerimento precedente, $5\equiv_4 1$ e $7\equiv_4 3$.
-  Che teorema ti aspetti?
+  Quale teorema ti aspetti?
 </details>
 
 <details class="solution">
   <summary>Soluzione al Suggerimento 3 (enunciato)</summary>
   **Teorema (somma di due quadrati).**
-  Un intero positivo $n$ si può scrivere come $n=a^2+b^2$ se e solo se, nella fattorizzazione prima di $n$,
+  Un intero positivo $n$ si può scrivere come $n=a^2+b^2$ se e solo se, nella fattorizzazione in primi di $n$,
   ogni primo $q\equiv_4 3$ compare con esponente **pari**.
 </details>
 
@@ -525,37 +518,36 @@ Sia $q$ un primo con $q\equiv_4 3$. Se $q\mid (a^2+b^2)$, allora $q\mid a$ e $q\
 
 :::
 
-
 ::: {.proof}
 
   Supponiamo $q\mid (a^2+b^2)$.
-  Se $q\nmid b$, allora $b$ ha un inverso $u$ modulo $q$, e
+  Se $q\nmid b$, allora $b$ ammette un inverso $u$ modulo $q$ e
   $$
   \left(a\cdot u\right)^2\equiv_q -1,
   $$
-  quindi $-1$ è un quadrato mod $q$.
-  Ma per il teorema di Natale, questo forzerebbe $q\equiv_4 1$, contraddizione.
-  Quindi $q\mid b$. Allora $q\mid a^2$ e quindi $q\mid a$.
+  quindi $-1$ è un quadrato modulo $q$.
+  Ma per il Teorema di Natale questo implicherebbe $q\equiv_4 1$, assurdo.
+  Dunque $q\mid b$. Allora $q\mid a^2$ e quindi $q\mid a$.
 
 :::
 
-  Ora supponi $n=a^2+b^2$. Prendi un primo $q\equiv_4 3$ che divide $n$. Per il lemma, $q$ divide sia $a$ sia $b$, quindi $q^2$ divide $a^2+b^2=n$. Questo significa che nella fattorizzazione prima di $n$ l’esponente di $q$ non può essere dispari: deve essere pari.
+  Ora supponiamo $n=a^2+b^2$. Sia $q\equiv_4 3$ un primo che divide $n$. Per il lemma, $q$ divide sia $a$ sia $b$, quindi $q^2$ divide $a^2+b^2=n$. Questo significa che, nella fattorizzazione in primi di $n$, l’esponente di $q$ non può essere dispari: deve essere pari.
 
-  **Passo 2: il converso.**
+  **Passo 2: il viceversa.**
 
-  Ora supponi che $n$ abbia la proprietà che ogni primo $q\equiv_4 3$ compaia con esponente pari. Allora possiamo pensare $n$ come prodotto di tre tipi di fattori:
+  Ora supponiamo che $n$ abbia la proprietà che ogni primo $q\equiv_4 3$ compaia con esponente pari. Allora possiamo scrivere $n$ come prodotto di tre tipi di fattori:
 
-- una potenza di $2$,
-- primi $p\equiv_4 1$ (anche ripetuti),
-- e quadrati di primi $q\equiv_4 3$ (anche ripetuti).
+- una potenza di $2$;
+- primi $p\equiv_4 1$ (eventualmente ripetuti);
+- e quadrati di primi $q\equiv_4 3$ (eventualmente ripetuti).
 
   Ognuno di questi fattori è una somma di due quadrati:
 
-- $2=1^2+1^2$,
-- se $p\equiv_4 1$ allora $p$ è una somma di due quadrati per il teorema di Natale,
-- e se hai un quadrato $q^{2m}$ allora $q^{2m}=(q^m)^2+0^2$.
+- $2=1^2+1^2$;
+- se $p\equiv_4 1$ allora $p$ è somma di due quadrati per il Teorema di Natale;
+- se hai un quadrato $q^{2m}$ allora $q^{2m}=(q^m)^2+0^2$.
 
-  Infine, per il Suggerimento 1, un prodotto di somme di due quadrati è ancora una somma di due quadrati. Quindi $n$ è una somma di due quadrati.
+  Infine, per il Suggerimento 1, un prodotto di somme di due quadrati (e lo stesso ragionamento vale non solo per i primi) è ancora una somma di due quadrati. Quindi $n$ è una somma di due quadrati.
 
 </details>
 

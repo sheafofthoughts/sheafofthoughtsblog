@@ -5,7 +5,6 @@ date: "2025-12-25"
 description: >
   We introduce Gaussian integers and explain what it means, in this context, to be a sum of two squares. In particular, we will see what it means for a prime to be a sum of two squares in the Gaussian integers.
 categories: [Expository]
-draft: unlinked
 ---
 
 <div class="lang-switch">
@@ -15,7 +14,7 @@ draft: unlinked
 
 # Fermat’s Christmas Theorem 
 
-Let's recap what we have seen so far. We start by stating Fermat's Christmas theorem in terms of congruences. 
+Let's recap what we have seen so far. We begin by stating Fermat's Christmas theorem in terms of congruences. 
 
 
 ::: {#thm-fermat}
@@ -40,9 +39,9 @@ We all know that the equation
 $$
 	x^2+1=0
 $$ {#eq-gauss}
-has no solutions in the integers, since squares are always nonnegative, and if we add $1$ to a nonnegative number we can't get zero. Right?
+has no solutions in the integers, since squares are always nonnegative, and if we add $1$ to a nonnegative number we can't get zero.
 
-Well, let's add a solution of this equation to the integers: we define 
+Let's add a solution of this equation to the integers: we define 
 $$
 i:=\sqrt{-1}
 $$
@@ -51,20 +50,29 @@ $$
 	i^2+1=\sqrt{-1}^2+1=-1+1=0
 $$
 
-We now have a solution to @eq-gauss.
+Thus, we now have a solution to @eq-gauss, which is $i$.
 
-We define $\mathbb{Z}[i]$ to be the set of integers in which we add this $i$. The "numbers" in $\mathbb{Z}[i]$ are of the form $a+b\cdot i$, where $a$ and $b$ are usual integers. For example, $1+2i$, $5+7i$, and $0+i$ are all Gaussian integers. The special cases of numbers of the form $a+0\cdot i$ will be just denoted by $a$, while the numbers $0+b\cdot i$ will be denoted just by $bi$. In particular observe that we have all the integers inside $\mathbb{Z}[i]$: indeed we can recover them as the numbers of the form $a+0\cdot i=a$.
-
-But why should we work in Gaussian integers instead of classical integers? We will understand this later, since the existence of a solution for the congruence
+We define $\mathbb{Z}[i]$ (Gaussian integers) to be the integers together with this $i$. The "numbers" in $\mathbb{Z}[i]$ are of the form 
 $$
-x^2+1\equiv_p 0
+a+b\cdot i
 $$
-is closely related to $p$ being a sum of two squares. 
+where $a$ and $b$ are usual integers. For example, 
+$$
+1+2i,\qquad 5+7i,\qquad 0+i
+$$
+are all Gaussian integers. The special cases of numbers of the form $a+0i$ will be just denoted by $a$, while the numbers $0+bi$ will be denoted just by $bi$. In particular observe that we have all the integers inside $\mathbb{Z}[i]$: indeed we can recover them as the numbers of the form $a+0i=a$.
+
+But why should we work in Gaussian integers instead of classical integers? We will try to understand this throughout the proof of Fermat's Christmas Theorem. The key is that the solutions of the polynomial equation
+$$
+	x^2+1=0
+$$
+are closely related to our theorem.
 
 
-First of all, how do products and sums work in the Gaussian integers?
 
-It is easy: you just have to treat $i$ as a formal variable, and remember that $i^2=-1$. I will explain it better:
+But first, we should understand how products and sums work in the Gaussian integers.
+
+It is easy: you just have to treat $i$ as a formal variable, and remember that $i^2=-1$. Let me explain it better:
 
 Suppose we want to sum $3+2i$ with $5+i$. Then we do like this:
 $$
@@ -89,12 +97,12 @@ $$
 	(-2+4i)(7-3i)=-2+34i,\qquad (3+6i)\cdot (-i)=6-3i,\qquad 3\cdot (-1+i)=-3+3i
 $$
 
-Now, define the following:
+Now, define the conjugate:
 
 ::: {.definition}
 
 **Definition:**
-Let $a+bi$ be a Gaussian integer. We define its conjugate to be $a-bi$.
+Let $a+bi$ be a Gaussian integer. We define its *conjugate* to be $a-bi$.
 
 :::
 
@@ -107,7 +115,7 @@ Let $a+bi$ be a Gaussian integer. We define its conjugate to be $a-bi$.
 
 :::
 
-Now observe this useful thing. If you multiply a Gaussian integer $a+bi$ by its conjugate $a-bi$ you get 
+Observe this useful thing. If you multiply a Gaussian integer $a+bi$ by its conjugate $a-bi$ you get 
 $$
 	(a+bi)(a-bi)=a^2-abi+abi-b^2i^2=a^2-b^2i^2
 $$
@@ -127,7 +135,7 @@ If you remember, in the [second post](https://sheafofthoughts.org/posts/fermat-c
 ::: {.definition}
 
 **Definition:**
-Let $a+bi$ be a Gaussian integer. We say that $a+bi$ divides $c+di$ if we can write 
+Let $a+bi$ be a Gaussian integer. We say that $a+bi$ *divides* $c+di$ if we can write 
 $$
 	c+di=(a+bi)\cdot (e+fi)
 $$ 
@@ -138,11 +146,11 @@ for some Gaussian integer $e+fi$.
 ::: {.definition}
 
 **Definition:**
-Let $a+bi$ be a Gaussian integer. We say that $a+bi$ is prime if whenever $a+bi$ divides a product $(c+di)(e+fi)$ then either $a+bi$ divides $c+di$ or $a+bi$ divides $e+fi$.
+Let $a+bi$ be a Gaussian integer. We say that $a+bi$ is *prime* if whenever $a+bi$ divides a product $(c+di)(e+fi)$ then either $a+bi$ divides $c+di$ or $a+bi$ divides $e+fi$.
 
 :::
 
-We will not prove the following theorem, whose proof is in some way similar to the one made for the integers.
+We will not prove the following theorem, whose proof is similar to the one made for the integers.
 
 
 ::: {#thm-ufd}
@@ -153,7 +161,7 @@ Every Gaussian integer $a+bi$ can be written as the product of Gaussian integer 
 $$
 	a+bi=(c_1+d_1i)\cdots(c_k+d_ki)
 $$ 
-for some positive integer $k$. This writing is unique up to multiplying by $-1, i,$ and $-i$.
+for some positive integer $k$. This writing is unique up to multiplying by $1,-1, i,$ and $-i$.
 
 
 :::
@@ -164,27 +172,46 @@ $$
 $$
 (you can check that $1+i$ and $2+i$ are primes by using the definition, but it is maybe a little tedious). Observe now that $i\cdot (-i)=-i^2=1$. Therefore we can write
 $$
-	1+3i=1\cdot (1+i)(2+i)=(i\cdot (-i))(1+i)(2+i)=i\cdot ((-i)\cdot (1+i))(2+i)=i\cdot (1-i)(2+i)
+	1+3i=1\cdot (1+i)(2+i)
 $$
-this seems to be another factorization of $1+3i$. However, it differs from the other one only because we multiplied by $1=i\cdot (-i)$. Therefore, we say that up to multiplying by these special numbers (if you think about it you can also do the same by writing $1=(-1)\cdot (-1)$ and $1=(-i)\cdot i$) the factorization is unique.
+just by multiplying by $1$. But now we know that $1=i\cdot (-i)$, therefore
+$$
+	1+3i=(i\cdot (-i))(1+i)(2+i)
+$$
+which is the same (by associativity) as
+$$
+	1+3i=i\cdot ((-i)(1+i))(2+i)
+$$
+hence
+$$
+	1+3i=i\cdot (1-i)(2+i).
+$$ 
+This seems to be another factorization of $1+3i$. However, it differs from the other one only because we multiplied by $1=i\cdot (-i)$. @thm-ufd is telling us that all the possible factorizations in primes of $1+3i$ we can write differ only by multiplying them by $1$ in fancy ways. Therefore, we say that up to multiplying by these special numbers (if you think about it you can also do the same by writing $1=(-1)\cdot (-1)$ and $1=(-i)\cdot i$) the factorization is unique.
 
 
 
 # Proof of the theorem (finally!)
 
-Okay, we are almost there. We can now try to understand how the proof will work.
+We can now try to understand how the proof will work.
 
-Let $p$ be a prime in the integers. A sketch of the proof is to prove the following statements:
+Let $p$ be a prime in the integers. A sketch of the proof goes with the following statements:
 
 - if $x^2+1\equiv_p 0$ has a solution then $p+0i$ is not prime in the Gaussian integers;
 - if $p+0i$ is not prime in the Gaussian integers, then $p$ can be written as the sum of two squares;
 - if $p$ is the sum of two squares then $p\equiv_4 1$ (we already proved this [last time](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem)!);
 - if $p\equiv_4 1$ then $x^2+1\equiv_p 0$ has a solution.
 
-These implications tell us that if we know that one statement above is true, then all the other three are true. In other words, the statements above are all saying the same thing: they are equivalent, since they imply each other (observe that the first hypothesis is the same as the last conclusion).
+These implications tell us that if we know that one statement above is true, then all the others are true. In other words, the statements
+
+- $x^2+1\equiv_p 0$ has a solution;
+- $p+0i$ is not prime in the Gaussian integers;
+- $p$ is the sum of two squares;
+- $p\equiv_4 1$
+  
+are all saying the same thing: they are equivalent, since they imply each other.
 
 
-# Relation between $x^2+1\equiv_p 0$ and Fermat's christmas theorem
+## Relation between $x^2+1\equiv_p 0$ and Fermat's christmas theorem
 
 
 The following lemma is the crucial one: through this lemma we will be able to prove Fermat's Christmas Theorem. It gives the right interpretation of what it means for a prime $p$ to be the sum of two squares.
@@ -237,7 +264,7 @@ Let $p$ be a prime number. If $p+0i$ is not prime in $\mathbb{Z}[i]$, then we ca
 
 ::: {.proof}
 
-If $p+0i$ is not prime, then it can be written as a product of two factors:
+If $p+0i$ is not prime, then (by @thm-ufd) it can be written as a product of two factors:
 $$
 	p+0i=(a+bi)(c+di)
 $$ 
@@ -286,7 +313,7 @@ i.e. multiplying all numbers from $p-1$ to $1$ we get $p-1$ modulo $p$.
 
 :::
 
-We give an idea of how to prove this theorem.
+We sketch an idea for the proof of Wilson's theorem, however this proof is not essential for understanding the core of Fermat's Christmas Theorem.
 
 ::: {.proof}
 
@@ -309,12 +336,12 @@ If $p$ is a prime such that $p\equiv_4 1$ then $x^2+1\equiv_p 0$ has a solution.
 
 ::: {.proof}
 
-Since $p\equiv_4 1$, it means that $p-1$ is divisible by $4$, which means that $p-1=4k$ for some integer $k$. We have then
+Since $p\equiv_4 1$, it means that $p-1$ is divisible by $4$, which means that $p-1=4k$ for some integer $k$. Consider then the product
 $$
 	(p-1)\cdot (p-2)\cdot (p-3)\cdots 3\cdot 2\cdot 1.
 $$
 
-Now group the factors in pairs as follows:
+Since $p-1=4k$ we can group the factors in pairs as follows:
 $$
 	(p-1)\cdot 1\cdot (p-2)\cdot 2\cdots (p-2k)\cdot (2k).
 $$
@@ -349,10 +376,11 @@ Therefore, we found a solution.
 
 ## The theorem is proven, what else can we say?
 
-The theorem is finally proven, but we don't stop asking questions. We come up with two questions.
+The theorem is finally proven, but we don't stop asking questions. 
 
 ::: {#qst-howmany}
 
+**Question:**
 How many primes can be written as the sum of two squares? Equivalently, how many primes have remainder $1$ when divided by $4$?
 
 :::
@@ -369,24 +397,25 @@ An interesting, but non trivial fact is to know also the density of these kinds 
 | $10^9$ | $50847534$ | $25423492$ | $0.499994\ldots$ |
 
 
-This can be proven, however this is far beyond our interests here.
+This can be rigorously proven, however this is far beyond our interests here.
 
-Another natural question now could be
+Another natural question could be
 
 ::: {#qst-numbers}
 
+**Question:**
 Consider an integer $n$. When can we write it as the sum of two squares?
 
 :::
 
-So we are trying to generalize from the case of primes to the case of a general integer. This is not difficult to prove knowing Fermat's Christmas Theorem, therefore it is also left as a guided exercise at the end.
+In other words we are asking how to generalize from the case of primes to the case of any integer. This is not difficult to prove knowing Fermat's Christmas Theorem, therefore it is also left as a guided exercise at the end.
 
 
 # Conclusion
 
 I would like to point out that the crucial point in our reasoning was to relate the problem of writing $p$ as the sum of two squares and the solution of the congruence $x^2+1$. Indeed, if you think about it, the Gaussian integers were defined by adding the solution of $x^2+1=0$ to the integers. This is not a coincidence.
 
-There are more general theorems that tell us precisely how the factorization of a prime (ideal) in an extension of the integers (given by adding something similar to the solutions of a polynomial) relates to the factorization (in our case the solutions) of the polynomial modulo that prime.
+There are more general theorems that tell us precisely how the factorization of a prime (actually, prime ideal) in an extension of the integers (given by adding something similar to the solutions of a polynomial) relates to the factorization of the polynomial modulo that prime.
 
 In our case we knew that $x^2+1\equiv_p 0$ has a solution, and this is the same as saying that there exists an integer $u$ such that $u^2\equiv_p -1$. Then modulo $p$ we have the factorization
 $$
@@ -397,7 +426,7 @@ $$
 	(x+u)(x-u)=x^2-u^2\equiv_p x^2+1.
 $$
 
-This tells us exactly that the prime $p$ can be written as the product of two primes in the Gaussian integers (observe the symmetry: the polynomial splits in two factors exactly as the prime). The theorem which explains this behaviour is known as the [Dedekind-Kummer theorem](https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem).
+This told us exactly that the prime $p$ can be written as the product of two primes in the Gaussian integers (observe the symmetry: the polynomial splits in two factors exactly as the prime). The theorem which explains this behaviour is known as the [Dedekind-Kummer theorem](https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem).
 
 
 # Guided exercises
@@ -441,15 +470,7 @@ Prove that there are infinitely many primes that can be written as the sum of tw
 
 <details class="solution">
   <summary>Solution to Hint 3 (and end of the exercise)</summary>
-  Take a prime $q$ dividing $k^2+1$. Then
-  $$
-  k^2\equiv_q -1,
-  $$
-  so $-1$ is a square mod $q$.
-  By definition of $k$, this forces $q\mid k$.
-
-  But then $q$ divides both $k$ and $k^2+1$, hence it divides their difference $(k^2+1)-k^2=1$, impossible.
-  Contradiction.
+  Similarly to the Euclid's proof, none of the prime factors of $k$ (i.e. the primes such that $-1$ is a square modulo $p$) can divide $k^2+1$ (since the remainder is $1$). However there must be a prime $q$ dividing $k^2+1$, hence the finite list we supposed to have is not complete.
 
   Therefore the assumption “only finitely many primes with $-1$ a square mod $p$” was false, and there are infinitely many such primes.
   By Fermat’s Christmas theorem, these are exactly the primes that are sums of two squares.
