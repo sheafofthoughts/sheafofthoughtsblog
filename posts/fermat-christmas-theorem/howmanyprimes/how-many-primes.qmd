@@ -44,11 +44,11 @@ We will instead use the term *irreducible* for the other definition we know:
 ::: {.definition}
 
 **Definition:**
-An integer $q$ is *irreducible* if its only divisors are itself,$1$, and $-1$.
+An integer $q$ is *irreducible* if its only divisors are itself, $1$, $-1$, and $-q$.
 
 :::
 
-We include $-1$ because we allow negative integers; for instance $-3$ is irreducible since its only divisors are $-1$, $1$, and $-3$.
+We include $-1$ and $-q$ because we allow negative integers; for instance $-3$ is irreducible since its only divisors are $-1$, $1$, $-3$, and $3$.
 
 For integers, a number is irreducible if and only if it is prime, so the two definitions agree. This is why we often use the irreducible definition for primes.
 
