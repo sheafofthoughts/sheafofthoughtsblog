@@ -457,9 +457,9 @@ Neukirch, Jürgen. 1999. <em>Algebraic Number Theory</em>. 1st ed. Vol. 322. Gru
 </div>
 <p>We will instead use the term <em>irreducible</em> for the other definition we know:</p>
 <div class="definition">
-<p><strong>Definition:</strong> An integer <img src="https://latex.codecogs.com/png.latex?q"> is <em>irreducible</em> if its only divisors are itself,<img src="https://latex.codecogs.com/png.latex?1">, and <img src="https://latex.codecogs.com/png.latex?-1">.</p>
+<p><strong>Definition:</strong> An integer <img src="https://latex.codecogs.com/png.latex?q"> is <em>irreducible</em> if its only divisors are itself, <img src="https://latex.codecogs.com/png.latex?1">, <img src="https://latex.codecogs.com/png.latex?-1">, and <img src="https://latex.codecogs.com/png.latex?-q">.</p>
 </div>
-<p>We include <img src="https://latex.codecogs.com/png.latex?-1"> because we allow negative integers; for instance <img src="https://latex.codecogs.com/png.latex?-3"> is irreducible since its only divisors are <img src="https://latex.codecogs.com/png.latex?-1">, <img src="https://latex.codecogs.com/png.latex?1">, and <img src="https://latex.codecogs.com/png.latex?-3">.</p>
+<p>We include <img src="https://latex.codecogs.com/png.latex?-1"> and <img src="https://latex.codecogs.com/png.latex?-q"> because we allow negative integers; for instance <img src="https://latex.codecogs.com/png.latex?-3"> is irreducible since its only divisors are <img src="https://latex.codecogs.com/png.latex?-1">, <img src="https://latex.codecogs.com/png.latex?1">, <img src="https://latex.codecogs.com/png.latex?-3">, and <img src="https://latex.codecogs.com/png.latex?3">.</p>
 <p>For integers, a number is irreducible if and only if it is prime, so the two definitions agree. This is why we often use the irreducible definition for primes.</p>
 <hr>
 </section>
