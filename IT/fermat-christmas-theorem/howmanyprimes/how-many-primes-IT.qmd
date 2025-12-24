@@ -248,5 +248,7 @@ In ogni caso, ci vediamo la prossima settimana!
 
 > Questo articolo fa parte della serie [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
 
-> Precedente: [Introduction](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html)
+> **Precedente**: [Introduction](https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html)
+
+> **Prossimo**: [Aritmetica modulare di base](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html)
 

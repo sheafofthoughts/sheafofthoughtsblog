@@ -423,3 +423,4 @@ Once we find such an $x$, bus $A$ will also arrive at time $x$. @thm-crt tells u
 
 > **Previous:** [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
 
+> **Next:** [Proof of Fermat's Christmas Theorem](https://sheafofthoughts.org/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html)

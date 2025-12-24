@@ -1,5 +1,5 @@
 ---
-title: "Dimostrazione del Teorema di Natale di Fermat"
+title: "Dimostrazione del Teorema di Natale"
 subtitle: "[Serie sul Teorema di Natale di Fermat](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-25"
 description: >
@@ -551,3 +551,8 @@ Sia $q$ un primo con $q\equiv_4 3$. Se $q\mid (a^2+b^2)$, allora $q\mid a$ e $q\
 
 </details>
 
+---
+
+> Questo articolo fa parte della serie [*Fermat's Christmas Theorem*](https://sheafofthoughts.org/posts/fermat-christmas-theorem/).
+
+> Precedente: [Aritmetica modulare di base](https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html)

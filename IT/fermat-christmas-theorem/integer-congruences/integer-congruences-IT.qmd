@@ -422,3 +422,5 @@ Una volta trovato un tale $x$, anche l’autobus $A$ arriverà al tempo $x$. @th
 > Questo articolo fa parte della serie [*Fermat's Christmas Theorem*](/posts/fermat-christmas-theorem/).
 
 > **Precedente:** [How many primes are there?](https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html)
+
+> **Prossimo** [Dimostrazione del Teorema di Natale](https://sheafofthoughts.org/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html)
