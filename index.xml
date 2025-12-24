@@ -10,7 +10,319 @@
 <atom:link href="https://sheafofthoughts.org/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Wed, 17 Dec 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 24 Dec 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Proof of Fermat’s Christmas Theorem</title>
+  <link>https://sheafofthoughts.org/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="lang-switch">
+<p><a href="../../../IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html">ITA</a> <span class="lang-current">ENG</span></p>
+</div>
+<section id="fermats-christmas-theorem" class="level1">
+<h1>Fermat’s Christmas Theorem</h1>
+<p>Let’s recap what we have seen so far. We begin by stating Fermat’s Christmas theorem in terms of congruences.</p>
+<div id="thm-fermat" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Fermat’s Christmas Theorem)</strong></span> An odd prime number <img src="https://latex.codecogs.com/png.latex?p"> can be written as <img src="https://latex.codecogs.com/png.latex?p=a%5E2+b%5E2"> with <img src="https://latex.codecogs.com/png.latex?a,b%5Cin%5Cmathbb%20Z"> if and only if <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201">.</p>
+</div>
+<p>In the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">previous post</a> we proved that if <img src="https://latex.codecogs.com/png.latex?p"> can be written as the sum of two squares, then it has remainder <img src="https://latex.codecogs.com/png.latex?1"> when divided by <img src="https://latex.codecogs.com/png.latex?4">, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201">. Now we want to prove the converse: if <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201">, then <img src="https://latex.codecogs.com/png.latex?p"> can be written as the sum of two squares (this is the hard part).</p>
+<p>In this post we develop everything we need in order to give a complete proof of the theorem. First, we shift the problem to the context of Gaussian integers, which are an extension of the integers we know. Then we will see how sums of two squares appear naturally there, and how to recognize the primes that can be written as the sum of two squares.</p>
+</section>
+<section id="gaussian-integers" class="level1">
+<h1>Gaussian integers</h1>
+<p>We all know that the equation <span id="eq-gauss"><img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2+1=0%0A%5Ctag%7B1%7D"></span> has no solutions in the integers, since squares are always nonnegative, and if we add <img src="https://latex.codecogs.com/png.latex?1"> to a nonnegative number we can’t get zero.</p>
+<p>Let’s add a solution of this equation to the integers: we define <img src="https://latex.codecogs.com/png.latex?%0Ai:=%5Csqrt%7B-1%7D%0A"> so that we get <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20i%5E2+1=%5Csqrt%7B-1%7D%5E2+1=-1+1=0%0A"></p>
+<p>Thus, we now have a solution to Equation&nbsp;1, which is <img src="https://latex.codecogs.com/png.latex?i">.</p>
+<p>We define <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D%5Bi%5D"> (Gaussian integers) to be the integers together with this <img src="https://latex.codecogs.com/png.latex?i">. The “numbers” in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D%5Bi%5D"> are of the form <img src="https://latex.codecogs.com/png.latex?%0Aa+b%5Ccdot%20i%0A"> where <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> are usual integers. For example, <img src="https://latex.codecogs.com/png.latex?%0A1+2i,%5Cqquad%205+7i,%5Cqquad%200+i%0A"> are all Gaussian integers. The special cases of numbers of the form <img src="https://latex.codecogs.com/png.latex?a+0i"> will be just denoted by <img src="https://latex.codecogs.com/png.latex?a">, while the numbers <img src="https://latex.codecogs.com/png.latex?0+bi"> will be denoted just by <img src="https://latex.codecogs.com/png.latex?bi">. In particular observe that we have all the integers inside <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D%5Bi%5D">: indeed we can recover them as the numbers of the form <img src="https://latex.codecogs.com/png.latex?a+0i=a">.</p>
+<p>But why should we work in Gaussian integers instead of classical integers? We will try to understand this throughout the proof of Fermat’s Christmas Theorem. The key is that the solutions of the polynomial equation <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2+1=0%0A"> are closely related to our theorem.</p>
+<p>But first, we should understand how products and sums work in the Gaussian integers.</p>
+<p>It is easy: you just have to treat <img src="https://latex.codecogs.com/png.latex?i"> as a formal variable, and remember that <img src="https://latex.codecogs.com/png.latex?i%5E2=-1">. Let me explain it better:</p>
+<p>Suppose we want to sum <img src="https://latex.codecogs.com/png.latex?3+2i"> with <img src="https://latex.codecogs.com/png.latex?5+i">. Then we do like this: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(3+2i)+(5+i)=(3+5)+(2+1)i=8+3i%0A"> so we add the numbers that don’t have the <img src="https://latex.codecogs.com/png.latex?i"> with them and the numbers that have the <img src="https://latex.codecogs.com/png.latex?i"> with them separately. Other examples: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(-2+4i)+(7-3i)=5+i,%5Cqquad%20(3+6i)-i=3+7i,%5Cqquad%203+(-1+i)=2+i.%0A"></p>
+<p>Similarly we do for the products, we just treat <img src="https://latex.codecogs.com/png.latex?i"> as a formal variable: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(3+2i)%5Ccdot(5+i)=3%5Ccdot%205+%203%5Ccdot%20i+2i%5Ccdot%205+2i%5Ccdot%20i=15+3i+10i+2i%5E2=15+2i%5E2+13i%0A"> Now remember that <img src="https://latex.codecogs.com/png.latex?i%5E2=-1"> so <img src="https://latex.codecogs.com/png.latex?2i%5E2=-2">, thus <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%2015+2i%5E2+13i=15-2+13i=13+13i%0A"></p>
+<p>Other examples: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(-2+4i)(7-3i)=-2+34i,%5Cqquad%20(3+6i)%5Ccdot%20(-i)=6-3i,%5Cqquad%203%5Ccdot%20(-1+i)=-3+3i%0A"></p>
+<p>Now, define the conjugate:</p>
+<div class="definition">
+<p><strong>Definition:</strong> Let <img src="https://latex.codecogs.com/png.latex?a+bi"> be a Gaussian integer. We define its <em>conjugate</em> to be <img src="https://latex.codecogs.com/png.latex?a-bi">.</p>
+</div>
+<div id="exm-conjugates" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> &nbsp;</p>
+<ul>
+<li>The conjugate of <img src="https://latex.codecogs.com/png.latex?3+4i"> is <img src="https://latex.codecogs.com/png.latex?3-4i">.</li>
+<li>The conjugate of <img src="https://latex.codecogs.com/png.latex?1-i"> is <img src="https://latex.codecogs.com/png.latex?1+i">.</li>
+<li>The conjugate of <img src="https://latex.codecogs.com/png.latex?4"> is <img src="https://latex.codecogs.com/png.latex?4">.</li>
+<li>The conjugate of <img src="https://latex.codecogs.com/png.latex?-6i"> is <img src="https://latex.codecogs.com/png.latex?6i">.</li>
+</ul>
+</div>
+<p>Observe this useful thing. If you multiply a Gaussian integer <img src="https://latex.codecogs.com/png.latex?a+bi"> by its conjugate <img src="https://latex.codecogs.com/png.latex?a-bi"> you get <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(a+bi)(a-bi)=a%5E2-abi+abi-b%5E2i%5E2=a%5E2-b%5E2i%5E2%0A"> and since <img src="https://latex.codecogs.com/png.latex?i%5E2=-1"> we get <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(a+bi)(a-bi)=a%5E2+b%5E2%0A"></p>
+<p>This is nice, isn’t it? Our goal is to understand when a prime is a sum of two squares, and now we have an easy way to produce sums of two squares.</p>
+<section id="what-is-a-prime-in-the-gaussian-integers" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-prime-in-the-gaussian-integers">What is a prime in the Gaussian integers?</h2>
+<p>If you remember, in the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html#what-a-prime-is">second post</a> we defined a prime <img src="https://latex.codecogs.com/png.latex?p"> as a number such that whenever <img src="https://latex.codecogs.com/png.latex?p"> divides a product <img src="https://latex.codecogs.com/png.latex?a%5Ccdot%20b">, then either <img src="https://latex.codecogs.com/png.latex?p"> divides <img src="https://latex.codecogs.com/png.latex?a"> or <img src="https://latex.codecogs.com/png.latex?p"> divides <img src="https://latex.codecogs.com/png.latex?b">. We now do the same in the Gaussian integers. First we define what it means to divide something in the Gaussian integers.</p>
+<div class="definition">
+<p><strong>Definition:</strong> Let <img src="https://latex.codecogs.com/png.latex?a+bi"> be a Gaussian integer. We say that <img src="https://latex.codecogs.com/png.latex?a+bi"> <em>divides</em> <img src="https://latex.codecogs.com/png.latex?c+di"> if we can write <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20c+di=(a+bi)%5Ccdot%20(e+fi)%0A"> for some Gaussian integer <img src="https://latex.codecogs.com/png.latex?e+fi">.</p>
+</div>
+<div class="definition">
+<p><strong>Definition:</strong> Let <img src="https://latex.codecogs.com/png.latex?a+bi"> be a Gaussian integer. We say that <img src="https://latex.codecogs.com/png.latex?a+bi"> is <em>prime</em> if whenever <img src="https://latex.codecogs.com/png.latex?a+bi"> divides a product <img src="https://latex.codecogs.com/png.latex?(c+di)(e+fi)"> then either <img src="https://latex.codecogs.com/png.latex?a+bi"> divides <img src="https://latex.codecogs.com/png.latex?c+di"> or <img src="https://latex.codecogs.com/png.latex?a+bi"> divides <img src="https://latex.codecogs.com/png.latex?e+fi">.</p>
+</div>
+<p>We will not prove the following theorem, whose proof is similar to the one made for the integers.</p>
+<div id="thm-ufd" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (Unique factorization)</strong></span> Every Gaussian integer <img src="https://latex.codecogs.com/png.latex?a+bi"> can be written as the product of Gaussian integer primes, i.e. <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20a+bi=(c_1+d_1i)%5Ccdots(c_k+d_ki)%0A"> for some positive integer <img src="https://latex.codecogs.com/png.latex?k">. This writing is unique up to multiplying by <img src="https://latex.codecogs.com/png.latex?1,-1,%20i,"> and <img src="https://latex.codecogs.com/png.latex?-i">.</p>
+</div>
+<p>Let’s clarify this uniqueness, which is a little bit strange. What we are saying is that if you consider a Gaussian integer like <img src="https://latex.codecogs.com/png.latex?1+3i">, you can factorize it as <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%201+3i=(1+i)(2+i)%0A"> (you can check that <img src="https://latex.codecogs.com/png.latex?1+i"> and <img src="https://latex.codecogs.com/png.latex?2+i"> are primes by using the definition, but it is maybe a little tedious). Observe now that <img src="https://latex.codecogs.com/png.latex?i%5Ccdot%20(-i)=-i%5E2=1">. Therefore we can write <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%201+3i=1%5Ccdot%20(1+i)(2+i)%0A"> just by multiplying by <img src="https://latex.codecogs.com/png.latex?1">. But now we know that <img src="https://latex.codecogs.com/png.latex?1=i%5Ccdot%20(-i)">, therefore <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%201+3i=(i%5Ccdot%20(-i))(1+i)(2+i)%0A"> which is the same (by associativity) as <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%201+3i=i%5Ccdot%20((-i)(1+i))(2+i)%0A"> hence <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%201+3i=i%5Ccdot%20(1-i)(2+i).%0A"> This seems to be another factorization of <img src="https://latex.codecogs.com/png.latex?1+3i">. However, it differs from the other one only because we multiplied by <img src="https://latex.codecogs.com/png.latex?1=i%5Ccdot%20(-i)">. Theorem&nbsp;2 is telling us that all the possible factorizations in primes of <img src="https://latex.codecogs.com/png.latex?1+3i"> we can write differ only by multiplying them by <img src="https://latex.codecogs.com/png.latex?1"> in fancy ways. Therefore, we say that up to multiplying by these special numbers (if you think about it you can also do the same by writing <img src="https://latex.codecogs.com/png.latex?1=(-1)%5Ccdot%20(-1)"> and <img src="https://latex.codecogs.com/png.latex?1=(-i)%5Ccdot%20i">) the factorization is unique.</p>
+</section>
+</section>
+<section id="proof-of-the-theorem-finally" class="level1">
+<h1>Proof of the theorem (finally!)</h1>
+<p>We can now try to understand how the proof will work.</p>
+<p>Let <img src="https://latex.codecogs.com/png.latex?p"> be a prime in the integers. A sketch of the proof goes with the following statements:</p>
+<ul>
+<li>if <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> has a solution then <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers;</li>
+<li>if <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers, then <img src="https://latex.codecogs.com/png.latex?p"> can be written as the sum of two squares;</li>
+<li>if <img src="https://latex.codecogs.com/png.latex?p"> is the sum of two squares then <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201"> (we already proved this <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">last time</a>!);</li>
+<li>if <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201"> then <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> has a solution.</li>
+</ul>
+<p>These implications tell us that if we know that one statement above is true, then all the others are true. In other words, the statements</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> has a solution;</li>
+<li><img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers;</li>
+<li><img src="https://latex.codecogs.com/png.latex?p"> is the sum of two squares;</li>
+<li><img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201"></li>
+</ul>
+<p>are all saying the same thing: they are equivalent, since they imply each other.</p>
+<section id="relation-between-x21equiv_p-0-and-fermats-christmas-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="relation-between-x21equiv_p-0-and-fermats-christmas-theorem">Relation between <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> and Fermat’s christmas theorem</h2>
+<p>The following lemma is the crucial one: through this lemma we will be able to prove Fermat’s Christmas Theorem. It gives the right interpretation of what it means for a prime <img src="https://latex.codecogs.com/png.latex?p"> to be the sum of two squares.</p>
+<div id="lem-square-minus-one" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1</strong></span> Let <img src="https://latex.codecogs.com/png.latex?p"> be a prime number. If the congruence <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2+1%5Cequiv_p%200%0A"> has a solution, then <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers.</p>
+</div>
+<p>The meaning of <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> having a solution is that there exists an integer <img src="https://latex.codecogs.com/png.latex?x%5Cin%20%5Cmathbb%7BZ%7D"> such that <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200">, or equivalently that <img src="https://latex.codecogs.com/png.latex?p"> divides <img src="https://latex.codecogs.com/png.latex?x%5E2+1">. Another way to say this is <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2%5Cequiv_p%20-1%0A"> so we are saying that <img src="https://latex.codecogs.com/png.latex?-1"> is a square when reduced modulo <img src="https://latex.codecogs.com/png.latex?p">.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose that there exists an <img src="https://latex.codecogs.com/png.latex?x%5Cin%20%5Cmathbb%7BZ%7D"> such that <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2+1%5Cequiv_p%200%0A"> This means that <img src="https://latex.codecogs.com/png.latex?p"> divides <img src="https://latex.codecogs.com/png.latex?x%5E2+1">. But observe that <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2+1=(x+i)(x-i)%0A"> in the Gaussian integers. We want to say that <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers.</p>
+<p>Suppose that <img src="https://latex.codecogs.com/png.latex?p+0i"> were a prime in the Gaussian integers. Since <img src="https://latex.codecogs.com/png.latex?p+0i"> divides the product <img src="https://latex.codecogs.com/png.latex?(x+i)(x-i)">, then it would have to divide one of them. But this is impossible. Indeed, if <img src="https://latex.codecogs.com/png.latex?p+0i"> divides <img src="https://latex.codecogs.com/png.latex?x+i">, then we can write <img src="https://latex.codecogs.com/png.latex?x+i=(p+0i)(a+bi)=pa+pbi">. Confronting the coefficients of <img src="https://latex.codecogs.com/png.latex?i"> in both sides gives <img src="https://latex.codecogs.com/png.latex?1=pb">, which is impossible. The same argument works for <img src="https://latex.codecogs.com/png.latex?x-i">.</p>
+<p>Therefore <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers.</p>
+</div>
+</section>
+<section id="primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers" class="level2">
+<h2 class="anchored" data-anchor-id="primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers">Primes in the integers which are not primes in the Gaussian integers</h2>
+<div id="lem-not-prime" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2</strong></span> Let <img src="https://latex.codecogs.com/png.latex?p"> be a prime number. If <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D%5Bi%5D">, then we can write <img src="https://latex.codecogs.com/png.latex?p"> as a sum of two squares.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime, then (by Theorem&nbsp;2) it can be written as a product of two factors: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20p+0i=(a+bi)(c+di)%0A"> where neither <img src="https://latex.codecogs.com/png.latex?a+bi"> nor <img src="https://latex.codecogs.com/png.latex?c+di"> are equal to <img src="https://latex.codecogs.com/png.latex?1,-1,i,-i">.</p>
+<p>Now multiply both sides by their conjugates. On the left we get <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(p+0i)(p-0i)=p%5E2.%0A"> On the right we get <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(a+bi)(a-bi)(c+di)(c-di)=(a%5E2+b%5E2)(c%5E2+d%5E2).%0A"> Therefore <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20p%5E2=(a%5E2+b%5E2)(c%5E2+d%5E2).%0A"></p>
+<p>We have <img src="https://latex.codecogs.com/png.latex?a%5E2+b%5E2%3E1"> and <img src="https://latex.codecogs.com/png.latex?c%5E2+d%5E2%3E1">. But <img src="https://latex.codecogs.com/png.latex?p"> is prime in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D">, so the only way two integers bigger than <img src="https://latex.codecogs.com/png.latex?1"> can multiply to <img src="https://latex.codecogs.com/png.latex?p%5E2"> is that <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20a%5E2+b%5E2=p,%5Cqquad%20c%5E2+d%5E2=p.%0A"> In particular, <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20p=a%5E2+b%5E2,%0A"> which means that <img src="https://latex.codecogs.com/png.latex?p"> is a sum of two squares.</p>
+</div>
+</section>
+<section id="wilson-theorem-and-solution-to-x21equiv_p-0" class="level2">
+<h2 class="anchored" data-anchor-id="wilson-theorem-and-solution-to-x21equiv_p-0">Wilson theorem and solution to <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"></h2>
+<p>We will use the following theorem to prove what we need.</p>
+<div id="thm-wilson" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (Wilson’s Theorem)</strong></span> If <img src="https://latex.codecogs.com/png.latex?p"> is a prime number, then <img src="https://latex.codecogs.com/png.latex?%0A(p-1)%5Ccdot%20(p-2)%5Ccdot%20(p-3)%5Ccdots%202%5Ccdot%201%20%5Cequiv_p%20p-1.%0A"> i.e.&nbsp;multiplying all numbers from <img src="https://latex.codecogs.com/png.latex?p-1"> to <img src="https://latex.codecogs.com/png.latex?1"> we get <img src="https://latex.codecogs.com/png.latex?p-1"> modulo <img src="https://latex.codecogs.com/png.latex?p">.</p>
+</div>
+<p>We sketch an idea for the proof of Wilson’s theorem, however this proof is not essential for understanding the core of Fermat’s Christmas Theorem.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em> (Idea). </span>Recall that an integer <img src="https://latex.codecogs.com/png.latex?x"> is invertible modulo <img src="https://latex.codecogs.com/png.latex?p"> if and only if <img src="https://latex.codecogs.com/png.latex?%5Cgcd(x,p)=1">. Since <img src="https://latex.codecogs.com/png.latex?p"> is prime, it has no common factors with any of the numbers <img src="https://latex.codecogs.com/png.latex?(p-1),(p-2),%5Cdots,2,1">. This means that every factor on the left hand side is invertible modulo <img src="https://latex.codecogs.com/png.latex?p">.</p>
+<p>Now, when you list all the invertible residues modulo <img src="https://latex.codecogs.com/png.latex?p">, you get exactly <img src="https://latex.codecogs.com/png.latex?1,2,%5Cdots,p-1">. So on the left hand side, every term appears together with its inverse, except for the terms that are their own inverse.</p>
+<p>An element <img src="https://latex.codecogs.com/png.latex?a"> is its own inverse if and only if <img src="https://latex.codecogs.com/png.latex?a%5E2%5Cequiv_p%201">. Modulo a prime, this means <img src="https://latex.codecogs.com/png.latex?a%5Cequiv_p%201"> or <img src="https://latex.codecogs.com/png.latex?a%5Cequiv_p%20-1">. Therefore, everything cancels out in pairs, and only <img src="https://latex.codecogs.com/png.latex?-1%5Cequiv_p%20p-1"> remains.</p>
+</div>
+<div id="lem-final" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 3</strong></span> If <img src="https://latex.codecogs.com/png.latex?p"> is a prime such that <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201"> then <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> has a solution.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201">, it means that <img src="https://latex.codecogs.com/png.latex?p-1"> is divisible by <img src="https://latex.codecogs.com/png.latex?4">, which means that <img src="https://latex.codecogs.com/png.latex?p-1=4k"> for some integer <img src="https://latex.codecogs.com/png.latex?k">. Consider then the product <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(p-1)%5Ccdot%20(p-2)%5Ccdot%20(p-3)%5Ccdots%203%5Ccdot%202%5Ccdot%201.%0A"></p>
+<p>Since <img src="https://latex.codecogs.com/png.latex?p-1=4k"> we can group the factors in pairs as follows: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(p-1)%5Ccdot%201%5Ccdot%20(p-2)%5Ccdot%202%5Ccdots%20(p-2k)%5Ccdot%20(2k).%0A"></p>
+<p>Since <img src="https://latex.codecogs.com/png.latex?p-j%5Cequiv_p%20-j">, each pair gives <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(p-j)%5Ccdot%20j%5Cequiv_p%20(-j)%5Ccdot%20j=-j%5E2.%0A"> Therefore <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(p-1)%5Ccdot%20(p-2)%5Ccdots%202%5Ccdot%201%5Cequiv_p%20(-1)%5E2%5Ccdot%20(-2)%5E2%5Ccdots%20(-(2k))%5E2=(1%5Ccdot%202%5Ccdot%203%5Ccdots%20%5Ccdot%20(2k-1)%5Ccdot%202k)%5E2.%0A"> (Here the minus signs disappear because we are squaring.)</p>
+<p>But, by Theorem&nbsp;3 we also know that the left hand side is congruent to <img src="https://latex.codecogs.com/png.latex?p-1"> modulo <img src="https://latex.codecogs.com/png.latex?p">. And since <img src="https://latex.codecogs.com/png.latex?p-1%5Cequiv_p%20-1"> we get that <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20-1%5Cequiv_p%20(1%5Ccdot%202%5Ccdots%20(2k-1)%5Ccdot%202k)%5E2%0A"> Define <img src="https://latex.codecogs.com/png.latex?%0Ax:=%201%5Ccdot%202%5Ccdots%20(2k-1)%5Ccdot%202k%0A"></p>
+<p>Then we get <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2+1%5Cequiv_p%200.%0A"> Therefore, we found a solution.</p>
+</div>
+</section>
+<section id="the-theorem-is-proven-what-else-can-we-say" class="level2">
+<h2 class="anchored" data-anchor-id="the-theorem-is-proven-what-else-can-we-say">The theorem is proven, what else can we say?</h2>
+<p>The theorem is finally proven, but we don’t stop asking questions.</p>
+<div id="qst-howmany">
+<p><strong>Question:</strong> How many primes can be written as the sum of two squares? Equivalently, how many primes have remainder <img src="https://latex.codecogs.com/png.latex?1"> when divided by <img src="https://latex.codecogs.com/png.latex?4">?</p>
+</div>
+<p>Probably not surprisingly we already expect that there are infinitely many primes that can be written as the sum of two squares. This statement is left as a guided exercise at the end of the post.</p>
+<p>An interesting, but non trivial fact is to know also the density of these kinds of primes. Namely, if we consider all the primes up to some integer <img src="https://latex.codecogs.com/png.latex?N">, how many of these do we expect to be written as the sum of two squares? The answer is that we expect about half of them to be of this kind. Indeed here you can see a table which could convince you:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?N"></th>
+<th style="text-align: right;">primes <img src="https://latex.codecogs.com/png.latex?%5Cle%20N"></th>
+<th style="text-align: right;">primes that are <img src="https://latex.codecogs.com/png.latex?a%5E2+b%5E2"></th>
+<th style="text-align: right;">proportion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?10%5E2"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?25"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?12"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?0.48"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?10%5E3"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?168"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?81"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?0.4821%5Cldots"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?10%5E6"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?78498"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?39176"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?0.49907%5Cldots"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?10%5E9"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?50847534"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?25423492"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?0.499994%5Cldots"></td>
+</tr>
+</tbody>
+</table>
+<p>This can be rigorously proven, however this is far beyond our interests here.</p>
+<p>Another natural question could be</p>
+<div id="qst-numbers">
+<p><strong>Question:</strong> Consider an integer <img src="https://latex.codecogs.com/png.latex?n">. When can we write it as the sum of two squares?</p>
+</div>
+<p>In other words we are asking how to generalize from the case of primes to the case of any integer. This is not difficult to prove knowing Fermat’s Christmas Theorem, therefore it is also left as a guided exercise at the end.</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>I would like to point out that the crucial point in our reasoning was to relate the problem of writing <img src="https://latex.codecogs.com/png.latex?p"> as the sum of two squares and the solution of the congruence <img src="https://latex.codecogs.com/png.latex?x%5E2+1">. Indeed, if you think about it, the Gaussian integers were defined by adding the solution of <img src="https://latex.codecogs.com/png.latex?x%5E2+1=0"> to the integers. This is not a coincidence.</p>
+<p>There are more general theorems that tell us precisely how the factorization of a prime (actually, prime ideal) in an extension of the integers (given by adding something similar to the solutions of a polynomial) relates to the factorization of the polynomial modulo that prime.</p>
+<p>In our case we knew that <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> has a solution, and this is the same as saying that there exists an integer <img src="https://latex.codecogs.com/png.latex?u"> such that <img src="https://latex.codecogs.com/png.latex?u%5E2%5Cequiv_p%20-1">. Then modulo <img src="https://latex.codecogs.com/png.latex?p"> we have the factorization <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20x%5E2+1%5Cequiv_p%20(x+u)(x-u),%0A"> because <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(x+u)(x-u)=x%5E2-u%5E2%5Cequiv_p%20x%5E2+1.%0A"></p>
+<p>This told us exactly that the prime <img src="https://latex.codecogs.com/png.latex?p"> can be written as the product of two primes in the Gaussian integers (observe the symmetry: the polynomial splits in two factors exactly as the prime). The theorem which explains this behaviour is known as the <a href="https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem">Dedekind-Kummer theorem</a>.</p>
+</section>
+<section id="guided-exercises" class="level1">
+<h1>Guided exercises</h1>
+<section id="exercise-1-infinitely-many-primes-that-are-sums-of-two-squares" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-infinitely-many-primes-that-are-sums-of-two-squares">Exercise 1: infinitely many primes that are sums of two squares</h2>
+<div id="qst-ex1">
+<section id="exercise-1" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-1">Exercise 1</h4>
+<p>Prove that there are infinitely many primes that can be written as the sum of two squares.</p>
+</section>
+</div>
+<details class="hint">
+<summary>
+Hint 1
+</summary>
+A prime is a sum of two squares if and only if <img src="https://latex.codecogs.com/png.latex?-1"> is a square mod <img src="https://latex.codecogs.com/png.latex?p">. Suppose there are only finitely many primes such that <img src="https://latex.codecogs.com/png.latex?-1"> is a square mod <img src="https://latex.codecogs.com/png.latex?p">. What can you say?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 1
+</summary>
+Saying “<img src="https://latex.codecogs.com/png.latex?-1"> is a square mod <img src="https://latex.codecogs.com/png.latex?p">” means: there exists an integer <img src="https://latex.codecogs.com/png.latex?n"> such that <img src="https://latex.codecogs.com/png.latex?%0A%20%20n%5E2%5Cequiv_p%20-1,%0A%20%20"> i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?p%5Cmid%20(n%5E2+1)">. So every prime for which <img src="https://latex.codecogs.com/png.latex?-1"> is a square mod <img src="https://latex.codecogs.com/png.latex?p"> divides at least one number of the form <img src="https://latex.codecogs.com/png.latex?n%5E2+1">.
+</details>
+<details class="hint">
+<summary>
+Hint 2
+</summary>
+Let <img src="https://latex.codecogs.com/png.latex?k"> be the product of all primes <img src="https://latex.codecogs.com/png.latex?p"> such that <img src="https://latex.codecogs.com/png.latex?-1"> is a square mod <img src="https://latex.codecogs.com/png.latex?p">. Try to imitate Euclid’s proof that there are infinitely many primes.
+</details>
+<details class="hint">
+<summary>
+Hint 3
+</summary>
+Consider the integer <img src="https://latex.codecogs.com/png.latex?k%5E2+1">. Which primes can divide it?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 3 (and end of the exercise)
+</summary>
+<p>Similarly to the Euclid’s proof, none of the prime factors of <img src="https://latex.codecogs.com/png.latex?k"> (i.e.&nbsp;the primes such that <img src="https://latex.codecogs.com/png.latex?-1"> is a square modulo <img src="https://latex.codecogs.com/png.latex?p">) can divide <img src="https://latex.codecogs.com/png.latex?k%5E2+1"> (since the remainder is <img src="https://latex.codecogs.com/png.latex?1">). However there must be a prime <img src="https://latex.codecogs.com/png.latex?q"> dividing <img src="https://latex.codecogs.com/png.latex?k%5E2+1">, hence the finite list we supposed to have is not complete.</p>
+Therefore the assumption “only finitely many primes with <img src="https://latex.codecogs.com/png.latex?-1"> a square mod <img src="https://latex.codecogs.com/png.latex?p">” was false, and there are infinitely many such primes. By Fermat’s Christmas theorem, these are exactly the primes that are sums of two squares.
+</details>
+<hr>
+</section>
+<section id="exercise-2-which-integers-are-sums-of-two-squares" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2-which-integers-are-sums-of-two-squares">Exercise 2: which integers are sums of two squares?</h2>
+<div id="qst-ex2">
+<section id="exercise-2" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-2">Exercise 2</h4>
+<p>Which integers <img src="https://latex.codecogs.com/png.latex?n%5Cge%201"> can be written as <img src="https://latex.codecogs.com/png.latex?n=a%5E2+b%5E2">?</p>
+</section>
+</div>
+<details class="hint">
+<summary>
+Hint 1
+</summary>
+What happens if <img src="https://latex.codecogs.com/png.latex?n"> is the product of two primes that can be written as the sum of two squares?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 1
+</summary>
+If <img src="https://latex.codecogs.com/png.latex?p=a%5E2+b%5E2"> and <img src="https://latex.codecogs.com/png.latex?q=c%5E2+d%5E2">, then <img src="https://latex.codecogs.com/png.latex?pq"> is again a sum of two squares. Indeed a sum of two squares can be written as a Gaussian integer times its conjugate: <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20a%5E2+b%5E2=(a+bi)(a-bi),%5Cqquad%20c%5E2+d%5E2=(c+di)(c-di).%0A%20%20"> Therefore <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20(a%5E2+b%5E2)(c%5E2+d%5E2)=(a+bi)(a-bi)(c+di)(c-di).%0A%20%20"> The factor <img src="https://latex.codecogs.com/png.latex?(a+bi)(c+di)"> is a Gaussian integer, and <img src="https://latex.codecogs.com/png.latex?(a-bi)(c-di)"> is its conjugate. So their product is a sum of two squares.
+</details>
+<details class="hint">
+<summary>
+Hint 2
+</summary>
+Consider the number <img src="https://latex.codecogs.com/png.latex?5%5Ccdot%207%5E2">. Can it be written as a sum of two squares?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 2
+</summary>
+Yes: <img src="https://latex.codecogs.com/png.latex?%0A%20%205%5Ccdot%207%5E2=245=14%5E2+7%5E2.%0A%20%20"> (So the prime <img src="https://latex.codecogs.com/png.latex?7%5Cequiv_4%203"> is not “forbidden”, but its exponent seems to matter.)
+</details>
+<details class="hint">
+<summary>
+Hint 3
+</summary>
+In the previous hint, <img src="https://latex.codecogs.com/png.latex?5%5Cequiv_4%201"> and <img src="https://latex.codecogs.com/png.latex?7%5Cequiv_4%203">. What theorem do you expect?
+</details>
+<details class="solution">
+<summary>
+Solution to Hint 3 (the statement)
+</summary>
+<strong>Theorem (sum of two squares).</strong> A positive integer <img src="https://latex.codecogs.com/png.latex?n"> can be written as <img src="https://latex.codecogs.com/png.latex?n=a%5E2+b%5E2"> if and only if, in the prime factorization of <img src="https://latex.codecogs.com/png.latex?n">, every prime <img src="https://latex.codecogs.com/png.latex?q%5Cequiv_4%203"> appears with an <strong>even</strong> exponent.
+</details>
+<details class="solution">
+<summary>
+Complete proof (guided by the hints)
+</summary>
+<p><strong>Step 1: primes <img src="https://latex.codecogs.com/png.latex?q%5Cequiv_4%203"> must appear an even number of times.</strong></p>
+<p>We first prove the following lemma:</p>
+<div id="lem-q3-divides" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 4</strong></span> Let <img src="https://latex.codecogs.com/png.latex?q"> be a prime with <img src="https://latex.codecogs.com/png.latex?q%5Cequiv_4%203">. If <img src="https://latex.codecogs.com/png.latex?q%5Cmid%20(a%5E2+b%5E2)">, then <img src="https://latex.codecogs.com/png.latex?q%5Cmid%20a"> and <img src="https://latex.codecogs.com/png.latex?q%5Cmid%20b">.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Suppose <img src="https://latex.codecogs.com/png.latex?q%5Cmid%20(a%5E2+b%5E2)">. If <img src="https://latex.codecogs.com/png.latex?q%5Cnmid%20b">, then <img src="https://latex.codecogs.com/png.latex?b"> has an inverse <img src="https://latex.codecogs.com/png.latex?u"> modulo <img src="https://latex.codecogs.com/png.latex?q">, and <img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Cleft(a%5Ccdot%20u%5Cright)%5E2%5Cequiv_q%20-1,%0A%20%20"> so <img src="https://latex.codecogs.com/png.latex?-1"> is a square mod <img src="https://latex.codecogs.com/png.latex?q">. But by Fermat’s Christmas theorem, this would force <img src="https://latex.codecogs.com/png.latex?q%5Cequiv_4%201">, contradiction. Therefore <img src="https://latex.codecogs.com/png.latex?q%5Cmid%20b">. Then <img src="https://latex.codecogs.com/png.latex?q%5Cmid%20a%5E2"> and hence <img src="https://latex.codecogs.com/png.latex?q%5Cmid%20a">.</p>
+</div>
+<p>Now assume <img src="https://latex.codecogs.com/png.latex?n=a%5E2+b%5E2">. Take a prime <img src="https://latex.codecogs.com/png.latex?q%5Cequiv_4%203"> dividing <img src="https://latex.codecogs.com/png.latex?n">. By the lemma, <img src="https://latex.codecogs.com/png.latex?q"> divides both <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b">, so <img src="https://latex.codecogs.com/png.latex?q%5E2"> divides <img src="https://latex.codecogs.com/png.latex?a%5E2+b%5E2=n">. This means that in the prime factorization of <img src="https://latex.codecogs.com/png.latex?n">, the exponent of <img src="https://latex.codecogs.com/png.latex?q"> cannot be odd: it must be even.</p>
+<p><strong>Step 2: the converse.</strong></p>
+<p>Now suppose <img src="https://latex.codecogs.com/png.latex?n"> has the property that every prime <img src="https://latex.codecogs.com/png.latex?q%5Cequiv_4%203"> appears with an even exponent. So we can write <img src="https://latex.codecogs.com/png.latex?n"> as a product of three types of factors:</p>
+<ul>
+<li><p>a power of <img src="https://latex.codecogs.com/png.latex?2">,</p></li>
+<li><p>primes <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201"> (possibly repeated),</p></li>
+<li><p>and squares of primes <img src="https://latex.codecogs.com/png.latex?q%5Cequiv_4%203"> (possibly repeated).</p>
+<p>Each of these factors is a sum of two squares:</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?2=1%5E2+1%5E2">,</p></li>
+<li><p>if <img src="https://latex.codecogs.com/png.latex?p%5Cequiv_4%201"> then <img src="https://latex.codecogs.com/png.latex?p"> is a sum of two squares by Fermat’s Christmas theorem,</p></li>
+<li><p>and if you have a square <img src="https://latex.codecogs.com/png.latex?q%5E%7B2m%7D"> then <img src="https://latex.codecogs.com/png.latex?q%5E%7B2m%7D=(q%5Em)%5E2+0%5E2">.</p>
+<p>Finally, by Hint 1, a product of sums of two squares (check that the arguments works not only for primes) is again a sum of two squares. Therefore <img src="https://latex.codecogs.com/png.latex?n"> is a sum of two squares.</p></li>
+</ul>
+</details>
+
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Expository</category>
+  <guid>https://sheafofthoughts.org/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html</guid>
+  <pubDate>Wed, 24 Dec 2025 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Why Fermat had (probably) no proof?</title>
   <link>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</link>

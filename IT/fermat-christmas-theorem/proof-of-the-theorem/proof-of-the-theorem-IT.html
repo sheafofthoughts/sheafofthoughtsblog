@@ -9,7 +9,7 @@
 <meta name="dcterms.date" content="2025-12-25">
 <meta name="description" content="Introduciamo gli interi di Gauss e spieghiamo cosa significa, in questo contesto, essere una somma di due quadrati. In particolare, vedremo cosa significa per un primo essere una somma di due quadrati negli interi di Gauss.">
 
-<title>Dimostrazione del Teorema di Natale – SheafofThoughts</title>
+<title>Dimostrazione del Teorema di Natale di Fermat – SheafofThoughts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -315,23 +315,23 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#il-teorema-di-natale" id="toc-il-teorema-di-natale" class="nav-link active" data-scroll-target="#il-teorema-di-natale">Il Teorema di Natale</a></li>
+  <li><a href="#teorema-di-natale" id="toc-teorema-di-natale" class="nav-link active" data-scroll-target="#teorema-di-natale">Teorema di Natale</a></li>
   <li><a href="#interi-di-gauss" id="toc-interi-di-gauss" class="nav-link" data-scroll-target="#interi-di-gauss">Interi di Gauss</a>
   <ul class="collapse">
-  <li><a href="#cosè-un-primo-negli-interi-di-gauss" id="toc-cosè-un-primo-negli-interi-di-gauss" class="nav-link" data-scroll-target="#cosè-un-primo-negli-interi-di-gauss">Cos’è un primo negli interi di Gauss?</a></li>
+  <li><a href="#che-cosè-un-primo-negli-interi-di-gauss" id="toc-che-cosè-un-primo-negli-interi-di-gauss" class="nav-link" data-scroll-target="#che-cosè-un-primo-negli-interi-di-gauss">Che cos’è un primo negli interi di Gauss?</a></li>
   </ul></li>
-  <li><a href="#dimostrazione-del-teorema-finalmente" id="toc-dimostrazione-del-teorema-finalmente" class="nav-link" data-scroll-target="#dimostrazione-del-teorema-finalmente">Dimostrazione del teorema (finalmente!)</a></li>
-  <li><a href="#relazione-tra-x21equiv_p-0-e-il-teorema-di-natale" id="toc-relazione-tra-x21equiv_p-0-e-il-teorema-di-natale" class="nav-link" data-scroll-target="#relazione-tra-x21equiv_p-0-e-il-teorema-di-natale">Relazione tra <span class="math inline">\(x^2+1\equiv_p 0\)</span> e il teorema di Natale</a>
+  <li><a href="#dimostrazione-del-teorema-finalmente" id="toc-dimostrazione-del-teorema-finalmente" class="nav-link" data-scroll-target="#dimostrazione-del-teorema-finalmente">Dimostrazione del teorema (finalmente!)</a>
   <ul class="collapse">
+  <li><a href="#relazione-tra-x21equiv_p-0-e-il-teorema-di-natale" id="toc-relazione-tra-x21equiv_p-0-e-il-teorema-di-natale" class="nav-link" data-scroll-target="#relazione-tra-x21equiv_p-0-e-il-teorema-di-natale">Relazione tra <span class="math inline">\(x^2+1\equiv_p 0\)</span> e il Teorema di Natale</a></li>
   <li><a href="#primi-negli-interi-che-non-sono-primi-negli-interi-di-gauss" id="toc-primi-negli-interi-che-non-sono-primi-negli-interi-di-gauss" class="nav-link" data-scroll-target="#primi-negli-interi-che-non-sono-primi-negli-interi-di-gauss">Primi negli interi che non sono primi negli interi di Gauss</a></li>
-  <li><a href="#teorema-di-wilson-e-soluzione-di-x21equiv_p-0" id="toc-teorema-di-wilson-e-soluzione-di-x21equiv_p-0" class="nav-link" data-scroll-target="#teorema-di-wilson-e-soluzione-di-x21equiv_p-0">Teorema di Wilson e soluzione di <span class="math inline">\(x^2+1\equiv_p 0\)</span></a></li>
-  <li><a href="#il-teorema-è-dimostrato-cosaltro-possiamo-dire" id="toc-il-teorema-è-dimostrato-cosaltro-possiamo-dire" class="nav-link" data-scroll-target="#il-teorema-è-dimostrato-cosaltro-possiamo-dire">Il teorema è dimostrato, cos’altro possiamo dire?</a></li>
+  <li><a href="#teorema-di-wilson-e-soluzioni-di-x21equiv_p-0" id="toc-teorema-di-wilson-e-soluzioni-di-x21equiv_p-0" class="nav-link" data-scroll-target="#teorema-di-wilson-e-soluzioni-di-x21equiv_p-0">Teorema di Wilson e soluzioni di <span class="math inline">\(x^2+1\equiv_p 0\)</span></a></li>
+  <li><a href="#il-teorema-è-dimostrato-cosaltro-possiamo-dire" id="toc-il-teorema-è-dimostrato-cosaltro-possiamo-dire" class="nav-link" data-scroll-target="#il-teorema-è-dimostrato-cosaltro-possiamo-dire">Il teorema è dimostrato: cos’altro possiamo dire?</a></li>
   </ul></li>
   <li><a href="#conclusione" id="toc-conclusione" class="nav-link" data-scroll-target="#conclusione">Conclusione</a></li>
   <li><a href="#esercizi-guidati" id="toc-esercizi-guidati" class="nav-link" data-scroll-target="#esercizi-guidati">Esercizi guidati</a>
   <ul class="collapse">
-  <li><a href="#esercizio-1-infiniti-primi-che-sono-somme-di-due-quadrati" id="toc-esercizio-1-infiniti-primi-che-sono-somme-di-due-quadrati" class="nav-link" data-scroll-target="#esercizio-1-infiniti-primi-che-sono-somme-di-due-quadrati">Esercizio 1: infiniti primi che sono somme di due quadrati</a></li>
-  <li><a href="#esercizio-2-quali-interi-sono-somme-di-due-quadrati" id="toc-esercizio-2-quali-interi-sono-somme-di-due-quadrati" class="nav-link" data-scroll-target="#esercizio-2-quali-interi-sono-somme-di-due-quadrati">Esercizio 2: quali interi sono somme di due quadrati?</a></li>
+  <li><a href="#esercizio-1-infiniti-primi-somma-di-due-quadrati" id="toc-esercizio-1-infiniti-primi-somma-di-due-quadrati" class="nav-link" data-scroll-target="#esercizio-1-infiniti-primi-somma-di-due-quadrati">Esercizio 1: infiniti primi somma di due quadrati</a></li>
+  <li><a href="#esercizio-2-quali-interi-sono-somma-di-due-quadrati" id="toc-esercizio-2-quali-interi-sono-somma-di-due-quadrati" class="nav-link" data-scroll-target="#esercizio-2-quali-interi-sono-somma-di-due-quadrati">Esercizio 2: quali interi sono somma di due quadrati?</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="proof-of-the-theorem-IT.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -342,8 +342,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dimostrazione del Teorema di Natale</h1>
-<p class="subtitle lead"><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a></p>
+<h1 class="title">Dimostrazione del Teorema di Natale di Fermat</h1>
+<p class="subtitle lead"><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Serie sul Teorema di Natale di Fermat</a></p>
   <div class="quarto-categories">
     <div class="quarto-category">Expository</div>
   </div>
@@ -375,50 +375,54 @@ window.Quarto = {
 
 
 <div class="lang-switch">
-<p><a href="../../../posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html">ENG</a> <span class="lang-current">ITA</span></p>
+<p><a href="../../../IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html">ITA</a> <span class="lang-current">ENG</span></p>
 </div>
-<section id="il-teorema-di-natale" class="level1">
-<h1>Il Teorema di Natale</h1>
-<p>Ricordiamo velocemente cosa abbiamo visto finora. Partiamo con l’enunciare il teorema di Natale in termini di congruenze.</p>
+<section id="teorema-di-natale" class="level1">
+<h1>Teorema di Natale</h1>
+<p>Ricapitoliamo ciò che abbiamo visto finora. Iniziamo enunciando il teorema di Natale in termini di congruenze.</p>
 <div id="thm-fermat" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Teorema di Natale)</strong></span> Un numero primo dispari <span class="math inline">\(p\)</span> si può scrivere come <span class="math inline">\(p=a^2+b^2\)</span> con <span class="math inline">\(a,b\in\mathbb Z\)</span> se e solo se <span class="math inline">\(p\equiv_4 1\)</span>.</p>
 </div>
-<p>Nel <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">post precedente</a> abbiamo dimostrato che se <span class="math inline">\(p\)</span> si può scrivere come somma di due quadrati, allora ha resto <span class="math inline">\(1\)</span> quando lo dividiamo per <span class="math inline">\(4\)</span>, cioè <span class="math inline">\(p\equiv_4 1\)</span>. Ora vogliamo dimostrare il converso: se <span class="math inline">\(p\equiv_4 1\)</span>, allora <span class="math inline">\(p\)</span> si può scrivere come somma di due quadrati (questa è la parte difficile).</p>
-<p>In questo post sviluppiamo tutto ciò che serve per dare una dimostrazione completa del teorema. Per prima cosa, spostiamo il problema nel contesto degli interi di Gauss, che sono un’estensione degli interi che conosciamo. Poi vedremo come le somme di due quadrati compaiono in modo naturale lì, e come riconoscere i primi che si possono scrivere come somma di due quadrati.</p>
+<p>Nel <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">post precedente</a> abbiamo dimostrato che se <span class="math inline">\(p\)</span> si può scrivere come somma di due quadrati, allora ha resto <span class="math inline">\(1\)</span> nella divisione per <span class="math inline">\(4\)</span>, cioè <span class="math inline">\(p\equiv_4 1\)</span>. Ora vogliamo dimostrare il viceversa: se <span class="math inline">\(p\equiv_4 1\)</span>, allora <span class="math inline">\(p\)</span> si può scrivere come somma di due quadrati (questa è la parte difficile).</p>
+<p>In questo post sviluppiamo tutto ciò che serve per dare una dimostrazione completa del teorema. Per prima cosa spostiamo il problema nel contesto degli interi di Gauss, che sono un’estensione degli interi che già conosciamo. Poi vedremo come le somme di due quadrati compaiono in modo naturale e come riconoscere i primi che si possono scrivere come somma di due quadrati.</p>
 </section>
 <section id="interi-di-gauss" class="level1">
 <h1>Interi di Gauss</h1>
 <p>Sappiamo tutti che l’equazione <span id="eq-gauss"><span class="math display">\[
     x^2+1=0
-\tag{1}\]</span></span> non ha soluzioni negli interi, perché i quadrati sono sempre non negativi, e se aggiungiamo <span class="math inline">\(1\)</span> a un numero non negativo non possiamo ottenere zero. Giusto?</p>
-<p>Bene, aggiungiamo una soluzione di questa equazione agli interi: definiamo <span class="math display">\[
+\tag{1}\]</span></span> non ha soluzioni negli interi, perché i quadrati sono sempre non negativi e, aggiungendo <span class="math inline">\(1\)</span> a un numero non negativo, non si può ottenere zero.</p>
+<p>Aggiungiamo allora una soluzione di questa equazione agli interi: definiamo <span class="math display">\[
 i:=\sqrt{-1}
-\]</span> così otteniamo <span class="math display">\[
-    i^2+1=\sqrt{-1}^2+1=-1+1=0
+\]</span> così che <span class="math display">\[
+    i^2+1=\sqrt{-1}^2+1=-1+1=0.
 \]</span></p>
-<p>Ora abbiamo una soluzione di <a href="#eq-gauss" class="quarto-xref">Equation&nbsp;1</a>.</p>
-<p>Definiamo <span class="math inline">\(\mathbb{Z}[i]\)</span> come l’insieme degli interi in cui aggiungiamo questo <span class="math inline">\(i\)</span>. I “numeri” in <span class="math inline">\(\mathbb{Z}[i]\)</span> sono della forma <span class="math inline">\(a+b\cdot i\)</span>, dove <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> sono interi usuali. Per esempio, <span class="math inline">\(1+2i\)</span>, <span class="math inline">\(5+7i\)</span>, e <span class="math inline">\(0+i\)</span> sono tutti interi di Gauss. I casi speciali della forma <span class="math inline">\(a+0\cdot i\)</span> li denotiamo semplicemente con <span class="math inline">\(a\)</span>, mentre i numeri <span class="math inline">\(0+b\cdot i\)</span> li denotiamo con <span class="math inline">\(bi\)</span>. In particolare, osserva che dentro <span class="math inline">\(\mathbb{Z}[i]\)</span> ci sono tutti gli interi: infatti li recuperiamo come i numeri della forma <span class="math inline">\(a+0\cdot i=a\)</span>.</p>
-<p>Ma perché dovremmo lavorare negli interi di Gauss invece che negli interi classici? Lo capiremo tra poco, dal momento che l’esistenza di una soluzione della congruenza <span class="math display">\[
-x^2+1\equiv_p 0
-\]</span> è strettamente legata al fatto che <span class="math inline">\(p\)</span> sia una somma di due quadrati.</p>
-<p>Prima di tutto: come funzionano somme e prodotti negli interi di Gauss?</p>
-<p>È facile: basta trattare <span class="math inline">\(i\)</span> come una variabile formale, e ricordare che <span class="math inline">\(i^2=-1\)</span>. Lo spiego meglio:</p>
+<p>Quindi ora abbiamo una soluzione di <a href="#eq-gauss" class="quarto-xref">Equation&nbsp;1</a>, che è <span class="math inline">\(i\)</span>.</p>
+<p>Definiamo <span class="math inline">\(\mathbb{Z}[i]\)</span> (gli interi di Gauss) come gli interi insieme a questo <span class="math inline">\(i\)</span>. I “numeri” in <span class="math inline">\(\mathbb{Z}[i]\)</span> sono della forma <span class="math display">\[
+a+b\cdot i
+\]</span> dove <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> sono interi usuali. Per esempio, <span class="math display">\[
+1+2i,\qquad 5+7i,\qquad 0+i
+\]</span> sono tutti interi di Gauss. I casi particolari della forma <span class="math inline">\(a+0i\)</span> li denoteremo semplicemente con <span class="math inline">\(a\)</span>, mentre i numeri <span class="math inline">\(0+bi\)</span> li denoteremo con <span class="math inline">\(bi\)</span>. In particolare, osserviamo che dentro <span class="math inline">\(\mathbb{Z}[i]\)</span> ci sono tutti gli interi: infatti li recuperiamo come numeri della forma <span class="math inline">\(a+0i=a\)</span>.</p>
+<p>Ma perché dovremmo lavorare negli interi di Gauss invece che negli interi “classici”? Cercheremo di capirlo lungo la dimostrazione del Teorema di Natale. Il punto chiave è che le soluzioni dell’equazione polinomiale <span class="math display">\[
+    x^2+1=0
+\]</span> sono strettamente legate al nostro teorema.</p>
+<p>Ma prima dobbiamo capire come funzionano somme e prodotti negli interi di Gauss.</p>
+<p>È semplice: basta trattare <span class="math inline">\(i\)</span> come una variabile formale e ricordare che <span class="math inline">\(i^2=-1\)</span>. Spiego meglio:</p>
 <p>Supponiamo di voler sommare <span class="math inline">\(3+2i\)</span> con <span class="math inline">\(5+i\)</span>. Allora facciamo così: <span class="math display">\[
-    (3+2i)+(5+i)=(3+5)+(2+1)i=8+3i
-\]</span> cioè sommiamo separatamente le parti senza <span class="math inline">\(i\)</span> e quelle con <span class="math inline">\(i\)</span>. Altri esempi: <span class="math display">\[
+    (3+2i)+(5+i)=(3+5)+(2+1)i=8+3i.
+\]</span> Cioè sommiamo separatamente la parte “reale” e la parte con <span class="math inline">\(i\)</span>. Altri esempi: <span class="math display">\[
     (-2+4i)+(7-3i)=5+i,\qquad (3+6i)-i=3+7i,\qquad 3+(-1+i)=2+i.
 \]</span></p>
-<p>Analogamente per i prodotti: trattiamo <span class="math inline">\(i\)</span> come una variabile formale: <span class="math display">\[
-    (3+2i)\cdot(5+i)=3\cdot 5+ 3\cdot i+2i\cdot 5+2i\cdot i=15+3i+10i+2i^2=15+2i^2+13i
+<p>Per i prodotti facciamo la stessa cosa: trattiamo <span class="math inline">\(i\)</span> come una variabile formale e poi usiamo <span class="math inline">\(i^2=-1\)</span>: <span class="math display">\[
+    (3+2i)\cdot(5+i)=3\cdot 5+ 3\cdot i+2i\cdot 5+2i\cdot i=15+3i+10i+2i^2=15+2i^2+13i.
 \]</span> Ora ricordiamo che <span class="math inline">\(i^2=-1\)</span>, quindi <span class="math inline">\(2i^2=-2\)</span>, e dunque <span class="math display">\[
-    15+2i^2+13i=15-2+13i=13+13i
+    15+2i^2+13i=15-2+13i=13+13i.
 \]</span></p>
 <p>Altri esempi: <span class="math display">\[
-    (-2+4i)(7-3i)=-2+34i,\qquad (3+6i)\cdot (-i)=6-3i,\qquad 3\cdot (-1+i)=-3+3i
+    (-2+4i)(7-3i)=-2+34i,\qquad (3+6i)\cdot (-i)=6-3i,\qquad 3\cdot (-1+i)=-3+3i.
 \]</span></p>
-<p>Ora definiamo quanto segue:</p>
+<p>Ora definiamo il coniugato:</p>
 <div class="definition">
-<p><strong>Definizione:</strong> Sia <span class="math inline">\(a+bi\)</span> un intero di Gauss. Definiamo il suo coniugato come <span class="math inline">\(a-bi\)</span>.</p>
+<p><strong>Definizione:</strong> Sia <span class="math inline">\(a+bi\)</span> un intero di Gauss. Definiamo il suo <em>coniugato</em> come <span class="math inline">\(a-bi\)</span>.</p>
 </div>
 <div id="exm-conjugates" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1</strong></span> &nbsp;</p>
@@ -429,138 +433,150 @@ x^2+1\equiv_p 0
 <li>Il coniugato di <span class="math inline">\(-6i\)</span> è <span class="math inline">\(6i\)</span>.</li>
 </ul>
 </div>
-<p>Ora osserva questo fatto utile. Se moltiplichi un intero di Gauss <span class="math inline">\(a+bi\)</span> per il suo coniugato <span class="math inline">\(a-bi\)</span> ottieni <span class="math display">\[
+<p>Osserviamo ora questo fatto utile. Se moltiplichiamo un intero di Gauss <span class="math inline">\(a+bi\)</span> per il suo coniugato <span class="math inline">\(a-bi\)</span>, otteniamo <span class="math display">\[
     (a+bi)(a-bi)=a^2-abi+abi-b^2i^2=a^2-b^2i^2
-\]</span> e siccome <span class="math inline">\(i^2=-1\)</span> otteniamo <span class="math display">\[
-    (a+bi)(a-bi)=a^2+b^2
+\]</span> e siccome <span class="math inline">\(i^2=-1\)</span> segue che <span class="math display">\[
+    (a+bi)(a-bi)=a^2+b^2.
 \]</span></p>
-<p>È bello, no? Il nostro obiettivo è capire quando un primo è una somma di due quadrati, e ora abbiamo un modo semplice per produrre somme di due quadrati.</p>
-<section id="cosè-un-primo-negli-interi-di-gauss" class="level2">
-<h2 class="anchored" data-anchor-id="cosè-un-primo-negli-interi-di-gauss">Cos’è un primo negli interi di Gauss?</h2>
-<p>Se ti ricordi, nel <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html#what-a-prime-is">secondo post</a> abbiamo definito un primo <span class="math inline">\(p\)</span> come un numero tale che, ogni volta che <span class="math inline">\(p\)</span> divide un prodotto <span class="math inline">\(a\cdot b\)</span>, allora <span class="math inline">\(p\)</span> divide <span class="math inline">\(a\)</span> oppure <span class="math inline">\(p\)</span> divide <span class="math inline">\(b\)</span>. Ora facciamo lo stesso negli interi di Gauss. Prima definiamo cosa significa dividere qualcosa negli interi di Gauss.</p>
+<p>Bello, no? Il nostro obiettivo è capire quando un primo è una somma di due quadrati, e ora abbiamo un modo semplice per produrre somme di due quadrati.</p>
+<section id="che-cosè-un-primo-negli-interi-di-gauss" class="level2">
+<h2 class="anchored" data-anchor-id="che-cosè-un-primo-negli-interi-di-gauss">Che cos’è un primo negli interi di Gauss?</h2>
+<p>Se ricordate, nel <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html#what-a-prime-is">secondo post</a> abbiamo definito un primo <span class="math inline">\(p\)</span> come un numero tale che, ogni volta che <span class="math inline">\(p\)</span> divide un prodotto <span class="math inline">\(a\cdot b\)</span>, allora <span class="math inline">\(p\)</span> divide <span class="math inline">\(a\)</span> oppure <span class="math inline">\(p\)</span> divide <span class="math inline">\(b\)</span>. Facciamo la stessa cosa negli interi di Gauss. Prima definiamo cosa significa “dividere” in <span class="math inline">\(\mathbb{Z}[i]\)</span>.</p>
 <div class="definition">
-<p><strong>Definizione:</strong> Sia <span class="math inline">\(a+bi\)</span> un intero di Gauss. Diciamo che <span class="math inline">\(a+bi\)</span> divide <span class="math inline">\(c+di\)</span> se possiamo scrivere <span class="math display">\[
+<p><strong>Definizione:</strong> Sia <span class="math inline">\(a+bi\)</span> un intero di Gauss. Diciamo che <span class="math inline">\(a+bi\)</span> <em>divide</em> <span class="math inline">\(c+di\)</span> se possiamo scrivere <span class="math display">\[
     c+di=(a+bi)\cdot (e+fi)
 \]</span> per qualche intero di Gauss <span class="math inline">\(e+fi\)</span>.</p>
 </div>
 <div class="definition">
-<p><strong>Definizione:</strong> Sia <span class="math inline">\(a+bi\)</span> un intero di Gauss. Diciamo che <span class="math inline">\(a+bi\)</span> è primo se ogni volta che <span class="math inline">\(a+bi\)</span> divide un prodotto <span class="math inline">\((c+di)(e+fi)\)</span>, allora <span class="math inline">\(a+bi\)</span> divide <span class="math inline">\(c+di\)</span> oppure <span class="math inline">\(a+bi\)</span> divide <span class="math inline">\(e+fi\)</span>.</p>
+<p><strong>Definizione:</strong> Sia <span class="math inline">\(a+bi\)</span> un intero di Gauss. Diciamo che <span class="math inline">\(a+bi\)</span> è <em>primo</em> se, ogni volta che <span class="math inline">\(a+bi\)</span> divide un prodotto <span class="math inline">\((c+di)(e+fi)\)</span>, allora <span class="math inline">\(a+bi\)</span> divide <span class="math inline">\(c+di\)</span> oppure <span class="math inline">\(a+bi\)</span> divide <span class="math inline">\(e+fi\)</span>.</p>
 </div>
-<p>Non dimostreremo il seguente teorema, la cui dimostrazione è in un certo senso simile a quella fatta per gli interi.</p>
+<p>Non dimostreremo il seguente teorema, la cui dimostrazione è simile a quella per gli interi.</p>
 <div id="thm-ufd" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (Fattorizzazione unica)</strong></span> Ogni intero di Gauss <span class="math inline">\(a+bi\)</span> si può scrivere come prodotto di primi di Gauss, cioè <span class="math display">\[
     a+bi=(c_1+d_1i)\cdots(c_k+d_ki)
-\]</span> per qualche intero positivo <span class="math inline">\(k\)</span>. Questa scrittura è unica a meno di moltiplicare per <span class="math inline">\(-1, i,\)</span> e <span class="math inline">\(-i\)</span>.</p>
+\]</span> per qualche intero positivo <span class="math inline">\(k\)</span>. Questa scrittura è unica a meno di moltiplicare per <span class="math inline">\(1,-1,i\)</span> e <span class="math inline">\(-i\)</span>.</p>
 </div>
-<p>Chiariamo questa unicità, che è un po’ strana. Quello che stiamo dicendo è che se consideri un intero di Gauss come <span class="math inline">\(1+3i\)</span>, lo puoi fattorizzare come <span class="math display">\[
-    1+3i=(1+i)(2+i)
-\]</span> (puoi verificare che <span class="math inline">\(1+i\)</span> e <span class="math inline">\(2+i\)</span> sono primi usando la definizione, ma può essere un po’ noioso). Ora osserva che <span class="math inline">\(i\cdot (-i)=-i^2=1\)</span>. Quindi possiamo scrivere <span class="math display">\[
-    1+3i=1\cdot (1+i)(2+i)=(i\cdot (-i))(1+i)(2+i)=i\cdot ((-i)\cdot (1+i))(2+i)=i\cdot (1-i)(2+i)
-\]</span> questa sembra un’altra fattorizzazione di <span class="math inline">\(1+3i\)</span>. Tuttavia differisce dalla precedente solo perché abbiamo moltiplicato per <span class="math inline">\(1=i\cdot (-i)\)</span>. Quindi diciamo che, a meno di moltiplicare per questi numeri speciali (se ci pensi puoi fare lo stesso anche con <span class="math inline">\(1=(-1)\cdot(-1)\)</span> e <span class="math inline">\(1=(-i)\cdot i\)</span>), la fattorizzazione è unica.</p>
+<p>Chiariamo questa unicità, che è un po’ strana. Il punto è che, per esempio, l’intero di Gauss <span class="math inline">\(1+3i\)</span> si può fattorizzare come <span class="math display">\[
+    1+3i=(1+i)(2+i).
+\]</span> (Potete verificare che <span class="math inline">\(1+i\)</span> e <span class="math inline">\(2+i\)</span> sono primi usando la definizione, ma può essere un po’ laborioso.) Ora osserviamo che <span class="math inline">\(i\cdot (-i)=-i^2=1\)</span>. Quindi possiamo scrivere <span class="math display">\[
+    1+3i=1\cdot (1+i)(2+i),
+\]</span> semplicemente moltiplicando per <span class="math inline">\(1\)</span>. Ma siccome <span class="math inline">\(1=i\cdot(-i)\)</span>, allora <span class="math display">\[
+    1+3i=(i\cdot (-i))(1+i)(2+i),
+\]</span> che è lo stesso (per associatività) di <span class="math display">\[
+    1+3i=i\cdot ((-i)(1+i))(2+i),
+\]</span> e quindi <span class="math display">\[
+    1+3i=i\cdot (1-i)(2+i).
+\]</span> Questa sembra un’altra fattorizzazione di <span class="math inline">\(1+3i\)</span>. Tuttavia differisce dalla precedente solo perché abbiamo moltiplicato per <span class="math inline">\(1=i\cdot (-i)\)</span>. <a href="#thm-ufd" class="quarto-xref">Theorem&nbsp;2</a> ci sta dicendo che tutte le possibili fattorizzazioni in primi di <span class="math inline">\(1+3i\)</span> differiscono solo per moltiplicazioni “furbe” per <span class="math inline">\(1\)</span>. Per questo diciamo che, a meno di moltiplicare per questi elementi speciali (e se ci pensate si può fare anche scrivendo <span class="math inline">\(1=(-1)\cdot(-1)\)</span> oppure <span class="math inline">\(1=(-i)\cdot i\)</span>), la fattorizzazione è unica.</p>
 </section>
 </section>
 <section id="dimostrazione-del-teorema-finalmente" class="level1">
 <h1>Dimostrazione del teorema (finalmente!)</h1>
-<p>Ok, ci siamo quasi. Ora possiamo provare a capire come funzionerà la dimostrazione.</p>
-<p>Sia <span class="math inline">\(p\)</span> un primo negli interi. Uno schema della dimostrazione è mostrare le seguenti affermazioni:</p>
+<p>Ora possiamo capire come funzionerà la dimostrazione.</p>
+<p>Sia <span class="math inline">\(p\)</span> un numero primo negli interi. Uno schema della dimostrazione consiste nel provare le seguenti affermazioni:</p>
 <ul>
 <li>se <span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione allora <span class="math inline">\(p+0i\)</span> non è primo negli interi di Gauss;</li>
 <li>se <span class="math inline">\(p+0i\)</span> non è primo negli interi di Gauss, allora <span class="math inline">\(p\)</span> si può scrivere come somma di due quadrati;</li>
-<li>se <span class="math inline">\(p\)</span> è somma di due quadrati allora <span class="math inline">\(p\equiv_4 1\)</span> (lo abbiamo già dimostrato <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">l’ultima volta</a>!);</li>
+<li>se <span class="math inline">\(p\)</span> è somma di due quadrati allora <span class="math inline">\(p\equiv_4 1\)</span> (lo abbiamo già dimostrato <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">l’altra volta</a>!);</li>
 <li>se <span class="math inline">\(p\equiv_4 1\)</span> allora <span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione.</li>
 </ul>
-<p>Queste implicazioni ci dicono che se sappiamo che una delle affermazioni sopra è vera, allora anche le altre tre lo sono. In altre parole, le affermazioni sopra stanno dicendo la stessa cosa: sono equivalenti, perché si implicano a vicenda (nota che la prima ipotesi coincide con l’ultima conclusione).</p>
-</section>
-<section id="relazione-tra-x21equiv_p-0-e-il-teorema-di-natale" class="level1">
-<h1>Relazione tra <span class="math inline">\(x^2+1\equiv_p 0\)</span> e il teorema di Natale</h1>
-<p>Il seguente lemma è cruciale: grazie a questo lemma potremo dimostrare il teorema di Natale. Dà l’interpretazione giusta di cosa significa che un primo <span class="math inline">\(p\)</span> sia una somma di due quadrati.</p>
+<p>Queste implicazioni ci dicono che, se sappiamo che una delle affermazioni sopra è vera, allora lo sono anche tutte le altre. In altre parole, le affermazioni</p>
+<ul>
+<li><span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione;</li>
+<li><span class="math inline">\(p+0i\)</span> non è primo negli interi di Gauss;</li>
+<li><span class="math inline">\(p\)</span> è somma di due quadrati;</li>
+<li><span class="math inline">\(p\equiv_4 1\)</span></li>
+</ul>
+<p>stanno dicendo la stessa cosa: sono equivalenti, perché si implicano a vicenda.</p>
+<section id="relazione-tra-x21equiv_p-0-e-il-teorema-di-natale" class="level2">
+<h2 class="anchored" data-anchor-id="relazione-tra-x21equiv_p-0-e-il-teorema-di-natale">Relazione tra <span class="math inline">\(x^2+1\equiv_p 0\)</span> e il Teorema di Natale</h2>
+<p>Il seguente lemma è quello cruciale: grazie a questo lemma riusciremo a dimostrare il Teorema di Natale. Ci dà l’interpretazione corretta di cosa significa che un primo <span class="math inline">\(p\)</span> è somma di due quadrati.</p>
 <div id="lem-square-minus-one" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 1</strong></span> Sia <span class="math inline">\(p\)</span> un numero primo. Se la congruenza <span class="math display">\[
     x^2+1\equiv_p 0
 \]</span> ha una soluzione, allora <span class="math inline">\(p+0i\)</span> non è primo negli interi di Gauss.</p>
 </div>
-<p>Il significato di “<span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione” è che esiste un intero <span class="math inline">\(x\in\mathbb Z\)</span> tale che <span class="math inline">\(x^2+1\equiv_p 0\)</span>, oppure equivalentemente che <span class="math inline">\(p\)</span> divide <span class="math inline">\(x^2+1\)</span>. Un altro modo di dirlo è <span class="math display">\[
-    x^2\equiv_p -1
-\]</span> quindi stiamo dicendo che <span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(p\)</span>.</p>
+<p>Dire che <span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione significa che esiste un intero <span class="math inline">\(x\in\mathbb{Z}\)</span> tale che <span class="math inline">\(x^2+1\equiv_p 0\)</span>, oppure, in modo equivalente, che <span class="math inline">\(p\)</span> divide <span class="math inline">\(x^2+1\)</span>. Un altro modo di dirlo è <span class="math display">\[
+    x^2\equiv_p -1,
+\]</span> cioè stiamo dicendo che <span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(p\)</span>.</p>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Supponiamo che esista un <span class="math inline">\(x\in\mathbb Z\)</span> tale che <span class="math display">\[
-    x^2+1\equiv_p 0
-\]</span> Questo significa che <span class="math inline">\(p\)</span> divide <span class="math inline">\(x^2+1\)</span>. Ma osserva che <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>Supponiamo che esista un <span class="math inline">\(x\in \mathbb{Z}\)</span> tale che <span class="math display">\[
+    x^2+1\equiv_p 0.
+\]</span> Questo significa che <span class="math inline">\(p\)</span> divide <span class="math inline">\(x^2+1\)</span>. Ma osserviamo che <span class="math display">\[
     x^2+1=(x+i)(x-i)
-\]</span> negli interi di Gauss. Vogliamo dire che <span class="math inline">\(p+0i\)</span> non è primo negli interi di Gauss.</p>
-<p>Supponiamo <span class="math inline">\(p+0i\)</span> primo negli interi di Gauss. Siccome <span class="math inline">\(p+0i\)</span> divide il prodotto <span class="math inline">\((x+i)(x-i)\)</span>, allora dovrebbe dividere uno dei due fattori. Ma è impossibile. Infatti, se <span class="math inline">\(p+0i\)</span> divide <span class="math inline">\(x+i\)</span>, allora possiamo scrivere <span class="math inline">\(x+i=(p+0i)(a+bi)=pa+pbi\)</span>. Confrontando i coefficienti di <span class="math inline">\(i\)</span> sui due lati otteniamo <span class="math inline">\(1=pb\)</span>, impossibile. Lo stesso argomento vale per <span class="math inline">\(x-i\)</span>.</p>
+\]</span> negli interi di Gauss. Vogliamo mostrare che <span class="math inline">\(p+0i\)</span> non è primo negli interi di Gauss.</p>
+<p>Supponiamo per assurdo che <span class="math inline">\(p+0i\)</span> sia primo negli interi di Gauss. Dato che <span class="math inline">\(p+0i\)</span> divide il prodotto <span class="math inline">\((x+i)(x-i)\)</span>, allora dovrebbe dividere uno dei due fattori. Ma questo è impossibile. Infatti, se <span class="math inline">\(p+0i\)</span> dividesse <span class="math inline">\(x+i\)</span>, potremmo scrivere <span class="math inline">\(x+i=(p+0i)(a+bi)=pa+pbi\)</span>. Confrontando i coefficienti di <span class="math inline">\(i\)</span> nei due membri otteniamo <span class="math inline">\(1=pb\)</span>, impossibile. Lo stesso argomento vale per <span class="math inline">\(x-i\)</span>.</p>
 <p>Quindi <span class="math inline">\(p+0i\)</span> non è primo negli interi di Gauss.</p>
 </div>
+</section>
 <section id="primi-negli-interi-che-non-sono-primi-negli-interi-di-gauss" class="level2">
 <h2 class="anchored" data-anchor-id="primi-negli-interi-che-non-sono-primi-negli-interi-di-gauss">Primi negli interi che non sono primi negli interi di Gauss</h2>
 <div id="lem-not-prime" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 2</strong></span> Sia <span class="math inline">\(p\)</span> un numero primo. Se <span class="math inline">\(p+0i\)</span> non è primo in <span class="math inline">\(\mathbb{Z}[i]\)</span>, allora possiamo scrivere <span class="math inline">\(p\)</span> come somma di due quadrati.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Se <span class="math inline">\(p+0i\)</span> non è primo, allora si può scrivere come prodotto di due fattori: <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>Se <span class="math inline">\(p+0i\)</span> non è primo, allora (per <a href="#thm-ufd" class="quarto-xref">Theorem&nbsp;2</a>) si può scrivere come prodotto di almeno due fattori: <span class="math display">\[
     p+0i=(a+bi)(c+di)
 \]</span> dove né <span class="math inline">\(a+bi\)</span> né <span class="math inline">\(c+di\)</span> sono uguali a <span class="math inline">\(1,-1,i,-i\)</span>.</p>
-<p>Ora moltiplichiamo entrambi i lati per i loro coniugati. A sinistra otteniamo <span class="math display">\[
+<p>Ora moltiplichiamo entrambi i membri per i loro coniugati. A sinistra otteniamo <span class="math display">\[
     (p+0i)(p-0i)=p^2.
 \]</span> A destra otteniamo <span class="math display">\[
     (a+bi)(a-bi)(c+di)(c-di)=(a^2+b^2)(c^2+d^2).
 \]</span> Quindi <span class="math display">\[
     p^2=(a^2+b^2)(c^2+d^2).
 \]</span></p>
-<p>Abbiamo <span class="math inline">\(a^2+b^2&gt;1\)</span> e <span class="math inline">\(c^2+d^2&gt;1\)</span>. Ma <span class="math inline">\(p\)</span> è primo in <span class="math inline">\(\mathbb Z\)</span>, quindi l’unico modo in cui due interi maggiori di <span class="math inline">\(1\)</span> possono moltiplicarsi per dare <span class="math inline">\(p^2\)</span> è che <span class="math display">\[
+<p>Abbiamo <span class="math inline">\(a^2+b^2&gt;1\)</span> e <span class="math inline">\(c^2+d^2&gt;1\)</span>. Ma <span class="math inline">\(p\)</span> è primo in <span class="math inline">\(\mathbb{Z}\)</span>, quindi l’unico modo in cui due interi maggiori di <span class="math inline">\(1\)</span> possono moltiplicarsi per dare <span class="math inline">\(p^2\)</span> è che <span class="math display">\[
     a^2+b^2=p,\qquad c^2+d^2=p.
 \]</span> In particolare, <span class="math display">\[
     p=a^2+b^2,
 \]</span> cioè <span class="math inline">\(p\)</span> è una somma di due quadrati.</p>
 </div>
 </section>
-<section id="teorema-di-wilson-e-soluzione-di-x21equiv_p-0" class="level2">
-<h2 class="anchored" data-anchor-id="teorema-di-wilson-e-soluzione-di-x21equiv_p-0">Teorema di Wilson e soluzione di <span class="math inline">\(x^2+1\equiv_p 0\)</span></h2>
-<p>Useremo il seguente teorema per dimostrare ciò che ci serve.</p>
+<section id="teorema-di-wilson-e-soluzioni-di-x21equiv_p-0" class="level2">
+<h2 class="anchored" data-anchor-id="teorema-di-wilson-e-soluzioni-di-x21equiv_p-0">Teorema di Wilson e soluzioni di <span class="math inline">\(x^2+1\equiv_p 0\)</span></h2>
+<p>Useremo il seguente teorema per ottenere ciò che ci serve.</p>
 <div id="thm-wilson" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Teorema di Wilson)</strong></span> Se <span class="math inline">\(p\)</span> è un numero primo, allora <span class="math display">\[
 (p-1)\cdot (p-2)\cdot (p-3)\cdots 2\cdot 1 \equiv_p p-1.
-\]</span> cioè moltiplicando tutti i numeri da <span class="math inline">\(p-1\)</span> fino a <span class="math inline">\(1\)</span> otteniamo <span class="math inline">\(p-1\)</span> modulo <span class="math inline">\(p\)</span>.</p>
+\]</span> Cioè, moltiplicando tutti i numeri da <span class="math inline">\(p-1\)</span> fino a <span class="math inline">\(1\)</span> otteniamo <span class="math inline">\(p-1\)</span> modulo <span class="math inline">\(p\)</span>.</p>
 </div>
-<p>Diamo un’idea di come dimostrare questo teorema.</p>
+<p>Diamo un’idea della dimostrazione del teorema di Wilson; tuttavia questa dimostrazione non è essenziale per capire il cuore del Teorema di Natale.</p>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em> (Idea). </span>Ricorda che un intero <span class="math inline">\(x\)</span> è invertibile modulo <span class="math inline">\(p\)</span> se e solo se <span class="math inline">\(\mathrm{MCD}(x,p)=1\)</span>. Siccome <span class="math inline">\(p\)</span> è primo, non ha fattori in comune con nessuno dei numeri <span class="math inline">\((p-1),(p-2),\dots,2,1\)</span>. Questo significa che ogni fattore a sinistra è invertibile modulo <span class="math inline">\(p\)</span>.</p>
-<p>Ora, se elenchi tutti i residui invertibili modulo <span class="math inline">\(p\)</span>, ottieni esattamente <span class="math inline">\(1,2,\dots,p-1\)</span>. Quindi, a sinistra, ogni termine compare insieme al suo inverso, tranne i termini che sono il proprio inverso.</p>
-<p>Un elemento <span class="math inline">\(a\)</span> è il proprio inverso se e solo se <span class="math inline">\(a^2\equiv_p 1\)</span>. Modulo un primo, questo significa <span class="math inline">\(a\equiv_p 1\)</span> oppure <span class="math inline">\(a\equiv_p -1\)</span>. Quindi tutto si cancella a coppie, e rimane solo <span class="math inline">\(-1\equiv_p p-1\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em> (Idea). </span>Ricordiamo che un intero <span class="math inline">\(x\)</span> è invertibile modulo <span class="math inline">\(p\)</span> se e solo se <span class="math inline">\(\mathrm{MCD}(x,p)=1\)</span>. Poiché <span class="math inline">\(p\)</span> è primo, non ha fattori in comune con nessuno dei numeri <span class="math inline">\((p-1),(p-2),\dots,2,1\)</span>. Questo significa che ogni fattore nel prodotto a sinistra è invertibile modulo <span class="math inline">\(p\)</span>.</p>
+<p>Ora, se elenchiamo tutti i resti invertibili modulo <span class="math inline">\(p\)</span>, otteniamo esattamente <span class="math inline">\(1,2,\dots,p-1\)</span>. Quindi nel prodotto a sinistra ogni termine compare insieme al suo inverso, tranne per i termini che sono il proprio inverso.</p>
+<p>Un elemento <span class="math inline">\(a\)</span> è il proprio inverso se e solo se <span class="math inline">\(a^2\equiv_p 1\)</span>. Modulo un primo questo significa <span class="math inline">\(a\equiv_p 1\)</span> oppure <span class="math inline">\(a\equiv_p -1\)</span>. Quindi tutto si semplifica a coppie e rimane solo <span class="math inline">\(-1\equiv_p p-1\)</span>.</p>
 </div>
 <div id="lem-final" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 3</strong></span> Se <span class="math inline">\(p\)</span> è un primo tale che <span class="math inline">\(p\equiv_4 1\)</span> allora <span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione.</p>
+<p><span class="theorem-title"><strong>Lemma 3</strong></span> Se <span class="math inline">\(p\)</span> è un primo tale che <span class="math inline">\(p\equiv_4 1\)</span>, allora <span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Dato che <span class="math inline">\(p\equiv_4 1\)</span>, significa che <span class="math inline">\(p-1\)</span> è divisibile per <span class="math inline">\(4\)</span>, cioè <span class="math inline">\(p-1=4k\)</span> per qualche intero <span class="math inline">\(k\)</span>. Consideriamo <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>Poiché <span class="math inline">\(p\equiv_4 1\)</span>, allora <span class="math inline">\(p-1\)</span> è divisibile per <span class="math inline">\(4\)</span>, cioè <span class="math inline">\(p-1=4k\)</span> per qualche intero <span class="math inline">\(k\)</span>. Consideriamo il prodotto <span class="math display">\[
     (p-1)\cdot (p-2)\cdot (p-3)\cdots 3\cdot 2\cdot 1.
 \]</span></p>
-<p>Ora raggruppiamo i fattori a coppie così: <span class="math display">\[
+<p>Dato che <span class="math inline">\(p-1=4k\)</span>, possiamo raggruppare i fattori a coppie nel seguente modo: <span class="math display">\[
     (p-1)\cdot 1\cdot (p-2)\cdot 2\cdots (p-2k)\cdot (2k).
 \]</span></p>
-<p>Siccome <span class="math inline">\(p-j\equiv_p -j\)</span>, ogni coppia dà <span class="math display">\[
+<p>Poiché <span class="math inline">\(p-j\equiv_p -j\)</span>, ogni coppia dà <span class="math display">\[
     (p-j)\cdot j\equiv_p (-j)\cdot j=-j^2.
 \]</span> Quindi <span class="math display">\[
     (p-1)\cdot (p-2)\cdots 2\cdot 1\equiv_p (-1)^2\cdot (-2)^2\cdots (-(2k))^2=(1\cdot 2\cdot 3\cdots \cdot (2k-1)\cdot 2k)^2.
-\]</span> (Qui i segni meno spariscono perché stiamo elevando al quadrato.)</p>
-<p>Ma per il teorema di Wilson <a href="#thm-wilson" class="quarto-xref">Theorem&nbsp;3</a> sappiamo anche che il lato sinistro è congruo a <span class="math inline">\(p-1\)</span> modulo <span class="math inline">\(p\)</span>. E siccome <span class="math inline">\(p-1\equiv_p -1\)</span>, otteniamo <span class="math display">\[
-    -1\equiv_p (1\cdot 2\cdots (2k-1)\cdot 2k)^2
+\]</span> (Qui i segni meno scompaiono perché stiamo elevando al quadrato.)</p>
+<p>Ma per <a href="#thm-wilson" class="quarto-xref">Theorem&nbsp;3</a> sappiamo anche che il membro sinistro è congruo a <span class="math inline">\(p-1\)</span> modulo <span class="math inline">\(p\)</span>. E poiché <span class="math inline">\(p-1\equiv_p -1\)</span>, otteniamo <span class="math display">\[
+    -1\equiv_p (1\cdot 2\cdots (2k-1)\cdot 2k)^2.
 \]</span> Definiamo <span class="math display">\[
-x:= 1\cdot 2\cdots (2k-1)\cdot 2k
-\]</span></p>
-<p>Allora otteniamo <span class="math display">\[
+x:= 1\cdot 2\cdots (2k-1)\cdot 2k.
+\]</span> Allora <span class="math display">\[
     x^2+1\equiv_p 0.
 \]</span> Quindi abbiamo trovato una soluzione.</p>
 </div>
 </section>
 <section id="il-teorema-è-dimostrato-cosaltro-possiamo-dire" class="level2">
-<h2 class="anchored" data-anchor-id="il-teorema-è-dimostrato-cosaltro-possiamo-dire">Il teorema è dimostrato, cos’altro possiamo dire?</h2>
-<p>Il teorema è finalmente dimostrato, ma non smettiamo di fare domande. Ne vengono fuori due.</p>
+<h2 class="anchored" data-anchor-id="il-teorema-è-dimostrato-cosaltro-possiamo-dire">Il teorema è dimostrato: cos’altro possiamo dire?</h2>
+<p>Il teorema è finalmente dimostrato, ma non smettiamo di farci domande.</p>
 <div id="qst-howmany">
-<p>Quanti primi si possono scrivere come somma di due quadrati? Equivalentemente, quanti primi hanno resto <span class="math inline">\(1\)</span> quando li dividiamo per <span class="math inline">\(4\)</span>?</p>
+<p><strong>Domanda:</strong> Quanti primi si possono scrivere come somma di due quadrati? Equivalentemente, quanti primi hanno resto <span class="math inline">\(1\)</span> nella divisione per <span class="math inline">\(4\)</span>?</p>
 </div>
-<p>Probabilmente non sorprende che ci aspettiamo che ci siano infiniti primi scrivibili come somma di due quadrati. Questa affermazione è lasciata come esercizio guidato alla fine del post.</p>
-<p>Un fatto interessante, ma non banale, è capire anche la densità di questi primi. Cioè: se consideriamo tutti i primi fino a un intero <span class="math inline">\(N\)</span>, quanti di questi ci aspettiamo che siano somme di due quadrati? La risposta è che ci aspettiamo circa la metà. Ecco una tabella che può convincerti:</p>
+<p>Non sorprende che ci aspettiamo che esistano infiniti primi che si possono scrivere come somma di due quadrati. Questa affermazione è lasciata come esercizio guidato alla fine del post.</p>
+<p>Un fatto interessante, ma non banale, è capire anche la densità di questo tipo di primi. Cioè: se consideriamo tutti i primi fino a un intero <span class="math inline">\(N\)</span>, quanti ci aspettiamo che siano scrivibili come somma di due quadrati? La risposta è che ci aspettiamo circa la metà. Per esempio, questa tabella potrebbe convincervi:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -597,75 +613,72 @@ x:= 1\cdot 2\cdots (2k-1)\cdot 2k
 </tr>
 </tbody>
 </table>
-<p>Questo si può dimostrare, ma è ben oltre i nostri interessi qui.</p>
-<p>Un’altra domanda naturale è</p>
+<p>Questo si può dimostrare in modo rigoroso, ma è ben oltre i nostri scopi qui.</p>
+<p>Un’altra domanda naturale potrebbe essere:</p>
 <div id="qst-numbers">
-<p>Dato un intero <span class="math inline">\(n\)</span>, quando si può scrivere come somma di due quadrati?</p>
+<p><strong>Domanda:</strong> Dato un intero <span class="math inline">\(n\)</span>, quando lo si può scrivere come somma di due quadrati?</p>
 </div>
-<p>Quindi stiamo generalizzando dal caso dei primi al caso di un intero qualunque. Questo non è difficile da dimostrare conoscendo il teorema di Natale, quindi lo lasciamo come esercizio guidato alla fine.</p>
+<p>In altre parole, stiamo chiedendo come generalizzare dal caso dei primi al caso di un intero qualunque. Questo non è difficile da dimostrare una volta noto il Teorema di Natale, quindi lo lasciamo come esercizio guidato alla fine.</p>
 </section>
 </section>
 <section id="conclusione" class="level1">
 <h1>Conclusione</h1>
-<p>Vorrei sottolineare che il punto cruciale del nostro ragionamento è stato collegare il problema di scrivere <span class="math inline">\(p\)</span> come somma di due quadrati con la soluzione della congruenza <span class="math inline">\(x^2+1\)</span>. Infatti, se ci pensi, gli interi di Gauss sono definiti aggiungendo agli interi una soluzione di <span class="math inline">\(x^2+1=0\)</span>. Non è una coincidenza.</p>
-<p>Esistono teoremi più generali che spiegano precisamente come la fattorizzazione di un (ideale) primo in un’estensione degli interi (ottenuta aggiungendo qualcosa di simile alle soluzioni di un polinomio) sia legata alla fattorizzazione (nel nostro caso, alle soluzioni) del polinomio modulo quel primo.</p>
-<p>Nel nostro caso sapevamo che <span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione, e questo equivale a dire che esiste un intero <span class="math inline">\(u\)</span> tale che <span class="math inline">\(u^2\equiv_p -1\)</span>. Allora modulo <span class="math inline">\(p\)</span> abbiamo la fattorizzazione <span class="math display">\[
+<p>Vorrei sottolineare che il punto cruciale del nostro ragionamento è stato collegare il problema di scrivere <span class="math inline">\(p\)</span> come somma di due quadrati con la risolubilità della congruenza <span class="math inline">\(x^2+1\)</span>. Infatti, se ci pensate, gli interi di Gauss sono stati definiti aggiungendo agli interi una soluzione di <span class="math inline">\(x^2+1=0\)</span>. Non è una coincidenza.</p>
+<p>Esistono teoremi più generali che descrivono precisamente come la fattorizzazione di un primo (in realtà, di un ideale primo) in un’estensione degli interi (ottenuta aggiungendo qualcosa di simile alle soluzioni di un polinomio) sia legata alla fattorizzazione del polinomio modulo quel primo.</p>
+<p>Nel nostro caso sapevamo che <span class="math inline">\(x^2+1\equiv_p 0\)</span> ha una soluzione, cioè esiste un intero <span class="math inline">\(u\)</span> tale che <span class="math inline">\(u^2\equiv_p -1\)</span>. Allora modulo <span class="math inline">\(p\)</span> abbiamo la fattorizzazione <span class="math display">\[
     x^2+1\equiv_p (x+u)(x-u),
 \]</span> perché <span class="math display">\[
     (x+u)(x-u)=x^2-u^2\equiv_p x^2+1.
 \]</span></p>
-<p>Questo ci dice esattamente che il primo <span class="math inline">\(p\)</span> si può scrivere come prodotto di due primi negli interi di Gauss (osserva la simmetria: il polinomio si spezza in due fattori esattamente come il primo). Il teorema che spiega questo comportamento è noto come <a href="https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem">teorema di Dedekind-Kummer</a>.</p>
+<p>Questo ci dice esattamente che il primo <span class="math inline">\(p\)</span> si può scrivere come prodotto di due primi negli interi di Gauss (osservate la simmetria: il polinomio si spezza in due fattori esattamente come il primo). Il teorema che spiega questo comportamento è noto come <a href="https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem">teorema di Dedekind-Kummer</a>.</p>
 </section>
 <section id="esercizi-guidati" class="level1">
 <h1>Esercizi guidati</h1>
-<section id="esercizio-1-infiniti-primi-che-sono-somme-di-due-quadrati" class="level2">
-<h2 class="anchored" data-anchor-id="esercizio-1-infiniti-primi-che-sono-somme-di-due-quadrati">Esercizio 1: infiniti primi che sono somme di due quadrati</h2>
+<section id="esercizio-1-infiniti-primi-somma-di-due-quadrati" class="level2">
+<h2 class="anchored" data-anchor-id="esercizio-1-infiniti-primi-somma-di-due-quadrati">Esercizio 1: infiniti primi somma di due quadrati</h2>
 <div id="qst-ex1">
 <section id="esercizio-1" class="level4">
 <h4 class="anchored" data-anchor-id="esercizio-1">Esercizio 1</h4>
-<p>Dimostra che esistono infiniti primi che si possono scrivere come somma di due quadrati.</p>
+<p>Dimostra che esistono infiniti numeri primi che si possono scrivere come somma di due quadrati.</p>
 </section>
 </div>
 <details class="hint">
 <summary>
 Suggerimento 1
 </summary>
-Un primo è una somma di due quadrati se e solo se <span class="math inline">\(-1\)</span> è un quadrato mod <span class="math inline">\(p\)</span>. Supponi che ci siano solo finitamenti molti primi tali che <span class="math inline">\(-1\)</span> sia un quadrato mod <span class="math inline">\(p\)</span>. Cosa puoi dire?
+Un primo è somma di due quadrati se e solo se <span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(p\)</span>. Supponi che esistano solo un numero finito di primi tali che <span class="math inline">\(-1\)</span> sia un quadrato modulo <span class="math inline">\(p\)</span>. Che cosa puoi dire?
 </details>
 <details class="solution">
 <summary>
 Soluzione al Suggerimento 1
 </summary>
-Dire “<span class="math inline">\(-1\)</span> è un quadrato mod <span class="math inline">\(p\)</span>” significa: esiste un intero <span class="math inline">\(n\)</span> tale che <span class="math display">\[
+Dire “<span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(p\)</span>” significa: esiste un intero <span class="math inline">\(n\)</span> tale che <span class="math display">\[
   n^2\equiv_p -1,
-  \]</span> cioè <span class="math inline">\(p\mid (n^2+1)\)</span>. Quindi ogni primo per cui <span class="math inline">\(-1\)</span> è un quadrato mod <span class="math inline">\(p\)</span> divide almeno un numero della forma <span class="math inline">\(n^2+1\)</span>.
+  \]</span> cioè <span class="math inline">\(p\mid (n^2+1)\)</span>. Quindi ogni primo per cui <span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(p\)</span> divide almeno un numero della forma <span class="math inline">\(n^2+1\)</span>.
 </details>
 <details class="hint">
 <summary>
 Suggerimento 2
 </summary>
-Sia <span class="math inline">\(k\)</span> il prodotto di tutti i primi <span class="math inline">\(p\)</span> tali che <span class="math inline">\(-1\)</span> sia un quadrato mod <span class="math inline">\(p\)</span>. Prova a imitare la dimostrazione di Euclide che esistono infiniti primi.
+Sia <span class="math inline">\(k\)</span> il prodotto di tutti i primi <span class="math inline">\(p\)</span> tali che <span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(p\)</span>. Prova a imitare la dimostrazione di Euclide che esistono infiniti primi.
 </details>
 <details class="hint">
 <summary>
 Suggerimento 3
 </summary>
-Considera l’intero <span class="math inline">\(k^2+1\)</span>. Quali primi lo possono dividere?
+Considera l’intero <span class="math inline">\(k^2+1\)</span>. Quali primi possono dividerlo?
 </details>
 <details class="solution">
 <summary>
 Soluzione al Suggerimento 3 (e fine dell’esercizio)
 </summary>
-<p>Sia <span class="math inline">\(q\)</span> un primo che divide <span class="math inline">\(k^2+1\)</span>. Allora <span class="math display">\[
-  k^2\equiv_q -1,
-  \]</span> quindi <span class="math inline">\(-1\)</span> è un quadrato mod <span class="math inline">\(q\)</span>. Per definizione di <span class="math inline">\(k\)</span>, questo forza <span class="math inline">\(q\mid k\)</span>.</p>
-<p>Ma allora <span class="math inline">\(q\)</span> divide sia <span class="math inline">\(k\)</span> sia <span class="math inline">\(k^2+1\)</span>, quindi divide anche la loro differenza <span class="math inline">\((k^2+1)-k^2=1\)</span>, impossibile. Contraddizione.</p>
-Quindi l’ipotesi “solo finitamenti molti primi con <span class="math inline">\(-1\)</span> quadrato mod <span class="math inline">\(p\)</span>” è falsa, ed esistono infiniti primi di questo tipo. Per il teorema di Natale, questi sono esattamente i primi che sono somme di due quadrati.
+<p>In modo analogo alla dimostrazione di Euclide, nessuno dei fattori primi di <span class="math inline">\(k\)</span> (cioè i primi tali che <span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(p\)</span>) può dividere <span class="math inline">\(k^2+1\)</span> (perché il resto sarebbe <span class="math inline">\(1\)</span>). Tuttavia deve esistere un primo <span class="math inline">\(q\)</span> che divide <span class="math inline">\(k^2+1\)</span>, quindi la lista finita che avevamo supposto non è completa.</p>
+Dunque l’ipotesi “solo un numero finito di primi con <span class="math inline">\(-1\)</span> quadrato modulo <span class="math inline">\(p\)</span>” era falsa, ed esistono infiniti tali primi. Per il Teorema di Natale, questi sono esattamente i primi che sono somma di due quadrati.
 </details>
 <hr>
 </section>
-<section id="esercizio-2-quali-interi-sono-somme-di-due-quadrati" class="level2">
-<h2 class="anchored" data-anchor-id="esercizio-2-quali-interi-sono-somme-di-due-quadrati">Esercizio 2: quali interi sono somme di due quadrati?</h2>
+<section id="esercizio-2-quali-interi-sono-somma-di-due-quadrati" class="level2">
+<h2 class="anchored" data-anchor-id="esercizio-2-quali-interi-sono-somma-di-due-quadrati">Esercizio 2: quali interi sono somma di due quadrati?</h2>
 <div id="qst-ex2">
 <section id="esercizio-2" class="level4">
 <h4 class="anchored" data-anchor-id="esercizio-2">Esercizio 2</h4>
@@ -676,7 +689,7 @@ Quindi l’ipotesi “solo finitamenti molti primi con <span class="math inline"
 <summary>
 Suggerimento 1
 </summary>
-Cosa succede se <span class="math inline">\(n\)</span> è il prodotto di due primi che si possono scrivere come somma di due quadrati?
+Che cosa succede se <span class="math inline">\(n\)</span> è il prodotto di due primi che si possono scrivere come somma di due quadrati?
 </details>
 <details class="solution">
 <summary>
@@ -700,19 +713,19 @@ Soluzione al Suggerimento 2
 </summary>
 Sì: <span class="math display">\[
   5\cdot 7^2=245=14^2+7^2.
-  \]</span> (Quindi il primo <span class="math inline">\(7\equiv_4 3\)</span> non è “vietato”, ma sembra contare l’esponente.)
+  \]</span> (Quindi il primo <span class="math inline">\(7\equiv_4 3\)</span> non è “vietato”, ma sembra che conti l’esponente.)
 </details>
 <details class="hint">
 <summary>
 Suggerimento 3
 </summary>
-Nel suggerimento precedente, <span class="math inline">\(5\equiv_4 1\)</span> e <span class="math inline">\(7\equiv_4 3\)</span>. Che teorema ti aspetti?
+Nel suggerimento precedente, <span class="math inline">\(5\equiv_4 1\)</span> e <span class="math inline">\(7\equiv_4 3\)</span>. Quale teorema ti aspetti?
 </details>
 <details class="solution">
 <summary>
 Soluzione al Suggerimento 3 (enunciato)
 </summary>
-<strong>Teorema (somma di due quadrati).</strong> Un intero positivo <span class="math inline">\(n\)</span> si può scrivere come <span class="math inline">\(n=a^2+b^2\)</span> se e solo se, nella fattorizzazione prima di <span class="math inline">\(n\)</span>, ogni primo <span class="math inline">\(q\equiv_4 3\)</span> compare con esponente <strong>pari</strong>.
+<strong>Teorema (somma di due quadrati).</strong> Un intero positivo <span class="math inline">\(n\)</span> si può scrivere come <span class="math inline">\(n=a^2+b^2\)</span> se e solo se, nella fattorizzazione in primi di <span class="math inline">\(n\)</span>, ogni primo <span class="math inline">\(q\equiv_4 3\)</span> compare con esponente <strong>pari</strong>.
 </details>
 <details class="solution">
 <summary>
@@ -724,22 +737,22 @@ Dimostrazione completa (guidata dai suggerimenti)
 <p><span class="theorem-title"><strong>Lemma 4</strong></span> Sia <span class="math inline">\(q\)</span> un primo con <span class="math inline">\(q\equiv_4 3\)</span>. Se <span class="math inline">\(q\mid (a^2+b^2)\)</span>, allora <span class="math inline">\(q\mid a\)</span> e <span class="math inline">\(q\mid b\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Supponiamo <span class="math inline">\(q\mid (a^2+b^2)\)</span>. Se <span class="math inline">\(q\nmid b\)</span>, allora <span class="math inline">\(b\)</span> ha un inverso <span class="math inline">\(u\)</span> modulo <span class="math inline">\(q\)</span>, e <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>Supponiamo <span class="math inline">\(q\mid (a^2+b^2)\)</span>. Se <span class="math inline">\(q\nmid b\)</span>, allora <span class="math inline">\(b\)</span> ammette un inverso <span class="math inline">\(u\)</span> modulo <span class="math inline">\(q\)</span> e <span class="math display">\[
   \left(a\cdot u\right)^2\equiv_q -1,
-  \]</span> quindi <span class="math inline">\(-1\)</span> è un quadrato mod <span class="math inline">\(q\)</span>. Ma per il teorema di Natale, questo forzerebbe <span class="math inline">\(q\equiv_4 1\)</span>, contraddizione. Quindi <span class="math inline">\(q\mid b\)</span>. Allora <span class="math inline">\(q\mid a^2\)</span> e quindi <span class="math inline">\(q\mid a\)</span>.</p>
+  \]</span> quindi <span class="math inline">\(-1\)</span> è un quadrato modulo <span class="math inline">\(q\)</span>. Ma per il Teorema di Natale questo implicherebbe <span class="math inline">\(q\equiv_4 1\)</span>, assurdo. Dunque <span class="math inline">\(q\mid b\)</span>. Allora <span class="math inline">\(q\mid a^2\)</span> e quindi <span class="math inline">\(q\mid a\)</span>.</p>
 </div>
-<p>Ora supponi <span class="math inline">\(n=a^2+b^2\)</span>. Prendi un primo <span class="math inline">\(q\equiv_4 3\)</span> che divide <span class="math inline">\(n\)</span>. Per il lemma, <span class="math inline">\(q\)</span> divide sia <span class="math inline">\(a\)</span> sia <span class="math inline">\(b\)</span>, quindi <span class="math inline">\(q^2\)</span> divide <span class="math inline">\(a^2+b^2=n\)</span>. Questo significa che nella fattorizzazione prima di <span class="math inline">\(n\)</span> l’esponente di <span class="math inline">\(q\)</span> non può essere dispari: deve essere pari.</p>
-<p><strong>Passo 2: il converso.</strong></p>
-<p>Ora supponi che <span class="math inline">\(n\)</span> abbia la proprietà che ogni primo <span class="math inline">\(q\equiv_4 3\)</span> compaia con esponente pari. Allora possiamo pensare <span class="math inline">\(n\)</span> come prodotto di tre tipi di fattori:</p>
+<p>Ora supponiamo <span class="math inline">\(n=a^2+b^2\)</span>. Sia <span class="math inline">\(q\equiv_4 3\)</span> un primo che divide <span class="math inline">\(n\)</span>. Per il lemma, <span class="math inline">\(q\)</span> divide sia <span class="math inline">\(a\)</span> sia <span class="math inline">\(b\)</span>, quindi <span class="math inline">\(q^2\)</span> divide <span class="math inline">\(a^2+b^2=n\)</span>. Questo significa che, nella fattorizzazione in primi di <span class="math inline">\(n\)</span>, l’esponente di <span class="math inline">\(q\)</span> non può essere dispari: deve essere pari.</p>
+<p><strong>Passo 2: il viceversa.</strong></p>
+<p>Ora supponiamo che <span class="math inline">\(n\)</span> abbia la proprietà che ogni primo <span class="math inline">\(q\equiv_4 3\)</span> compaia con esponente pari. Allora possiamo scrivere <span class="math inline">\(n\)</span> come prodotto di tre tipi di fattori:</p>
 <ul>
-<li><p>una potenza di <span class="math inline">\(2\)</span>,</p></li>
-<li><p>primi <span class="math inline">\(p\equiv_4 1\)</span> (anche ripetuti),</p></li>
-<li><p>e quadrati di primi <span class="math inline">\(q\equiv_4 3\)</span> (anche ripetuti).</p>
+<li><p>una potenza di <span class="math inline">\(2\)</span>;</p></li>
+<li><p>primi <span class="math inline">\(p\equiv_4 1\)</span> (eventualmente ripetuti);</p></li>
+<li><p>e quadrati di primi <span class="math inline">\(q\equiv_4 3\)</span> (eventualmente ripetuti).</p>
 <p>Ognuno di questi fattori è una somma di due quadrati:</p></li>
-<li><p><span class="math inline">\(2=1^2+1^2\)</span>,</p></li>
-<li><p>se <span class="math inline">\(p\equiv_4 1\)</span> allora <span class="math inline">\(p\)</span> è una somma di due quadrati per il teorema di Natale,</p></li>
-<li><p>e se hai un quadrato <span class="math inline">\(q^{2m}\)</span> allora <span class="math inline">\(q^{2m}=(q^m)^2+0^2\)</span>.</p>
-<p>Infine, per il Suggerimento 1, un prodotto di somme di due quadrati è ancora una somma di due quadrati. Quindi <span class="math inline">\(n\)</span> è una somma di due quadrati.</p></li>
+<li><p><span class="math inline">\(2=1^2+1^2\)</span>;</p></li>
+<li><p>se <span class="math inline">\(p\equiv_4 1\)</span> allora <span class="math inline">\(p\)</span> è somma di due quadrati per il Teorema di Natale;</p></li>
+<li><p>se hai un quadrato <span class="math inline">\(q^{2m}\)</span> allora <span class="math inline">\(q^{2m}=(q^m)^2+0^2\)</span>.</p>
+<p>Infine, per il Suggerimento 1, un prodotto di somme di due quadrati (e lo stesso ragionamento vale non solo per i primi) è ancora una somma di due quadrati. Quindi <span class="math inline">\(n\)</span> è una somma di due quadrati.</p></li>
 </ul>
 </details>
 

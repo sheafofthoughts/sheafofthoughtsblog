@@ -320,9 +320,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#what-is-a-prime-in-the-gaussian-integers" id="toc-what-is-a-prime-in-the-gaussian-integers" class="nav-link" data-scroll-target="#what-is-a-prime-in-the-gaussian-integers">What is a prime in the Gaussian integers?</a></li>
   </ul></li>
-  <li><a href="#proof-of-the-theorem-finally" id="toc-proof-of-the-theorem-finally" class="nav-link" data-scroll-target="#proof-of-the-theorem-finally">Proof of the theorem (finally!)</a></li>
-  <li><a href="#relation-between-x21equiv_p-0-and-fermats-christmas-theorem" id="toc-relation-between-x21equiv_p-0-and-fermats-christmas-theorem" class="nav-link" data-scroll-target="#relation-between-x21equiv_p-0-and-fermats-christmas-theorem">Relation between <span class="math inline">\(x^2+1\equiv_p 0\)</span> and Fermat’s christmas theorem</a>
+  <li><a href="#proof-of-the-theorem-finally" id="toc-proof-of-the-theorem-finally" class="nav-link" data-scroll-target="#proof-of-the-theorem-finally">Proof of the theorem (finally!)</a>
   <ul class="collapse">
+  <li><a href="#relation-between-x21equiv_p-0-and-fermats-christmas-theorem" id="toc-relation-between-x21equiv_p-0-and-fermats-christmas-theorem" class="nav-link" data-scroll-target="#relation-between-x21equiv_p-0-and-fermats-christmas-theorem">Relation between <span class="math inline">\(x^2+1\equiv_p 0\)</span> and Fermat’s christmas theorem</a></li>
   <li><a href="#primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers" id="toc-primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers" class="nav-link" data-scroll-target="#primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers">Primes in the integers which are not primes in the Gaussian integers</a></li>
   <li><a href="#wilson-theorem-and-solution-to-x21equiv_p-0" id="toc-wilson-theorem-and-solution-to-x21equiv_p-0" class="nav-link" data-scroll-target="#wilson-theorem-and-solution-to-x21equiv_p-0">Wilson theorem and solution to <span class="math inline">\(x^2+1\equiv_p 0\)</span></a></li>
   <li><a href="#the-theorem-is-proven-what-else-can-we-say" id="toc-the-theorem-is-proven-what-else-can-we-say" class="nav-link" data-scroll-target="#the-theorem-is-proven-what-else-can-we-say">The theorem is proven, what else can we say?</a></li>
@@ -379,7 +379,7 @@ window.Quarto = {
 </div>
 <section id="fermats-christmas-theorem" class="level1">
 <h1>Fermat’s Christmas Theorem</h1>
-<p>Let’s recap what we have seen so far. We start by stating Fermat’s Christmas theorem in terms of congruences.</p>
+<p>Let’s recap what we have seen so far. We begin by stating Fermat’s Christmas theorem in terms of congruences.</p>
 <div id="thm-fermat" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Fermat’s Christmas Theorem)</strong></span> An odd prime number <span class="math inline">\(p\)</span> can be written as <span class="math inline">\(p=a^2+b^2\)</span> with <span class="math inline">\(a,b\in\mathbb Z\)</span> if and only if <span class="math inline">\(p\equiv_4 1\)</span>.</p>
 </div>
@@ -390,19 +390,23 @@ window.Quarto = {
 <h1>Gaussian integers</h1>
 <p>We all know that the equation <span id="eq-gauss"><span class="math display">\[
     x^2+1=0
-\tag{1}\]</span></span> has no solutions in the integers, since squares are always nonnegative, and if we add <span class="math inline">\(1\)</span> to a nonnegative number we can’t get zero. Right?</p>
-<p>Well, let’s add a solution of this equation to the integers: we define <span class="math display">\[
+\tag{1}\]</span></span> has no solutions in the integers, since squares are always nonnegative, and if we add <span class="math inline">\(1\)</span> to a nonnegative number we can’t get zero.</p>
+<p>Let’s add a solution of this equation to the integers: we define <span class="math display">\[
 i:=\sqrt{-1}
 \]</span> so that we get <span class="math display">\[
     i^2+1=\sqrt{-1}^2+1=-1+1=0
 \]</span></p>
-<p>We now have a solution to <a href="#eq-gauss" class="quarto-xref">Equation&nbsp;1</a>.</p>
-<p>We define <span class="math inline">\(\mathbb{Z}[i]\)</span> to be the set of integers in which we add this <span class="math inline">\(i\)</span>. The “numbers” in <span class="math inline">\(\mathbb{Z}[i]\)</span> are of the form <span class="math inline">\(a+b\cdot i\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are usual integers. For example, <span class="math inline">\(1+2i\)</span>, <span class="math inline">\(5+7i\)</span>, and <span class="math inline">\(0+i\)</span> are all Gaussian integers. The special cases of numbers of the form <span class="math inline">\(a+0\cdot i\)</span> will be just denoted by <span class="math inline">\(a\)</span>, while the numbers <span class="math inline">\(0+b\cdot i\)</span> will be denoted just by <span class="math inline">\(bi\)</span>. In particular observe that we have all the integers inside <span class="math inline">\(\mathbb{Z}[i]\)</span>: indeed we can recover them as the numbers of the form <span class="math inline">\(a+0\cdot i=a\)</span>.</p>
-<p>But why should we work in Gaussian integers instead of classical integers? We will understand this later, since the existence of a solution for the congruence <span class="math display">\[
-x^2+1\equiv_p 0
-\]</span> is closely related to <span class="math inline">\(p\)</span> being a sum of two squares.</p>
-<p>First of all, how do products and sums work in the Gaussian integers?</p>
-<p>It is easy: you just have to treat <span class="math inline">\(i\)</span> as a formal variable, and remember that <span class="math inline">\(i^2=-1\)</span>. I will explain it better:</p>
+<p>Thus, we now have a solution to <a href="#eq-gauss" class="quarto-xref">Equation&nbsp;1</a>, which is <span class="math inline">\(i\)</span>.</p>
+<p>We define <span class="math inline">\(\mathbb{Z}[i]\)</span> (Gaussian integers) to be the integers together with this <span class="math inline">\(i\)</span>. The “numbers” in <span class="math inline">\(\mathbb{Z}[i]\)</span> are of the form <span class="math display">\[
+a+b\cdot i
+\]</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are usual integers. For example, <span class="math display">\[
+1+2i,\qquad 5+7i,\qquad 0+i
+\]</span> are all Gaussian integers. The special cases of numbers of the form <span class="math inline">\(a+0i\)</span> will be just denoted by <span class="math inline">\(a\)</span>, while the numbers <span class="math inline">\(0+bi\)</span> will be denoted just by <span class="math inline">\(bi\)</span>. In particular observe that we have all the integers inside <span class="math inline">\(\mathbb{Z}[i]\)</span>: indeed we can recover them as the numbers of the form <span class="math inline">\(a+0i=a\)</span>.</p>
+<p>But why should we work in Gaussian integers instead of classical integers? We will try to understand this throughout the proof of Fermat’s Christmas Theorem. The key is that the solutions of the polynomial equation <span class="math display">\[
+    x^2+1=0
+\]</span> are closely related to our theorem.</p>
+<p>But first, we should understand how products and sums work in the Gaussian integers.</p>
+<p>It is easy: you just have to treat <span class="math inline">\(i\)</span> as a formal variable, and remember that <span class="math inline">\(i^2=-1\)</span>. Let me explain it better:</p>
 <p>Suppose we want to sum <span class="math inline">\(3+2i\)</span> with <span class="math inline">\(5+i\)</span>. Then we do like this: <span class="math display">\[
     (3+2i)+(5+i)=(3+5)+(2+1)i=8+3i
 \]</span> so we add the numbers that don’t have the <span class="math inline">\(i\)</span> with them and the numbers that have the <span class="math inline">\(i\)</span> with them separately. Other examples: <span class="math display">\[
@@ -416,9 +420,9 @@ x^2+1\equiv_p 0
 <p>Other examples: <span class="math display">\[
     (-2+4i)(7-3i)=-2+34i,\qquad (3+6i)\cdot (-i)=6-3i,\qquad 3\cdot (-1+i)=-3+3i
 \]</span></p>
-<p>Now, define the following:</p>
+<p>Now, define the conjugate:</p>
 <div class="definition">
-<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We define its conjugate to be <span class="math inline">\(a-bi\)</span>.</p>
+<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We define its <em>conjugate</em> to be <span class="math inline">\(a-bi\)</span>.</p>
 </div>
 <div id="exm-conjugates" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1</strong></span> &nbsp;</p>
@@ -429,7 +433,7 @@ x^2+1\equiv_p 0
 <li>The conjugate of <span class="math inline">\(-6i\)</span> is <span class="math inline">\(6i\)</span>.</li>
 </ul>
 </div>
-<p>Now observe this useful thing. If you multiply a Gaussian integer <span class="math inline">\(a+bi\)</span> by its conjugate <span class="math inline">\(a-bi\)</span> you get <span class="math display">\[
+<p>Observe this useful thing. If you multiply a Gaussian integer <span class="math inline">\(a+bi\)</span> by its conjugate <span class="math inline">\(a-bi\)</span> you get <span class="math display">\[
     (a+bi)(a-bi)=a^2-abi+abi-b^2i^2=a^2-b^2i^2
 \]</span> and since <span class="math inline">\(i^2=-1\)</span> we get <span class="math display">\[
     (a+bi)(a-bi)=a^2+b^2
@@ -439,40 +443,52 @@ x^2+1\equiv_p 0
 <h2 class="anchored" data-anchor-id="what-is-a-prime-in-the-gaussian-integers">What is a prime in the Gaussian integers?</h2>
 <p>If you remember, in the <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html#what-a-prime-is">second post</a> we defined a prime <span class="math inline">\(p\)</span> as a number such that whenever <span class="math inline">\(p\)</span> divides a product <span class="math inline">\(a\cdot b\)</span>, then either <span class="math inline">\(p\)</span> divides <span class="math inline">\(a\)</span> or <span class="math inline">\(p\)</span> divides <span class="math inline">\(b\)</span>. We now do the same in the Gaussian integers. First we define what it means to divide something in the Gaussian integers.</p>
 <div class="definition">
-<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We say that <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(c+di\)</span> if we can write <span class="math display">\[
+<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We say that <span class="math inline">\(a+bi\)</span> <em>divides</em> <span class="math inline">\(c+di\)</span> if we can write <span class="math display">\[
     c+di=(a+bi)\cdot (e+fi)
 \]</span> for some Gaussian integer <span class="math inline">\(e+fi\)</span>.</p>
 </div>
 <div class="definition">
-<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We say that <span class="math inline">\(a+bi\)</span> is prime if whenever <span class="math inline">\(a+bi\)</span> divides a product <span class="math inline">\((c+di)(e+fi)\)</span> then either <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(c+di\)</span> or <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(e+fi\)</span>.</p>
+<p><strong>Definition:</strong> Let <span class="math inline">\(a+bi\)</span> be a Gaussian integer. We say that <span class="math inline">\(a+bi\)</span> is <em>prime</em> if whenever <span class="math inline">\(a+bi\)</span> divides a product <span class="math inline">\((c+di)(e+fi)\)</span> then either <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(c+di\)</span> or <span class="math inline">\(a+bi\)</span> divides <span class="math inline">\(e+fi\)</span>.</p>
 </div>
-<p>We will not prove the following theorem, whose proof is in some way similar to the one made for the integers.</p>
+<p>We will not prove the following theorem, whose proof is similar to the one made for the integers.</p>
 <div id="thm-ufd" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (Unique factorization)</strong></span> Every Gaussian integer <span class="math inline">\(a+bi\)</span> can be written as the product of Gaussian integer primes, i.e. <span class="math display">\[
     a+bi=(c_1+d_1i)\cdots(c_k+d_ki)
-\]</span> for some positive integer <span class="math inline">\(k\)</span>. This writing is unique up to multiplying by <span class="math inline">\(-1, i,\)</span> and <span class="math inline">\(-i\)</span>.</p>
+\]</span> for some positive integer <span class="math inline">\(k\)</span>. This writing is unique up to multiplying by <span class="math inline">\(1,-1, i,\)</span> and <span class="math inline">\(-i\)</span>.</p>
 </div>
 <p>Let’s clarify this uniqueness, which is a little bit strange. What we are saying is that if you consider a Gaussian integer like <span class="math inline">\(1+3i\)</span>, you can factorize it as <span class="math display">\[
     1+3i=(1+i)(2+i)
 \]</span> (you can check that <span class="math inline">\(1+i\)</span> and <span class="math inline">\(2+i\)</span> are primes by using the definition, but it is maybe a little tedious). Observe now that <span class="math inline">\(i\cdot (-i)=-i^2=1\)</span>. Therefore we can write <span class="math display">\[
-    1+3i=1\cdot (1+i)(2+i)=(i\cdot (-i))(1+i)(2+i)=i\cdot ((-i)\cdot (1+i))(2+i)=i\cdot (1-i)(2+i)
-\]</span> this seems to be another factorization of <span class="math inline">\(1+3i\)</span>. However, it differs from the other one only because we multiplied by <span class="math inline">\(1=i\cdot (-i)\)</span>. Therefore, we say that up to multiplying by these special numbers (if you think about it you can also do the same by writing <span class="math inline">\(1=(-1)\cdot (-1)\)</span> and <span class="math inline">\(1=(-i)\cdot i\)</span>) the factorization is unique.</p>
+    1+3i=1\cdot (1+i)(2+i)
+\]</span> just by multiplying by <span class="math inline">\(1\)</span>. But now we know that <span class="math inline">\(1=i\cdot (-i)\)</span>, therefore <span class="math display">\[
+    1+3i=(i\cdot (-i))(1+i)(2+i)
+\]</span> which is the same (by associativity) as <span class="math display">\[
+    1+3i=i\cdot ((-i)(1+i))(2+i)
+\]</span> hence <span class="math display">\[
+    1+3i=i\cdot (1-i)(2+i).
+\]</span> This seems to be another factorization of <span class="math inline">\(1+3i\)</span>. However, it differs from the other one only because we multiplied by <span class="math inline">\(1=i\cdot (-i)\)</span>. <a href="#thm-ufd" class="quarto-xref">Theorem&nbsp;2</a> is telling us that all the possible factorizations in primes of <span class="math inline">\(1+3i\)</span> we can write differ only by multiplying them by <span class="math inline">\(1\)</span> in fancy ways. Therefore, we say that up to multiplying by these special numbers (if you think about it you can also do the same by writing <span class="math inline">\(1=(-1)\cdot (-1)\)</span> and <span class="math inline">\(1=(-i)\cdot i\)</span>) the factorization is unique.</p>
 </section>
 </section>
 <section id="proof-of-the-theorem-finally" class="level1">
 <h1>Proof of the theorem (finally!)</h1>
-<p>Okay, we are almost there. We can now try to understand how the proof will work.</p>
-<p>Let <span class="math inline">\(p\)</span> be a prime in the integers. A sketch of the proof is to prove the following statements:</p>
+<p>We can now try to understand how the proof will work.</p>
+<p>Let <span class="math inline">\(p\)</span> be a prime in the integers. A sketch of the proof goes with the following statements:</p>
 <ul>
 <li>if <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution then <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers;</li>
 <li>if <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers, then <span class="math inline">\(p\)</span> can be written as the sum of two squares;</li>
 <li>if <span class="math inline">\(p\)</span> is the sum of two squares then <span class="math inline">\(p\equiv_4 1\)</span> (we already proved this <a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html#easy-part-of-fermats-christmas-theorem">last time</a>!);</li>
 <li>if <span class="math inline">\(p\equiv_4 1\)</span> then <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution.</li>
 </ul>
-<p>These implications tell us that if we know that one statement above is true, then all the other three are true. In other words, the statements above are all saying the same thing: they are equivalent, since they imply each other (observe that the first hypothesis is the same as the last conclusion).</p>
-</section>
-<section id="relation-between-x21equiv_p-0-and-fermats-christmas-theorem" class="level1">
-<h1>Relation between <span class="math inline">\(x^2+1\equiv_p 0\)</span> and Fermat’s christmas theorem</h1>
+<p>These implications tell us that if we know that one statement above is true, then all the others are true. In other words, the statements</p>
+<ul>
+<li><span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution;</li>
+<li><span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers;</li>
+<li><span class="math inline">\(p\)</span> is the sum of two squares;</li>
+<li><span class="math inline">\(p\equiv_4 1\)</span></li>
+</ul>
+<p>are all saying the same thing: they are equivalent, since they imply each other.</p>
+<section id="relation-between-x21equiv_p-0-and-fermats-christmas-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="relation-between-x21equiv_p-0-and-fermats-christmas-theorem">Relation between <span class="math inline">\(x^2+1\equiv_p 0\)</span> and Fermat’s christmas theorem</h2>
 <p>The following lemma is the crucial one: through this lemma we will be able to prove Fermat’s Christmas Theorem. It gives the right interpretation of what it means for a prime <span class="math inline">\(p\)</span> to be the sum of two squares.</p>
 <div id="lem-square-minus-one" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 1</strong></span> Let <span class="math inline">\(p\)</span> be a prime number. If the congruence <span class="math display">\[
@@ -491,13 +507,14 @@ x^2+1\equiv_p 0
 <p>Suppose that <span class="math inline">\(p+0i\)</span> were a prime in the Gaussian integers. Since <span class="math inline">\(p+0i\)</span> divides the product <span class="math inline">\((x+i)(x-i)\)</span>, then it would have to divide one of them. But this is impossible. Indeed, if <span class="math inline">\(p+0i\)</span> divides <span class="math inline">\(x+i\)</span>, then we can write <span class="math inline">\(x+i=(p+0i)(a+bi)=pa+pbi\)</span>. Confronting the coefficients of <span class="math inline">\(i\)</span> in both sides gives <span class="math inline">\(1=pb\)</span>, which is impossible. The same argument works for <span class="math inline">\(x-i\)</span>.</p>
 <p>Therefore <span class="math inline">\(p+0i\)</span> is not prime in the Gaussian integers.</p>
 </div>
+</section>
 <section id="primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers" class="level2">
 <h2 class="anchored" data-anchor-id="primes-in-the-integers-which-are-not-primes-in-the-gaussian-integers">Primes in the integers which are not primes in the Gaussian integers</h2>
 <div id="lem-not-prime" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 2</strong></span> Let <span class="math inline">\(p\)</span> be a prime number. If <span class="math inline">\(p+0i\)</span> is not prime in <span class="math inline">\(\mathbb{Z}[i]\)</span>, then we can write <span class="math inline">\(p\)</span> as a sum of two squares.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(p+0i\)</span> is not prime, then it can be written as a product of two factors: <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(p+0i\)</span> is not prime, then (by <a href="#thm-ufd" class="quarto-xref">Theorem&nbsp;2</a>) it can be written as a product of two factors: <span class="math display">\[
     p+0i=(a+bi)(c+di)
 \]</span> where neither <span class="math inline">\(a+bi\)</span> nor <span class="math inline">\(c+di\)</span> are equal to <span class="math inline">\(1,-1,i,-i\)</span>.</p>
 <p>Now multiply both sides by their conjugates. On the left we get <span class="math display">\[
@@ -522,7 +539,7 @@ x^2+1\equiv_p 0
 (p-1)\cdot (p-2)\cdot (p-3)\cdots 2\cdot 1 \equiv_p p-1.
 \]</span> i.e.&nbsp;multiplying all numbers from <span class="math inline">\(p-1\)</span> to <span class="math inline">\(1\)</span> we get <span class="math inline">\(p-1\)</span> modulo <span class="math inline">\(p\)</span>.</p>
 </div>
-<p>We give an idea of how to prove this theorem.</p>
+<p>We sketch an idea for the proof of Wilson’s theorem, however this proof is not essential for understanding the core of Fermat’s Christmas Theorem.</p>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em> (Idea). </span>Recall that an integer <span class="math inline">\(x\)</span> is invertible modulo <span class="math inline">\(p\)</span> if and only if <span class="math inline">\(\gcd(x,p)=1\)</span>. Since <span class="math inline">\(p\)</span> is prime, it has no common factors with any of the numbers <span class="math inline">\((p-1),(p-2),\dots,2,1\)</span>. This means that every factor on the left hand side is invertible modulo <span class="math inline">\(p\)</span>.</p>
 <p>Now, when you list all the invertible residues modulo <span class="math inline">\(p\)</span>, you get exactly <span class="math inline">\(1,2,\dots,p-1\)</span>. So on the left hand side, every term appears together with its inverse, except for the terms that are their own inverse.</p>
@@ -532,10 +549,10 @@ x^2+1\equiv_p 0
 <p><span class="theorem-title"><strong>Lemma 3</strong></span> If <span class="math inline">\(p\)</span> is a prime such that <span class="math inline">\(p\equiv_4 1\)</span> then <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(p\equiv_4 1\)</span>, it means that <span class="math inline">\(p-1\)</span> is divisible by <span class="math inline">\(4\)</span>, which means that <span class="math inline">\(p-1=4k\)</span> for some integer <span class="math inline">\(k\)</span>. We have then <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(p\equiv_4 1\)</span>, it means that <span class="math inline">\(p-1\)</span> is divisible by <span class="math inline">\(4\)</span>, which means that <span class="math inline">\(p-1=4k\)</span> for some integer <span class="math inline">\(k\)</span>. Consider then the product <span class="math display">\[
     (p-1)\cdot (p-2)\cdot (p-3)\cdots 3\cdot 2\cdot 1.
 \]</span></p>
-<p>Now group the factors in pairs as follows: <span class="math display">\[
+<p>Since <span class="math inline">\(p-1=4k\)</span> we can group the factors in pairs as follows: <span class="math display">\[
     (p-1)\cdot 1\cdot (p-2)\cdot 2\cdots (p-2k)\cdot (2k).
 \]</span></p>
 <p>Since <span class="math inline">\(p-j\equiv_p -j\)</span>, each pair gives <span class="math display">\[
@@ -555,9 +572,9 @@ x:= 1\cdot 2\cdots (2k-1)\cdot 2k
 </section>
 <section id="the-theorem-is-proven-what-else-can-we-say" class="level2">
 <h2 class="anchored" data-anchor-id="the-theorem-is-proven-what-else-can-we-say">The theorem is proven, what else can we say?</h2>
-<p>The theorem is finally proven, but we don’t stop asking questions. We come up with two questions.</p>
+<p>The theorem is finally proven, but we don’t stop asking questions.</p>
 <div id="qst-howmany">
-<p>How many primes can be written as the sum of two squares? Equivalently, how many primes have remainder <span class="math inline">\(1\)</span> when divided by <span class="math inline">\(4\)</span>?</p>
+<p><strong>Question:</strong> How many primes can be written as the sum of two squares? Equivalently, how many primes have remainder <span class="math inline">\(1\)</span> when divided by <span class="math inline">\(4\)</span>?</p>
 </div>
 <p>Probably not surprisingly we already expect that there are infinitely many primes that can be written as the sum of two squares. This statement is left as a guided exercise at the end of the post.</p>
 <p>An interesting, but non trivial fact is to know also the density of these kinds of primes. Namely, if we consider all the primes up to some integer <span class="math inline">\(N\)</span>, how many of these do we expect to be written as the sum of two squares? The answer is that we expect about half of them to be of this kind. Indeed here you can see a table which could convince you:</p>
@@ -597,24 +614,24 @@ x:= 1\cdot 2\cdots (2k-1)\cdot 2k
 </tr>
 </tbody>
 </table>
-<p>This can be proven, however this is far beyond our interests here.</p>
-<p>Another natural question now could be</p>
+<p>This can be rigorously proven, however this is far beyond our interests here.</p>
+<p>Another natural question could be</p>
 <div id="qst-numbers">
-<p>Consider an integer <span class="math inline">\(n\)</span>. When can we write it as the sum of two squares?</p>
+<p><strong>Question:</strong> Consider an integer <span class="math inline">\(n\)</span>. When can we write it as the sum of two squares?</p>
 </div>
-<p>So we are trying to generalize from the case of primes to the case of a general integer. This is not difficult to prove knowing Fermat’s Christmas Theorem, therefore it is also left as a guided exercise at the end.</p>
+<p>In other words we are asking how to generalize from the case of primes to the case of any integer. This is not difficult to prove knowing Fermat’s Christmas Theorem, therefore it is also left as a guided exercise at the end.</p>
 </section>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
 <p>I would like to point out that the crucial point in our reasoning was to relate the problem of writing <span class="math inline">\(p\)</span> as the sum of two squares and the solution of the congruence <span class="math inline">\(x^2+1\)</span>. Indeed, if you think about it, the Gaussian integers were defined by adding the solution of <span class="math inline">\(x^2+1=0\)</span> to the integers. This is not a coincidence.</p>
-<p>There are more general theorems that tell us precisely how the factorization of a prime (ideal) in an extension of the integers (given by adding something similar to the solutions of a polynomial) relates to the factorization (in our case the solutions) of the polynomial modulo that prime.</p>
+<p>There are more general theorems that tell us precisely how the factorization of a prime (actually, prime ideal) in an extension of the integers (given by adding something similar to the solutions of a polynomial) relates to the factorization of the polynomial modulo that prime.</p>
 <p>In our case we knew that <span class="math inline">\(x^2+1\equiv_p 0\)</span> has a solution, and this is the same as saying that there exists an integer <span class="math inline">\(u\)</span> such that <span class="math inline">\(u^2\equiv_p -1\)</span>. Then modulo <span class="math inline">\(p\)</span> we have the factorization <span class="math display">\[
     x^2+1\equiv_p (x+u)(x-u),
 \]</span> because <span class="math display">\[
     (x+u)(x-u)=x^2-u^2\equiv_p x^2+1.
 \]</span></p>
-<p>This tells us exactly that the prime <span class="math inline">\(p\)</span> can be written as the product of two primes in the Gaussian integers (observe the symmetry: the polynomial splits in two factors exactly as the prime). The theorem which explains this behaviour is known as the <a href="https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem">Dedekind-Kummer theorem</a>.</p>
+<p>This told us exactly that the prime <span class="math inline">\(p\)</span> can be written as the product of two primes in the Gaussian integers (observe the symmetry: the polynomial splits in two factors exactly as the prime). The theorem which explains this behaviour is known as the <a href="https://en.wikipedia.org/wiki/Dedekind%E2%80%93Kummer_theorem">Dedekind-Kummer theorem</a>.</p>
 </section>
 <section id="guided-exercises" class="level1">
 <h1>Guided exercises</h1>
@@ -656,10 +673,7 @@ Consider the integer <span class="math inline">\(k^2+1\)</span>. Which primes ca
 <summary>
 Solution to Hint 3 (and end of the exercise)
 </summary>
-<p>Take a prime <span class="math inline">\(q\)</span> dividing <span class="math inline">\(k^2+1\)</span>. Then <span class="math display">\[
-  k^2\equiv_q -1,
-  \]</span> so <span class="math inline">\(-1\)</span> is a square mod <span class="math inline">\(q\)</span>. By definition of <span class="math inline">\(k\)</span>, this forces <span class="math inline">\(q\mid k\)</span>.</p>
-<p>But then <span class="math inline">\(q\)</span> divides both <span class="math inline">\(k\)</span> and <span class="math inline">\(k^2+1\)</span>, hence it divides their difference <span class="math inline">\((k^2+1)-k^2=1\)</span>, impossible. Contradiction.</p>
+<p>Similarly to the Euclid’s proof, none of the prime factors of <span class="math inline">\(k\)</span> (i.e.&nbsp;the primes such that <span class="math inline">\(-1\)</span> is a square modulo <span class="math inline">\(p\)</span>) can divide <span class="math inline">\(k^2+1\)</span> (since the remainder is <span class="math inline">\(1\)</span>). However there must be a prime <span class="math inline">\(q\)</span> dividing <span class="math inline">\(k^2+1\)</span>, hence the finite list we supposed to have is not complete.</p>
 Therefore the assumption “only finitely many primes with <span class="math inline">\(-1\)</span> a square mod <span class="math inline">\(p\)</span>” was false, and there are infinitely many such primes. By Fermat’s Christmas theorem, these are exactly the primes that are sums of two squares.
 </details>
 <hr>

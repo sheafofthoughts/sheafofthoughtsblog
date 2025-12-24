@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html",
       "/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html",
       "/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html",
       "/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html",
