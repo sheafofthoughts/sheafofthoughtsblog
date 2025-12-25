@@ -9,8 +9,8 @@ draft: unlinked
 ---
 
 <div class="lang-switch">
-  <a href="/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.qmd">ITA</a>
-  <span class="lang-current">ENG</span>
+  <a href="/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.qmd">ENG</a>
+  <span class="lang-current">ITA</span>
 </div>
 
 # Teorema di Natale
