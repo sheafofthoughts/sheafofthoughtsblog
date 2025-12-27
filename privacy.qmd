@@ -5,8 +5,6 @@ draft: unlinked
 comments: false
 ---
 
-### Privacy
-
 This site is a personal, non-commercial math blog. It does not use first-party analytics, advertising, or tracking cookies. Pages are served via GitHub Pages, which may log standard technical information (such as IP address and user agent) in server logs for security and operational purposes.
 
 Comments are provided via **giscus**, which embeds GitHub Discussions. To post a comment you must be logged in with your GitHub account. When you interact with the comment box, GitHub may process personal data (for example your GitHub username, profile picture, IP address, and browser information) in accordance with [GitHub’s Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) and the [giscus privacy policy](https://github.com/giscus/giscus#privacy).
