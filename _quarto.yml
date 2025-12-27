@@ -6,6 +6,18 @@ project:
 
 website:
   title: "SheafofThoughts"
+
+  comments:
+    giscus:
+      repo: "sheafofthoughts/sheafofthoughtsblog"
+      repo-id: "R_kgDOQmlT5A"
+      category: "Announcements"
+      category-id: "DIC_kwDOQmlT5M4C0SVZ"
+      mapping: "pathname"
+      reactions-enabled: true
+      input-position: "bottom"
+      theme: "preferred_color_scheme"
+
   site-url: https://sheafofthoughts.org
   navbar:
     left:
@@ -14,6 +26,8 @@ website:
     right:
       - href: about.qmd
         text: About
+      - href: privacy.qmd
+        text: Privacy
 
 format:
   html:

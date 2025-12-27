@@ -1,5 +1,6 @@
 ---
 title: "Recent Posts"
+comments: false
 format:
   html:
     toc: false
@@ -14,5 +15,6 @@ listing:
   fields: [title, subtitle, description, date, categories]
   feed:
     title: "SheafofThoughts"
+
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Fermat's Christmas Theorem – series index"
+comments: false
 format:
   html:
     toc: false

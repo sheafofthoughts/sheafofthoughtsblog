@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Recent Posts – SheafofThoughts</title>
+<title>Privacy – SheafofThoughts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <meta name="msvalidate.01" content="27B9097A6103EA5075D902CB55234013">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -136,7 +105,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="SheafofThoughts" href="index.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -318,7 +287,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Recent Posts</span></a>
   </li>  
 </ul>
@@ -328,7 +297,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./privacy.html"> 
+    <a class="nav-link active" href="./privacy.html" aria-current="page"> 
 <span class="menu-text">Privacy</span></a>
   </li>  
 </ul>
@@ -344,14 +313,21 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QWxnZWJyYWljJTIwR2VvbWV0cnk=">Algebraic Geometry <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RXhwb3NpdG9yeQ==">Expository <span class="quarto-category-count">(4)</span></div><div class="category" data-category="SW50ZXJtZWRpYXRl">Intermediate <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TnVtYmVyJTIwVGhlb3J5">Number Theory <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#privacy" id="toc-privacy" class="nav-link active" data-scroll-target="#privacy">Privacy</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="privacy.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Recent Posts</h1>
+<h1 class="title">Privacy</h1>
 </div>
 
 
@@ -368,199 +344,17 @@ window.Quarto = {
 </header>
 
 
+<section id="privacy" class="level3">
+<h3 class="anchored" data-anchor-id="privacy">Privacy</h3>
+<p>This site is a personal, non-commercial math blog. It does not use first-party analytics, advertising, or tracking cookies. Pages are served via GitHub Pages, which may log standard technical information (such as IP address and user agent) in server logs for security and operational purposes.</p>
+<p>Comments are provided via <strong>giscus</strong>, which embeds GitHub Discussions. To post a comment you must be logged in with your GitHub account. When you interact with the comment box, GitHub may process personal data (for example your GitHub username, profile picture, IP address, and browser information) in accordance with <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub’s Privacy Statement</a> and the <a href="https://github.com/giscus/giscus#privacy">giscus privacy policy</a>.</p>
+<p>I do not store any additional personal data from visitors beyond what is collected by GitHub/Giscus, nor do I share data with third parties for marketing purposes. If you contact me directly (for example via email), any information you provide will be used solely to respond to your request.</p>
 
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1766617200000" data-listing-file-modified-sort="1766575707785" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2900">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">Proof of Fermat’s Christmas Theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">
-<p>We prove Fermat’s Christmas Theorem using Gaussian integers, linking sums of two squares to the solvability of <span class="math inline">\(x^2\equiv_p -1\)</span>.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">
-<div class="listing-date">
-Dec 25, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="SW50ZXJtZWRpYXRlJTJDTnVtYmVyJTIwVGhlb3J5JTJDQWxnZWJyYWljJTIwR2VvbWV0cnk=" data-listing-date-sort="1766012400000" data-listing-file-modified-sort="1766075434875" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1575">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">Why Fermat had (probably) no proof?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TnVtYmVyJTIwVGhlb3J5'); return false;">Number Theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwR2VvbWV0cnk='); return false;">Algebraic Geometry</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">
-<p>We explain why, if Fermat had a proof, it should have been <em>very</em> remarkable.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">
-<div class="listing-date">
-Dec 18, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1765666800000" data-listing-file-modified-sort="1766574997342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1813">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">Some basic modular arithmetic</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">
-<p>We introduce modular arithmetic and understand the meaning of Chinese Remainder Theorem.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">
-<div class="listing-date">
-Dec 14, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="SW50ZXJtZWRpYXRlJTJDTnVtYmVyJTIwVGhlb3J5" data-listing-date-sort="1765580400000" data-listing-file-modified-sort="1766075135954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1591">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">Some interesting consequences of Chebotarev density theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TnVtYmVyJTIwVGhlb3J5'); return false;">Number Theory</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">
-<p>We will prove how some interesting propositions follow from the Chebotarev density theorem.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">
-<div class="listing-date">
-Dec 13, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1765148400000" data-listing-file-modified-sort="1766495939524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1514">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">How many primes are there?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">
-<p>Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">
-<div class="listing-date">
-Dec 8, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="SW50ZXJtZWRpYXRlJTJDQWxnZWJyYWljJTIwR2VvbWV0cnk=" data-listing-date-sort="1765062000000" data-listing-file-modified-sort="1765623251539" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1666">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">Ax–Grothendieck Theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">When does injectivity imply bijectivity?</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwR2VvbWV0cnk='); return false;">Algebraic Geometry</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">
-<p>We investigate when injectivity is sufficient for surjectivity in an algebraic setting. We first treat the case of an algebraically closed field and give a complete proof, then discuss generalizations to schemes.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">
-<div class="listing-date">
-Dec 7, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1764370800000" data-listing-file-modified-sort="1765756188770" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1019">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">Introduction to Fermat’s Christmas Theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">
-<p>We introduce Fermat’s Christmas Theorem and try to understand its meaning through concrete examples.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">
-<div class="listing-date">
-Nov 29, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -974,6 +768,38 @@ Nov 29, 2025
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "sheafofthoughts/sheafofthoughtsblog";
+    script.dataset.repoId = "R_kgDOQmlT5A";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOQmlT5M4C0SVZ";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 

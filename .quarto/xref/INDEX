@@ -81,5 +81,9 @@
   "IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.qmd": {
     "proof-of-the-theorem-IT.html": "9666e289",
     "proof-of-the-theorem-IT.tex": "6d60d185"
+  },
+  "privacy.qmd": {
+    "privacy.html": "ad7f36dd",
+    "privacy.tex": "051ec72a"
   }
 }
