@@ -1,14 +1,5 @@
 [
   {
-    "listing": "/posts/fermat-christmas-theorem/index.html",
-    "items": [
-      "/posts/fermat-christmas-theorem/introduction/introduction.html",
-      "/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html",
-      "/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html",
-      "/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html",
@@ -18,6 +9,15 @@
       "/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html",
       "/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html",
       "/posts/fermat-christmas-theorem/introduction/introduction.html"
+    ]
+  },
+  {
+    "listing": "/posts/fermat-christmas-theorem/index.html",
+    "items": [
+      "/posts/fermat-christmas-theorem/introduction/introduction.html",
+      "/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html",
+      "/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html",
+      "/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html"
     ]
   }
 ]
