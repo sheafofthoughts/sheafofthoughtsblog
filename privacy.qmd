@@ -2,6 +2,7 @@
 title: "Privacy"
 page-layout: article
 draft: unlinked
+comments: false
 ---
 
 ### Privacy
