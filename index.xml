@@ -78,7 +78,7 @@
 <section id="proof-of-the-theorem-finally" class="level1">
 <h1>Proof of the theorem (finally!)</h1>
 <p>We can now try to understand how the proof will work.</p>
-<p>Let <img src="https://latex.codecogs.com/png.latex?p"> be a prime in the integers. A sketch of the proof goes with the following statements:</p>
+<p>Let <img src="https://latex.codecogs.com/png.latex?p"> be an odd prime in the integers. A sketch of the proof goes with the following statements:</p>
 <ul>
 <li>if <img src="https://latex.codecogs.com/png.latex?x%5E2+1%5Cequiv_p%200"> has a solution then <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers;</li>
 <li>if <img src="https://latex.codecogs.com/png.latex?p+0i"> is not prime in the Gaussian integers, then <img src="https://latex.codecogs.com/png.latex?p"> can be written as the sum of two squares;</li>
