@@ -182,7 +182,7 @@ Questa sembra un’altra fattorizzazione di $1+3i$. Tuttavia differisce dalla pr
 
 Ora possiamo capire come funzionerà la dimostrazione.
 
-Sia $p$ un numero primo negli interi. Uno schema della dimostrazione consiste nel provare le seguenti affermazioni:
+Sia $p$ un numero primo dispari negli interi. Uno schema della dimostrazione consiste nel provare le seguenti affermazioni:
 
 - se $x^2+1\equiv_p 0$ ha una soluzione allora $p+0i$ non è primo negli interi di Gauss;
 - se $p+0i$ non è primo negli interi di Gauss, allora $p$ si può scrivere come somma di due quadrati;

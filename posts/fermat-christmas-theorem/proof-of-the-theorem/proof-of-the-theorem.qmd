@@ -194,7 +194,7 @@ This seems to be another factorization of $1+3i$. However, it differs from the o
 
 We can now try to understand how the proof will work.
 
-Let $p$ be a prime in the integers. A sketch of the proof goes with the following statements:
+Let $p$ be an odd prime in the integers. A sketch of the proof goes with the following statements:
 
 - if $x^2+1\equiv_p 0$ has a solution then $p+0i$ is not prime in the Gaussian integers;
 - if $p+0i$ is not prime in the Gaussian integers, then $p$ can be written as the sum of two squares;
