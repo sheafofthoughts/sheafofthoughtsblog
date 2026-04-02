@@ -1,20 +1,67 @@
 ---
-title: "Recent Posts"
+title: "Home"
+page-layout: full
 comments: false
 format:
   html:
     toc: false
-
-listing:
-  type: default
-  contents:
-    - posts
-    - "!posts/fermat-christmas-theorem/index.qmd"
-  sort: "date desc"
-  categories: true
-  fields: [title, subtitle, description, date, categories]
-  feed:
-    title: "SheafofThoughts"
-
 ---
+
+Welcome to **SheafofThoughts**.
+
+This is a mathematics blog with posts at different levels and on different themes. The homepage is organized by category: click a title inside a box to jump directly to the recent posts in that class.
+
+## Browse by category
+
+::: {.category-grid}
+
+::: {.category-card}
+::: {.category-card-top}
+Topic
+:::
+### [Algebraic Geometry](posts.html#category=Algebraic%20Geometry)
+
+schemes, cohomology...
+:::
+
+::: {.category-card}
+::: {.category-card-top}
+Topic
+:::
+### [Number Theory](posts.html#category=Number%20Theory)
+
+diophantine equations, primes, number-theoretic curiosities...
+:::
+
+::: {.category-card}
+::: {.category-card-top}
+Level
+:::
+### [Beginner](posts.html#category=Beginner)
+
+Beginner-friendlier posts meant to explain ideas slowly and from first principles.
+:::
+
+::: {.category-card}
+::: {.category-card-top}
+Level
+:::
+### [Intermediate](posts.html#category=Intermediate)
+
+Posts aimed at readers with more background who want denser mathematical content.
+:::
+:::
+
+## Series
+
+::: {.series-grid}
+::: {.category-card}
+::: {.category-card-top}
+Series
+:::
+### [Fermat’s Christmas Theorem](posts/fermat-christmas-theorem/)
+
+A series of posts aimed at proving Fermat's Christmas Theorem.
+:::
+:::
 

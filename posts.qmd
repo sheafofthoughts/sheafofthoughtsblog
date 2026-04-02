@@ -1,0 +1,19 @@
+---
+title: "Browse Posts"
+comments: false
+format:
+  html:
+    toc: false
+listing:
+  type: default
+  contents:
+    - posts
+    - "!posts/fermat-christmas-theorem/index.qmd"
+  sort: "date desc"
+  categories: numbered
+  fields: [title, subtitle, description, date, categories]
+  sort-ui: [date, title]
+  filter-ui: [title, description, categories]
+  feed:
+    title: "SheafofThoughts"
+---

@@ -4,12 +4,12 @@ subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts
 date: "2025-12-25"
 description: >
   We prove Fermat's Christmas Theorem using Gaussian integers, linking sums of two squares to the solvability of $x^2\equiv_p -1$.
-categories: [Expository]
+categories: [Beginner, Number Theory]
 ---
 
 <div class="lang-switch">
-  <a href="/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.qmd">ITA</a>
   <span class="lang-current">ENG</span>
+  <a href="/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.qmd">ITA</a>
 </div>
 
 # Fermat’s Christmas Theorem 

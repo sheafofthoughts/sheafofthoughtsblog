@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Privacy – SheafofThoughts</title>
+<title>Browse Posts – SheafofThoughts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -72,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <meta name="msvalidate.01" content="27B9097A6103EA5075D902CB55234013">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -105,7 +136,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="SheafofThoughts" href="posts.xml" data-external="1"></head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -291,7 +322,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link active" href="./posts.html" aria-current="page"> 
 <span class="menu-text">Browse Posts</span></a>
   </li>  
 </ul>
@@ -301,7 +332,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./privacy.html" aria-current="page"> 
+    <a class="nav-link" href="./privacy.html"> 
 <span class="menu-text">Privacy</span></a>
   </li>  
 </ul>
@@ -317,33 +348,14 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#controller" id="toc-controller" class="nav-link active" data-scroll-target="#controller">1. Controller</a></li>
-  <li><a href="#categories-of-personal-data" id="toc-categories-of-personal-data" class="nav-link" data-scroll-target="#categories-of-personal-data">2. Categories of personal data</a></li>
-  <li><a href="#purposes-of-processing" id="toc-purposes-of-processing" class="nav-link" data-scroll-target="#purposes-of-processing">3. Purposes of processing</a></li>
-  <li><a href="#legal-bases" id="toc-legal-bases" class="nav-link" data-scroll-target="#legal-bases">4. Legal bases</a></li>
-  <li><a href="#cookies-and-similar-technologies" id="toc-cookies-and-similar-technologies" class="nav-link" data-scroll-target="#cookies-and-similar-technologies">5. Cookies and similar technologies</a></li>
-  <li><a href="#hosting-provider-and-recipients" id="toc-hosting-provider-and-recipients" class="nav-link" data-scroll-target="#hosting-provider-and-recipients">6. Hosting provider and recipients</a></li>
-  <li><a href="#international-transfers" id="toc-international-transfers" class="nav-link" data-scroll-target="#international-transfers">7. International transfers</a></li>
-  <li><a href="#retention" id="toc-retention" class="nav-link" data-scroll-target="#retention">8. Retention</a></li>
-  <li><a href="#whether-provision-of-data-is-mandatory" id="toc-whether-provision-of-data-is-mandatory" class="nav-link" data-scroll-target="#whether-provision-of-data-is-mandatory">9. Whether provision of data is mandatory</a></li>
-  <li><a href="#your-rights" id="toc-your-rights" class="nav-link" data-scroll-target="#your-rights">10. Your rights</a></li>
-  <li><a href="#complaint-to-a-supervisory-authority" id="toc-complaint-to-a-supervisory-authority" class="nav-link" data-scroll-target="#complaint-to-a-supervisory-authority">11. Complaint to a supervisory authority</a></li>
-  <li><a href="#automated-decision-making" id="toc-automated-decision-making" class="nav-link" data-scroll-target="#automated-decision-making">12. Automated decision-making</a></li>
-  <li><a href="#changes-to-this-notice" id="toc-changes-to-this-notice" class="nav-link" data-scroll-target="#changes-to-this-notice">13. Changes to this notice</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="privacy.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QWxnZWJyYWljJTIwR2VvbWV0cnk=">Algebraic Geometry <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QmVnaW5uZXI=">Beginner <span class="quarto-category-count">(4)</span></div><div class="category" data-category="SW50ZXJtZWRpYXRl">Intermediate <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TnVtYmVyJTIwVGhlb3J5">Number Theory <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Privacy</h1>
+<h1 class="title">Browse Posts</h1>
 </div>
 
 
@@ -360,113 +372,223 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last updated: 2026-04-02</em></p>
-<p>This privacy notice explains how personal data may be processed when you visit <strong>SheafofThoughts</strong> (the “Site”). It is written for the current configuration of the Site as a <strong>static personal blog without comments, contact forms, newsletters, analytics, advertising, or social-media widgets</strong>.</p>
-<section id="controller" class="level2">
-<h2 class="anchored" data-anchor-id="controller">1. Controller</h2>
-<p>The controller of the processing connected with this Site is the person who operates <strong>sheafofthoughts.org</strong>.</p>
-<p>Before publishing this notice, replace the placeholders below with real information:</p>
-<ul>
-<li><strong>Controller:</strong> <code>Davide D'Angelo</code></li>
-<li><strong>Contact email for privacy requests:</strong> <code>sheafofthoughts.huddling989@passmail.com</code></li>
-</ul>
-</section>
-<section id="categories-of-personal-data" class="level2">
-<h2 class="anchored" data-anchor-id="categories-of-personal-data">2. Categories of personal data</h2>
-<p>When you browse the Site, the following categories of personal data may be processed:</p>
-<ol type="1">
-<li><strong>Technical connection and request data</strong>, such as IP address, date and time of the request, requested resource, browser and device metadata, referrer, and similar HTTP or server-log information.</li>
-<li><strong>Security and operational data</strong> generated by the hosting infrastructure to deliver the Site, prevent abuse, and maintain service integrity.</li>
-<li><strong>Data you voluntarily provide</strong> only if you contact the Site owner directly outside the Site, for example by sending an email to the published contact address.</li>
-</ol>
-<p>The Site is intended not to collect comments, account data, form submissions, newsletter sign-ups, or first-party analytics data.</p>
-</section>
-<section id="purposes-of-processing" class="level2">
-<h2 class="anchored" data-anchor-id="purposes-of-processing">3. Purposes of processing</h2>
-<p>Personal data may be processed for the following purposes:</p>
-<ul>
-<li>delivering the Site and its content;</li>
-<li>ensuring security, integrity, abuse prevention, and troubleshooting;</li>
-<li>maintaining the availability and technical operation of the Site;</li>
-<li>replying to communications that you voluntarily send directly to the Site owner.</li>
-</ul>
-</section>
-<section id="legal-bases" class="level2">
-<h2 class="anchored" data-anchor-id="legal-bases">4. Legal bases</h2>
-<p>The processing described above is based on the following legal bases:</p>
-<ul>
-<li><strong>Article 6(1)(f) GDPR</strong>: legitimate interests in operating a secure and functional personal website and in responding to communications sent by users;</li>
-<li>where applicable, <strong>Article 6(1)(b) GDPR</strong> for steps taken at your request before entering into a specific arrangement initiated by you;</li>
-<li>where applicable, compliance with legal obligations under <strong>Article 6(1)(c) GDPR</strong>.</li>
-</ul>
-</section>
-<section id="cookies-and-similar-technologies" class="level2">
-<h2 class="anchored" data-anchor-id="cookies-and-similar-technologies">5. Cookies and similar technologies</h2>
-<p>The Site is intended to operate <strong>without first-party analytics cookies, profiling cookies, advertising cookies, or comment widgets</strong>.</p>
-<p>To the best of the current configuration, the Site itself does not intentionally set non-essential tracking tools. However, the hosting provider may process technical information and may use cookies or similar technologies insofar as necessary for infrastructure delivery, security, and service operation.</p>
-<p>If analytics, embeds, external interactive widgets, advertising, or similar tools are added later, this notice and the technical configuration should be reviewed again, and consent requirements may change.</p>
-</section>
-<section id="hosting-provider-and-recipients" class="level2">
-<h2 class="anchored" data-anchor-id="hosting-provider-and-recipients">6. Hosting provider and recipients</h2>
-<p>The Site is hosted through <strong>GitHub Pages / GitHub</strong>. According to GitHub’s documentation, when a GitHub Pages site is visited, the visitor’s IP address is logged and stored for security purposes.</p>
-<p>Personal data may therefore be processed by:</p>
-<ul>
-<li><strong>GitHub / GitHub Pages</strong>, as hosting and infrastructure provider;</li>
-<li>technical service providers involved in secure content delivery, network protection, and related infrastructure support where applicable;</li>
-<li>public authorities or other recipients where disclosure is required by law.</li>
-</ul>
-</section>
-<section id="international-transfers" class="level2">
-<h2 class="anchored" data-anchor-id="international-transfers">7. International transfers</h2>
-<p>Because the Site uses GitHub infrastructure, personal data may be processed outside the European Economic Area, including in the United States.</p>
-<p>GitHub states in its privacy documentation that it may transfer personal data from the EU/EEA, UK, and Switzerland outside those jurisdictions and that it relies on the transfer mechanisms and safeguards described in its own privacy documentation.</p>
-</section>
-<section id="retention" class="level2">
-<h2 class="anchored" data-anchor-id="retention">8. Retention</h2>
-<p>The Site owner does not intend to maintain a separate visitor database.</p>
-<p>Personal data is kept only for as long as necessary for the purposes described above and, in practice, may be retained according to the operational policies of the hosting provider.</p>
-<p>In particular:</p>
-<ul>
-<li>technical and security log data are retained according to the hosting provider’s operational and security practices;</li>
-<li>emails or other direct communications sent to the Site owner may be retained for as long as reasonably necessary to handle the correspondence and any related follow-up.</li>
-</ul>
-</section>
-<section id="whether-provision-of-data-is-mandatory" class="level2">
-<h2 class="anchored" data-anchor-id="whether-provision-of-data-is-mandatory">9. Whether provision of data is mandatory</h2>
-<p>Some technical processing is necessary in order to access the Site.</p>
-<p>If you choose to contact the Site owner directly, you necessarily provide the data contained in your communication.</p>
-</section>
-<section id="your-rights" class="level2">
-<h2 class="anchored" data-anchor-id="your-rights">10. Your rights</h2>
-<p>Subject to the conditions and limits laid down by the GDPR, you may request:</p>
-<ul>
-<li>access to your personal data;</li>
-<li>rectification of inaccurate data;</li>
-<li>erasure of data;</li>
-<li>restriction of processing;</li>
-<li>objection to processing based on legitimate interests;</li>
-<li>data portability, where applicable.</li>
-</ul>
-<p>Where processing is based on consent, you may also withdraw consent at any time, without affecting the lawfulness of processing carried out before withdrawal.</p>
-<p>To exercise your rights in relation to processing controlled by the Site owner, use the contact details indicated in Section 1.</p>
-</section>
-<section id="complaint-to-a-supervisory-authority" class="level2">
-<h2 class="anchored" data-anchor-id="complaint-to-a-supervisory-authority">11. Complaint to a supervisory authority</h2>
-<p>You have the right to lodge a complaint with a competent supervisory authority. For individuals in Italy, this includes the <strong>Garante per la protezione dei dati personali</strong>.</p>
-</section>
-<section id="automated-decision-making" class="level2">
-<h2 class="anchored" data-anchor-id="automated-decision-making">12. Automated decision-making</h2>
-<p>The Site does not intentionally carry out automated decision-making or profiling producing legal or similarly significant effects on visitors.</p>
-</section>
-<section id="changes-to-this-notice" class="level2">
-<h2 class="anchored" data-anchor-id="changes-to-this-notice">13. Changes to this notice</h2>
-<p>This notice may be updated if the Site changes, especially if analytics, forms, comments, newsletters, embeds, or other third-party tools are added.</p>
 
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="QmVnaW5uZXIlMkNOdW1iZXIlMjBUaGVvcnk=" data-listing-date-sort="1766617200000" data-listing-file-modified-sort="1775135457702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2901">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">Proof of Fermat’s Christmas Theorem</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmVnaW5uZXI='); return false;">Beginner</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TnVtYmVyJTIwVGhlb3J5'); return false;">Number Theory</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">
+<p>We prove Fermat’s Christmas Theorem using Gaussian integers, linking sums of two squares to the solvability of <span class="math inline">\(x^2\equiv_p -1\)</span>.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">
+<div class="listing-date">
+Dec 25, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="SW50ZXJtZWRpYXRlJTJDTnVtYmVyJTIwVGhlb3J5JTJDQWxnZWJyYWljJTIwR2VvbWV0cnk=" data-listing-date-sort="1766012400000" data-listing-file-modified-sort="1766075434875" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1575">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">Why Fermat had (probably) no proof?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TnVtYmVyJTIwVGhlb3J5'); return false;">Number Theory</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwR2VvbWV0cnk='); return false;">Algebraic Geometry</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">
+<p>We explain why, if Fermat had a proof, it should have been <em>very</em> remarkable.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">
+<div class="listing-date">
+Dec 18, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="QmVnaW5uZXI=" data-listing-date-sort="1765666800000" data-listing-file-modified-sort="1775135175965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1813">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">Some basic modular arithmetic</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmVnaW5uZXI='); return false;">Beginner</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">
+<p>We introduce modular arithmetic and understand the meaning of Chinese Remainder Theorem.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">
+<div class="listing-date">
+Dec 14, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="SW50ZXJtZWRpYXRlJTJDTnVtYmVyJTIwVGhlb3J5" data-listing-date-sort="1765580400000" data-listing-file-modified-sort="1766075135954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1591">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">Some interesting consequences of Chebotarev density theorem</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TnVtYmVyJTIwVGhlb3J5'); return false;">Number Theory</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">
+<p>We will prove how some interesting propositions follow from the Chebotarev density theorem.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">
+<div class="listing-date">
+Dec 13, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="QmVnaW5uZXI=" data-listing-date-sort="1765148400000" data-listing-file-modified-sort="1775135163857" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1514">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">How many primes are there?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmVnaW5uZXI='); return false;">Beginner</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">
+<p>Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">
+<div class="listing-date">
+Dec 8, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="SW50ZXJtZWRpYXRlJTJDQWxnZWJyYWljJTIwR2VvbWV0cnk=" data-listing-date-sort="1765062000000" data-listing-file-modified-sort="1765623251539" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1666">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">Ax–Grothendieck Theorem</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">When does injectivity imply bijectivity?</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwR2VvbWV0cnk='); return false;">Algebraic Geometry</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">
+<p>We investigate when injectivity is sufficient for surjectivity in an algebraic setting. We first treat the case of an algebraically closed field and give a complete proof, then discuss generalizations to schemes.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">
+<div class="listing-date">
+Dec 7, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="QmVnaW5uZXI=" data-listing-date-sort="1764370800000" data-listing-file-modified-sort="1775135192838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1019">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">Introduction to Fermat’s Christmas Theorem</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmVnaW5uZXI='); return false;">Beginner</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">
+<p>We introduce Fermat’s Christmas Theorem and try to understand its meaning through concrete examples.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">
+<div class="listing-date">
+Nov 29, 2025
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

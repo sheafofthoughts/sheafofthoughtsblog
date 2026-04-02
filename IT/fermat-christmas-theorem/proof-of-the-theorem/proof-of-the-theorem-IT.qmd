@@ -4,7 +4,7 @@ subtitle: "[Serie sul Teorema di Natale di Fermat](https://sheafofthoughts.org/p
 date: "2025-12-25"
 description: >
   Dimostriamo il Teorema di Natale mediante gli interi di Gauss, connettendo le somme di due quadrati con la risolubilità di $x^2\equiv_p -1$
-categories: [Expository]
+categories: [Base, Teoria dei Numeri]
 draft: unlinked
 ---
 

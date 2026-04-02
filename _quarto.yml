@@ -7,22 +7,13 @@ project:
 website:
   title: "SheafofThoughts"
 
-  comments:
-    giscus:
-      repo: "sheafofthoughts/sheafofthoughtsblog"
-      repo-id: "R_kgDOQmlT5A"
-      category: "Announcements"
-      category-id: "DIC_kwDOQmlT5M4C0SVZ"
-      mapping: "pathname"
-      reactions-enabled: true
-      input-position: "bottom"
-      theme: "preferred_color_scheme"
-
   site-url: https://sheafofthoughts.org
   navbar:
     left:
       - href: index.qmd
-        text: Recent Posts
+        text: Home
+      - href: posts.qmd
+        text: Browse Posts
     right:
       - href: about.qmd
         text: About
@@ -31,7 +22,7 @@ website:
 
 format:
   html:
-    include-in-header: 
+    include-in-header:
       - bing-verify.html
     theme:
       light: flatly
@@ -47,4 +38,3 @@ format:
 
 filters:
   - tikz
-

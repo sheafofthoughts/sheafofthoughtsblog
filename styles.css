@@ -469,3 +469,95 @@ body.quarto-dark details.solution {
   background-color: #042f2e;
 }
 
+
+/* ============================
+   Homepage category cards
+   ============================ */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.category-card {
+  display: block;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.75);
+  color: inherit;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.category-card:hover,
+.category-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+  border-color: rgba(59, 130, 246, 0.45);
+}
+
+.category-card-top {
+  display: inline-block;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+  color: #475569;
+}
+
+.category-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+  font-size: 1.1rem;
+}
+
+.category-card p {
+  margin-bottom: 0;
+  color: #475569;
+}
+
+
+.category-card .category-card-top p {
+  margin: 0;
+}
+
+.category-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.category-card h3 a:hover,
+.category-card h3 a:focus {
+  text-decoration: underline;
+}
+body.quarto-dark .category-card {
+  background: rgba(17, 24, 39, 0.9);
+  border-color: rgba(148, 163, 184, 0.25);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+body.quarto-dark .category-card:hover,
+body.quarto-dark .category-card:focus {
+  border-color: rgba(96, 165, 250, 0.6);
+}
+
+body.quarto-dark .category-card-top,
+body.quarto-dark .category-card p {
+  color: #cbd5e1;
+}
+
+/* ============================
+   Series cards
+   ============================ */
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 340px));
+  gap: 1rem;
+  margin: 1.5rem 0 1rem 0;
+  justify-content: start;
+}

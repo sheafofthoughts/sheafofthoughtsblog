@@ -2,7 +2,7 @@
 title: "Quanti numeri primi ci sono?"
 subtitle: "[Serie \"Fermat's Christmas Theorem\"](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-12-08"
-categories: [Divulgativo, Teoria dei numeri]
+categories: [Base]
 ---
 
 <div class="lang-switch">

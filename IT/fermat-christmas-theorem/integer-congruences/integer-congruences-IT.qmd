@@ -4,7 +4,7 @@ subtitle: "[Fermat's Christmas Theorem series](https://sheafofthoughts.org/posts
 date: "2025-12-14"
 description:
   Introduciamo l’aritmetica modulare e capiamo il significato del Teorema Cinese del Resto.
-categories: [Expository]
+categories: [Base]
 ---
 
 <div class="lang-switch">

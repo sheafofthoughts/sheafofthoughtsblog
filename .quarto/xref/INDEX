@@ -85,5 +85,8 @@
   "privacy.qmd": {
     "privacy.html": "ad7f36dd",
     "privacy.tex": "051ec72a"
+  },
+  "posts.qmd": {
+    "posts.html": "4ff3637d"
   }
 }

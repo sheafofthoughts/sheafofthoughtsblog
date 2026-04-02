@@ -3,7 +3,7 @@ title: "Introduzione"
 subtitle: "[Serie \"Fermat's Christmas Theorem\"](https://sheafofthoughts.org/posts/fermat-christmas-theorem/)"
 date: "2025-11-29"
 bibliography: references.bib
-categories: [Divulgativo, Teoria dei numeri]
+categories: [Base]
 ---
 
 <div class="lang-switch">

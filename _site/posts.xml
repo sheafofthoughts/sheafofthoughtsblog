@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>SheafofThoughts</title>
-<link>https://sheafofthoughts.org/</link>
-<atom:link href="https://sheafofthoughts.org/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://sheafofthoughts.org/posts.html</link>
+<atom:link href="https://sheafofthoughts.org/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.26</generator>
 <lastBuildDate>Wed, 24 Dec 2025 23:00:00 GMT</lastBuildDate>
@@ -21,7 +21,7 @@
 
 
 <div class="lang-switch">
-<p><a href="../../../IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html">ITA</a> <span class="lang-current">ENG</span></p>
+<p><span class="lang-current">ENG</span> <a href="../../../IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html">ITA</a></p>
 </div>
 <section id="fermats-christmas-theorem" class="level1">
 <h1>Fermat’s Christmas Theorem</h1>
@@ -326,7 +326,8 @@ Complete proof (guided by the hints)
 </section>
 
  ]]></description>
-  <category>Expository</category>
+  <category>Beginner</category>
+  <category>Number Theory</category>
   <guid>https://sheafofthoughts.org/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html</guid>
   <pubDate>Wed, 24 Dec 2025 23:00:00 GMT</pubDate>
 </item>
@@ -613,7 +614,7 @@ Dickinson, L. J. 1938. <em>History of the Theory of Numbers</em>. New York: Chel
 </section>
 
  ]]></description>
-  <category>Expository</category>
+  <category>Beginner</category>
   <guid>https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html</guid>
   <pubDate>Sat, 13 Dec 2025 23:00:00 GMT</pubDate>
 </item>
@@ -890,7 +891,7 @@ Neukirch, Jürgen. 1999. <em>Algebraic Number Theory</em>. 1st ed. Vol. 322. Gru
 </section>
 
  ]]></description>
-  <category>Expository</category>
+  <category>Beginner</category>
   <guid>https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html</guid>
   <pubDate>Sun, 07 Dec 2025 23:00:00 GMT</pubDate>
 </item>
@@ -1126,7 +1127,7 @@ Neukirch, Jürgen. 1999. <em>Algebraic Number Theory</em>. 1st ed. Vol. 322. Gru
 Dickinson, L. J. 1938. <em>History of the Theory of Numbers</em>. New York: Chelsea Publishing Company.
 </div>
 </div></section></div> ]]></description>
-  <category>Expository</category>
+  <category>Beginner</category>
   <guid>https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html</guid>
   <pubDate>Fri, 28 Nov 2025 23:00:00 GMT</pubDate>
 </item>
