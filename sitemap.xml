@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sheafofthoughts.org/about.html</loc>
-    <lastmod>2025-12-27T15:11:39.232Z</lastmod>
-  </url>
-  <url>
     <loc>https://sheafofthoughts.org/index.html</loc>
-    <lastmod>2025-12-27T15:02:18.873Z</lastmod>
+    <lastmod>2026-04-02T13:03:49.201Z</lastmod>
   </url>
   <url>
-    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/integer-congruences/integer-congruences-IT.html</loc>
-    <lastmod>2025-12-24T11:28:37.810Z</lastmod>
+    <loc>https://sheafofthoughts.org/about.html</loc>
+    <lastmod>2026-04-02T11:25:17.016Z</lastmod>
   </url>
   <url>
-    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/introduction/introduction-IT.html</loc>
-    <lastmod>2025-12-14T23:49:38.901Z</lastmod>
+    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html</loc>
+    <lastmod>2026-04-02T13:14:23.079Z</lastmod>
   </url>
   <url>
-    <loc>https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html</loc>
-    <lastmod>2025-12-18T16:25:35.954Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/index.html</loc>
-    <lastmod>2025-12-27T15:03:06.721Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html</loc>
-    <lastmod>2025-12-24T11:16:37.342Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html</loc>
-    <lastmod>2025-12-23T13:18:59.524Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html</loc>
-    <lastmod>2025-12-14T23:49:48.770Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html</loc>
-    <lastmod>2025-12-29T16:32:10.493Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</loc>
-    <lastmod>2025-12-13T10:54:11.539Z</lastmod>
+    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.html</loc>
+    <lastmod>2026-04-02T13:13:38.257Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html</loc>
     <lastmod>2025-12-18T16:30:34.875Z</lastmod>
   </url>
   <url>
-    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/howmanyprimes/how-many-primes-IT.html</loc>
-    <lastmod>2025-12-24T11:22:39.346Z</lastmod>
+    <loc>https://sheafofthoughts.org/posts/interesting-facts/ax-grothendieck/ax-grothendieck.html</loc>
+    <lastmod>2025-12-13T10:54:11.539Z</lastmod>
   </url>
   <url>
-    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem-IT.html</loc>
-    <lastmod>2025-12-29T16:33:05.690Z</lastmod>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html</loc>
+    <lastmod>2026-04-02T13:10:57.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/introduction/introduction.html</loc>
+    <lastmod>2026-04-02T13:06:32.838Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html</loc>
+    <lastmod>2026-04-02T13:06:03.857Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html</loc>
+    <lastmod>2026-04-02T13:06:15.965Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/fermat-christmas-theorem/index.html</loc>
+    <lastmod>2025-12-27T15:03:06.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html</loc>
+    <lastmod>2025-12-18T16:25:35.954Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/introduction/introduction-IT.html</loc>
+    <lastmod>2026-04-02T13:14:02.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/IT/fermat-christmas-theorem/integer-congruences/integer-congruences-IT.html</loc>
+    <lastmod>2026-04-02T13:13:26.411Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sheafofthoughts.org/posts.html</loc>
+    <lastmod>2026-04-02T08:56:18.000Z</lastmod>
   </url>
   <url>
     <loc>https://sheafofthoughts.org/privacy.html</loc>
-    <lastmod>2025-12-27T15:16:53.817Z</lastmod>
+    <lastmod>2026-04-02T11:40:28.289Z</lastmod>
   </url>
 </urlset>

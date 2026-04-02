@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Recent Posts – SheafofThoughts</title>
+<title>Home – SheafofThoughts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <meta name="msvalidate.01" content="27B9097A6103EA5075D902CB55234013">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -136,7 +105,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="SheafofThoughts" href="index.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -319,7 +288,11 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Recent Posts</span></a>
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./posts.html"> 
+<span class="menu-text">Browse Posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -340,23 +313,22 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QWxnZWJyYWljJTIwR2VvbWV0cnk=">Algebraic Geometry <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RXhwb3NpdG9yeQ==">Expository <span class="quarto-category-count">(4)</span></div><div class="category" data-category="SW50ZXJtZWRpYXRl">Intermediate <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TnVtYmVyJTIwVGhlb3J5">Number Theory <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Recent Posts</h1>
+<h1 class="title">Home</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -368,199 +340,68 @@ window.Quarto = {
 </header>
 
 
+<p>Welcome to <strong>SheafofThoughts</strong>.</p>
+<p>This is a mathematics blog with posts at different levels and on different themes. The homepage is organized by category: click a title inside a box to jump directly to the recent posts in that class.</p>
+<section id="browse-by-category" class="level2">
+<h2 class="anchored" data-anchor-id="browse-by-category">Browse by category</h2>
+<div class="category-grid">
+<div class="category-card">
+<div class="category-card-top">
+<p>Topic</p>
+</div>
+<section id="algebraic-geometry" class="level3">
+<h3 class="anchored" data-anchor-id="algebraic-geometry"><a href="posts.html#category=Algebraic Geometry">Algebraic Geometry</a></h3>
+<p>schemes, cohomology…</p>
+</section>
+</div>
+<div class="category-card">
+<div class="category-card-top">
+<p>Topic</p>
+</div>
+<section id="number-theory" class="level3">
+<h3 class="anchored" data-anchor-id="number-theory"><a href="posts.html#category=Number Theory">Number Theory</a></h3>
+<p>diophantine equations, primes, number-theoretic curiosities…</p>
+</section>
+</div>
+<div class="category-card">
+<div class="category-card-top">
+<p>Level</p>
+</div>
+<section id="beginner" class="level3">
+<h3 class="anchored" data-anchor-id="beginner"><a href="posts.html#category=Beginner">Beginner</a></h3>
+<p>Beginner-friendlier posts meant to explain ideas slowly and from first principles.</p>
+</section>
+</div>
+<div class="category-card">
+<div class="category-card-top">
+<p>Level</p>
+</div>
+<section id="intermediate" class="level3">
+<h3 class="anchored" data-anchor-id="intermediate"><a href="posts.html#category=Intermediate">Intermediate</a></h3>
+<p>Posts aimed at readers with more background who want denser mathematical content.</p>
+</section>
+</div>
+</div>
+</section>
+<section id="series" class="level2">
+<h2 class="anchored" data-anchor-id="series">Series</h2>
+<div class="series-grid">
+<div class="category-card">
+<div class="category-card-top">
+<p>Series</p>
+</div>
+<section id="fermats-christmas-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="fermats-christmas-theorem"><a href="posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem</a></h3>
+<p>A series of posts aimed at proving Fermat’s Christmas Theorem.</p>
+</section>
+</div>
+</div>
 
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1766617200000" data-listing-file-modified-sort="1767025930493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2901">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">Proof of Fermat’s Christmas Theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">
-<p>We prove Fermat’s Christmas Theorem using Gaussian integers, linking sums of two squares to the solvability of <span class="math inline">\(x^2\equiv_p -1\)</span>.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/proof-of-the-theorem/proof-of-the-theorem.html" class="no-external">
-<div class="listing-date">
-Dec 25, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="SW50ZXJtZWRpYXRlJTJDTnVtYmVyJTIwVGhlb3J5JTJDQWxnZWJyYWljJTIwR2VvbWV0cnk=" data-listing-date-sort="1766012400000" data-listing-file-modified-sort="1766075434875" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1575">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">Why Fermat had (probably) no proof?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TnVtYmVyJTIwVGhlb3J5'); return false;">Number Theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwR2VvbWV0cnk='); return false;">Algebraic Geometry</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">
-<p>We explain why, if Fermat had a proof, it should have been <em>very</em> remarkable.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/interesting-facts/why-fermat-had-no-proof/why-fermat-had-no-proof.html" class="no-external">
-<div class="listing-date">
-Dec 18, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1765666800000" data-listing-file-modified-sort="1766574997342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1813">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">Some basic modular arithmetic</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">
-<p>We introduce modular arithmetic and understand the meaning of Chinese Remainder Theorem.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/integer-congruences/integer-congruences.html" class="no-external">
-<div class="listing-date">
-Dec 14, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="SW50ZXJtZWRpYXRlJTJDTnVtYmVyJTIwVGhlb3J5" data-listing-date-sort="1765580400000" data-listing-file-modified-sort="1766075135954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1591">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">Some interesting consequences of Chebotarev density theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TnVtYmVyJTIwVGhlb3J5'); return false;">Number Theory</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">
-<p>We will prove how some interesting propositions follow from the Chebotarev density theorem.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/interesting-facts/chebotarev-corollaries/chebotarev-corollaries.html" class="no-external">
-<div class="listing-date">
-Dec 13, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1765148400000" data-listing-file-modified-sort="1766495939524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1514">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">How many primes are there?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">
-<p>Expository tour of Euclid’s proof that there are infinitely many primes, preceded by a discussion of Euclidean division and the fundamental theorem of arithmetic.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/howmanyprimes/how-many-primes.html" class="no-external">
-<div class="listing-date">
-Dec 8, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="SW50ZXJtZWRpYXRlJTJDQWxnZWJyYWljJTIwR2VvbWV0cnk=" data-listing-date-sort="1765062000000" data-listing-file-modified-sort="1765623251539" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1666">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">Ax–Grothendieck Theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">When does injectivity imply bijectivity?</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJtZWRpYXRl'); return false;">Intermediate</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWxnZWJyYWljJTIwR2VvbWV0cnk='); return false;">Algebraic Geometry</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">
-<p>We investigate when injectivity is sufficient for surjectivity in an algebraic setting. We first treat the case of an algebraically closed field and give a complete proof, then discuss generalizations to schemes.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/interesting-facts/ax-grothendieck/ax-grothendieck.html" class="no-external">
-<div class="listing-date">
-Dec 7, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="RXhwb3NpdG9yeQ==" data-listing-date-sort="1764370800000" data-listing-file-modified-sort="1765756188770" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1019">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">Introduction to Fermat’s Christmas Theorem</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external"></a><a href="https://sheafofthoughts.org/posts/fermat-christmas-theorem/">Fermat’s Christmas Theorem series</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwb3NpdG9yeQ=='); return false;">Expository</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">
-<p>We introduce Fermat’s Christmas Theorem and try to understand its meaning through concrete examples.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fermat-christmas-theorem/introduction/introduction.html" class="no-external">
-<div class="listing-date">
-Nov 29, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
