@@ -12,8 +12,6 @@ This privacy notice explains how personal data may be processed when you visit *
 
 The controller of the processing connected with this Site is the person who operates **sheafofthoughts.org**.
 
-Before publishing this notice, replace the placeholders below with real information:
-
 - **Controller:** `Davide D'Angelo`
 - **Contact email for privacy requests:** `sheafofthoughts.huddling989@passmail.com`
 
