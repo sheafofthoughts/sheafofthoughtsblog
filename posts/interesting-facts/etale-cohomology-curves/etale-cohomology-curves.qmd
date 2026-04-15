@@ -3,7 +3,8 @@ title: "Étale cohomology of curves"
 date: "2025-04-09"
 description: >
    We study the cohomology of algebraic curves.
-#categories: [Advanced, Algebraic Geometry]
+categories: [Advanced, Algebraic Geometry]
+draft: true
 draft-mode: unlinked
 ---
 
