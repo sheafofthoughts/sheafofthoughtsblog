@@ -19,5 +19,8 @@ I write as a student who is still learning, and these posts are a way to collect
 
 ## Notes
 
-Everything here is written in my free time, so there may be occasional errors.
-If you notice something unclear, feel free to open an issue on GitHub.
+
+  - **Note on sources:** most of the mathematical content on this blog is expository. The proofs and arguments are usually drawn from lectures, textbooks, papers, or from my own notes and memory of them. I do not claim originality for standard results or proofs unless this is explicitly stated. Even when a precise source is not cited line by line, the material should be understood in that spirit.
+
+  - Everything here is written in my free time, so there may be occasional errors. If you notice something unclear, feel free to open an issue on GitHub.
+
