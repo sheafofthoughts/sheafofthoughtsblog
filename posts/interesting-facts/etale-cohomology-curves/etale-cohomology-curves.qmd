@@ -11,22 +11,33 @@ draft-mode: unlinked
 
 ::: {#lem-vanishcohomology}
 
-Let $X$ be a finite scheme over a separably closed field $k$. Then $\mathrm{H}^i(X,\mathcal{F})=0$ for $i>0$ and for all $\mathcal{F}\in X_{ét}$.
+Let $X$ be a finite scheme over a separably closed field $k$. Then $\mathrm{H}^i(X,\mathcal{F})=0$ for $i>0$ and for all $\mathcal{F}\in \mathrm{Sh}(X_{ét})$.
 :::
 
 ::: {.proof}
 
-in progress...
+Since the structure map $f:X\to \mathrm{Spec}(k)$ is finite, $f_*:\mathrm{Sh}(X _{ét})\to\mathrm{Sh}(\mathrm{Spec}(k)_{ét})$ is exact. Therefore, the derived functor $\mathrm{R}^qf_*$ vanishes for every $q>0$. But we have the spectral sequence
+$$
+	\mathrm{E}_2 ^{p,q}=\mathrm{H}^p(\mathrm{Spec}(k) _{ét}, \mathrm{R}^qf_* \mathcal{F})\Longrightarrow \mathrm{H} ^{p+q}(X _{ét}, \mathcal{F})
+$$
+Hence, by the vanishing of $R^qf_*$ we get that $\mathrm{H}^p(\mathrm{Spec}(k) _{ét}, f_* \mathcal{F})\cong \mathrm{H}^p(X _{ét}, \mathcal{F})$. Since $k$ is separably closed, it is a strictly henselian ring, so global sections are isomorphic to stalks. Hence global sections are exact, and the cohomology vanishes.
+
 :::
+
 
 
 ::: {#lem-support}
 
-Let $X$ be a scheme, $i: Z\to X$ a closed immersion, and $\mathcal{F}\in X_{ét}$ supported on $Z$. Then the canonical morphism $\mathcal{F}\to i_*i^* \mathcal{F}$ is an isomorphism.
+Let $X$ be a scheme, $i: Z\to X$ a closed immersion, and $\mathcal{F}\in \mathrm{Sh}(X_{ét})$ supported on $Z$. Then the canonical morphism $\eta: \mathcal{F}\to i_*i^* \mathcal{F}$ is an isomorphism.
 :::
 ::: {.proof}
 
-in progress...
+The natural morphism $\eta$ is an isomorphism on stalks, indeed
+$$
+	(i_*i^* \mathcal{F}) _{\bar x}\cong \mathcal{F} _{\bar x}
+$$ 
+for every geometric point $\bar x$, since $\mathcal{F}$ is supported on $Z$.
+
 :::
 
 
@@ -37,50 +48,79 @@ in progress...
 
 Let $X$ be a scheme and $\mathcal{F}\in X_{ét}$ supported on finitely many closed points of $X$. Then 
 $$
-	\mathcal{F}\cong\bigoplus_{x\in \mathrm{supp}(\mathcal{F})}x_*x^* \mathcal{F}
+	\mathcal{F}\cong\bigoplus_{x\in \mathrm{supp}(\mathcal{F})}x_* \mathcal{F} _{x}
 $$
 :::
 
 ::: {.proof}
 
-in progress...
+We apply @lem-support with $Z:=\{x\in X: x \text{ is a geometric point}\}$ and $i: Z\to X$. We then have that 
+$$
+	\mathcal{F}\cong i_*i^* \mathcal{F}
+$$
+and
+$$
+	i_*i^* \mathcal{F}\cong i_*\Big(\bigoplus_{x\in \mathrm{supp}(X)} \mathcal{F}_x\Big) \cong \bigoplus_{x\in \mathrm{supp}(X)} x_*\mathcal{F}_x
+$$
+where the latter isomorphism holds because the points are finitely many.
+
 :::
 
 ::: {#lem-vanishingskyscraper}
 
-Let $X$ be a scheme and $\mathcal{F}\in X_{ét}$ skyscrapersheaf $f:x\to X$ (riscriverò meglio). Then
+Let $X$ be a scheme, $x$ be a geometric point of $X$, and $\mathcal{F}\in \mathrm{Sh}(x _{ét})$. Then for every $i>0$
 $$
-	\mathrm{R}^if_* \mathcal{F}=0
+	\mathrm{R}^ix_* \mathcal{F}=0
 $$
 
 In particular,
 $$
-	\mathrm{H}^i(X, \mathcal{F})=0
+	\mathrm{H}^i(X _{ét}, x_*\mathcal{F})=0
 $$
 for all $i>0$.
 :::
 
 ::: {.proof}
 
-in progress...
+Consider an exact sequence 
+$$
+	0\to \mathcal{F}\to \mathcal{G}\to \mathcal{H}\to 0
+$$ 
+of étale sheaves over $x _{ét}$. We have that $x_* \mathcal{G}\to x_* \mathcal{H}$ is surjective, therefore $\mathrm{R}^ix_* \mathcal{F}=0$. As a consequence, with the same reasoning used in the proof of @lem-vanishcohomology using spectral sequence we obtain $\mathrm{H}^i(X _{ét}, \mathcal{F})=0$.
+
 :::
 
 
 
 ::: {#lem-torsion}
 
-Let $X$ be a quasi-compact quasi-separated (qcqs) scheme, and $\mathcal{F}\in X_{ét}$ be a torsion sheaf. Then $\mathrm{H}^i(X, \mathcal{F})$ is a torsion group for all $i\geq 0$.
+Let $X$ be a quasi-compact quasi-separated (qcqs) scheme, and $\mathcal{F}\in \mathrm{Sh}(X_{ét})$ be a torsion sheaf. Then $\mathrm{H}^i(X, \mathcal{F})$ is a torsion group for all $i\geq 0$.
 :::
 
 ::: {.proof}
 
-in progress...
+Let $\mathcal{F}[n]$ be the kernel of the multiplication by $n$ map $\mathcal{F}\xrightarrow{\cdot n} \mathcal{F}$. We have an isomorphism
+$$
+	\mathrm{colim} (\mathcal{F}[n])\to \mathcal{F}
+$$
+because it is an isomorphism on stalks:
+$$
+	(\mathrm{colim} \mathcal{F}[n])_x\cong\mathrm{colim}((\mathcal{F}[n])_x)\cong \mathrm{colim}((\mathcal{F}_x)[n])\cong \mathcal{F}_x
+$$
+
+Since $X$ is qcqs, the cohomology commutes with colimits:
+$$
+	\mathrm{H}^i(X _{ét}, \mathcal{F})\cong \mathrm{H}^i(X _{ét}, \mathrm{colim}(\mathcal{F}[n]))\cong \mathrm{colim}(\mathrm{H}^i(X _{ét}, \mathcal{F}[n]))
+$$
+
+Since the multiplication by $n$ map is the zero map on $\mathcal{F}[n]$, in cohomology it is again the zero map (being the cohomology functor additive). Therefore, the cohomology is a colimit of torsion groups, ad therefore it is a torsion group.
+
 :::
 
 
 ::: {#thm-multiplicative-sheaf}
 
-Let $C$ be an algebraic curve over a separably closed field $k$. Then
+Let $C$ be an algebraic curve (finite type and separated over a field) over a separably closed field $k$. Then
 $$
 	\mathrm{H}^i(C, \mathcal{O}_{C,ét})=
 	\begin{cases}
@@ -93,10 +133,36 @@ $$
 
 :::
 
+
 ::: {.proof}
 
-in progress...
+Let $c$ be a geometric point of the curve and $\eta$ be the generic point. We claim that 
+$$
+	(\mathrm{R}^q\eta _* \mathcal{O}_{\eta, \mathrm{ét}} ^\times)_c\cong \mathrm{H}^q(\eta\times_X \mathrm{Spec}(\mathcal{O}_{C,c} ^{\mathrm{sh}})_{ét}, (\mathcal{O}^\times _{\eta,\mathrm{ét}})_{|\eta\times_X \mathrm{Spec}(O _{C,c} ^{\mathrm{sh}})})
+$$
+
+Indeed, $\eta \times \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh})=:L$. Also, that restriction of $\mathcal{O}_{\eta,\mathrm{ét}}^\times $ is isomorphic to $\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times$. Moreover, $L$ is the maximal unramified extension of the function field and hence it is a a separable algebraic extension of $\eta$. 
+
+Hence,
+$$
+	\mathrm{H}^q(\eta \times_X \mathrm{Spec}(\mathcal{O}_{C,c}^\mathrm{sh}), \mathcal{O}_{\eta, \mathrm{ét}}^\times)\cong \mathrm{H}^q(L^\mathrm{sep}/L, L^\times)
+$$
+
+We claim that this is of $p^\infty$ torsion for $q\geq 2$.
+
+For $q=1$ it is Hilbert 90, while for 
+
 :::
+
+
+
+::: {#thm-smooth-proper-unity}
+## Theorem Name
+
+Content
+:::
+
+
 
 
 
