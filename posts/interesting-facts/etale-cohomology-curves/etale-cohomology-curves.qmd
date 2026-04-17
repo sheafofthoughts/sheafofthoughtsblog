@@ -144,7 +144,8 @@ $$
 	(\mathrm{R}^q\eta _* \mathcal{O}_{\eta, \mathrm{ét}} ^\times)_c\cong \mathrm{H}^q(\eta\times_X \mathrm{Spec}(\mathcal{O}_{C,c} ^{\mathrm{sh}})_{ét}, (\mathcal{O}^\times _{\eta,\mathrm{ét}})_{|\eta\times_X \mathrm{Spec}(O _{C,c} ^{\mathrm{sh}})})
 $$
 
-Indeed, $\eta \times \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh})=:L$. Also, that restriction of $\mathcal{O}_{\eta,\mathrm{ét}}^\times $ is isomorphic to $\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times$. Moreover, $L$ is the maximal unramified extension of the function field and hence it is a a separable algebraic extension of $\eta$. 
+
+Indeed, $\eta \times \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh})=:L$. Also, that restriction of $\mathcal{O}_{\eta ,\mathrm{ét}}^\times$ is isomorphic to $\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times$. Moreover, $L$ is the maximal unramified extension of the function field and hence it is a a separable algebraic extension of $\eta$. 
 
 Hence,
 $$
