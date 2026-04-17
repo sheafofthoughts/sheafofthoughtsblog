@@ -136,6 +136,9 @@ $$
 
 ::: {.proof}
 
+It is clear for $i=0$ and we will not prove the case for $i=1$, it follows from the relation between torsors and $\mathrm{H}^1$.
+
+Let's study the case of $i>1$.
 Let $c$ be a geometric point of the curve and $\eta$ be the generic point. We claim that 
 $$
 	(\mathrm{R}^q\eta _* \mathcal{O}_{\eta, \mathrm{ét}} ^\times)_c\cong \mathrm{H}^q(\eta\times_X \mathrm{Spec}(\mathcal{O}_{C,c} ^{\mathrm{sh}})_{ét}, (\mathcal{O}^\times _{\eta,\mathrm{ét}})_{|\eta\times_X \mathrm{Spec}(O _{C,c} ^{\mathrm{sh}})})
