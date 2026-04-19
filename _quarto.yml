@@ -17,8 +17,6 @@ website:
     right:
       - href: about.qmd
         text: About
-      - href: privacy.qmd
-        text: Privacy
 
 format:
   html:
