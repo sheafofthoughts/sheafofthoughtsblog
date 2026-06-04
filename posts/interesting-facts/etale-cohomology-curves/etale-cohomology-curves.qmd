@@ -185,7 +185,7 @@ Let's study the case of $i>1$.
   	0\to \mathcal{O}_{C, \mathrm{ét}}^\times\to \eta_* \mathcal{O}_{\eta, \mathrm{ét}}^\times \to \bigoplus _{c\in C \text{ closed }} c_* \mathbb{Z}\to 0
   $$ {#eq-exact-sequence-regular}
   
-  where the second map is the divisor map. This sequence is exact since on the stalk at a geometric point $\bar x$ it is given by
+  where the second map is the divisor map. This sequence is exact since on the stalk at a geometric point $\bar x$ over a closed point it is given by
   $$
   	0\to (\mathcal{O}_{C, \bar x} ^{\mathrm{sh}})^\times \to (\mathrm{Frac}(\mathcal{O}_{C, \bar x} ^{\mathrm{sh}}))^\times\to \mathbb{Z}\to 0
   $$
@@ -207,7 +207,7 @@ Let's study the case of $i>1$.
 	(\mathrm{R}^q\eta _* \mathcal{O}_{\eta, \mathrm{ét}} ^\times)_c\cong \mathrm{H}^q((\eta\times_C \mathrm{Spec}(\mathcal{O}_{C,c} ^{\mathrm{sh}}))_{ét}, (\mathcal{O}^\times _{\eta,\mathrm{ét}})_{|\eta\times_C \mathrm{Spec}(\mathcal{O} _{C,c} ^{\mathrm{sh}})})	
   $$ {#eq-iso-stalk-higher-image}
 
-  As $\eta \times_C \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Spec}(\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh}))$, write $L$ for $\mathrm{Frac}(\mathcal{O}_{C,c} ^{\mathrm{sh}})$, so that the restriction of $\mathcal{O}_{\eta ,\mathrm{ét}}^\times$ appearing in the right-hand side of [-@eq-iso-stalk-higher-image] is just $\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times$. Observe that $L$ is an algebraic separable extension of the function field $k(C)$. Indeed, $\mathcal{O}_{C,c}^ \mathrm{sh}$ is the filtered colimit of local étale $\mathcal{O}_{C,c}$-algebras $B$, and for each such $B$ the field $\mathrm{Frac}(B)=B\otimes _{\mathcal{O}_{C,c}}k(C)$ is a finite separable extension of $k(C)$; thus every element of $L$ lies in some finite separable extension of $k(C)$.
+  As $\eta \times_C \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Spec}(\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh}))$, write $L$ for $\mathrm{Frac}(\mathcal{O}_{C,c} ^{\mathrm{sh}})$, so that the restriction of $\mathcal{O}_{\eta ,\mathrm{ét}}^\times$ appearing in the right-hand side of [-@eq-iso-stalk-higher-image] is just $\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times$. Observe that $L$ is an algebraic separable extension of the function field $k(C)$. Indeed, $\mathcal{O}_{C,c}^ \mathrm{sh}$ is the filtered colimit of local étale $\mathcal{O}_{C,c}$-algebras $B$, and for each such $B$ the field $\mathrm{Frac}(B)=B\otimes _{\mathcal{O}_{C,c}}k(C)$ is a finite separable extension of $k(C)$, thus every element of $L$ lies in some finite separable extension of $k(C)$.
 
   By the [relation between Galois and étale cohomology](https://stacks.math.columbia.edu/tag/03QU), we have
   $$
@@ -254,7 +254,7 @@ Let's study the case of $i>1$.
   $$
   	(\mathrm{R}^q\eta_* \mathcal{O}_{\eta, \mathrm{ét}}^\times)_c
   $$
-  is a $p^\infty$-torsion group at every geometric point $c$; thus the sheaf $R^q \eta_* \mathcal{O}_{\eta , \mathrm{ét}}^\times$ is a $p^\infty$-torsion sheaf. 
+  is a $p^\infty$-torsion group at every geometric point $c$, thus the sheaf $R^q \eta_* \mathcal{O}_{\eta , \mathrm{ét}}^\times$ is a $p^\infty$-torsion sheaf. 
 
   Consider the Grothendieck spectral sequence
   $$
@@ -307,30 +307,46 @@ Let's study the case of $i>1$.
 
   Apply **Step 1** to every connected component.
 
-
-
-
 - **Step 3:** suppose $C$ is reduced.
 
-  Consider the normalization $\nu: C'\to C$ of the curve and the sequence
+  Consider the normalization $\nu: C'\to C$ of the curve. We first prove that the natural morphism
   $$
-  	0\to \mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times\to Q\to 0
-  $$ {#eq-normalization-sequence}
-  where $Q$ is the cokernel. The sequence [-@eq-normalization-sequence] is exact because $C$ is reduced, so we can write its normalization as the disjoint union of the normalizations of its irreducible components. Affine locally, if $A$ is the coordinate ring of $C$ and $\mathfrak{p}_1,\dots , \mathfrak{p}_r$ are its minimal primes, the map is 
+  	\mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times
   $$
-  	A\to \prod_i \widetilde{A/\mathfrak{p}_i}
-  $$
-  This is injective because $A$ is reduced, so $\bigcap_i \mathfrak{p}_i=0$. Since étale morphisms are flat, this injectivity remains true after pulling back to any affine étale $V\to C$. Moreover,
-  $$
-  	(\nu_* \mathcal{O}_{C',\mathrm{ét}}^\times)(V)=\Gamma(V\times_C C', \mathcal{O}_{C'}^\times),
-  $$ 
-  so the first map in [-@eq-normalization-sequence] is injective. Therefore the sequence is exact by definition of $Q$.
+  is injective.
 
-  Now consider the regular locus $C _{\mathrm{reg}}$ of $C$. It is Zariski open in $C$, since $C$ is locally of finite type over a field. Moreover, each stalk at a generic point is a field, hence regular; thus $C _{\mathrm{reg}}$ is dense. Since $C$ has dimension $1$, regularity gives normality, so 
+  Let $C _{\mathrm{reg}}$ be the regular locus of $C$. It is Zariski open in $C$, since $C$ is locally of finite type over a field. Moreover, since $C$ is reduced, each generic point of $C$ is regular, thus $C _{\mathrm{reg}}$ is dense. Since regular points are normal, the normalization is an isomorphism over $C _{\mathrm{reg}}$. Hence
   $$
   	(\mathcal{O}_{C, \mathrm{ét}}^\times)_{|C _{\mathrm{reg}}}\to  (\nu_* \mathcal{O}_{C', \mathrm{ét}}^\times)_{|C _{\mathrm{reg}}}
   $$ 
-  is an isomorphism. Hence $Q$ vanishes on a dense open subset of $C$, and thus it is supported on finitely many points of $C$. Therefore, by @cor-sumskyscraper, we get
+  is an isomorphism.
+
+  Now let $V\to C$ be an affine étale morphism. Since étale morphisms are open, 
+  $$
+  	V_{\mathrm{reg}}:=V\times_C C_{\mathrm{reg}}
+  $$
+  is a dense open subset of $V$. After base change to $V$, the normalization map is still an isomorphism over $V_{\mathrm{reg}}$. Therefore the map
+  $$
+  	\Gamma(V,\mathcal{O}_V^\times)\to \Gamma(V\times_C C',\mathcal{O}_{V\times_C C'}^\times)
+  $$
+  becomes an isomorphism after restricting to the dense open subset $V_{\mathrm{reg}}$.
+
+  Since $C$ is reduced and $V\to C$ is étale, also $V$ is reduced. Hence restriction to a dense open subset is injective, thus
+  $$
+  	\Gamma(V,\mathcal{O}_V^\times)\to \Gamma(V\times_C C',\mathcal{O}_{V\times_C C'}^\times)
+  $$
+  is injective. Since this holds for every affine étale $V\to C$, the morphism
+  $$
+  	\mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times
+  $$
+  is injective.
+
+  Now define $Q$ as the cokernel of this injective morphism. We have an exact sequence
+  $$
+  	0\to \mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times\to Q\to 0
+  $$ {#eq-normalization-sequence}
+
+  Since the normalization is an isomorphism over $C _{\mathrm{reg}}$, the sheaf $Q$ vanishes on $C _{\mathrm{reg}}$. Hence $Q$ is supported on finitely many points of $C$. Therefore, by @cor-sumskyscraper, we get
   $$
   	\mathrm{H}^i(C _{\mathrm{ét}}, \mathcal{O}_{C, \mathrm{ét}}^\times)\cong \mathrm{H}^i(C _{\mathrm{ét}}, \nu_* \mathcal{O}_{C', \mathrm{ét}}^\times)
   $$ 
@@ -342,7 +358,6 @@ Let's study the case of $i>1$.
   $$
   
   Since $C'$ is normal of dimension $1$, it is regular, so we can apply **Step 2**.
-
 
 
 - **Step 4:** no additional hypotheses on $C$.
@@ -361,7 +376,7 @@ Let's study the case of $i>1$.
   $$ 
   for every $i>1$.
   
-  Since $\pi$ is a closed immersion, it is finite; thus $\pi_*$ is exact, giving
+  Since $\pi$ is a closed immersion, it is finite, thus $\pi_*$ is exact, giving
   $$
   	\mathrm{H}^i(C_{\mathrm{ét}}, \pi_* \mathcal{O}_{C_0, \mathrm{ét}}^\times)\cong \mathrm{H}^i((C_0)_{\mathrm{ét}}, \mathcal{O}_{C_0, \mathrm{ét}}^\times)
   $$
