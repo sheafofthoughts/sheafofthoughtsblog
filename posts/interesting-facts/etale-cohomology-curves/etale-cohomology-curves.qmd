@@ -1,6 +1,6 @@
 ---
 title: "Étale cohomology of curves"
-date: "2025-06-04"
+date: "2026-06-04"
 description: >
   A computation of the étale cohomology of the multiplicative sheaf on curves
 categories: [Advanced, Algebraic Geometry]
