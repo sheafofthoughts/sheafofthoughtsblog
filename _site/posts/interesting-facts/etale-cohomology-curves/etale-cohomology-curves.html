@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-04-09">
-<meta name="description" content="We study the cohomology of algebraic curves.">
+<meta name="dcterms.date" content="2025-06-04">
+<meta name="description" content="A computation of the étale cohomology of the multiplicative sheaf on curves">
 
 <title>Étale cohomology of curves – SheafofThoughts</title>
 <style>
@@ -75,7 +75,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <meta name="msvalidate.01" content="27B9097A6103EA5075D902CB55234013">
-<meta name="quarto:status" content="draft">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -275,7 +274,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -316,8 +315,16 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="etale-cohomology-curves.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">Preliminaries</a></li>
+  <li><a href="#proof-of-the-theorem" id="toc-proof-of-the-theorem" class="nav-link" data-scroll-target="#proof-of-the-theorem">Proof of the theorem</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="etale-cohomology-curves.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -333,7 +340,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    <p>We study the cohomology of algebraic curves.</p>
+    <p>A computation of the étale cohomology of the multiplicative sheaf on curves</p>
   </div>
 </div>
 
@@ -344,7 +351,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 9, 2025</p>
+      <p class="date">June 4, 2025</p>
     </div>
   </div>
   
@@ -356,17 +363,36 @@ window.Quarto = {
 </header>
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This post grew out of a theorem I encountered last semester in a course on étale cohomology. I wanted to collect in one place the ingredients entering the proof, mostly for my own understanding.</p>
+<p>The theorem we prove is the following.</p>
+<div id="thm-multiplicative-sheaf" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1</strong></span> Let <span class="math inline">\(C\)</span> be an algebraic curve (of dimension 1, finite type, and separated over a field) over a separably closed field <span class="math inline">\(k\)</span>. Then <span class="math display">\[
+    \mathrm{H}^i(C, \mathcal{O}^\times_{C,\mathrm{ét}})=
+    \begin{cases}
+    \mathcal{O}_C(C)^\times &amp;i=0\\
+    \mathrm{Pic}(C) &amp;i=1 \\ 0 &amp;i&gt;1\text{ and $k$ is algebraically closed}\\
+    p^\infty \text{-torsion group } &amp;i&gt;1 \text{ and $k$ is non-perfect with char($k$)=p}
+    \end{cases}
+\]</span></p>
+</div>
+<p>One of the crucial points of the proof is to reduce the computation of higher cohomology of <span class="math inline">\(\mathcal{O}_{C,\mathrm{ét}}^\times\)</span> to the generic point of the curve. Once this is done, the problem becomes a statement in Galois cohomology.</p>
+</section>
+<section id="preliminaries" class="level2">
+<h2 class="anchored" data-anchor-id="preliminaries">Preliminaries</h2>
+<p>In this section we collect the auxiliary facts used in the proof: vanishing results for finite schemes over a field, finite sums of skyscraper sheaves, and torsion sheaves.</p>
 <div id="lem-vanishcohomology" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 1</strong></span> Let <span class="math inline">\(X\)</span> be a finite scheme over a separably closed field <span class="math inline">\(k\)</span>. Then <span class="math inline">\(\mathrm{H}^i(X,\mathcal{F})=0\)</span> for <span class="math inline">\(i&gt;0\)</span> and for all <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(X_{ét})\)</span>.</p>
+<p><span class="theorem-title"><strong>Lemma 1</strong></span> Let <span class="math inline">\(X\)</span> be a finite scheme over a separably closed field <span class="math inline">\(k\)</span>. Then <span class="math inline">\(\mathrm{H}^i(X,\mathcal{F})=0\)</span> for <span class="math inline">\(i&gt;0\)</span> and for all <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(X_{\mathrm{ét}})\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Since the structure map <span class="math inline">\(f:X\to \mathrm{Spec}(k)\)</span> is finite, <span class="math inline">\(f_*:\mathrm{Sh}(X _{ét})\to\mathrm{Sh}(\mathrm{Spec}(k)_{ét})\)</span> is exact. Therefore, the derived functor <span class="math inline">\(\mathrm{R}^qf_*\)</span> vanishes for every <span class="math inline">\(q&gt;0\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Since the structure map <span class="math inline">\(f:X\to \mathrm{Spec}(k)\)</span> is finite, <span class="math inline">\(f_*:\mathrm{Sh}(X _{\mathrm{ét}})\to\mathrm{Sh}(\mathrm{Spec}(k)_{\mathrm{ét}})\)</span> is exact. Therefore, the derived functor <span class="math inline">\(\mathrm{R}^qf_*\)</span> vanishes for every <span class="math inline">\(q&gt;0\)</span>.</p>
 <p>Consider the Grothendieck spectral sequence <span class="math display">\[
-    \mathrm{E}_2 ^{p,q}=\mathrm{H}^p(\mathrm{Spec}(k) _{ét}, \mathrm{R}^qf_* \mathcal{F})\Longrightarrow \mathrm{H} ^{p+q}(X _{ét}, \mathcal{F})
-\]</span> By the vanishing of <span class="math inline">\(R^qf_*\)</span> we get that <span class="math inline">\(\mathrm{H}^p(\mathrm{Spec}(k) _{ét}, f_* \mathcal{F})\cong \mathrm{H}^p(X _{ét}, \mathcal{F})\)</span>. Since <span class="math inline">\(k\)</span> is separably closed, it is a strictly henselian ring, so global sections are isomorphic to stalks. Hence global sections are exact, and the cohomology vanishes.</p>
+    \mathrm{E}_2 ^{p,q}=\mathrm{H}^p(\mathrm{Spec}(k) _{\mathrm{ét}}, \mathrm{R}^qf_* \mathcal{F})\Longrightarrow \mathrm{H} ^{p+q}(X _{\mathrm{ét}}, \mathcal{F})
+\]</span> By the vanishing of <span class="math inline">\(R^qf_*\)</span> we get that <span class="math inline">\(\mathrm{H}^p(\mathrm{Spec}(k) _{\mathrm{ét}}, f_* \mathcal{F})\cong \mathrm{H}^p(X _{\mathrm{ét}}, \mathcal{F})\)</span>. Since <span class="math inline">\(k\)</span> is separably closed, it is a strictly henselian ring, so global sections are isomorphic to stalks. Hence global sections are exact, and the cohomology vanishes.</p>
 </div>
 <div id="lem-support" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 2</strong></span> Let <span class="math inline">\(X\)</span> be a scheme, <span class="math inline">\(i: Z\to X\)</span> a closed immersion, and <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(X_{ét})\)</span> be supported on <span class="math inline">\(Z\)</span>. Then the canonical morphism <span class="math inline">\(\eta: \mathcal{F}\to i_*i^* \mathcal{F}\)</span> is an isomorphism.</p>
+<p><span class="theorem-title"><strong>Lemma 2</strong></span> Let <span class="math inline">\(X\)</span> be a scheme, <span class="math inline">\(i: Z\to X\)</span> a closed immersion, and <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(X_{\mathrm{ét}})\)</span> be supported on <span class="math inline">\(Z\)</span>. Then the canonical morphism <span class="math inline">\(\eta: \mathcal{F}\to i_*i^* \mathcal{F}\)</span> is an isomorphism.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>We check that <span class="math inline">\(\eta\)</span> is an isomorphism on stalks. Let <span class="math inline">\(\bar x\)</span> be a geometric point of <span class="math inline">\(X\)</span>, and let <span class="math inline">\(x\)</span> be the underlying point. Since <span class="math inline">\(i\)</span> is a closed immersion, it is finite. Hence, by Stacks project <a href="https://stacks.math.columbia.edu/tag/0DK3">Tag 0DK3</a>, we have <span class="math display">\[
@@ -380,32 +406,37 @@ window.Quarto = {
 \]</span></p>
 </div>
 <div id="cor-sumskyscraper" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 1 (of <a href="#lem-support" class="quarto-xref">Lemma&nbsp;2</a>)</strong></span> Let <span class="math inline">\(X\)</span> be a scheme and <span class="math inline">\(\mathcal{F}\in X_{ét}\)</span> supported on finitely many closed points of <span class="math inline">\(X\)</span>. Then <span class="math display">\[
+<p><span class="theorem-title"><strong>Corollary 1 (of <a href="#lem-support" class="quarto-xref">Lemma&nbsp;2</a>)</strong></span> Let <span class="math inline">\(X\)</span> be a scheme and <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(X_{\mathrm{ét}})\)</span> supported on finitely many closed points of <span class="math inline">\(X\)</span>. Then <span class="math display">\[
     \mathcal{F}\cong\bigoplus_{x\in \mathrm{supp}(\mathcal{F})}x_* \mathcal{F} _{x}
 \]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>We apply <a href="#lem-support" class="quarto-xref">Lemma&nbsp;2</a> with <span class="math inline">\(Z:=\{x\in X: x \text{ is a geometric point}\}\)</span> and <span class="math inline">\(i: Z\to X\)</span>. We then have that <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>We apply <a href="#lem-support" class="quarto-xref">Lemma&nbsp;2</a> with <span class="math inline">\(Z:=\{x\to X: x \text{ is a geometric point}\}\)</span> and <span class="math inline">\(i: Z\to X\)</span>. We then have that <span class="math display">\[
     \mathcal{F}\cong i_*i^* \mathcal{F}
 \]</span> and <span class="math display">\[
     i_*i^* \mathcal{F}\cong i_*\Big(\bigoplus_{x\in \mathrm{supp}(X)} \mathcal{F}_x\Big) \cong \bigoplus_{x\in \mathrm{supp}(X)} x_*\mathcal{F}_x
 \]</span> where the latter isomorphism holds because the points are finitely many.</p>
 </div>
 <div id="lem-vanishingskyscraper" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 3</strong></span> Let <span class="math inline">\(X\)</span> be a scheme, <span class="math inline">\(x\)</span> be a geometric point of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(x _{ét})\)</span>. Then for every <span class="math inline">\(i&gt;0\)</span> <span class="math display">\[
-    \mathrm{R}^ix_* \mathcal{F}=0
+<p><span class="theorem-title"><strong>Lemma 3</strong></span> Let <span class="math inline">\(X\)</span> be a scheme, <span class="math inline">\(x\)</span> be a geometric point of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(x_{\mathrm{ét}})\)</span>. Then for every <span class="math inline">\(i&gt;0\)</span> <span class="math display">\[
+    \mathrm{R}^ix_* \mathcal{F}=0.
 \]</span></p>
 <p>In particular, <span class="math display">\[
-    \mathrm{H}^i(X _{ét}, x_*\mathcal{F})=0
+    \mathrm{H}^i(X_{\mathrm{ét}}, x_*\mathcal{F})=0
 \]</span> for all <span class="math inline">\(i&gt;0\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Consider an exact sequence <span class="math display">\[
     0\to \mathcal{F}\to \mathcal{G}\to \mathcal{H}\to 0
-\]</span> of étale sheaves over <span class="math inline">\(x _{ét}\)</span>. We have that <span class="math inline">\(x_* \mathcal{G}\to x_* \mathcal{H}\)</span> is surjective, therefore <span class="math inline">\(\mathrm{R}^ix_* \mathcal{F}=0\)</span>. As a consequence, with the same reasoning used in the proof of <a href="#lem-vanishcohomology" class="quarto-xref">Lemma&nbsp;1</a> using spectral sequence we obtain <span class="math inline">\(\mathrm{H}^i(X _{ét}, \mathcal{F})=0\)</span>.</p>
+\]</span> of étale sheaves over <span class="math inline">\(x_{\mathrm{ét}}\)</span>. Since <span class="math inline">\(x\)</span> is a geometric point, the functor <span class="math inline">\(x_*\)</span> is exact. Indeed, sections of <span class="math inline">\(x_*\mathcal{F}\)</span> over an étale <span class="math inline">\(U\to X\)</span> are products of stalks over the geometric fibre of <span class="math inline">\(U\)</span> at <span class="math inline">\(x\)</span>, and products of abelian groups are exact. Therefore <span class="math display">\[
+    \mathrm{R}^ix_* \mathcal{F}=0
+\]</span> for every <span class="math inline">\(i&gt;0\)</span>.</p>
+<p>As a consequence, with the same reasoning used in the proof of <a href="#lem-vanishcohomology" class="quarto-xref">Lemma&nbsp;1</a> using the Grothendieck spectral sequence, we obtain <span class="math display">\[
+    \mathrm{H}^i(X_{\mathrm{ét}}, x_*\mathcal{F})=0
+\]</span> for every <span class="math inline">\(i&gt;0\)</span>.</p>
 </div>
 <div id="lem-torsion" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 4</strong></span> Let <span class="math inline">\(X\)</span> be a quasi-compact quasi-separated (qcqs) scheme, and <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(X_{ét})\)</span> be a torsion sheaf. Then <span class="math inline">\(\mathrm{H}^i(X, \mathcal{F})\)</span> is a torsion group for all <span class="math inline">\(i\geq 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Lemma 4</strong></span> Let <span class="math inline">\(X\)</span> be a quasi-compact quasi-separated (qcqs) scheme, and <span class="math inline">\(\mathcal{F}\in \mathrm{Sh}(X_{\mathrm{ét}})\)</span> be a torsion sheaf. Then <span class="math inline">\(\mathrm{H}^i(X, \mathcal{F})\)</span> is a torsion group for all <span class="math inline">\(i\geq 0\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathcal{F}[n]\)</span> be the kernel of the multiplication by <span class="math inline">\(n\)</span> map <span class="math inline">\(\mathcal{F}\xrightarrow{\cdot n} \mathcal{F}\)</span>. We have an isomorphism <span class="math display">\[
@@ -414,38 +445,40 @@ window.Quarto = {
     (\varinjlim \mathcal{F}[n])_x\cong\varinjlim((\mathcal{F}[n])_x)\cong \varinjlim((\mathcal{F}_x)[n])\cong \mathcal{F}_x
 \]</span></p>
 <p>Since <span class="math inline">\(X\)</span> is qcqs, the cohomology commutes with colimits: <span class="math display">\[
-    \mathrm{H}^i(X _{ét}, \mathcal{F})\cong \mathrm{H}^i(X _{ét}, \varinjlim(\mathcal{F}[n]))\cong \varinjlim(\mathrm{H}^i(X _{ét}, \mathcal{F}[n]))
+    \mathrm{H}^i(X _{\mathrm{ét}}, \mathcal{F})\cong \mathrm{H}^i(X _{\mathrm{ét}}, \varinjlim(\mathcal{F}[n]))\cong \varinjlim(\mathrm{H}^i(X _{\mathrm{ét}}, \mathcal{F}[n]))
 \]</span></p>
-<p>Since the multiplication by <span class="math inline">\(n\)</span> map is the zero map on <span class="math inline">\(\mathcal{F}[n]\)</span>, in cohomology it is again the zero map (being the cohomology functor additive). Therefore, the cohomology is a colimit of torsion groups, ad therefore it is a torsion group.</p>
+<p>Since the multiplication by <span class="math inline">\(n\)</span> map is the zero map on <span class="math inline">\(\mathcal{F}[n]\)</span>, in cohomology it is again the zero map (since the cohomology functor is additive). Therefore, the cohomology is a colimit of torsion groups, and therefore it is a torsion group.</p>
 </div>
 <div id="lem-c-one-field" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 5</strong></span> Let <span class="math inline">\(k\)</span> be a separably closed field, <span class="math inline">\(K/k\)</span> a trascendence degree <span class="math inline">\(1\)</span> field extension, and <span class="math inline">\(L/K\)</span> be an algebraic and separable field extension. Then <span class="math inline">\(L':=(L\otimes_k \bar k)_{\mathrm{red}}\)</span>, where <span class="math inline">\(\bar k\)</span> denotes an algebraic closure, is a field with <span class="math inline">\(C_1\)</span> property and <span class="math inline">\(L'/L\)</span> is purely inseparable.</p>
+<p><span class="theorem-title"><strong>Lemma 5</strong></span> Let <span class="math inline">\(k\)</span> be a separably closed field, <span class="math inline">\(K/k\)</span> a field extension of transcendence degree <span class="math inline">\(1\)</span>, and <span class="math inline">\(L/K\)</span> be an algebraic and separable field extension. Then <span class="math inline">\(L':=(L\otimes_k \bar k)_{\mathrm{red}}\)</span>, where <span class="math inline">\(\bar k\)</span> denotes an algebraic closure, is a field with <span class="math inline">\(C_1\)</span> property and <span class="math inline">\(L'/L\)</span> is purely inseparable.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>We first show that <span class="math inline">\(L'/L\)</span> is purely inseparable. If <span class="math inline">\(\operatorname{char}(k)=0\)</span>, then <span class="math inline">\(k\)</span> is already algebraically closed, so <span class="math inline">\(\bar k=k\)</span>, hence <span class="math inline">\(L'=L\)</span>, and there is nothing to prove. If <span class="math inline">\(\mathrm{char}(k)=p&gt;0\)</span>, it is easy to verify that for every <span class="math inline">\(x \in L\otimes _k \bar k\)</span> we get for a suitable <span class="math inline">\(n\)</span> that <span class="math inline">\(x^{p^n}\in L\)</span> (write <span class="math inline">\(x\)</span> as sum of elementary tensor). Thus, passing to the reduction give the purely inseparable extension.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>We first show that <span class="math inline">\(L'/L\)</span> is purely inseparable. If <span class="math inline">\(\operatorname{char}(k)=0\)</span>, then <span class="math inline">\(k\)</span> is already algebraically closed, so <span class="math inline">\(\bar k=k\)</span>, hence <span class="math inline">\(L'=L\)</span>, and there is nothing to prove. If <span class="math inline">\(\mathrm{char}(k)=p&gt;0\)</span>, it is easy to verify that for every <span class="math inline">\(x \in L\otimes _k \bar k\)</span> we get for a suitable <span class="math inline">\(n\)</span> that <span class="math inline">\(x^{p^n}\in L\)</span> (write <span class="math inline">\(x\)</span> as a sum of elementary tensor). Thus, passing to the reduction gives the purely inseparable extension.</p>
 <p>It remains to prove that <span class="math inline">\(L'\)</span> is <span class="math inline">\(C_1\)</span>. Since <span class="math inline">\(L/k(t)\)</span> is algebraic, <span class="math inline">\(A:=L\otimes_k \bar k\)</span> is integral over <span class="math inline">\(k(t)\otimes_k \bar k\)</span>. Now <span class="math inline">\(t\)</span> is transcendental over <span class="math inline">\(k\)</span>, so <span class="math display">\[
 k(t)\otimes_k \bar k \cong \bar k(t).
 \]</span> Hence <span class="math inline">\(A\)</span> is integral over the field <span class="math inline">\(\bar k(t)\)</span>, and therefore <span class="math inline">\(L'/\bar k(t)\)</span> is algebraic (being <span class="math inline">\(L'\)</span> a quotient of <span class="math inline">\(A\)</span>).</p>
 <p>Now <span class="math inline">\(\bar k\)</span> is algebraically closed, so by <a href="https://stacks.math.columbia.edu/tag/03RD">Tsen’s theorem</a> the field <span class="math inline">\(\bar k(t)\)</span> is <span class="math inline">\(C_1\)</span>. Since algebraic extensions of <span class="math inline">\(C_1\)</span>-fields are again <span class="math inline">\(C_1\)</span>, it follows that <span class="math inline">\(L'\)</span> is <span class="math inline">\(C_1\)</span>.</p>
 </div>
-<div id="thm-multiplicative-sheaf" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1</strong></span> Let <span class="math inline">\(C\)</span> be an algebraic curve (of dimension 1, finite type, and separated over a field) over a separably closed field <span class="math inline">\(k\)</span>. Then <span class="math display">\[
-    \mathrm{H}^i(C, \mathcal{O}_{C,ét})=
+</section>
+<section id="proof-of-the-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-the-theorem">Proof of the theorem</h2>
+<p>We are now ready to prove that</p>
+<p><span class="math display">\[
+    \mathrm{H}^i(C, \mathcal{O}^\times_{C,\mathrm{ét}})=
     \begin{cases}
         \mathcal{O}_C(C)^\times &amp;i=0\\
         \mathrm{Pic}(C) &amp;i=1 \\
         0 &amp;i&gt;1 \text{ and $k$ is algebraically closed}\\
-        p^\infty \text{ torsion group } &amp;i&gt;1 \text{ and $k$ is non perfect with char($k$)=p}
+        p^\infty \text{-torsion group } &amp;i&gt;1 \text{ and $k$ is non-perfect with char($k$)=p}
     \end{cases}
 \]</span></p>
-</div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The case <span class="math inline">\(i=0\)</span> is clear. We will not prove the case <span class="math inline">\(i=1\)</span>, since it follows from the interpretation of first cohomology in terms of torsors. More precisely, <span class="math inline">\(H^1(C_{\mathrm{ét}},\mathcal{O}_{C,\mathrm{ét}}^\times)\)</span> classifies <span class="math inline">\(\mathcal{O}_{C,\mathrm{ét}}^\times\)</span>-torsors on <span class="math inline">\(C_{\mathrm{ét}}\)</span>, see <a href="https://stacks.math.columbia.edu/tag/03AJ">Tag 03AJ</a>. These torsors are equivalent to line bundles on <span class="math inline">\(C\)</span>, thus we obtain <span class="math display">\[
     H^1(C_{\mathrm{ét}}, \mathcal{O}_{C,\mathrm{ét}}^\times)\cong \mathrm{Pic}(C),
 \]</span> see <a href="https://stacks.math.columbia.edu/tag/040E">Tag 040E</a> for the proof.</p>
-<p>Let’s study the case of <span class="math inline">\(i&gt;1\)</span>.</p>
+<p>We now study the case of <span class="math inline">\(i&gt;1\)</span>.</p>
 <ul>
-<li><p><strong>Step 1:</strong> suppose the curve to be regular and connected.</p>
+<li><p><strong>Step 1:</strong> suppose the curve is regular and connected.</p>
 <p>In particular, the curve is integral, since every stalk is a noetherian regular local ring (hence reduced) and since every point belongs to exactly one irreducible component. Since irreducible components are closed (because <span class="math inline">\(C\)</span> is a noetherian topological space), the curve is indeed integral.</p>
 <p>Let <span class="math inline">\(\eta\)</span> be the generic point. Consider the following exact sequence: <span id="eq-exact-sequence-regular"><span class="math display">\[
   0\to \mathcal{O}_{C, \mathrm{ét}}^\times\to \eta_* \mathcal{O}_{\eta, \mathrm{ét}}^\times \to \bigoplus _{c\in C \text{ closed }} c_* \mathbb{Z}\to 0
@@ -455,13 +488,13 @@ k(t)\otimes_k \bar k \cong \bar k(t).
 \]</span> and the right-hand side map is the valuation map.</p>
 <p>Taking cohomology of sequence <a href="#eq-exact-sequence-regular" class="quarto-xref">1</a> gives that <span id="eq-iso-pushforward"><span class="math display">\[
   \mathrm{H}^i(C, \mathcal{O}_{C, \mathrm{ét}}^\times)\cong \mathrm{H}^i(C, \eta_* \mathcal{O}_{\eta, \mathrm{ét}}^\times)
-\tag{2}\]</span></span> for all <span class="math inline">\(i&gt;1\)</span>. Indeed, the sheaf <span class="math inline">\(\bigoplus _{c\in C \text{ closed }} c_* \mathbb{Z}\)</span> is the filtered colimit of the finite sums <span class="math inline">\(\bigoplus _{c\in S} c_* \mathbb{Z}\)</span>, where <span class="math inline">\(S\)</span> ranges over the finite subsets of closed points of <span class="math inline">\(C\)</span>. By <a href="#cor-sumskyscraper" class="quarto-xref">Corollary&nbsp;1</a>, each such finite sum has vanishing higher cohomology. Since <span class="math inline">\(C\)</span> is qcqs, filtered colimits of abelian sheaves on <span class="math inline">\(C_{\mathrm{ét}}\)</span> commute with cohomology by the Stacks Project <a href="https://stacks.math.columbia.edu/tag/073D">Tag 073D</a>. Therefore <span class="math display">\[
+\tag{2}\]</span></span> for all <span class="math inline">\(i&gt;1\)</span>. Indeed, the sheaf <span class="math inline">\(\bigoplus _{c\in C \text{ closed }} c_* \mathbb{Z}\)</span> is the filtered colimit of the finite sums <span class="math inline">\(\bigoplus _{c\in S} c_* \mathbb{Z}\)</span>, where <span class="math inline">\(S\)</span> ranges over the finite subsets of closed points of <span class="math inline">\(C\)</span>. By <a href="#cor-sumskyscraper" class="quarto-xref">Corollary&nbsp;1</a> and <a href="#lem-vanishingskyscraper" class="quarto-xref">Lemma&nbsp;3</a>, each such finite sum has vanishing higher cohomology. Since <span class="math inline">\(C\)</span> is qcqs, filtered colimits of abelian sheaves on <span class="math inline">\(C_{\mathrm{ét}}\)</span> commute with cohomology by the Stacks Project <a href="https://stacks.math.columbia.edu/tag/073D">Tag 073D</a>. Therefore <span class="math display">\[
   \mathrm{H}^i\left(C_{\mathrm{ét}},\bigoplus _{c\in C \text{ closed }} c_* \mathbb{Z}\right)=0
 \]</span> for every <span class="math inline">\(i&gt;0\)</span>, and the claimed isomorphism follows from the long exact sequence in cohomology.</p>
 <p>By <a href="https://stacks.math.columbia.edu/tag/03Q9">Tag 03Q9</a>, we have for every geometric point <span class="math inline">\(c\)</span> of <span class="math inline">\(C\)</span> <span id="eq-iso-stalk-higher-image"><span class="math display">\[
   (\mathrm{R}^q\eta _* \mathcal{O}_{\eta, \mathrm{ét}} ^\times)_c\cong \mathrm{H}^q((\eta\times_C \mathrm{Spec}(\mathcal{O}_{C,c} ^{\mathrm{sh}}))_{ét}, (\mathcal{O}^\times _{\eta,\mathrm{ét}})_{|\eta\times_C \mathrm{Spec}(\mathcal{O} _{C,c} ^{\mathrm{sh}})})   
 \tag{3}\]</span></span></p>
-<p>As <span class="math inline">\(\eta \times_C \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Spec}(\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh}))\)</span>, write <span class="math inline">\(L\)</span> for <span class="math inline">\(\mathrm{Frac}(\mathcal{O}_{C,c} ^{\mathrm{sh}})\)</span>, so that the restriction of <span class="math inline">\(\mathcal{O}_{\eta ,\mathrm{ét}}^\times\)</span> appearing in the right-hand side of <a href="#eq-iso-stalk-higher-image" class="quarto-xref">3</a> is just <span class="math inline">\(\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times\)</span>. Observe that <span class="math inline">\(L\)</span> is an algebraic separable extension of the function field <span class="math inline">\(k(C)\)</span>. Indeed, <span class="math inline">\(\mathcal{O}_{C,c}^ \mathrm{sh}\)</span> is the filtered colimit of local étale <span class="math inline">\(\mathcal{O}_{C,c}\)</span>-algebras <span class="math inline">\(B\)</span>, and for each such <span class="math inline">\(B\)</span> the field <span class="math inline">\(\mathrm{Frac}(B)=B\otimes _{\mathcal{O}_{C,c}}k(C)\)</span> is a finite separable extension of <span class="math inline">\(k(C)\)</span>, thus every element of <span class="math inline">\(L\)</span> lies in some finite separable extension of <span class="math inline">\(k(C)\)</span>.</p>
+<p>As <span class="math inline">\(\eta \times_C \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Spec}(\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh}))\)</span>, write <span class="math inline">\(L\)</span> for <span class="math inline">\(\mathrm{Frac}(\mathcal{O}_{C,c} ^{\mathrm{sh}})\)</span>, so that the restriction of <span class="math inline">\(\mathcal{O}_{\eta ,\mathrm{ét}}^\times\)</span> appearing in the right-hand side of <a href="#eq-iso-stalk-higher-image" class="quarto-xref">3</a> is just <span class="math inline">\(\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times\)</span>. Observe that <span class="math inline">\(L\)</span> is an algebraic separable extension of the function field <span class="math inline">\(\kappa(C)\)</span>. Indeed, <span class="math inline">\(\mathcal{O}_{C,c}^ \mathrm{sh}\)</span> is the filtered colimit of local étale <span class="math inline">\(\mathcal{O}_{C,c}\)</span>-algebras <span class="math inline">\(B\)</span>, and for each such <span class="math inline">\(B\)</span> the field <span class="math inline">\(\mathrm{Frac}(B)=B\otimes _{\mathcal{O}_{C,c}}\kappa(C)\)</span> is a finite separable extension of <span class="math inline">\(\kappa(C)\)</span>, thus every element of <span class="math inline">\(L\)</span> lies in some finite separable extension of <span class="math inline">\(\kappa(C)\)</span>.</p>
 <p>By the <a href="https://stacks.math.columbia.edu/tag/03QU">relation between Galois and étale cohomology</a>, we have <span id="eq-iso-gal-etale"><span class="math display">\[
   \mathrm{H}^q(\mathrm{Spec}(L), \mathcal{O}_{\mathrm{Spec}(L), \mathrm{ét}}^\times)\cong \mathrm{H}^q(\mathrm{Gal}(L^\mathrm{sep}/L), (L^{\mathrm{sep}})^\times)
 \tag{4}\]</span></span></p>
@@ -503,7 +536,7 @@ k(t)\otimes_k \bar k \cong \bar k(t).
   \cong
   \mathrm{H}^n(\eta_{\mathrm{\acute et}},\mathcal O^\times_{\eta,\mathrm{\acute et}})\otimes_{\mathbb{Z}}\mathbb{Z}[p^{-1}].
 \]</span></p>
-<p>Now <span class="math inline">\(\mathrm{H}^1(\eta_{\mathrm{\acute et}},\mathcal O^\times_{\eta,\mathrm{\acute et}})=0\)</span> by Hilbert-90, and for every <span class="math inline">\(n\geq 2\)</span> the group <span class="math inline">\(\mathrm{H}^n(\eta_{\mathrm{\acute et}},\mathcal O^\times_{\eta,\mathrm{\acute et}})\)</span> is a <span class="math inline">\(p^\infty\)</span>-torsion group by the same Galois-cohomological argument as above, applied to the field <span class="math inline">\(k(C)\)</span>. Therefore <span class="math display">\[
+<p>Now <span class="math inline">\(\mathrm{H}^1(\eta_{\mathrm{\acute et}},\mathcal O^\times_{\eta,\mathrm{\acute et}})=0\)</span> by Hilbert-90, and for every <span class="math inline">\(n\geq 2\)</span> the group <span class="math inline">\(\mathrm{H}^n(\eta_{\mathrm{\acute et}},\mathcal O^\times_{\eta,\mathrm{\acute et}})\)</span> is a <span class="math inline">\(p^\infty\)</span>-torsion group by the same Galois-cohomological argument as above, applied to the field <span class="math inline">\(\kappa(C)\)</span>. Therefore <span class="math display">\[
   \mathrm{H}^n(\eta_{\mathrm{\acute et}},\mathcal O^\times_{\eta,\mathrm{\acute et}})\otimes_{\mathbb{Z}}\mathbb{Z}[p^{-1}]=0
   \qquad (n&gt;0).
 \]</span> It follows that <span class="math display">\[
@@ -514,7 +547,23 @@ k(t)\otimes_k \bar k \cong \bar k(t).
   \mathrm{H}^n(C_{\mathrm{\acute et}},\eta_*\mathcal O^\times_{\eta,\mathrm{\acute et}})\otimes_{\mathbb{Z}}\mathbb{Z}[p^{-1}]=0
   \qquad (n&gt;1).
 \]</span></p>
-<p>By the isomorphism <a href="#eq-iso-pushforward" class="quarto-xref">2</a>, this gives the claim in the case of a regular connected curve.</p></li>
+<p>By the isomorphism <a href="#eq-iso-pushforward" class="quarto-xref">2</a>, this gives the claim in the case of a regular connected curve.</p>
+<p>If <span class="math inline">\(k\)</span> is algebraically closed, the previous argument gives a stronger conclusion. Indeed, in this case the field <span class="math inline">\(L=\mathrm{Frac}(\mathcal{O}_{C,c}^{\mathrm{sh}})\)</span> is a <span class="math inline">\(C_1\)</span>-field, being an algebraic extension of the function field <span class="math inline">\(\kappa(C)\)</span>. Hence, by the same Galois-cohomological vanishing used above, we have <span class="math display">\[
+  \mathrm{H}^q(\mathrm{Gal}(L^{\mathrm{sep}}/L),(L^{\mathrm{sep}})^\times)=0
+\]</span> for every <span class="math inline">\(q&gt;0\)</span>. Therefore <span class="math display">\[
+  (\mathrm{R}^q\eta_* \mathcal{O}_{\eta,\mathrm{ét}}^\times)_c=0
+\]</span> for every geometric point <span class="math inline">\(c\)</span> of <span class="math inline">\(C\)</span> and every <span class="math inline">\(q&gt;0\)</span>, so <span class="math display">\[
+  \mathrm{R}^q\eta_* \mathcal{O}_{\eta,\mathrm{ét}}^\times=0
+\]</span> for every <span class="math inline">\(q&gt;0\)</span>.</p>
+<p>Thus the Grothendieck spectral sequence degenerates and gives <span class="math display">\[
+  \mathrm{H}^n(C_{\mathrm{ét}},\eta_*\mathcal{O}_{\eta,\mathrm{ét}}^\times)
+  \cong
+  \mathrm{H}^n(\eta_{\mathrm{ét}},\mathcal{O}_{\eta,\mathrm{ét}}^\times)
+\]</span> for every <span class="math inline">\(n\geq 0\)</span>. Since <span class="math inline">\(\kappa(C)\)</span> is again a <span class="math inline">\(C_1\)</span>-field, the right-hand side vanishes for every <span class="math inline">\(n&gt;0\)</span>. Therefore <span class="math display">\[
+  \mathrm{H}^n(C_{\mathrm{ét}},\eta_*\mathcal{O}_{\eta,\mathrm{ét}}^\times)=0
+\]</span> for every <span class="math inline">\(n&gt;0\)</span>. By <a href="#eq-iso-pushforward" class="quarto-xref">2</a>, this proves the vanishing of <span class="math display">\[
+  \mathrm{H}^n(C_{\mathrm{ét}},\mathcal{O}_{C,\mathrm{ét}}^\times)
+\]</span> for every <span class="math inline">\(n&gt;1\)</span> in the case where <span class="math inline">\(k\)</span> is algebraically closed.</p></li>
 <li><p><strong>Step 2:</strong> suppose <span class="math inline">\(C\)</span> is regular.</p>
 <p>Apply <strong>Step 1</strong> to every connected component.</p></li>
 <li><p><strong>Step 3:</strong> suppose <span class="math inline">\(C\)</span> is reduced.</p>
@@ -557,20 +606,27 @@ k(t)\otimes_k \bar k \cong \bar k(t).
 \]</span> for every <span class="math inline">\(i\geq 0\)</span>. Moreover, the nilradical of <span class="math inline">\(\mathcal{O}_{C_0}\)</span> is killed by <span class="math inline">\(2^{n-1}\)</span>. Applying the induction hypothesis, we get the claim.</p></li>
 </ul>
 </div>
-<div id="thm-smooth-proper-unity" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2</strong></span> Let <span class="math inline">\(C\)</span> a proper smooth connected curve of genus <span class="math inline">\(g\)</span> over a separably closed field <span class="math inline">\(k\)</span>. Let <span class="math inline">\(n\in \mathbb{N}\)</span> coprime with <span class="math inline">\(\mathrm{char}(k)\)</span>. Then <span class="math display">\[
+<!--- ::: {#thm-smooth-proper-unity}
+
+Let $C$ a proper smooth connected curve of genus $g$ over a separably closed field $k$. Let $n\in \mathbb{N}$ coprime with $\mathrm{char}(k)$. Then
+$$
     \mathrm{H}^i(C _{\mathrm{ét}}, \mu_n)=
     \begin{cases}
-        \mu_n(k) &amp;i=0\\
-        \mathrm{Pic}^0(C)[n] &amp;i=1\\
-        \mathbb{Z}/n \mathbb{Z} &amp;i=2\\
-        0 &amp;i&gt;2\\
+        \mu_n(k) &i=0\\
+        \mathrm{Pic}^0(C)[n] &i=1\\
+        \mathbb{Z}/n \mathbb{Z} &i=2\\
+        0 &i>2\\
     \end{cases}
-\]</span></p>
-</div>
+$$
+    
+
+:::
+
+-->
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
