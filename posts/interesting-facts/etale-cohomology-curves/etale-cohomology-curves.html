@@ -450,7 +450,7 @@ k(t)\otimes_k \bar k \cong \bar k(t).
 <p>Let <span class="math inline">\(\eta\)</span> be the generic point. Consider the following exact sequence: <span id="eq-exact-sequence-regular"><span class="math display">\[
   0\to \mathcal{O}_{C, \mathrm{ét}}^\times\to \eta_* \mathcal{O}_{\eta, \mathrm{ét}}^\times \to \bigoplus _{c\in C \text{ closed }} c_* \mathbb{Z}\to 0
 \tag{1}\]</span></span></p>
-<p>where the second map is the divisor map. This sequence is exact since on the stalk at a geometric point <span class="math inline">\(\bar x\)</span> it is given by <span class="math display">\[
+<p>where the second map is the divisor map. This sequence is exact since on the stalk at a geometric point <span class="math inline">\(\bar x\)</span> over a closed point it is given by <span class="math display">\[
   0\to (\mathcal{O}_{C, \bar x} ^{\mathrm{sh}})^\times \to (\mathrm{Frac}(\mathcal{O}_{C, \bar x} ^{\mathrm{sh}}))^\times\to \mathbb{Z}\to 0
 \]</span> and the right-hand side map is the valuation map.</p>
 <p>Taking cohomology of sequence <a href="#eq-exact-sequence-regular" class="quarto-xref">1</a> gives that <span id="eq-iso-pushforward"><span class="math display">\[
@@ -461,7 +461,7 @@ k(t)\otimes_k \bar k \cong \bar k(t).
 <p>By <a href="https://stacks.math.columbia.edu/tag/03Q9">Tag 03Q9</a>, we have for every geometric point <span class="math inline">\(c\)</span> of <span class="math inline">\(C\)</span> <span id="eq-iso-stalk-higher-image"><span class="math display">\[
   (\mathrm{R}^q\eta _* \mathcal{O}_{\eta, \mathrm{ét}} ^\times)_c\cong \mathrm{H}^q((\eta\times_C \mathrm{Spec}(\mathcal{O}_{C,c} ^{\mathrm{sh}}))_{ét}, (\mathcal{O}^\times _{\eta,\mathrm{ét}})_{|\eta\times_C \mathrm{Spec}(\mathcal{O} _{C,c} ^{\mathrm{sh}})})   
 \tag{3}\]</span></span></p>
-<p>As <span class="math inline">\(\eta \times_C \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Spec}(\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh}))\)</span>, write <span class="math inline">\(L\)</span> for <span class="math inline">\(\mathrm{Frac}(\mathcal{O}_{C,c} ^{\mathrm{sh}})\)</span>, so that the restriction of <span class="math inline">\(\mathcal{O}_{\eta ,\mathrm{ét}}^\times\)</span> appearing in the right-hand side of <a href="#eq-iso-stalk-higher-image" class="quarto-xref">3</a> is just <span class="math inline">\(\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times\)</span>. Observe that <span class="math inline">\(L\)</span> is an algebraic separable extension of the function field <span class="math inline">\(k(C)\)</span>. Indeed, <span class="math inline">\(\mathcal{O}_{C,c}^ \mathrm{sh}\)</span> is the filtered colimit of local étale <span class="math inline">\(\mathcal{O}_{C,c}\)</span>-algebras <span class="math inline">\(B\)</span>, and for each such <span class="math inline">\(B\)</span> the field <span class="math inline">\(\mathrm{Frac}(B)=B\otimes _{\mathcal{O}_{C,c}}k(C)\)</span> is a finite separable extension of <span class="math inline">\(k(C)\)</span>; thus every element of <span class="math inline">\(L\)</span> lies in some finite separable extension of <span class="math inline">\(k(C)\)</span>.</p>
+<p>As <span class="math inline">\(\eta \times_C \mathrm{Spec}(\mathcal{O} _{C,c}^\mathrm{sh})=\mathrm{Spec}(\mathrm{Frac}(\mathcal{O}_{C,c}^\mathrm{sh}))\)</span>, write <span class="math inline">\(L\)</span> for <span class="math inline">\(\mathrm{Frac}(\mathcal{O}_{C,c} ^{\mathrm{sh}})\)</span>, so that the restriction of <span class="math inline">\(\mathcal{O}_{\eta ,\mathrm{ét}}^\times\)</span> appearing in the right-hand side of <a href="#eq-iso-stalk-higher-image" class="quarto-xref">3</a> is just <span class="math inline">\(\mathcal{O}_{\mathrm{Spec}(L),\mathrm{ét}}^\times\)</span>. Observe that <span class="math inline">\(L\)</span> is an algebraic separable extension of the function field <span class="math inline">\(k(C)\)</span>. Indeed, <span class="math inline">\(\mathcal{O}_{C,c}^ \mathrm{sh}\)</span> is the filtered colimit of local étale <span class="math inline">\(\mathcal{O}_{C,c}\)</span>-algebras <span class="math inline">\(B\)</span>, and for each such <span class="math inline">\(B\)</span> the field <span class="math inline">\(\mathrm{Frac}(B)=B\otimes _{\mathcal{O}_{C,c}}k(C)\)</span> is a finite separable extension of <span class="math inline">\(k(C)\)</span>, thus every element of <span class="math inline">\(L\)</span> lies in some finite separable extension of <span class="math inline">\(k(C)\)</span>.</p>
 <p>By the <a href="https://stacks.math.columbia.edu/tag/03QU">relation between Galois and étale cohomology</a>, we have <span id="eq-iso-gal-etale"><span class="math display">\[
   \mathrm{H}^q(\mathrm{Spec}(L), \mathcal{O}_{\mathrm{Spec}(L), \mathrm{ét}}^\times)\cong \mathrm{H}^q(\mathrm{Gal}(L^\mathrm{sep}/L), (L^{\mathrm{sep}})^\times)
 \tag{4}\]</span></span></p>
@@ -485,7 +485,7 @@ k(t)\otimes_k \bar k \cong \bar k(t).
 </div>
 <p>By isomorphisms <a href="#eq-iso-stalk-higher-image" class="quarto-xref">3</a>, <a href="#eq-iso-gal-etale" class="quarto-xref">4</a>, and <a href="#clm-p-torsion">Claim</a>, we get that <span class="math display">\[
   (\mathrm{R}^q\eta_* \mathcal{O}_{\eta, \mathrm{ét}}^\times)_c
-\]</span> is a <span class="math inline">\(p^\infty\)</span>-torsion group at every geometric point <span class="math inline">\(c\)</span>; thus the sheaf <span class="math inline">\(R^q \eta_* \mathcal{O}_{\eta , \mathrm{ét}}^\times\)</span> is a <span class="math inline">\(p^\infty\)</span>-torsion sheaf.</p>
+\]</span> is a <span class="math inline">\(p^\infty\)</span>-torsion group at every geometric point <span class="math inline">\(c\)</span>, thus the sheaf <span class="math inline">\(R^q \eta_* \mathcal{O}_{\eta , \mathrm{ét}}^\times\)</span> is a <span class="math inline">\(p^\infty\)</span>-torsion sheaf.</p>
 <p>Consider the Grothendieck spectral sequence <span class="math display">\[
   \mathrm{E}_2^{i,j}:=\mathrm{H}^i(C_{\mathrm{\acute et}},\mathrm{R}^j\eta_*\mathcal O^\times_{\eta,\mathrm{\acute et}})
   \Longrightarrow
@@ -518,16 +518,26 @@ k(t)\otimes_k \bar k \cong \bar k(t).
 <li><p><strong>Step 2:</strong> suppose <span class="math inline">\(C\)</span> is regular.</p>
 <p>Apply <strong>Step 1</strong> to every connected component.</p></li>
 <li><p><strong>Step 3:</strong> suppose <span class="math inline">\(C\)</span> is reduced.</p>
-<p>Consider the normalization <span class="math inline">\(\nu: C'\to C\)</span> of the curve and the sequence <span id="eq-normalization-sequence"><span class="math display">\[
-  0\to \mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times\to Q\to 0
-\tag{5}\]</span></span> where <span class="math inline">\(Q\)</span> is the cokernel. The sequence <a href="#eq-normalization-sequence" class="quarto-xref">5</a> is exact because <span class="math inline">\(C\)</span> is reduced, so we can write its normalization as the disjoint union of the normalizations of its irreducible components. Affine locally, if <span class="math inline">\(A\)</span> is the coordinate ring of <span class="math inline">\(C\)</span> and <span class="math inline">\(\mathfrak{p}_1,\dots , \mathfrak{p}_r\)</span> are its minimal primes, the map is <span class="math display">\[
-  A\to \prod_i \widetilde{A/\mathfrak{p}_i}
-\]</span> This is injective because <span class="math inline">\(A\)</span> is reduced, so <span class="math inline">\(\bigcap_i \mathfrak{p}_i=0\)</span>. Since étale morphisms are flat, this injectivity remains true after pulling back to any affine étale <span class="math inline">\(V\to C\)</span>. Moreover, <span class="math display">\[
-  (\nu_* \mathcal{O}_{C',\mathrm{ét}}^\times)(V)=\Gamma(V\times_C C', \mathcal{O}_{C'}^\times),
-\]</span> so the first map in <a href="#eq-normalization-sequence" class="quarto-xref">5</a> is injective. Therefore the sequence is exact by definition of <span class="math inline">\(Q\)</span>.</p>
-<p>Now consider the regular locus <span class="math inline">\(C _{\mathrm{reg}}\)</span> of <span class="math inline">\(C\)</span>. It is Zariski open in <span class="math inline">\(C\)</span>, since <span class="math inline">\(C\)</span> is locally of finite type over a field. Moreover, each stalk at a generic point is a field, hence regular; thus <span class="math inline">\(C _{\mathrm{reg}}\)</span> is dense. Since <span class="math inline">\(C\)</span> has dimension <span class="math inline">\(1\)</span>, regularity gives normality, so <span class="math display">\[
+<p>Consider the normalization <span class="math inline">\(\nu: C'\to C\)</span> of the curve. We first prove that the natural morphism <span class="math display">\[
+  \mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times
+\]</span> is injective.</p>
+<p>Let <span class="math inline">\(C _{\mathrm{reg}}\)</span> be the regular locus of <span class="math inline">\(C\)</span>. It is Zariski open in <span class="math inline">\(C\)</span>, since <span class="math inline">\(C\)</span> is locally of finite type over a field. Moreover, since <span class="math inline">\(C\)</span> is reduced, each generic point of <span class="math inline">\(C\)</span> is regular, thus <span class="math inline">\(C _{\mathrm{reg}}\)</span> is dense. Since regular points are normal, the normalization is an isomorphism over <span class="math inline">\(C _{\mathrm{reg}}\)</span>. Hence <span class="math display">\[
   (\mathcal{O}_{C, \mathrm{ét}}^\times)_{|C _{\mathrm{reg}}}\to  (\nu_* \mathcal{O}_{C', \mathrm{ét}}^\times)_{|C _{\mathrm{reg}}}
-\]</span> is an isomorphism. Hence <span class="math inline">\(Q\)</span> vanishes on a dense open subset of <span class="math inline">\(C\)</span>, and thus it is supported on finitely many points of <span class="math inline">\(C\)</span>. Therefore, by <a href="#cor-sumskyscraper" class="quarto-xref">Corollary&nbsp;1</a>, we get <span class="math display">\[
+\]</span> is an isomorphism.</p>
+<p>Now let <span class="math inline">\(V\to C\)</span> be an affine étale morphism. Since étale morphisms are open, <span class="math display">\[
+  V_{\mathrm{reg}}:=V\times_C C_{\mathrm{reg}}
+\]</span> is a dense open subset of <span class="math inline">\(V\)</span>. After base change to <span class="math inline">\(V\)</span>, the normalization map is still an isomorphism over <span class="math inline">\(V_{\mathrm{reg}}\)</span>. Therefore the map <span class="math display">\[
+  \Gamma(V,\mathcal{O}_V^\times)\to \Gamma(V\times_C C',\mathcal{O}_{V\times_C C'}^\times)
+\]</span> becomes an isomorphism after restricting to the dense open subset <span class="math inline">\(V_{\mathrm{reg}}\)</span>.</p>
+<p>Since <span class="math inline">\(C\)</span> is reduced and <span class="math inline">\(V\to C\)</span> is étale, also <span class="math inline">\(V\)</span> is reduced. Hence restriction to a dense open subset is injective, thus <span class="math display">\[
+  \Gamma(V,\mathcal{O}_V^\times)\to \Gamma(V\times_C C',\mathcal{O}_{V\times_C C'}^\times)
+\]</span> is injective. Since this holds for every affine étale <span class="math inline">\(V\to C\)</span>, the morphism <span class="math display">\[
+  \mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times
+\]</span> is injective.</p>
+<p>Now define <span class="math inline">\(Q\)</span> as the cokernel of this injective morphism. We have an exact sequence <span id="eq-normalization-sequence"><span class="math display">\[
+  0\to \mathcal{O}_{C, \mathrm{ét}}^\times\to \nu_* \mathcal{O}_{C',\mathrm{ét}}^\times\to Q\to 0
+\tag{5}\]</span></span></p>
+<p>Since the normalization is an isomorphism over <span class="math inline">\(C _{\mathrm{reg}}\)</span>, the sheaf <span class="math inline">\(Q\)</span> vanishes on <span class="math inline">\(C _{\mathrm{reg}}\)</span>. Hence <span class="math inline">\(Q\)</span> is supported on finitely many points of <span class="math inline">\(C\)</span>. Therefore, by <a href="#cor-sumskyscraper" class="quarto-xref">Corollary&nbsp;1</a>, we get <span class="math display">\[
   \mathrm{H}^i(C _{\mathrm{ét}}, \mathcal{O}_{C, \mathrm{ét}}^\times)\cong \mathrm{H}^i(C _{\mathrm{ét}}, \nu_* \mathcal{O}_{C', \mathrm{ét}}^\times)
 \]</span> for every <span class="math inline">\(i\geq 2\)</span>.</p>
 <p>Moreover, by the Stacks Project <a href="https://stacks.math.columbia.edu/tag/035S">Tag 035S</a> and <a href="https://stacks.math.columbia.edu/tag/035B">Tag 035B</a>, <span class="math inline">\(\nu\)</span> is finite. Hence, by the exactness of the direct image of a finite morphism on étale sheaves, <span class="math inline">\(\nu_*\)</span> is exact, giving <span class="math display">\[
@@ -542,7 +552,7 @@ k(t)\otimes_k \bar k \cong \bar k(t).
 \]</span> for every <span class="math inline">\(i\geq 0\)</span>. Thus, by dimension vanishing, we get an isomorphism <span class="math display">\[
   \mathrm{H}^i(C _{\mathrm{ét}}, \mathcal{O}_{C, \mathrm{ét}}^\times)\cong \mathrm{H}^i(C _{\mathrm{ét}}, \pi_* \mathcal{O}_{C_0, \mathrm{ét}}^\times)
 \]</span> for every <span class="math inline">\(i&gt;1\)</span>.</p>
-<p>Since <span class="math inline">\(\pi\)</span> is a closed immersion, it is finite; thus <span class="math inline">\(\pi_*\)</span> is exact, giving <span class="math display">\[
+<p>Since <span class="math inline">\(\pi\)</span> is a closed immersion, it is finite, thus <span class="math inline">\(\pi_*\)</span> is exact, giving <span class="math display">\[
   \mathrm{H}^i(C_{\mathrm{ét}}, \pi_* \mathcal{O}_{C_0, \mathrm{ét}}^\times)\cong \mathrm{H}^i((C_0)_{\mathrm{ét}}, \mathcal{O}_{C_0, \mathrm{ét}}^\times)
 \]</span> for every <span class="math inline">\(i\geq 0\)</span>. Moreover, the nilradical of <span class="math inline">\(\mathcal{O}_{C_0}\)</span> is killed by <span class="math inline">\(2^{n-1}\)</span>. Applying the induction hypothesis, we get the claim.</p></li>
 </ul>
