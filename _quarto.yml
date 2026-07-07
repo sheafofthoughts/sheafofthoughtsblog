@@ -13,7 +13,7 @@ website:
       - href: index.qmd
         text: Home
       - href: posts.qmd
-        text: Browse Posts
+        text: Browse posts
     right:
       - href: about.qmd
         text: About

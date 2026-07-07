@@ -5,11 +5,28 @@ comments: false
 format:
   html:
     toc: false
+listing:
+  id: recent-posts
+  contents:
+    - "posts/**/*.qmd"
+    - "!posts/**/index.qmd"
+  sort: "date desc"
+  type: default
+  max-items: 3
+  sort-ui: false
+  filter-ui: false
+  categories: false
 ---
 
 Welcome to **SheafofThoughts**.
 
-This is a mathematics blog with posts at different levels and on different themes. The homepage is organized by category: click a title inside a box to jump directly to the recent posts in that class.
+This is a mathematics blog with posts at different levels and on different themes. Below you can find the most recent posts. For the complete list, click “Browse posts” in the upper-left corner of the page, or use the boxes below to browse by category or series.
+
+
+## Recent posts
+
+::: {#recent-posts}
+:::
 
 ## Browse by category
 
@@ -20,8 +37,6 @@ This is a mathematics blog with posts at different levels and on different theme
 Topic
 :::
 ### [Algebraic Geometry](posts.html#category=Algebraic%20Geometry)
-
-schemes, cohomology...
 :::
 
 ::: {.category-card}
@@ -29,8 +44,6 @@ schemes, cohomology...
 Topic
 :::
 ### [Number Theory](posts.html#category=Number%20Theory)
-
-diophantine equations, primes, number-theoretic curiosities...
 :::
 
 ::: {.category-card}
@@ -38,8 +51,6 @@ diophantine equations, primes, number-theoretic curiosities...
 Level
 :::
 ### [Beginner](posts.html#category=Beginner)
-
-Beginner-friendlier posts meant to explain ideas slowly and from first principles.
 :::
 
 ::: {.category-card}
@@ -47,9 +58,15 @@ Beginner-friendlier posts meant to explain ideas slowly and from first principle
 Level
 :::
 ### [Intermediate](posts.html#category=Intermediate)
-
-Posts aimed at readers with more background who want denser mathematical content.
 :::
+
+::: {.category-card}
+::: {.category-card-top}
+Level
+:::
+### [Advanced](posts.html#category=Advanced)
+:::
+
 :::
 
 ## Series
@@ -64,4 +81,5 @@ Series
 A series of posts aimed at proving Fermat's Christmas Theorem.
 :::
 :::
+
 
