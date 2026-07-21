@@ -1152,9 +1152,25 @@ Neukirch, Jürgen. 1999. <em>Algebraic Number Theory</em>. 1st ed. Vol. 322. Gru
 <h1>Conclusion</h1>
 <p>To conclude, we point your attention to the fact that this theorem is linked to a famous conjecture, namely the <a href="https://en.wikipedia.org/wiki/Jacobian_conjecture">Jacobian conjecture</a>.</p>
 <div id="cnj-jacobian" class="theorem conjecture">
-<p><span class="theorem-title"><strong>Conjecture 1 (Jacobian conjecture)</strong></span> Let <img src="https://latex.codecogs.com/png.latex?k"> be a field of characteristic <img src="https://latex.codecogs.com/png.latex?0"> and let <img src="https://latex.codecogs.com/png.latex?F:%20k%5En%5Cto%20k%5En"> be a polynomial mapping. If the Jacobian determinant <img src="https://latex.codecogs.com/png.latex?J_F"> is invertible, then <img src="https://latex.codecogs.com/png.latex?F"> is an isomorphism.</p>
+<p><span class="theorem-title"><strong>Conjecture 1 (Jacobian conjecture)</strong></span> Let <img src="https://latex.codecogs.com/png.latex?k"> be a field of characteristic <img src="https://latex.codecogs.com/png.latex?0"> and let <img src="https://latex.codecogs.com/png.latex?%0AF:%5Cmathbb%7BA%7D%5En_k%5Clongrightarrow%5Cmathbb%7BA%7D%5En_k%0A"> be a polynomial mapping. If the Jacobian determinant <img src="https://latex.codecogs.com/png.latex?J_F"> is invertible, then <img src="https://latex.codecogs.com/png.latex?F"> is an isomorphism.</p>
 </div>
-<p>Over an algebraically closed field of characteristic <img src="https://latex.codecogs.com/png.latex?0">, the fact that the bijection in Theorem&nbsp;2 becomes an isomorphism shows that, to prove the Jacobian conjecture for <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BA%7D%5En_k">, it suffices to show that a map <img src="https://latex.codecogs.com/png.latex?%0AF:%5Cmathbb%7BA%7D%5En_k%5Crightarrow%20%5Cmathbb%7BA%7D%5En_k%0A"> with invertible Jacobian determinant is injective.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Update: the Jacobian conjecture has been disproved
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In July 2026, <strong>Levent Alpöge</strong> announced an explicit counterexample, whose discovery he credited to the large language model <strong>Claude Fable 5</strong>, after <strong>Akhil Mathew</strong> suggested posing the problem to it.</p>
+<p>Consider the polynomial map <img src="https://latex.codecogs.com/png.latex?%0AF=(P,Q,R):%5Cmathbb%7BC%7D%5E3%5Clongrightarrow%5Cmathbb%7BC%7D%5E3,%0A"> where <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0AP(x,y,z)%0A%20%20&amp;=%20(1+xy)%5E3z+y%5E2(1+xy)(4+3xy),%5C%5C%0AQ(x,y,z)%0A%20%20&amp;=%20y+3x(1+xy)%5E2z+3xy%5E2(4+3xy),%5C%5C%0AR(x,y,z)%0A%20%20&amp;=%202x-3x%5E2y-x%5E3z.%0A%5Cend%7Balign*%7D"></p>
+<p>A direct computation gives <img src="https://latex.codecogs.com/png.latex?%0A%5Cdet%20J_F=-2.%0A"> However, <img src="https://latex.codecogs.com/png.latex?%0AF%5Cleft(0,0,-%5Cfrac14%5Cright)%0A=%0AF%5Cleft(1,-%5Cfrac32,%5Cfrac%7B13%7D%7B2%7D%5Cright)%0A=%0AF%5Cleft(-1,%5Cfrac32,%5Cfrac%7B13%7D%7B2%7D%5Cright)%0A=%0A%5Cleft(-%5Cfrac14,0,0%5Cright).%0A"> Therefore, <img src="https://latex.codecogs.com/png.latex?F"> has an invertible Jacobian determinant but is not injective, and hence is not an isomorphism.</p>
+<p>This disproves the Jacobian conjecture in dimension <img src="https://latex.codecogs.com/png.latex?3">. By adjoining identity coordinates, one obtains counterexamples in every dimension <img src="https://latex.codecogs.com/png.latex?n%5Cgeq%203">. The conjecture in dimension <img src="https://latex.codecogs.com/png.latex?2"> remains open.</p>
+</div>
+</div>
+<p>Over an algebraically closed field of characteristic <img src="https://latex.codecogs.com/png.latex?0">, the Ax–Grothendieck theorem says that every injective polynomial endomorphism of affine space is an isomorphism. Therefore, before the counterexample above was discovered, the Jacobian conjecture for <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BA%7D%5En_k"> could equivalently be reduced to proving that every polynomial map <img src="https://latex.codecogs.com/png.latex?%0AF:%5Cmathbb%7BA%7D%5En_k%5Clongrightarrow%5Cmathbb%7BA%7D%5En_k%0A"> with invertible Jacobian determinant is injective. The counterexample shows that this injectivity statement is false for every <img src="https://latex.codecogs.com/png.latex?n%5Cgeq%203">.</p>
 <hr>
 <p>I would like to thank my friend who suggested this topic to me and helped me write this post.</p>
 <hr>

@@ -92,5 +92,8 @@
   "posts/interesting-facts/etale-cohomology-curves/etale-cohomology-curves.qmd": {
     "etale-cohomology-curves.html": "2d73c202",
     "etale-cohomology-curves.tex": "fc12e470"
+  },
+  "backup/privacy.qmd": {
+    "privacy.html": "a71deada"
   }
 }
