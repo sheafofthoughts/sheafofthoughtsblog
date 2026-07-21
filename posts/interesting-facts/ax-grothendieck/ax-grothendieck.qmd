@@ -232,7 +232,7 @@ be a polynomial mapping. If the Jacobian determinant $J_F$ is invertible, then $
 ::: {.callout-warning}
 ## Update: the Jacobian conjecture has been disproved
 
-In July 2026, **Levent Alpöge** announced an explicit counterexample, whose discovery he credited to the large language model **Claude Fable 5**, after **Akhil Mathew** suggested posing the problem to it.
+In July 2026, **Levent Alpöge** announced an explicit counterexample, discovered through the use of **Claude Fable 5**.
 
 Consider the polynomial map
 $$
@@ -254,8 +254,6 @@ $$
 $$
 However,
 $$
-F\left(0,0,-\frac14\right)
-=
 F\left(1,-\frac32,\frac{13}{2}\right)
 =
 F\left(-1,\frac32,\frac{13}{2}\right)
@@ -263,8 +261,6 @@ F\left(-1,\frac32,\frac{13}{2}\right)
 \left(-\frac14,0,0\right).
 $$
 Therefore, $F$ has an invertible Jacobian determinant but is not injective, and hence is not an isomorphism.
-
-This disproves the Jacobian conjecture in dimension $3$. By adjoining identity coordinates, one obtains counterexamples in every dimension $n\geq 3$. The conjecture in dimension $2$ remains open.
 :::
 
 Over an algebraically closed field of characteristic $0$, the Ax--Grothendieck theorem says that every injective polynomial endomorphism of affine space is an isomorphism. Therefore, before the counterexample above was discovered, the Jacobian conjecture for $\mathbb{A}^n_k$ could equivalently be reduced to proving that every polynomial map
