@@ -294,7 +294,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../posts.html"> 
-<span class="menu-text">Browse Posts</span></a>
+<span class="menu-text">Browse posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -492,11 +492,48 @@ f: X(k)\to Y(k)
 <h1>Conclusion</h1>
 <p>To conclude, we point your attention to the fact that this theorem is linked to a famous conjecture, namely the <a href="https://en.wikipedia.org/wiki/Jacobian_conjecture">Jacobian conjecture</a>.</p>
 <div id="cnj-jacobian" class="theorem conjecture">
-<p><span class="theorem-title"><strong>Conjecture 1 (Jacobian conjecture)</strong></span> Let <span class="math inline">\(k\)</span> be a field of characteristic <span class="math inline">\(0\)</span> and let <span class="math inline">\(F: k^n\to k^n\)</span> be a polynomial mapping. If the Jacobian determinant <span class="math inline">\(J_F\)</span> is invertible, then <span class="math inline">\(F\)</span> is an isomorphism.</p>
+<p><span class="theorem-title"><strong>Conjecture 1 (Jacobian conjecture)</strong></span> Let <span class="math inline">\(k\)</span> be a field of characteristic <span class="math inline">\(0\)</span> and let <span class="math display">\[
+F:\mathbb{A}^n_k\longrightarrow\mathbb{A}^n_k
+\]</span> be a polynomial mapping. If the Jacobian determinant <span class="math inline">\(J_F\)</span> is invertible, then <span class="math inline">\(F\)</span> is an isomorphism.</p>
 </div>
-<p>Over an algebraically closed field of characteristic <span class="math inline">\(0\)</span>, the fact that the bijection in <a href="#thm-ax-groth" class="quarto-xref">Theorem&nbsp;2</a> becomes an isomorphism shows that, to prove the Jacobian conjecture for <span class="math inline">\(\mathbb{A}^n_k\)</span>, it suffices to show that a map <span class="math display">\[
-F:\mathbb{A}^n_k\rightarrow \mathbb{A}^n_k
-\]</span> with invertible Jacobian determinant is injective.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Update: the Jacobian conjecture has been disproved
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In July 2026, <strong>Levent Alpöge</strong> announced an explicit counterexample, whose discovery he credited to the large language model <strong>Claude Fable 5</strong>, after <strong>Akhil Mathew</strong> suggested posing the problem to it.</p>
+<p>Consider the polynomial map <span class="math display">\[
+F=(P,Q,R):\mathbb{C}^3\longrightarrow\mathbb{C}^3,
+\]</span> where <span class="math display">\[\begin{align*}
+P(x,y,z)
+  &amp;= (1+xy)^3z+y^2(1+xy)(4+3xy),\\
+Q(x,y,z)
+  &amp;= y+3x(1+xy)^2z+3xy^2(4+3xy),\\
+R(x,y,z)
+  &amp;= 2x-3x^2y-x^3z.
+\end{align*}\]</span></p>
+<p>A direct computation gives <span class="math display">\[
+\det J_F=-2.
+\]</span> However, <span class="math display">\[
+F\left(0,0,-\frac14\right)
+=
+F\left(1,-\frac32,\frac{13}{2}\right)
+=
+F\left(-1,\frac32,\frac{13}{2}\right)
+=
+\left(-\frac14,0,0\right).
+\]</span> Therefore, <span class="math inline">\(F\)</span> has an invertible Jacobian determinant but is not injective, and hence is not an isomorphism.</p>
+<p>This disproves the Jacobian conjecture in dimension <span class="math inline">\(3\)</span>. By adjoining identity coordinates, one obtains counterexamples in every dimension <span class="math inline">\(n\geq 3\)</span>. The conjecture in dimension <span class="math inline">\(2\)</span> remains open.</p>
+</div>
+</div>
+<p>Over an algebraically closed field of characteristic <span class="math inline">\(0\)</span>, the Ax–Grothendieck theorem says that every injective polynomial endomorphism of affine space is an isomorphism. Therefore, before the counterexample above was discovered, the Jacobian conjecture for <span class="math inline">\(\mathbb{A}^n_k\)</span> could equivalently be reduced to proving that every polynomial map <span class="math display">\[
+F:\mathbb{A}^n_k\longrightarrow\mathbb{A}^n_k
+\]</span> with invertible Jacobian determinant is injective. The counterexample shows that this injectivity statement is false for every <span class="math inline">\(n\geq 3\)</span>.</p>
 <hr>
 <p>I would like to thank my friend who suggested this topic to me and helped me write this post.</p>
 <hr>
